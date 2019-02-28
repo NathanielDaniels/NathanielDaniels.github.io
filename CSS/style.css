@@ -14,7 +14,7 @@ body {
   width: 100%;
 }
 
-body nav.top-navbar {
+body header.top-navbar {
   background: blueviolet;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -25,18 +25,18 @@ body nav.top-navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 60px;
+  height: 50px;
   width: 100%;
 }
 
-body nav.top-navbar .nav-container {
+body header.top-navbar .nav-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 95%;
 }
 
-body nav.top-navbar .nav-container h1 {
+body header.top-navbar .nav-container h1.logo {
   color: yellow;
   padding: 0 20px;
   font-size: 30px;
@@ -44,12 +44,12 @@ body nav.top-navbar .nav-container h1 {
   transition: .3s ease-in-out;
 }
 
-body nav.top-navbar .nav-container h1:hover {
+body header.top-navbar .nav-container h1.logo:hover {
   -webkit-filter: drop-shadow(2px 2px 2px black);
           filter: drop-shadow(2px 2px 2px black);
 }
 
-body nav.top-navbar .nav-container ul.navbar-links {
+body header.top-navbar .nav-container ul.menu-links {
   width: 100%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -62,12 +62,12 @@ body nav.top-navbar .nav-container ul.navbar-links {
           justify-content: flex-end;
 }
 
-body nav.top-navbar .nav-container ul.navbar-links li {
+body header.top-navbar .nav-container ul.menu-links li {
   list-style: none;
   padding: 0 20px;
 }
 
-body nav.top-navbar .nav-container ul.navbar-links li a {
+body header.top-navbar .nav-container ul.menu-links li a {
   color: white;
   font-size: 20px;
   text-decoration: none;
@@ -76,13 +76,16 @@ body nav.top-navbar .nav-container ul.navbar-links li a {
   transition: .3s ease-in-out;
 }
 
-body nav.top-navbar .nav-container ul.navbar-links li a:hover {
+body header.top-navbar .nav-container ul.menu-links li a:hover {
   color: yellow;
   -webkit-filter: drop-shadow(2px 2px 2px black);
           filter: drop-shadow(2px 2px 2px black);
 }
 
 body .main-section {
+  position: relative;
+  z-index: 1;
+  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,7 +99,37 @@ body .main-section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: blueviolet;
+  background: #761cca;
+}
+
+body .main-section:after {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 100px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+
+body .main-section:after {
+  bottom: 0;
+  -webkit-transform: skewY(-1.5deg);
+          transform: skewY(-1.5deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+
+body .main-section .bg {
+  background-image: url("/IMG/desk-background.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: opacity(0.2);
+          filter: opacity(0.2);
 }
 
 body .main-section .main-content {
@@ -123,30 +156,5 @@ body .main-section .triangle-container .triangle-down {
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-top: 25px solid yellow;
-}
-
-body .edge--bottom {
-  position: relative;
-  z-index: 1;
-}
-
-body .edge--bottom:after {
-  background: inherit;
-  content: '';
-  display: block;
-  height: 100px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-  -webkit-backface-visibility: hidden;
-}
-
-body .edge--bottom:after {
-  bottom: 0;
-  -webkit-transform: skewY(-1.5deg);
-          transform: skewY(-1.5deg);
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
 }
 /*# sourceMappingURL=style.css.map */

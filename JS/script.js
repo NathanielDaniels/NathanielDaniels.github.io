@@ -1,4 +1,4 @@
-mainTitle = document.getElementById('menu-title')
+mainTitle = document.getElementById('switch-title')
 
 mainTitle.addEventListener('click', function () {
   mainTitle.innerHTML = 'Welcome!'
