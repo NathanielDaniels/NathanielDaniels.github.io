@@ -2,7 +2,7 @@
 
 // /Google Fonts ========================================
 
-@mixin angle($pseudo, $flip: false, $angle: 1.5deg) {
+@mixin angle($pseudo, $flip: false, $angle: 1deg) {
   // Possible values for $pseudo are: before, after, both
   @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
     position: relative;
@@ -13,7 +13,7 @@
       background: inherit;
       content: '';
       display: block;
-      height: 100px;
+      height: 500px;
       left: 0;
       position: absolute;
       right: 0;
@@ -69,7 +69,7 @@
           transform: skewY($angle);
           transform-origin: 0 0;
         } @else {
-          transform: skewY($angle * -1);
+          transform: skewY($angle * 5);
           transform-origin: 100%;
         }
       }
@@ -95,7 +95,6 @@
 }
 
 body {
-  height: 1000px;
   max-width: 100%;
   width: 100%;
   // NAVBAR ======================
@@ -146,17 +145,16 @@ body {
 
   // Main Section (Hero) ==========================================
   .main-section {
-    @include angle(after);
-    height: 550px;
+    // @include angle(after);
+    height: 650px;
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     justify-content: center;
     align-items: center;
     background: hsl(271, 76%, 45%);
     // background: linear-gradient(90deg,rgba(76,5,113,.7) 0,rgba(76,5,113,.7)), url("/IMG/desk-background.jpg");
     // background-size: cover;
     .bg {
-      top: 50px;
       background-image: url("/IMG/desk-background.jpg");
       background-size: cover;
       background-position: center;
@@ -182,7 +180,8 @@ body {
     }
     .triangle-container {
       position: absolute;
-      top: 90%;
+      top: 85%;
+      z-index: 5;
       .triangle-down{
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
@@ -190,6 +189,19 @@ body {
       }
     }
     
+  }
+  .about-section {
+    @include angle(both);
+      height: 500px;
+      // background: blue;
+      background: white;
+  }
+
+  .portfolio-section {
+    @include angle(both);
+      height: 500px;
+      // background: blue;
+      background: blueviolet;
   }
 //  .edge--bottom {
 //       @include angle(after);
