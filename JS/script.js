@@ -21,16 +21,8 @@ function change () {
 }
 
 // Bounce Animation ====================================
-// $(document).ready(function () {
-//   $('.bounce').effect('bounce', { times: 3 }, 600)
-// }, 1000)
-
 var docLink = $('#bounce')
 
 setInterval(function () {
   docLink.effect('bounce', { times: 1 }, 1000)
 })
-
-// setInterval(function () {
-//   $('.bounce').effect('bounce', { times: 3 }, 600)
-// }, 1000)

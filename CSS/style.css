@@ -6,6 +6,7 @@
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: .05rem;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -45,8 +46,8 @@ body header.top-navbar .nav-container h1.logo {
 }
 
 body header.top-navbar .nav-container h1.logo:hover {
-  -webkit-filter: drop-shadow(2px 2px 2px black);
-          filter: drop-shadow(2px 2px 2px black);
+  -webkit-filter: drop-shadow(2px 2px 2px #340c5a);
+          filter: drop-shadow(2px 2px 2px #340c5a);
 }
 
 body header.top-navbar .nav-container ul.menu-links {
@@ -78,12 +79,12 @@ body header.top-navbar .nav-container ul.menu-links li a {
 
 body header.top-navbar .nav-container ul.menu-links li a:hover {
   color: yellow;
-  -webkit-filter: drop-shadow(2px 2px 2px black);
-          filter: drop-shadow(2px 2px 2px black);
+  -webkit-filter: drop-shadow(2px 2px 2px #340c5a);
+          filter: drop-shadow(2px 2px 2px #340c5a);
 }
 
 body .main-section {
-  height: 650px;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,11 +100,11 @@ body .main-section {
 body .main-section .bg {
   background-image: url("/IMG/desk-background.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 50% 70%;
   width: 100%;
   height: 100%;
-  -webkit-filter: opacity(0.2);
-          filter: opacity(0.2);
+  -webkit-filter: opacity(0.15);
+          filter: opacity(0.15);
 }
 
 body .main-section .main-content {
@@ -113,17 +114,18 @@ body .main-section .main-content {
 body .main-section .main-content h1 {
   font-size: 60px;
   padding: 10px 0;
-  color: white;
+  color: #ffff99;
 }
 
 body .main-section .main-content .greeting-loop {
   color: white;
   font-size: 40px;
+  text-align: center;
 }
 
 body .main-section .triangle-container {
   position: absolute;
-  top: 85%;
+  top: 80%;
   z-index: 5;
 }
 
@@ -133,14 +135,14 @@ body .main-section .triangle-container .triangle-down {
   border-top: 25px solid yellow;
 }
 
-body .about-section {
+body #about-section {
   position: relative;
   z-index: 1;
   height: 500px;
   background: white;
 }
 
-body .about-section:before, body .about-section:after {
+body #about-section:before, body #about-section:after {
   background: inherit;
   content: '';
   display: block;
@@ -150,9 +152,10 @@ body .about-section:before, body .about-section:after {
   right: 0;
   z-index: -1;
   -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
-body .about-section:before {
+body #about-section:before {
   top: 0;
   -webkit-transform: skewY(1deg);
           transform: skewY(1deg);
@@ -160,7 +163,7 @@ body .about-section:before {
           transform-origin: 100% 0;
 }
 
-body .about-section:after {
+body #about-section:after {
   bottom: 0;
   -webkit-transform: skewY(5deg);
           transform: skewY(5deg);
@@ -168,14 +171,21 @@ body .about-section:after {
           transform-origin: 100%;
 }
 
-body .portfolio-section {
+body #about-section .about {
+  text-align: center;
+  font-size: 35px;
+  color: blueviolet;
+  text-transform: uppercase;
+}
+
+body #portfolio-section {
   position: relative;
   z-index: 1;
   height: 500px;
   background: blueviolet;
 }
 
-body .portfolio-section:before, body .portfolio-section:after {
+body #portfolio-section:before, body #portfolio-section:after {
   background: inherit;
   content: '';
   display: block;
@@ -185,9 +195,10 @@ body .portfolio-section:before, body .portfolio-section:after {
   right: 0;
   z-index: -1;
   -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
-body .portfolio-section:before {
+body #portfolio-section:before {
   top: 0;
   -webkit-transform: skewY(1deg);
           transform: skewY(1deg);
@@ -195,11 +206,33 @@ body .portfolio-section:before {
           transform-origin: 100% 0;
 }
 
-body .portfolio-section:after {
+body #portfolio-section:after {
   bottom: 0;
   -webkit-transform: skewY(5deg);
           transform: skewY(5deg);
   -webkit-transform-origin: 100%;
           transform-origin: 100%;
+}
+
+body #portfolio-section .portfolio {
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  text-transform: uppercase;
+}
+
+body .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: black;
+  color: white;
+  height: 50px;
 }
 /*# sourceMappingURL=style.css.map */
