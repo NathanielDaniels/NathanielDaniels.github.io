@@ -188,14 +188,14 @@ body {
   .edge--bottom {
     @include angle(after);
     // background: blueviolet;
-    width: 100%;
-    height: 500px;
-    background-image: url("/IMG/desk-background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    filter: opacity(.3);
+    // width: 100%;
+    // height: 500px;
+    // background-image: url("/IMG/desk-background.jpg");
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // width: 100%;
+    // filter: opacity(.3);
     
   } 
 
