@@ -84,6 +84,10 @@ html header.top-navbar .nav-container ul.menu-links li a:hover, body header.top-
           filter: drop-shadow(2px 2px 2px #340c5a);
 }
 
+html header.top-navbar button.hamburger, body header.top-navbar button.hamburger {
+  font-size: 30px;
+}
+
 html .main-section, body .main-section {
   height: 110vh;
   display: -webkit-box;

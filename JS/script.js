@@ -4,6 +4,14 @@ mainTitle.addEventListener('click', function () {
   mainTitle.innerHTML = 'Welcome!'
 })
 
+// Hamburger Menu====================================
+
+var $hamburger = $('.hamburger')
+$hamburger.on('click', function (e) {
+  $hamburger.toggleClass('is-active')
+  // Do something else, like open/close menu
+})
+
 // Greeting-Loop =======================================
 var text = ['Web Designer', 'Web Enthusiast', 'Front-End Developer']
 var counter = 0
