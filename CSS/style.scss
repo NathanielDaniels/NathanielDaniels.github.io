@@ -2,7 +2,7 @@
 
 // /Google Fonts ========================================
 
-@mixin angle($pseudo, $flip: false, $angle: 1deg) {
+@mixin angle($pseudo, $flip: false, $angle: 1.2deg) {
   // Possible values for $pseudo are: before, after, both
   @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
     position: relative;
@@ -13,7 +13,7 @@
       background: inherit;
       content: '';
       display: block;
-      height: 500px;
+      height: 600px;
       left: 0;
       position: absolute;
       right: 0;
@@ -194,26 +194,58 @@ body {
     
   }
   #about-section {
-    @include angle(both);
-      height: 500px;
+    .about {
+      @include angle(both);
+      height: 600px;
       background: white;
-      .about {
-        text-align: center;
-        font-size: 35px;
+      h2.about-title {
+        // margin-top: 50px;
+        font-size: 50px;
         color: blueviolet;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .about-info {
+        font-size: 26px;
+        height: 400px;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+      }
+    }
+      
+  }
+
+  #portfolio-section {
+    .portfolio {
+      @include angle(both);
+      height: 600px;
+      background: blueviolet;
+    }
+      h2.portfolio-title {
+        text-align: center;
+        font-size: 50px;
+        color: white;
         text-transform: uppercase;
       }
   }
 
-  #portfolio-section {
+  #contact-section {
     @include angle(both);
-      height: 500px;
-      background: blueviolet;
-      .portfolio {
+      height: 600px;
+      background: white;
+      .contact {
         text-align: center;
-        font-size: 35px;
-        color: white;
-        text-transform: uppercase;
+        h2.contact-title {
+          font-size: 50px;
+          color: blueviolet;
+          text-transform: uppercase;
+        }
       }
   }
 
