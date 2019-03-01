@@ -84,7 +84,7 @@ body header.top-navbar .nav-container ul.menu-links li a:hover {
 }
 
 body .main-section {
-  height: 100vh;
+  height: 110vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,6 +140,7 @@ body #about-section .about {
   z-index: 1;
   height: 600px;
   background: white;
+  width: 100%;
 }
 
 body #about-section .about:before, body #about-section .about:after {
@@ -175,25 +176,15 @@ body #about-section .about h2.about-title {
   font-size: 50px;
   color: blueviolet;
   text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: absolute;
+  top: -30px;
+  left: 80px;
 }
 
 body #about-section .about .about-info {
   font-size: 26px;
-  height: 400px;
-  width: 90%;
+  height: 460px;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,6 +195,7 @@ body #about-section .about .about-info {
       -ms-flex-align: center;
           align-items: center;
   text-align: justify;
+  margin: 0 auto;
 }
 
 body #portfolio-section .portfolio {
@@ -249,14 +241,95 @@ body #portfolio-section h2.portfolio-title {
   text-transform: uppercase;
 }
 
+body #portfolio-section .grid-container {
+  height: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #portfolio-section .grid-container .portfolio-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  width: 1000px;
+  height: 400px;
+}
+
+body #portfolio-section .grid-container .portfolio-grid .box {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+body #portfolio-section .grid-container .portfolio-grid .box1 {
+  background: blue;
+  border-top-left-radius: 15px;
+}
+
+body #portfolio-section .grid-container .portfolio-grid .box2 {
+  background: green;
+}
+
+body #portfolio-section .grid-container .portfolio-grid .box3 {
+  background: orange;
+  border-top-right-radius: 15px;
+}
+
+body #portfolio-section .grid-container .portfolio-grid .box4 {
+  background: red;
+  border-bottom-left-radius: 15px;
+}
+
+body #portfolio-section .grid-container .portfolio-grid .box5 {
+  background: purple;
+}
+
+body #portfolio-section .grid-container .portfolio-grid .box6 {
+  background: white;
+  border-bottom-right-radius: 15px;
+}
+
 body #contact-section {
+  position: relative;
+  z-index: 1;
   position: relative;
   z-index: 1;
   height: 600px;
   background: white;
 }
 
-body #contact-section:before, body #contact-section:after {
+body #contact-section:after {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 600px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+body #contact-section:after {
+  bottom: 0;
+  -webkit-transform: skewY(-1.2deg);
+          transform: skewY(-1.2deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+
+body #contact-section:before {
   background: inherit;
   content: '';
   display: block;
@@ -277,14 +350,6 @@ body #contact-section:before {
           transform-origin: 100% 0;
 }
 
-body #contact-section:after {
-  bottom: 0;
-  -webkit-transform: skewY(6deg);
-          transform: skewY(6deg);
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
-}
-
 body #contact-section .contact {
   text-align: center;
 }
@@ -299,14 +364,15 @@ body .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background: black;
   color: white;
   height: 50px;
+  padding-right: 20px;
 }
 /*# sourceMappingURL=style.css.map */

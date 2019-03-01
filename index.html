@@ -13,6 +13,7 @@
 
 <body>
 
+
   <!-- <header class="top-navbar">
     <div class="nav-container">
       <h1 class="logo" id="switch-title">Hello</h1>
@@ -25,9 +26,9 @@
   </header> -->
 
   <section class="main-section edge--bottom">
-    <div class="bg"></div>
+    <div class="bg" role="background-img"></div>
     <header class="top-navbar">
-      <div class="nav-container">
+      <div class="nav-container" role="header-container">
         <h1 class="logo" id="switch-title">Hello</h1>
         <ul class="menu-links">
           <li><a href="#about-section">About</a></li>
@@ -36,18 +37,18 @@
         </ul>
       </div>
     </header>
-    <div class="main-content">
+    <div class="main-content" role="top-content">
       <h1>Hi, I'm Nathan.</h1>
-      <div id='greeting' class="greeting-loop">Front-End Developer</div>
+      <div id='greeting' class="greeting-loop" role="skill-loop-animation">Front-End Developer</div>
     </div>
-    <div class="triangle-container">
-      <div id="bounce" class="triangle-down"></div>
+    <div class="triangle-container" role="scroll-triangle">
+      <div id="bounce" class="triangle-down" role="bounce-animation"></div>
     </div>
 
   </section>
 
   <section id="about-section">
-    <div class="about">
+    <div class="about" role="about-container">
       <h2 class="about-title">About</h2>
       <p class="about-info">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim tempor nulla, vitae condimentum tortor
@@ -63,13 +64,23 @@
   </section>
 
   <section id="portfolio-section">
-    <div class="portfolio">
+    <div class="portfolio" role="portfolio-container">
       <h2 class="portfolio-title">Portfolio</h2>
+      <div class="grid-container">
+        <div class="portfolio-grid">
+          <div class="box box1">1</div>
+          <div class="box box2">2</div>
+          <div class="box box3">3</div>
+          <div class="box box4">4</div>
+          <div class="box box5">5</div>
+          <div class="box box6">6</div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="contact-section">
-    <div class="contact">
+    <div class="contact" role="contact-container">
       <h2 class="contact-title">Contact</h2>
     </div>
   </section>

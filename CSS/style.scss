@@ -102,7 +102,6 @@ body {
   header.top-navbar {
     position: absolute;
     top:0;
-    // background: blueviolet;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -138,17 +137,17 @@ body {
               color: yellow;
               filter: drop-shadow(2px 2px 2px hsl(271, 76%, 20%));
             }
-          } // a
-        } // li
-      } // .navbar-menu
-    } // .nav-items
-  } // .top-navbar
+          }
+        }
+      }
+    }
+  }
 
   // Main Section (Hero) ==========================================
   .main-section {
     // @include angle(after);
     // height: 650px;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     // flex-direction: column;
     justify-content: center;
@@ -191,34 +190,32 @@ body {
         border-top: 25px solid yellow;
       }
     }
-    
   }
   #about-section {
     .about {
       @include angle(both);
       height: 600px;
       background: white;
+      width: 100%;
       h2.about-title {
-        // margin-top: 50px;
         font-size: 50px;
         color: blueviolet;
         text-transform: uppercase;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        position: absolute;
+        top: -30px;
+        left: 80px;
       }
       .about-info {
         font-size: 26px;
-        height: 400px;
-        width: 90%;
+        height: 460px;
+        width: 80%;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: justify;
+        margin: 0 auto;
       }
     }
-      
   }
 
   #portfolio-section {
@@ -227,41 +224,85 @@ body {
       height: 600px;
       background: blueviolet;
     }
-      h2.portfolio-title {
-        text-align: center;
-        font-size: 50px;
-        color: white;
-        text-transform: uppercase;
+    h2.portfolio-title {
+      text-align: center;
+      font-size: 50px;
+      color: white;
+      text-transform: uppercase;
+    }
+    .grid-container {
+      height: 85%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
+        width: 1000px;
+        height: 400px;
+        // transform: skewY(5.5deg);
+        // transform: skew(5deg,6deg);
+        .box {
+          padding: 20px;
+          border-radius: 5px;
+          
+        }
+        .box1 {
+          background: blue;
+          border-top-left-radius: 15px;
+        }
+        .box2 {
+          background: green;
+        }
+        .box3 {
+          background: orange;
+          border-top-right-radius: 15px;
+        }
+        .box4 {
+          background: red;
+          border-bottom-left-radius: 15px;
+        }
+        .box5 {
+          background: purple;
+        }
+        .box6 {
+          background: white;
+          border-bottom-right-radius: 15px;
+        }
       }
+    }
   }
 
   #contact-section {
-    @include angle(both);
-      height: 600px;
-      background: white;
-      .contact {
-        text-align: center;
-        h2.contact-title {
-          font-size: 50px;
-          color: blueviolet;
-          text-transform: uppercase;
-        }
+    @include angle(after);
+    @include angle(before);
+    height: 600px;
+    background: white;
+    .contact {
+      text-align: center;
+      h2.contact-title {
+        font-size: 50px;
+        color: blueviolet;
+        text-transform: uppercase;
       }
+    }
   }
 
   .footer {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     background: black;
     color: white;
     height: 50px;
+    padding-right: 20px;
   }
 //  .edge--bottom {
 //       @include angle(after);
 //       height: 500px;
 //     } 
-
 
 
 
