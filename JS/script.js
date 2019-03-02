@@ -4,15 +4,14 @@ mainTitle.addEventListener('click', function () {
   mainTitle.innerHTML = 'Welcome!'
 })
 
-// Hamburger Menu====================================
+// Hamburger Menu Animation ===============================
+$menu = $('.menu')
 
-var $hamburger = $('.hamburger')
-$hamburger.on('click', function (e) {
-  $hamburger.toggleClass('is-active')
-  // Do something else, like open/close menu
+$menu.click(function () {
+  $(this).toggleClass('close')
 })
 
-// Greeting-Loop =======================================
+// Greeting-Loop Animation ================================
 var text = ['Web Designer', 'Web Enthusiast', 'Front-End Developer']
 var counter = 0
 var elem = $('#greeting')

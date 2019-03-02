@@ -15,7 +15,7 @@ html, body {
   height: 100%;
 }
 
-html header.top-navbar, body header.top-navbar {
+header.top-navbar {
   position: absolute;
   top: 0;
   -webkit-box-align: center;
@@ -31,14 +31,14 @@ html header.top-navbar, body header.top-navbar {
   width: 100%;
 }
 
-html header.top-navbar .nav-container, body header.top-navbar .nav-container {
+header.top-navbar .nav-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 95%;
 }
 
-html header.top-navbar .nav-container h1.logo, body header.top-navbar .nav-container h1.logo {
+header.top-navbar .nav-container h1.logo {
   color: yellow;
   padding: 0 20px;
   font-size: 30px;
@@ -46,12 +46,12 @@ html header.top-navbar .nav-container h1.logo, body header.top-navbar .nav-conta
   transition: .3s ease-in-out;
 }
 
-html header.top-navbar .nav-container h1.logo:hover, body header.top-navbar .nav-container h1.logo:hover {
+header.top-navbar .nav-container h1.logo:hover {
   -webkit-filter: drop-shadow(2px 2px 2px #340c5a);
           filter: drop-shadow(2px 2px 2px #340c5a);
 }
 
-html header.top-navbar .nav-container ul.menu-links, body header.top-navbar .nav-container ul.menu-links {
+header.top-navbar .nav-container ul.menu-links {
   width: 100%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -64,12 +64,12 @@ html header.top-navbar .nav-container ul.menu-links, body header.top-navbar .nav
           justify-content: flex-end;
 }
 
-html header.top-navbar .nav-container ul.menu-links li, body header.top-navbar .nav-container ul.menu-links li {
+header.top-navbar .nav-container ul.menu-links li {
   list-style: none;
   padding: 0 20px;
 }
 
-html header.top-navbar .nav-container ul.menu-links li a, body header.top-navbar .nav-container ul.menu-links li a {
+header.top-navbar .nav-container ul.menu-links li a {
   color: white;
   font-size: 20px;
   text-decoration: none;
@@ -78,17 +78,66 @@ html header.top-navbar .nav-container ul.menu-links li a, body header.top-navbar
   transition: .3s ease-in-out;
 }
 
-html header.top-navbar .nav-container ul.menu-links li a:hover, body header.top-navbar .nav-container ul.menu-links li a:hover {
+header.top-navbar .nav-container ul.menu-links li a:hover {
   color: yellow;
   -webkit-filter: drop-shadow(2px 2px 2px #340c5a);
           filter: drop-shadow(2px 2px 2px #340c5a);
 }
 
-html header.top-navbar button.hamburger, body header.top-navbar button.hamburger {
-  font-size: 30px;
+header.top-navbar #burger-wrapper {
+  background: transparent;
+  border: transparent;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 10px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
 }
 
-html .main-section, body .main-section {
+header.top-navbar #burger-wrapper .main-item {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  top: 5px;
+}
+
+header.top-navbar #burger-wrapper .main-item .line {
+  position: absolute;
+  width: 35px;
+  height: 4px;
+  left: 0px;
+  background: #fff;
+  border-radius: 2.5px;
+  -webkit-transition: all 0.2s cubic-bezier(0.42, 0, 0.68, 1.78);
+  transition: all 0.2s cubic-bezier(0.42, 0, 0.68, 1.78);
+}
+
+header.top-navbar #burger-wrapper .main-item .line01 {
+  top: 5%;
+}
+
+header.top-navbar #burger-wrapper .main-item .line02 {
+  top: 30%;
+}
+
+header.top-navbar #burger-wrapper .main-item .line03 {
+  top: 55%;
+}
+
+header.top-navbar #burger-wrapper .menu.close .line01 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 30%;
+}
+
+header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger-wrapper .menu.close .line03 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 30%;
+}
+
+.main-section {
   height: 110vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,7 +151,7 @@ html .main-section, body .main-section {
   background: #761cca;
 }
 
-html .main-section .bg, body .main-section .bg {
+.main-section .bg {
   background-image: url("/IMG/desk-background.jpg");
   background-size: cover;
   background-position: 50% 70%;
@@ -112,35 +161,35 @@ html .main-section .bg, body .main-section .bg {
           filter: opacity(0.15);
 }
 
-html .main-section .main-content, body .main-section .main-content {
+.main-section .main-content {
   position: absolute;
 }
 
-html .main-section .main-content h1, body .main-section .main-content h1 {
+.main-section .main-content h1 {
   font-size: 60px;
   padding: 10px 0;
   color: #ffff99;
 }
 
-html .main-section .main-content .greeting-loop, body .main-section .main-content .greeting-loop {
+.main-section .main-content .greeting-loop {
   color: white;
   font-size: 40px;
   text-align: center;
 }
 
-html .main-section .triangle-container, body .main-section .triangle-container {
+.main-section .triangle-container {
   position: absolute;
   top: 80%;
   z-index: 5;
 }
 
-html .main-section .triangle-container .triangle-down, body .main-section .triangle-container .triangle-down {
+.main-section .triangle-container .triangle-down {
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-top: 25px solid yellow;
 }
 
-html #about-section .about, body #about-section .about {
+#about-section .about {
   position: relative;
   z-index: 1;
   height: 600px;
@@ -148,7 +197,7 @@ html #about-section .about, body #about-section .about {
   width: 100%;
 }
 
-html #about-section .about:before, html #about-section .about:after, body #about-section .about:before, body #about-section .about:after {
+#about-section .about:before, #about-section .about:after {
   background: inherit;
   content: '';
   display: block;
@@ -161,7 +210,7 @@ html #about-section .about:before, html #about-section .about:after, body #about
           backface-visibility: hidden;
 }
 
-html #about-section .about:before, body #about-section .about:before {
+#about-section .about:before {
   top: 0;
   -webkit-transform: skewY(1.2deg);
           transform: skewY(1.2deg);
@@ -169,7 +218,7 @@ html #about-section .about:before, body #about-section .about:before {
           transform-origin: 100% 0;
 }
 
-html #about-section .about:after, body #about-section .about:after {
+#about-section .about:after {
   bottom: 0;
   -webkit-transform: skewY(6deg);
           transform: skewY(6deg);
@@ -177,7 +226,7 @@ html #about-section .about:after, body #about-section .about:after {
           transform-origin: 100%;
 }
 
-html #about-section .about h2.about-title, body #about-section .about h2.about-title {
+#about-section .about h2.about-title {
   font-size: 50px;
   color: blueviolet;
   text-transform: uppercase;
@@ -185,7 +234,7 @@ html #about-section .about h2.about-title, body #about-section .about h2.about-t
   left: 80px;
 }
 
-html #about-section .about p.about-info, body #about-section .about p.about-info {
+#about-section .about p.about-info {
   font-size: 22px;
   height: 460px;
   width: 80%;
@@ -209,14 +258,14 @@ html #about-section .about p.about-info, body #about-section .about p.about-info
           hyphens: auto;
 }
 
-html #portfolio-section .portfolio, body #portfolio-section .portfolio {
+#portfolio-section .portfolio {
   position: relative;
   z-index: 1;
   height: 600px;
   background: blueviolet;
 }
 
-html #portfolio-section .portfolio:before, html #portfolio-section .portfolio:after, body #portfolio-section .portfolio:before, body #portfolio-section .portfolio:after {
+#portfolio-section .portfolio:before, #portfolio-section .portfolio:after {
   background: inherit;
   content: '';
   display: block;
@@ -229,7 +278,7 @@ html #portfolio-section .portfolio:before, html #portfolio-section .portfolio:af
           backface-visibility: hidden;
 }
 
-html #portfolio-section .portfolio:before, body #portfolio-section .portfolio:before {
+#portfolio-section .portfolio:before {
   top: 0;
   -webkit-transform: skewY(1.2deg);
           transform: skewY(1.2deg);
@@ -237,7 +286,7 @@ html #portfolio-section .portfolio:before, body #portfolio-section .portfolio:be
           transform-origin: 100% 0;
 }
 
-html #portfolio-section .portfolio:after, body #portfolio-section .portfolio:after {
+#portfolio-section .portfolio:after {
   bottom: 0;
   -webkit-transform: skewY(6deg);
           transform: skewY(6deg);
@@ -245,14 +294,14 @@ html #portfolio-section .portfolio:after, body #portfolio-section .portfolio:aft
           transform-origin: 100%;
 }
 
-html #portfolio-section h2.portfolio-title, body #portfolio-section h2.portfolio-title {
+#portfolio-section h2.portfolio-title {
   text-align: center;
   font-size: 50px;
   color: white;
   text-transform: uppercase;
 }
 
-html #portfolio-section .grid-container, body #portfolio-section .grid-container {
+#portfolio-section .grid-container {
   height: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -265,7 +314,7 @@ html #portfolio-section .grid-container, body #portfolio-section .grid-container
           align-items: center;
 }
 
-html #portfolio-section .grid-container .portfolio-grid, body #portfolio-section .grid-container .portfolio-grid {
+#portfolio-section .grid-container .portfolio-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -277,29 +326,36 @@ html #portfolio-section .grid-container .portfolio-grid, body #portfolio-section
   height: 400px;
 }
 
-html #portfolio-section .grid-container .portfolio-grid .box, body #portfolio-section .grid-container .portfolio-grid .box {
+#portfolio-section .grid-container .portfolio-grid .box {
   padding: 20px;
   border-radius: 5px;
   background: white;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
-html #portfolio-section .grid-container .portfolio-grid .box1, body #portfolio-section .grid-container .portfolio-grid .box1 {
+#portfolio-section .grid-container .portfolio-grid .box:hover {
+  -webkit-filter: drop-shadow(0px 5px 8px #340c5a);
+          filter: drop-shadow(0px 5px 8px #340c5a);
+}
+
+#portfolio-section .grid-container .portfolio-grid .box1 {
   border-top-left-radius: 15px;
 }
 
-html #portfolio-section .grid-container .portfolio-grid .box3, body #portfolio-section .grid-container .portfolio-grid .box3 {
+#portfolio-section .grid-container .portfolio-grid .box3 {
   border-top-right-radius: 15px;
 }
 
-html #portfolio-section .grid-container .portfolio-grid .box4, body #portfolio-section .grid-container .portfolio-grid .box4 {
+#portfolio-section .grid-container .portfolio-grid .box4 {
   border-bottom-left-radius: 15px;
 }
 
-html #portfolio-section .grid-container .portfolio-grid .box6, body #portfolio-section .grid-container .portfolio-grid .box6 {
+#portfolio-section .grid-container .portfolio-grid .box6 {
   border-bottom-right-radius: 15px;
 }
 
-html #contact-section, body #contact-section {
+#contact-section {
   position: relative;
   z-index: 1;
   position: relative;
@@ -308,7 +364,7 @@ html #contact-section, body #contact-section {
   background: white;
 }
 
-html #contact-section:after, body #contact-section:after {
+#contact-section:after {
   background: inherit;
   content: '';
   display: block;
@@ -321,7 +377,7 @@ html #contact-section:after, body #contact-section:after {
           backface-visibility: hidden;
 }
 
-html #contact-section:after, body #contact-section:after {
+#contact-section:after {
   bottom: 0;
   -webkit-transform: skewY(-1.2deg);
           transform: skewY(-1.2deg);
@@ -329,7 +385,7 @@ html #contact-section:after, body #contact-section:after {
           transform-origin: 100%;
 }
 
-html #contact-section:before, body #contact-section:before {
+#contact-section:before {
   background: inherit;
   content: '';
   display: block;
@@ -342,7 +398,7 @@ html #contact-section:before, body #contact-section:before {
           backface-visibility: hidden;
 }
 
-html #contact-section:before, body #contact-section:before {
+#contact-section:before {
   top: 0;
   -webkit-transform: skewY(1.2deg);
           transform: skewY(1.2deg);
@@ -350,17 +406,17 @@ html #contact-section:before, body #contact-section:before {
           transform-origin: 100% 0;
 }
 
-html #contact-section .contact, body #contact-section .contact {
+#contact-section .contact {
   text-align: center;
 }
 
-html #contact-section .contact h2.contact-title, body #contact-section .contact h2.contact-title {
+#contact-section .contact h2.contact-title {
   font-size: 50px;
   color: blueviolet;
   text-transform: uppercase;
 }
 
-html .footer, body .footer {
+.footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,4 +431,4 @@ html .footer, body .footer {
   height: 50px;
   padding-right: 20px;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */
