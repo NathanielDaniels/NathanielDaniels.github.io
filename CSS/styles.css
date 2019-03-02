@@ -27,7 +27,7 @@ header.top-navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 50px;
+  height: 70px;
   width: 100%;
 }
 
@@ -38,17 +38,17 @@ header.top-navbar .nav-container {
   width: 95%;
 }
 
-header.top-navbar .nav-container h1.logo {
+header.top-navbar .nav-container .logo {
   color: yellow;
-  padding: 0 20px;
-  font-size: 30px;
+  padding-left: 20px;
+  font-size: 40px;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
-header.top-navbar .nav-container h1.logo:hover {
-  -webkit-filter: drop-shadow(2px 2px 2px #340c5a);
-          filter: drop-shadow(2px 2px 2px #340c5a);
+header.top-navbar .nav-container .logo:hover {
+  -webkit-filter: drop-shadow(0px 2px 2px #340c5a);
+          filter: drop-shadow(0px 2px 2px #340c5a);
 }
 
 header.top-navbar .nav-container ul.menu-links {
@@ -76,18 +76,21 @@ header.top-navbar .nav-container ul.menu-links li a {
   text-transform: uppercase;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+  cursor: pointer;
 }
 
 header.top-navbar .nav-container ul.menu-links li a:hover {
   color: yellow;
-  -webkit-filter: drop-shadow(2px 2px 2px #340c5a);
-          filter: drop-shadow(2px 2px 2px #340c5a);
+  -webkit-filter: drop-shadow(0px 2px 2px #340c5a);
+          filter: drop-shadow(0px 2px 2px #340c5a);
 }
 
 header.top-navbar .nav-container ul.menu-links li a:focus {
   outline: 1.45px dashed;
   outline-color: yellow;
   padding: 2px 5px;
+  -webkit-filter: drop-shadow(0px 2px 2px #340c5a);
+          filter: drop-shadow(0px 2px 2px #340c5a);
 }
 
 header.top-navbar #burger-wrapper {
@@ -95,7 +98,7 @@ header.top-navbar #burger-wrapper {
   background: transparent;
   border: transparent;
   border-radius: 50%;
-  margin: 10px;
+  margin-right: 10px;
   position: relative;
   padding: 5px;
   cursor: pointer;
@@ -104,7 +107,7 @@ header.top-navbar #burger-wrapper {
 header.top-navbar #burger-wrapper:focus {
   outline: thin dashed;
   outline-color: yellow;
-  padding: 5px;
+  padding: 0 5px;
 }
 
 header.top-navbar #burger-wrapper .main-item {
@@ -112,6 +115,15 @@ header.top-navbar #burger-wrapper .main-item {
   height: 35px;
   position: relative;
   top: 5px;
+}
+
+header.top-navbar #burger-wrapper .main-item:hover {
+  -webkit-filter: drop-shadow(0px 2px 2px #340c5a);
+          filter: drop-shadow(0px 2px 2px #340c5a);
+}
+
+header.top-navbar #burger-wrapper .main-item:hover .line {
+  background: yellow;
 }
 
 header.top-navbar #burger-wrapper .main-item .line {
@@ -141,16 +153,18 @@ header.top-navbar #burger-wrapper .menu.close .line01 {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   top: 30%;
+  background: yellow;
 }
 
 header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger-wrapper .menu.close .line03 {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   top: 30%;
+  background: yellow;
 }
 
 .main-section {
-  height: 100%;
+  height: 125vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,7 +180,7 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
 .main-section .bg {
   background-image: url("/IMG/desk-background.jpg");
   background-size: cover;
-  background-position: 50% 70%;
+  background-position: 50% 100%;
   width: 100%;
   height: 100%;
   -webkit-filter: opacity(0.15);
@@ -177,13 +191,20 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
   position: absolute;
 }
 
-.main-section .main-content h1 {
-  font-size: 60px;
-  padding: 10px 0;
-  color: #ffff99;
+.main-section .main-content .content-wrapper {
+  position: relative;
+  top: -80px;
 }
 
-.main-section .main-content .greeting-loop {
+.main-section .main-content .content-wrapper h1 {
+  font-size: 80px;
+  padding: 10px 0;
+  color: #ffff99;
+  -webkit-filter: drop-shadow(0px 2px 2px #340c5a);
+          filter: drop-shadow(0px 2px 2px #340c5a);
+}
+
+.main-section .main-content .content-wrapper .greeting-loop {
   color: #fff;
   font-size: 40px;
   text-align: center;
@@ -191,7 +212,7 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
 
 .main-section .triangle-container {
   position: absolute;
-  top: 80%;
+  top: 90%;
   z-index: 5;
 }
 
@@ -201,11 +222,8 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
   border-top: 25px solid yellow;
 }
 
-#about-section {
-  height: 600px;
-}
-
 #about-section .about {
+  height: 600px;
   position: relative;
   z-index: 1;
   background: #fff;
@@ -217,7 +235,7 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
   background: inherit;
   content: '';
   display: block;
-  height: 700px;
+  height: 200px;
   left: 0;
   position: absolute;
   right: 0;
@@ -228,8 +246,8 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
 
 #about-section .about:before {
   top: 0;
-  -webkit-transform: skewY(5deg);
-          transform: skewY(5deg);
+  -webkit-transform: skewY(6deg);
+          transform: skewY(6deg);
   -webkit-transform-origin: 100% 0;
           transform-origin: 100% 0;
 }
@@ -240,13 +258,14 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
   color: blueviolet;
   text-transform: uppercase;
   position: relative;
+  top: 15px;
   left: 80px;
   width: 50%;
 }
 
 #about-section .about p.about-info {
+  padding: 50px 0;
   font-size: 22px;
-  height: 350px;
   width: 80%;
   max-width: 80%;
   line-height: 1.4em;
@@ -268,21 +287,18 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
           hyphens: auto;
 }
 
-#portfolio-section {
-  height: 600px;
-}
-
 #portfolio-section .portfolio {
+  height: 800px;
   position: relative;
   z-index: 1;
   background: blueviolet;
 }
 
-#portfolio-section .portfolio:before {
+#portfolio-section .portfolio:before, #portfolio-section .portfolio:after {
   background: inherit;
   content: '';
   display: block;
-  height: 700px;
+  height: 200px;
   left: 0;
   position: absolute;
   right: 0;
@@ -293,14 +309,21 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
 
 #portfolio-section .portfolio:before {
   top: 0;
-  -webkit-transform: skewY(5deg);
-          transform: skewY(5deg);
+  -webkit-transform: skewY(6deg);
+          transform: skewY(6deg);
   -webkit-transform-origin: 100% 0;
           transform-origin: 100% 0;
 }
 
+#portfolio-section .portfolio:after {
+  bottom: 0;
+  -webkit-transform: skewY(-6deg);
+          transform: skewY(-6deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+
 #portfolio-section h2.portfolio-title {
-  padding-bottom: 60px;
   font-weight: 800;
   text-align: center;
   font-size: 50px;
@@ -340,6 +363,7 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
   background: #fff;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  cursor: pointer;
 }
 
 #portfolio-section .grid-container .portfolio-grid .box:hover {
@@ -381,19 +405,27 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
   text-transform: uppercase;
 }
 
-.footer {
+.footer-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background: black;
   color: #fff;
   height: 50px;
-  padding-right: 20px;
+}
+
+.footer-section .social-media {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-section .web-dev {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 /*# sourceMappingURL=styles.css.map */

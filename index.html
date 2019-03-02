@@ -8,7 +8,7 @@
   <script src="http://www.tutorialspoint.com/jquery/jquery-1.3.2.min.js"></script>
   <script src="http://www.tutorialspoint.com/jquery/jquery-ui-1.7.2.custom.min.js"></script>
   <title>Nathan's Portfolio</title>
-  <link href="/node_modules/hamburgers/dist/hamburgers.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
   <link rel="stylesheet" href="./CSS/styles.css">
 </head>
 
@@ -28,11 +28,13 @@
 
   <section class="main-section edge--bottom">
     <div class="bg" role="background-img"></div>
-    <!-- Header Section -->
+    <!-- Header/Navbar Section -->
     <header class="top-navbar">
-      <!-- Header Navbar Container -->
+      <!-- Inner Navbar Container -->
       <div class="nav-container" role="header-container">
-        <h1 class="logo" id="switch-title">Hello</h1>
+        <div class="logo">
+          <i class="fas fa-fingerprint"></i>
+        </div>
         <ul class="menu-links">
           <li><a href="#about-section">About</a></li>
           <li><a href="#portfolio-section">Portfolio</a></li>
@@ -50,8 +52,11 @@
     </header>
     <!-- Top Main Content -->
     <div class="main-content" role="top-content">
-      <h1>Hi, I'm Nathan.</h1>
-      <div id='greeting' class="greeting-loop" role="skill-loop-animation">Front-End Developer</div>
+      <div class="content-wrapper">
+        <h1>Hi, I'm Nathan.</h1>
+        <div id='greeting' class="greeting-loop" role="skills-loop-animation">Front-End Developer</div>
+      </div>
+
     </div>
     <!-- Animated Triangle -->
     <div class="triangle-container" role="scroll-triangle">
@@ -97,8 +102,16 @@
     </div>
   </section>
   <!-- Footer Section -->
-  <footer class="footer">
-    By: Nathaniel Daniels
+  <footer class="footer-section">
+
+    <div class="social-media">
+      <i class="fab fa-twitter-square"></i>
+    </div>
+
+    <div class="web-dev">
+      By: Nathaniel Daniels
+    </div>
+
   </footer>
 
 

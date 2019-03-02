@@ -1,8 +1,8 @@
-mainTitle = document.getElementById('switch-title')
+// mainTitle = document.getElementById('switch-title')
 
-mainTitle.addEventListener('click', function () {
-  mainTitle.innerHTML = 'Welcome!'
-})
+// mainTitle.addEventListener('click', function () {
+//   mainTitle.innerHTML = 'Welcome!'
+// })
 
 // Hamburger Menu Animation ===============================
 $menu = $('.menu')
