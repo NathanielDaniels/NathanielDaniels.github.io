@@ -195,6 +195,7 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
   height: 600px;
   background: white;
   width: 100%;
+  max-width: 100%;
 }
 
 #about-section .about:before, #about-section .about:after {
@@ -231,8 +232,8 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
   color: blueviolet;
   text-transform: uppercase;
   position: relative;
-  top: -10px;
   left: 80px;
+  width: 50%;
 }
 
 #about-section .about p.about-info {

@@ -250,13 +250,15 @@ html,body {
       height: 600px;
       background: white;
       width: 100%;
+      max-width: 100%;
       h2.about-title {
         font-size: 50px;
         color: blueviolet;
         text-transform: uppercase;
         position: relative;
-        top: -10px;
+        // top: -10px;
         left: 80px;
+        width: 50%;
       }
       p.about-info {
         font-size: 22px;
