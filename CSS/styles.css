@@ -138,7 +138,7 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
 }
 
 .main-section {
-  height: 110vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,20 +189,23 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
   border-top: 25px solid yellow;
 }
 
+#about-section {
+  height: 600px;
+}
+
 #about-section .about {
   position: relative;
   z-index: 1;
-  height: 600px;
   background: white;
   width: 100%;
   max-width: 100%;
 }
 
-#about-section .about:before, #about-section .about:after {
+#about-section .about:before {
   background: inherit;
   content: '';
   display: block;
-  height: 600px;
+  height: 700px;
   left: 0;
   position: absolute;
   right: 0;
@@ -213,22 +216,15 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
 
 #about-section .about:before {
   top: 0;
-  -webkit-transform: skewY(1.2deg);
-          transform: skewY(1.2deg);
+  -webkit-transform: skewY(5deg);
+          transform: skewY(5deg);
   -webkit-transform-origin: 100% 0;
           transform-origin: 100% 0;
 }
 
-#about-section .about:after {
-  bottom: 0;
-  -webkit-transform: skewY(6deg);
-          transform: skewY(6deg);
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
-}
-
 #about-section .about h2.about-title {
   font-size: 50px;
+  font-weight: 800;
   color: blueviolet;
   text-transform: uppercase;
   position: relative;
@@ -260,18 +256,21 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
           hyphens: auto;
 }
 
+#portfolio-section {
+  height: 600px;
+}
+
 #portfolio-section .portfolio {
   position: relative;
   z-index: 1;
-  height: 600px;
   background: blueviolet;
 }
 
-#portfolio-section .portfolio:before, #portfolio-section .portfolio:after {
+#portfolio-section .portfolio:before {
   background: inherit;
   content: '';
   display: block;
-  height: 600px;
+  height: 700px;
   left: 0;
   position: absolute;
   right: 0;
@@ -282,21 +281,15 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
 
 #portfolio-section .portfolio:before {
   top: 0;
-  -webkit-transform: skewY(1.2deg);
-          transform: skewY(1.2deg);
+  -webkit-transform: skewY(5deg);
+          transform: skewY(5deg);
   -webkit-transform-origin: 100% 0;
           transform-origin: 100% 0;
 }
 
-#portfolio-section .portfolio:after {
-  bottom: 0;
-  -webkit-transform: skewY(6deg);
-          transform: skewY(6deg);
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
-}
-
 #portfolio-section h2.portfolio-title {
+  padding-bottom: 60px;
+  font-weight: 800;
   text-align: center;
   font-size: 50px;
   color: white;
@@ -359,61 +352,18 @@ header.top-navbar #burger-wrapper .menu.close .line02, header.top-navbar #burger
 }
 
 #contact-section {
-  position: relative;
-  z-index: 1;
-  position: relative;
-  z-index: 1;
-  height: 600px;
+  padding-top: 100px;
+  height: 800px;
   background: white;
 }
 
-#contact-section:after {
-  background: inherit;
-  content: '';
-  display: block;
-  height: 600px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-#contact-section:after {
-  bottom: 0;
-  -webkit-transform: skewY(-1.2deg);
-          transform: skewY(-1.2deg);
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
-}
-
-#contact-section:before {
-  background: inherit;
-  content: '';
-  display: block;
-  height: 600px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-#contact-section:before {
-  top: 0;
-  -webkit-transform: skewY(1.2deg);
-          transform: skewY(1.2deg);
-  -webkit-transform-origin: 100% 0;
-          transform-origin: 100% 0;
-}
-
 #contact-section .contact {
+  height: 600px;
   text-align: center;
 }
 
 #contact-section .contact h2.contact-title {
+  font-weight: 800;
   font-size: 50px;
   color: blueviolet;
   text-transform: uppercase;
