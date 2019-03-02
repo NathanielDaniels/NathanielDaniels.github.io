@@ -136,7 +136,7 @@ html,body {
           list-style: none;
           padding: 0 20px;
           a {
-            color: white;
+            color: #fff;
             font-size: 20px;
             text-decoration: none;
             text-transform: uppercase;
@@ -144,6 +144,11 @@ html,body {
             &:hover {
               color: yellow;
               filter: drop-shadow(2px 2px 2px hsl(271, 76%, 20%));
+            }
+            &:focus {
+              outline: 1.45px dashed;
+              outline-color:yellow;
+              padding: 2px 5px;
             }
           }
         }
@@ -160,11 +165,17 @@ html,body {
       position: relative;
       padding: 5px;
       cursor: pointer;
+      &:focus {
+        outline: thin dashed;
+        outline-color:yellow;
+        padding:5px;
+      }
       .main-item {
         width: 35px;
         height: 35px;
         position: relative;
         top: 5px;
+        
         .line {
           position: absolute;
           width: 35px;
@@ -173,6 +184,7 @@ html,body {
           background: #fff;
           border-radius: 2.5px;
           transition: all .2s cubic-bezier(0.42, 0, 0.68, 1.78);
+          
         }
         .line01 {
           top: 5%;
@@ -223,10 +235,10 @@ html,body {
         font-size: 60px;
         padding: 10px 0;
         color: hsl(60, 100%, 80%);
-        // color: white;
+        // color: #fff;
     }
       .greeting-loop {
-        color: white;
+        color: #fff;
         font-size: 40px;
         text-align: center;
       }
@@ -251,7 +263,7 @@ html,body {
     .about {
       @include angle(before);
       // height: 600px;
-      background: white;
+      background: #fff;
       width: 100%;
       max-width: 100%;
       h2.about-title {
@@ -296,7 +308,7 @@ html,body {
       font-weight: 800;
       text-align: center;
       font-size: 50px;
-      color: white;
+      color: hsl(60, 100%, 80%);
       text-transform: uppercase;
     }
     .grid-container {
@@ -318,7 +330,7 @@ html,body {
         .box {
           padding: 20px;
           border-radius: 5px;
-          background: white;
+          background: #fff;
           transition: all .3s ease-in-out;
           &:hover {
             filter: drop-shadow(0px 5px 8px hsl(271, 76%, 20%));
@@ -344,7 +356,7 @@ html,body {
           // background: purple;
         }
         .box6 {
-          // background: white;
+          // background: #fff;
           border-bottom-right-radius: 15px;
         }
       }
@@ -354,7 +366,7 @@ html,body {
   #contact-section {
     padding-top: 100px;
     height: 800px;
-    background: white;
+    background: #fff;
     .contact {
       // @include angle(before);
       height: 600px;
@@ -375,7 +387,7 @@ html,body {
     justify-content: flex-end;
     align-items: center;
     background: black;
-    color: white;
+    color: #fff;
     height: 50px;
     padding-right: 20px;
   }
