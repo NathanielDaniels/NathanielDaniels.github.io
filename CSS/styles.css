@@ -262,9 +262,7 @@ section#about-section .about h2.about-title {
   color: blueviolet;
   text-transform: uppercase;
   position: relative;
-  top: 15px;
   left: 80px;
-  width: 50%;
 }
 
 section#about-section .about p.about-info {
@@ -292,7 +290,7 @@ section#about-section .about p.about-info {
 }
 
 section#portfolio-section .portfolio {
-  height: 800px;
+  height: 600px;
   position: relative;
   z-index: 1;
   background: blueviolet;
@@ -328,7 +326,7 @@ section#portfolio-section .portfolio:after {
           transform-origin: 100%;
 }
 
-section#portfolio-section h2.portfolio-title {
+section#portfolio-section .portfolio h2.portfolio-title {
   font-weight: 800;
   text-align: center;
   font-size: 50px;
@@ -336,17 +334,20 @@ section#portfolio-section h2.portfolio-title {
   text-transform: uppercase;
 }
 
-section#portfolio-section .grid-container {
-  margin: 0 15px;
+section#portfolio-section .portfolio .grid-container {
+  margin: 75px 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-section#portfolio-section .grid-container .portfolio-grid {
+section#portfolio-section .portfolio .grid-container .portfolio-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -358,7 +359,7 @@ section#portfolio-section .grid-container .portfolio-grid {
   height: 400px;
 }
 
-section#portfolio-section .grid-container .portfolio-grid .box {
+section#portfolio-section .portfolio .grid-container .portfolio-grid .box {
   padding: 20px;
   border-radius: 5px;
   background: #fff;
@@ -367,30 +368,30 @@ section#portfolio-section .grid-container .portfolio-grid .box {
   cursor: pointer;
 }
 
-section#portfolio-section .grid-container .portfolio-grid .box:hover {
+section#portfolio-section .portfolio .grid-container .portfolio-grid .box:hover {
   -webkit-filter: drop-shadow(0px 5px 8px #340c5a);
           filter: drop-shadow(0px 5px 8px #340c5a);
 }
 
-section#portfolio-section .grid-container .portfolio-grid .box1 {
+section#portfolio-section .portfolio .grid-container .portfolio-grid .box1 {
   border-top-left-radius: 15px;
 }
 
-section#portfolio-section .grid-container .portfolio-grid .box3 {
+section#portfolio-section .portfolio .grid-container .portfolio-grid .box3 {
   border-top-right-radius: 15px;
 }
 
-section#portfolio-section .grid-container .portfolio-grid .box4 {
+section#portfolio-section .portfolio .grid-container .portfolio-grid .box4 {
   border-bottom-left-radius: 15px;
 }
 
-section#portfolio-section .grid-container .portfolio-grid .box6 {
+section#portfolio-section .portfolio .grid-container .portfolio-grid .box6 {
   border-bottom-right-radius: 15px;
 }
 
 section#contact-section {
   padding-top: 100px;
-  height: 600px;
+  height: 700px;
   background: #fff;
   cursor: default;
 }
@@ -400,6 +401,7 @@ section#contact-section .contact {
 }
 
 section#contact-section .contact h2.contact-title {
+  margin-top: 40px;
   font-weight: 800;
   font-size: 50px;
   color: blueviolet;
