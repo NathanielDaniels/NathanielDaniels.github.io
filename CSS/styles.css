@@ -261,8 +261,7 @@ section#about-section .about h2.about-title {
   font-weight: 800;
   color: blueviolet;
   text-transform: uppercase;
-  position: relative;
-  left: 80px;
+  margin-left: 80px;
 }
 
 section#about-section .about p.about-info {
@@ -369,8 +368,10 @@ section#portfolio-section .portfolio .grid-container .portfolio-grid .box {
 }
 
 section#portfolio-section .portfolio .grid-container .portfolio-grid .box:hover {
-  -webkit-filter: drop-shadow(0px 5px 8px #340c5a);
-          filter: drop-shadow(0px 5px 8px #340c5a);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: drop-shadow(0px 10px 8px #340c5a);
+          filter: drop-shadow(0px 10px 8px #340c5a);
 }
 
 section#portfolio-section .portfolio .grid-container .portfolio-grid .box1 {
@@ -408,6 +409,60 @@ section#contact-section .contact h2.contact-title {
   text-transform: uppercase;
 }
 
+section#contact-section .contact form.cfForm {
+  max-width: 600px;
+  text-align: center;
+  margin: 55px auto;
+}
+
+section#contact-section .contact form.cfForm input, section#contact-section .contact form.cfForm textarea {
+  font-size: 18px;
+  border: 1px solid blueviolet;
+  padding: 1em;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  font-family: arial, sans-serif;
+  -webkit-filter: drop-shadow(1px 3px 2px gray);
+          filter: drop-shadow(1px 3px 2px gray);
+  resize: none;
+}
+
+section#contact-section .contact form.cfForm input:focus, section#contact-section .contact form.cfForm textarea:focus {
+  outline-color: yellow;
+  -webkit-filter: drop-shadow(1px 2px 2px blueviolet);
+          filter: drop-shadow(1px 2px 2px blueviolet);
+}
+
+section#contact-section .contact form.cfForm #input-submit {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  background: blueviolet;
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0 4px 2px gray);
+          filter: drop-shadow(0 4px 2px gray);
+}
+
+section#contact-section .contact form.cfForm textarea {
+  height: 214px;
+}
+
+section#contact-section .contact .half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+section#contact-section .contact .right {
+  width: 50%;
+}
+
+section#contact-section .contact .left {
+  margin-right: 2%;
+}
+
 footer.footer-section {
   width: 100%;
   display: -webkit-box;
@@ -418,7 +473,7 @@ footer.footer-section {
           align-items: center;
   background: black;
   color: #fff;
-  height: 50px;
+  height: 70px;
 }
 
 footer.footer-section .social-media {
@@ -437,14 +492,15 @@ footer.footer-section .social-media a {
 }
 
 footer.footer-section .social-media a:hover {
-  color: yellow;
+  color: blueviolet;
 }
 
 footer.footer-section .social-media a .fab {
-  font-size: 35px;
+  font-size: 40px;
 }
 
 footer.footer-section .web-dev {
+  font-size: 18px;
   position: absolute;
   right: 0;
   padding-right: 10px;
