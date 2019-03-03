@@ -169,7 +169,7 @@ section.main-section {
         }
       }
     }
-    #burger-wrapper {
+    #burger-container {
       // display: none;
       display: inline-block;
       background: transparent;
@@ -185,7 +185,7 @@ section.main-section {
         padding: 0 5px;
         // filter: drop-shadow(0px 2px 2px hsl(271, 76%, 20%));   
       }
-      .main-item {
+      .burger-elements {
         width: 35px;
         height: 35px;
         position: relative;
@@ -215,12 +215,12 @@ section.main-section {
           top: 55%;
         }
       }
-      .menu.close .line01 {
+      .burger-elements.close .line01 {
         transform: rotate(45deg);
         top: 30%;
         background: yellow;
       }
-      .menu.close .line02, .menu.close .line03 {
+      .burger-elements.close .line02, .burger-elements.close .line03 {
         transform: rotate(-45deg);
         top: 30%;
         background: yellow;
@@ -232,6 +232,7 @@ section.main-section {
     .content-wrapper {
       position: relative;
       top: -80px;
+      cursor: default;
       h1 {
       font-size: 80px;
       padding: 10px 0;
@@ -266,6 +267,7 @@ section#about-section {
     background: #fff;
     width: 100%;
     max-width: 100%;
+    cursor: default;
     h2.about-title {
       font-size: 50px;
       font-weight: 800;
@@ -301,6 +303,7 @@ section#portfolio-section {
     height: 800px;
     @include angle(both);
     background: blueviolet;
+    cursor: default;
   }
   h2.portfolio-title {
     font-weight: 800;
@@ -365,6 +368,7 @@ section#contact-section {
   padding-top: 100px;
   height: 600px;
   background: #fff;
+  cursor: default;
   .contact {
     // @include angle(before);
     text-align: center;
@@ -380,24 +384,34 @@ section#contact-section {
 
   // FOOTER Section ================================
 footer.footer-section {
-  // @include angle(before);
+  width: 100%;
   display: flex;
   align-items: center;
   background: black;
   color: #fff;
   height: 50px;
-  // padding-right: 20px;
   .social-media {
-    justify-content: center;
+    width: 20%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+    a {
+      color: #fff;
+      &:hover {
+        color: yellow;
+      }
+      .fab {
+      font-size: 35px;
+      }
+    }
   }
   .web-dev {
-    // width: 100%;
-    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    padding-right: 10px;
+    cursor: default;
   }
 }
-//  .edge--bottom {
-//       @include angle(after);
-//       height: 500px;
-//     } 
 
 

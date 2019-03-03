@@ -117,7 +117,7 @@ section.main-section header.main-section--header .header__container ul.header__n
           filter: drop-shadow(0px 2px 2px #340c5a);
 }
 
-section.main-section header.main-section--header #burger-wrapper {
+section.main-section header.main-section--header #burger-container {
   display: inline-block;
   background: transparent;
   border: transparent;
@@ -128,29 +128,29 @@ section.main-section header.main-section--header #burger-wrapper {
   cursor: pointer;
 }
 
-section.main-section header.main-section--header #burger-wrapper:focus {
+section.main-section header.main-section--header #burger-container:focus {
   outline: thin dashed;
   outline-color: yellow;
   padding: 0 5px;
 }
 
-section.main-section header.main-section--header #burger-wrapper .main-item {
+section.main-section header.main-section--header #burger-container .burger-elements {
   width: 35px;
   height: 35px;
   position: relative;
   top: 5px;
 }
 
-section.main-section header.main-section--header #burger-wrapper .main-item:hover {
+section.main-section header.main-section--header #burger-container .burger-elements:hover {
   -webkit-filter: drop-shadow(0px 2px 2px #340c5a);
           filter: drop-shadow(0px 2px 2px #340c5a);
 }
 
-section.main-section header.main-section--header #burger-wrapper .main-item:hover .line {
+section.main-section header.main-section--header #burger-container .burger-elements:hover .line {
   background: yellow;
 }
 
-section.main-section header.main-section--header #burger-wrapper .main-item .line {
+section.main-section header.main-section--header #burger-container .burger-elements .line {
   position: absolute;
   width: 35px;
   height: 4px;
@@ -161,26 +161,26 @@ section.main-section header.main-section--header #burger-wrapper .main-item .lin
   transition: all 0.2s cubic-bezier(0.42, 0, 0.68, 1.78);
 }
 
-section.main-section header.main-section--header #burger-wrapper .main-item .line01 {
+section.main-section header.main-section--header #burger-container .burger-elements .line01 {
   top: 5%;
 }
 
-section.main-section header.main-section--header #burger-wrapper .main-item .line02 {
+section.main-section header.main-section--header #burger-container .burger-elements .line02 {
   top: 30%;
 }
 
-section.main-section header.main-section--header #burger-wrapper .main-item .line03 {
+section.main-section header.main-section--header #burger-container .burger-elements .line03 {
   top: 55%;
 }
 
-section.main-section header.main-section--header #burger-wrapper .menu.close .line01 {
+section.main-section header.main-section--header #burger-container .burger-elements.close .line01 {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   top: 30%;
   background: yellow;
 }
 
-section.main-section header.main-section--header #burger-wrapper .menu.close .line02, section.main-section header.main-section--header #burger-wrapper .menu.close .line03 {
+section.main-section header.main-section--header #burger-container .burger-elements.close .line02, section.main-section header.main-section--header #burger-container .burger-elements.close .line03 {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   top: 30%;
@@ -194,6 +194,7 @@ section.main-section .main-content {
 section.main-section .main-content .content-wrapper {
   position: relative;
   top: -80px;
+  cursor: default;
 }
 
 section.main-section .main-content .content-wrapper h1 {
@@ -231,6 +232,7 @@ section#about-section .about {
   background: #fff;
   width: 100%;
   max-width: 100%;
+  cursor: default;
 }
 
 section#about-section .about:before {
@@ -294,6 +296,7 @@ section#portfolio-section .portfolio {
   position: relative;
   z-index: 1;
   background: blueviolet;
+  cursor: default;
 }
 
 section#portfolio-section .portfolio:before, section#portfolio-section .portfolio:after {
@@ -389,6 +392,7 @@ section#contact-section {
   padding-top: 100px;
   height: 600px;
   background: #fff;
+  cursor: default;
 }
 
 section#contact-section .contact {
@@ -403,6 +407,7 @@ section#contact-section .contact h2.contact-title {
 }
 
 footer.footer-section {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -415,14 +420,32 @@ footer.footer-section {
 }
 
 footer.footer-section .social-media {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 20%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  cursor: pointer;
+}
+
+footer.footer-section .social-media a {
+  color: #fff;
+}
+
+footer.footer-section .social-media a:hover {
+  color: yellow;
+}
+
+footer.footer-section .social-media a .fab {
+  font-size: 35px;
 }
 
 footer.footer-section .web-dev {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  padding-right: 10px;
+  cursor: default;
 }
 /*# sourceMappingURL=styles.css.map */

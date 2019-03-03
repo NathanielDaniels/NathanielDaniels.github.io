@@ -5,7 +5,7 @@
 // })
 
 // Hamburger Menu Animation ===============================
-$menu = $('.menu')
+$menu = $('.burger-elements')
 
 $menu.click(function () {
   $(this).toggleClass('close')
