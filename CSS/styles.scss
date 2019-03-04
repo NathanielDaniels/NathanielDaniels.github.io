@@ -317,7 +317,7 @@ section#portfolio-section {
           padding: 20px;
           border-radius: 5px;
           background: #fff;
-          transition: all .3s ease-in-out;
+          transition: all .5s ease-in-out;
           cursor: pointer;
           &:hover {
             transform: scale(1.1);
@@ -373,10 +373,8 @@ section#contact-section {
       text-align: center;
       margin: 55px auto;
       input, textarea {
-        // background: hsl(271, 76%, 53%);
         font-size: 18px;
-        border: 1px solid blueviolet; 
-        // outline:0;
+        border: 1px solid blueviolet;
         padding: 1em;
         border-radius:8px;
         display: block;
@@ -386,28 +384,50 @@ section#contact-section {
         filter: drop-shadow(1px 3px 2px gray);
         resize: none;
         &:focus {
-          // outline: 2px solid yellow;
           outline-color: yellow;
           filter: drop-shadow(1px 2px 2px blueviolet);
         }
       }
   
       #input-submit {
-        // margin: 20px 0;
         color: #fff;
         font-size: 30px;
         font-weight: bold;
         background: blueviolet;
         cursor: pointer;
-        filter: drop-shadow(0 4px 2px gray);
-        // &:hover {
-        //   filter: drop-shadow(0px 5px 5px hsl(271, 76%, 20%));
-        // }
+        filter: drop-shadow(0px 4px 2px gray);
+        letter-spacing: .1rem;
+        transition: .3s ease-in-out;
+        text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+        &:hover {
+          filter: drop-shadow(0px 1px 1px gray);
+        }
       }
       textarea {
           height: 214px;
       }
     }
+
+    // filter: drop-shadow(0px 4px 2px hsl(32, 75%, 18%));
+    //   font-size: 30px;
+    //   left: 50%;
+    //   letter-spacing: .1rem;
+    //   opacity: .9;
+    //   padding: 10px 15px;
+    //   position: absolute;
+    //   text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+    //   text-transform: uppercase;
+    //   transform: translate(-50%, -50%);
+    //   transition: all .3s ease-in-out;
+    //   &:hover {
+    //     background: hsl(3,60,19);
+    //     // filter: drop-shadow(0px 0px 0px transparent);
+    //     filter: drop-shadow(0px 1px 1px hsl(32, 75%, 18%));
+    //     // filter: drop-shadow(0px 1px 1px hsl(32, 75%, 20%));
+    //     opacity: 1;
+    //     // box-shadow: none;
+    //   }
+
     .half {
       float: left;
       width: 48%;

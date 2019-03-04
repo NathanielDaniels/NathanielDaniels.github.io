@@ -362,8 +362,8 @@ section#portfolio-section .portfolio .grid-container .portfolio-grid .box {
   padding: 20px;
   border-radius: 5px;
   background: #fff;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
   cursor: pointer;
 }
 
@@ -441,8 +441,17 @@ section#contact-section .contact form.cfForm #input-submit {
   font-weight: bold;
   background: blueviolet;
   cursor: pointer;
-  -webkit-filter: drop-shadow(0 4px 2px gray);
-          filter: drop-shadow(0 4px 2px gray);
+  -webkit-filter: drop-shadow(0px 4px 2px gray);
+          filter: drop-shadow(0px 4px 2px gray);
+  letter-spacing: .1rem;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
+}
+
+section#contact-section .contact form.cfForm #input-submit:hover {
+  -webkit-filter: drop-shadow(0px 1px 1px gray);
+          filter: drop-shadow(0px 1px 1px gray);
 }
 
 section#contact-section .contact form.cfForm textarea {
