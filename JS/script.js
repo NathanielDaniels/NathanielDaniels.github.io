@@ -33,3 +33,11 @@ var docLink = $('#bounce')
 setInterval(function () {
   docLink.effect('bounce', { times: 1 }, 1000)
 })
+
+$('.box').magnificPopup({
+  delegate: 'a',
+  type: 'image',
+  gallery: {
+    enabled: true
+  }
+})
