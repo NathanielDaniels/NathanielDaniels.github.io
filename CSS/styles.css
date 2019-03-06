@@ -226,7 +226,7 @@ section.main-section .triangle-container .triangle-down {
 }
 
 section#about-section .about {
-  height: 600px;
+  height: 800px;
   position: relative;
   z-index: 1;
   background: #fff;
@@ -359,8 +359,6 @@ section#portfolio-section .portfolio .grid-container .portfolio-grid {
 }
 
 section#portfolio-section .portfolio .grid-container .portfolio-grid .box {
-  background-size: cover;
-  background-position: center center;
   border-radius: 10px;
   background: #262626;
   -webkit-transition: .4s ease-in-out;
@@ -378,14 +376,11 @@ section#portfolio-section .portfolio .grid-container .portfolio-grid .box:hover 
           filter: drop-shadow(0px 8px 8px #340c5a);
 }
 
-section#portfolio-section .portfolio .grid-container .portfolio-grid .box img {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-}
-
 section#portfolio-section .portfolio .grid-container .portfolio-grid .box1 {
   border-top-left-radius: 15px;
+  background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
+  background-size: cover;
+  background-position: center center;
 }
 
 section#portfolio-section .portfolio .grid-container .portfolio-grid .box3 {
