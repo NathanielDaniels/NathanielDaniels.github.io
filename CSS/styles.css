@@ -366,12 +366,15 @@ section#portfolio-section .portfolio .grid-container .portfolio-grid .box {
   cursor: pointer;
   -webkit-filter: drop-shadow(0px 4px 4px #340c5a);
           filter: drop-shadow(0px 4px 4px #340c5a);
+  overflow: hidden;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
 }
 
 section#portfolio-section .portfolio .grid-container .portfolio-grid .box:hover {
   z-index: 1;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.1) rotate(5deg);
+          transform: scale(1.1) rotate(5deg);
   -webkit-filter: drop-shadow(0px 8px 8px #340c5a);
           filter: drop-shadow(0px 8px 8px #340c5a);
 }
@@ -383,7 +386,16 @@ section#portfolio-section .portfolio .grid-container .portfolio-grid .box1 {
   background-position: center center;
 }
 
+section#portfolio-section .portfolio .grid-container .portfolio-grid .box2 {
+  background-image: url("/IMG/portfolio-img/Task-Manager.png");
+  background-size: cover;
+  background-position: center center;
+}
+
 section#portfolio-section .portfolio .grid-container .portfolio-grid .box3 {
+  background-image: url("/IMG/portfolio-img/Rock-Paper-Pokemon.png");
+  background-size: cover;
+  background-position: center center;
   border-top-right-radius: 15px;
 }
 
