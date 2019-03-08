@@ -34,10 +34,26 @@ setInterval(function () {
   docLink.effect('bounce', { times: 1 }, 1000)
 })
 
-$('.box').magnificPopup({
-  delegate: 'a',
-  type: 'image',
-  gallery: {
-    enabled: true
-  }
+//  ====================================
+// $('.box').magnificPopup({
+//   delegate: 'a',
+//   type: 'image',
+//   gallery: {
+//     enabled: true
+//   }
+// })
+
+//  ====================================
+// var box = $('.box')
+
+// box.click(function () {
+//   $(this).toggleClass('rotate')
+
+// console.log(rotateBox())
+// })
+
+$(function () {
+  $('.box').click(function () {
+    $(this).toggleClass('rotate')
+  })
 })

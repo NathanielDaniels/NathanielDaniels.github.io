@@ -367,16 +367,18 @@ section#portfolio-section .portfolio .grid-container .portfolio-grid .box {
   -webkit-filter: drop-shadow(0px 4px 4px #340c5a);
           filter: drop-shadow(0px 4px 4px #340c5a);
   overflow: hidden;
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
+  z-index: 5;
 }
 
 section#portfolio-section .portfolio .grid-container .portfolio-grid .box:hover {
-  z-index: 1;
-  -webkit-transform: scale(1.1) rotate(5deg);
-          transform: scale(1.1) rotate(5deg);
   -webkit-filter: drop-shadow(0px 8px 8px #340c5a);
           filter: drop-shadow(0px 8px 8px #340c5a);
+}
+
+section#portfolio-section .portfolio .grid-container .portfolio-grid .rotate {
+  z-index: 10;
+  -webkit-transform: scale(2) rotate(360deg);
+          transform: scale(2) rotate(360deg);
 }
 
 section#portfolio-section .portfolio .grid-container .portfolio-grid .box1 {

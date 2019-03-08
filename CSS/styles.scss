@@ -316,31 +316,25 @@ section#portfolio-section {
         .box {
           border-radius: 10px;
           background: hsl(0, 0%, 15%);
-          // background: lime;
           transition: .4s ease-in-out;
           cursor: pointer;
           filter: drop-shadow(0px 4px 4px hsl(271, 76%, 20%));
           overflow: hidden;
-          transform: rotate(0);
+          z-index: 5;
           &:hover {
-            z-index: 1;
-            transform: scale(1.1) rotate(5deg);
-            // transform: scale(1.1);
+            // z-index: 1;
             filter: drop-shadow(0px 8px 8px hsl(271, 76%, 20%));
-
           }
-          
-          // img {
-          //   width: 120%;
-          //   height: 100%;
-          //   border-radius: 5px;
-          //   &:hover {
-          //     // transform: scale(1.1), rotate(15deg);
-          //   }
+        }
+        .rotate {
+          z-index: 10;
+          transform: scale(2) rotate(360deg);
+          // &:hover {
+          //   opacity: .5;
           // }
         }
+        
         .box1 {
-          
           border-top-left-radius: 15px;
           background-image: url('/IMG/portfolio-img/Simones-recipe-box.png');
           background-size: cover;
@@ -364,14 +358,16 @@ section#portfolio-section {
           // background: red;
           border-bottom-left-radius: 15px;
         }
-        .box5 {
-          // background: purple;
-        }
+        // .box5 {
+        //   // background: purple;
+        // }
         .box6 {
           // background: #fff;
           border-bottom-right-radius: 15px;
         }
+        
       }
+      
     }
   }
   
