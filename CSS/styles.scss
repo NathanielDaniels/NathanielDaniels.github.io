@@ -316,11 +316,12 @@ section#portfolio-section {
         .box {
           border-radius: 10px;
           background: hsl(0, 0%, 15%);
-          transition: .4s ease-in-out;
+          transition: .5s ease-in-out;
           cursor: pointer;
           filter: drop-shadow(0px 4px 4px hsl(271, 76%, 20%));
           overflow: hidden;
           z-index: 5;
+          perspective: 600px;
           &:hover {
             // z-index: 1;
             filter: drop-shadow(0px 8px 8px hsl(271, 76%, 20%));
@@ -328,7 +329,10 @@ section#portfolio-section {
         }
         .rotate {
           z-index: 10;
-          transform: scale(2) rotate(360deg);
+          // transform: scale(2) rotateX(180deg) rotateY(180deg);
+          // transform: scale(2) rotateX(180deg);
+          transform: scale(2) rotateY(180deg);
+          // transform: scale(2) rotate(360deg);
           // &:hover {
           //   opacity: .5;
           // }
@@ -339,6 +343,7 @@ section#portfolio-section {
           background-image: url('/IMG/portfolio-img/Simones-recipe-box.png');
           background-size: cover;
           background-position: center center;
+          // backface-visibility: hidden;
           // &:hover {
           //   transform: scale(1.1) rotate(5deg);
           // }

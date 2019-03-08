@@ -361,13 +361,15 @@ section#portfolio-section .portfolio .grid-container .portfolio-grid {
 section#portfolio-section .portfolio .grid-container .portfolio-grid .box {
   border-radius: 10px;
   background: #262626;
-  -webkit-transition: .4s ease-in-out;
-  transition: .4s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
   cursor: pointer;
   -webkit-filter: drop-shadow(0px 4px 4px #340c5a);
           filter: drop-shadow(0px 4px 4px #340c5a);
   overflow: hidden;
   z-index: 5;
+  -webkit-perspective: 600px;
+          perspective: 600px;
 }
 
 section#portfolio-section .portfolio .grid-container .portfolio-grid .box:hover {
@@ -377,8 +379,8 @@ section#portfolio-section .portfolio .grid-container .portfolio-grid .box:hover 
 
 section#portfolio-section .portfolio .grid-container .portfolio-grid .rotate {
   z-index: 10;
-  -webkit-transform: scale(2) rotate(360deg);
-          transform: scale(2) rotate(360deg);
+  -webkit-transform: scale(2) rotateY(180deg);
+          transform: scale(2) rotateY(180deg);
 }
 
 section#portfolio-section .portfolio .grid-container .portfolio-grid .box1 {

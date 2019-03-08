@@ -52,8 +52,20 @@ setInterval(function () {
 // console.log(rotateBox())
 // })
 
+// PORTFOLIO CLICK FUNCTION =====================
 $(function () {
   $('.box').click(function () {
-    $(this).toggleClass('rotate')
+    // $(this).toggleClass('rotate')
+    $(this)
+      .toggleClass('rotate')
+      .siblings('.rotate')
+      .removeClass('rotate')
+
+    // $(this).
   })
 })
+
+// ONLY WORKS ONE CLICK ===================
+// $('.box').one('click', function () {
+//   $(this).toggleClass('rotate')
+// })
