@@ -60,8 +60,6 @@ $(function () {
       .toggleClass('rotate')
       .siblings('.rotate')
       .removeClass('rotate')
-
-    // $(this).
   })
 })
 

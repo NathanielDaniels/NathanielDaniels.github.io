@@ -9,6 +9,11 @@
   scroll-behavior: smooth;
 }
 
+*::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html, body {
   max-width: 100%;
   width: 100%;
@@ -117,8 +122,8 @@ section.main-section header.main-section--header .header__container ul.header__n
           filter: drop-shadow(0px 2px 2px #340c5a);
 }
 
-section.main-section header.main-section--header #burger-container {
-  display: inline-block;
+section.main-section header.main-section--header .burger-container {
+  display: none;
   background: transparent;
   border: transparent;
   border-radius: 50%;
@@ -128,29 +133,29 @@ section.main-section header.main-section--header #burger-container {
   cursor: pointer;
 }
 
-section.main-section header.main-section--header #burger-container:focus {
+section.main-section header.main-section--header .burger-container:focus {
   outline: thin dashed;
   outline-color: yellow;
   padding: 0 5px;
 }
 
-section.main-section header.main-section--header #burger-container .burger-elements {
+section.main-section header.main-section--header .burger-container .burger-elements {
   width: 35px;
   height: 35px;
   position: relative;
   top: 5px;
 }
 
-section.main-section header.main-section--header #burger-container .burger-elements:hover {
+section.main-section header.main-section--header .burger-container .burger-elements:hover {
   -webkit-filter: drop-shadow(0px 2px 2px #340c5a);
           filter: drop-shadow(0px 2px 2px #340c5a);
 }
 
-section.main-section header.main-section--header #burger-container .burger-elements:hover .line {
+section.main-section header.main-section--header .burger-container .burger-elements:hover .line {
   background: yellow;
 }
 
-section.main-section header.main-section--header #burger-container .burger-elements .line {
+section.main-section header.main-section--header .burger-container .burger-elements .line {
   position: absolute;
   width: 35px;
   height: 4px;
@@ -161,26 +166,26 @@ section.main-section header.main-section--header #burger-container .burger-eleme
   transition: all 0.2s cubic-bezier(0.42, 0, 0.68, 1.78);
 }
 
-section.main-section header.main-section--header #burger-container .burger-elements .line01 {
+section.main-section header.main-section--header .burger-container .burger-elements .line01 {
   top: 5%;
 }
 
-section.main-section header.main-section--header #burger-container .burger-elements .line02 {
+section.main-section header.main-section--header .burger-container .burger-elements .line02 {
   top: 30%;
 }
 
-section.main-section header.main-section--header #burger-container .burger-elements .line03 {
+section.main-section header.main-section--header .burger-container .burger-elements .line03 {
   top: 55%;
 }
 
-section.main-section header.main-section--header #burger-container .burger-elements.close .line01 {
+section.main-section header.main-section--header .burger-container .burger-elements.close .line01 {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   top: 30%;
   background: yellow;
 }
 
-section.main-section header.main-section--header #burger-container .burger-elements.close .line02, section.main-section header.main-section--header #burger-container .burger-elements.close .line03 {
+section.main-section header.main-section--header .burger-container .burger-elements.close .line02, section.main-section header.main-section--header .burger-container .burger-elements.close .line03 {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   top: 30%;
@@ -356,6 +361,8 @@ section#portfolio-section .portfolio .grid-container .portfolio-grid {
   grid-gap: 15px;
   width: 1000px;
   height: 400px;
+  -webkit-perspective: 600px;
+          perspective: 600px;
 }
 
 section#portfolio-section .portfolio .grid-container .portfolio-grid .box {
@@ -368,8 +375,8 @@ section#portfolio-section .portfolio .grid-container .portfolio-grid .box {
           filter: drop-shadow(0px 4px 4px #340c5a);
   overflow: hidden;
   z-index: 5;
-  -webkit-perspective: 600px;
-          perspective: 600px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 section#portfolio-section .portfolio .grid-container .portfolio-grid .box:hover {
