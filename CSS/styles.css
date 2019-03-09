@@ -553,7 +553,7 @@ footer.footer-section .web-dev {
         grid-template-columns: 1fr !important;
     -ms-grid-rows: (1fr)[6] !important;
         grid-template-rows: repeat(6, 1fr) !important;
-    width: 50% !important;
+    width: 80% !important;
   }
 }
 
