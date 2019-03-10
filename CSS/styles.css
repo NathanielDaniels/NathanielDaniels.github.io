@@ -671,6 +671,12 @@ html, body {
   }
 }
 
+@media screen and (min-width: 600px) {
+  #sidebar-menu {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .main-content .content-wrapper h1 {
     font-size: 36px !important;

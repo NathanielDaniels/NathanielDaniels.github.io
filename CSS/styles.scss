@@ -504,7 +504,7 @@ html,body {
   }
 }
 
-// @MEDIA Section ================================
+// @MEDIA QUERIES Section ================================
 @media screen and (max-width: 800px) {
   .main-content {
     .content-wrapper {
@@ -535,8 +535,8 @@ html,body {
   }
   section#contact-section {
     padding-top: 75px !important;
-    .contact {
-    }
+    // .contact {
+    // }
   }
 }
 
@@ -602,6 +602,12 @@ html,body {
     }
   }
 
+}
+
+@media screen and (min-width: 600px) {
+  #sidebar-menu {
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 500px) {
