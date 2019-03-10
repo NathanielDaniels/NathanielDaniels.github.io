@@ -96,7 +96,7 @@ html,body {
 }
 
   // MAIN Section (Hero) ===========================
-section.main-section {
+.main-section {
   height: 125vh;
   display: flex;
   justify-content: center;
@@ -255,7 +255,7 @@ section.main-section {
 }
   
   // ABOUT Section =================================
-section#about-section {
+#about-section {
   .about {
     height: 800px;
     @include angle(before);
@@ -290,7 +290,7 @@ section#about-section {
 }
  
   // PORTFOLIO Section =============================
-section#portfolio-section {
+#portfolio-section {
   .portfolio {
     height: 600px;
     @include angle(both);
@@ -382,7 +382,7 @@ section#portfolio-section {
 }
 
   // CONTACT Section ===============================
-section#contact-section {
+#contact-section {
   padding-top: 100px;
   height: 700px;
   background: #fff;
@@ -468,7 +468,7 @@ section#contact-section {
 
 
   // FOOTER Section ================================
-footer.footer-section {
+.footer-section {
   width: 100%;
   display: flex;
   align-items: center;
@@ -508,12 +508,17 @@ footer.footer-section {
       }
     }
   }
-  .portfolio-grid { 
-    grid-template-columns: 1fr 1fr !important;
-    grid-template-rows: repeat(3, 1fr) !important;
-    width: 90% !important;
-    .box {
-      height: 200px !important ;
+  section#portfolio-section {
+    .portfolio { 
+      height: 800px !important;
+      .portfolio-grid { 
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+        width: 90% !important;
+        .box {
+          height: 200px !important;
+        }
+      }
     }
   }
 }
@@ -539,5 +544,31 @@ footer.footer-section {
       }
     }
   }
-  
+  section#portfolio-section {
+    .portfolio { 
+      height: 1500px !important;
+      .portfolio-grid { 
+        grid-template-columns: 1fr !important;
+        grid-template-rows: repeat(6, 1fr) !important;
+        width: 80% !important;
+        .box {
+          height: 200px !important;
+        }
+      }
+    }
+  }
+  #contact-section {
+    width: 100% !important;
+    height: 900px !important;
+    display: flex !important;
+    
+    .contact {
+      .cf-form {
+        margin: 0 auto !important;
+      }
+      .half {
+        width: 80% !important;
+      }
+    }
+  }
 }

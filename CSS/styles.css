@@ -20,7 +20,7 @@ html, body {
   height: 100%;
 }
 
-section.main-section {
+.main-section {
   height: 125vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,7 +34,7 @@ section.main-section {
   background: #761cca;
 }
 
-section.main-section .bg {
+.main-section .bg {
   background-image: url("/IMG/desk-background.jpg");
   background-size: cover;
   background-position: 50% 100%;
@@ -44,7 +44,7 @@ section.main-section .bg {
           filter: opacity(0.15);
 }
 
-section.main-section header.main-section__header {
+.main-section header.main-section__header {
   position: absolute;
   top: 0;
   -webkit-box-align: center;
@@ -60,14 +60,14 @@ section.main-section header.main-section__header {
   width: 100%;
 }
 
-section.main-section header.main-section__header .header--inner-container {
+.main-section header.main-section__header .header--inner-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 98%;
 }
 
-section.main-section header.main-section__header .header--inner-container .header--logo {
+.main-section header.main-section__header .header--inner-container .header--logo {
   color: yellow;
   padding-left: 20px;
   font-size: 40px;
@@ -75,12 +75,12 @@ section.main-section header.main-section__header .header--inner-container .heade
   transition: .3s ease-in-out;
 }
 
-section.main-section header.main-section__header .header--inner-container .header--logo:hover {
+.main-section header.main-section__header .header--inner-container .header--logo:hover {
   -webkit-filter: drop-shadow(0px 2px 2px #340c5a);
           filter: drop-shadow(0px 2px 2px #340c5a);
 }
 
-section.main-section header.main-section__header .header--inner-container .header--nav-links {
+.main-section header.main-section__header .header--inner-container .header--nav-links {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -93,12 +93,12 @@ section.main-section header.main-section__header .header--inner-container .heade
           justify-content: flex-end;
 }
 
-section.main-section header.main-section__header .header--inner-container .header--nav-links li {
+.main-section header.main-section__header .header--inner-container .header--nav-links li {
   list-style: none;
   padding: 0 20px;
 }
 
-section.main-section header.main-section__header .header--inner-container .header--nav-links li a {
+.main-section header.main-section__header .header--inner-container .header--nav-links li a {
   color: #fff;
   font-size: 20px;
   text-decoration: none;
@@ -108,13 +108,13 @@ section.main-section header.main-section__header .header--inner-container .heade
   cursor: pointer;
 }
 
-section.main-section header.main-section__header .header--inner-container .header--nav-links li a:hover {
+.main-section header.main-section__header .header--inner-container .header--nav-links li a:hover {
   color: yellow;
   -webkit-filter: drop-shadow(0px 2px 2px #340c5a);
           filter: drop-shadow(0px 2px 2px #340c5a);
 }
 
-section.main-section header.main-section__header .header--inner-container .header--nav-links li a:focus {
+.main-section header.main-section__header .header--inner-container .header--nav-links li a:focus {
   outline: 1.45px dashed;
   outline-color: yellow;
   padding: 2px 5px;
@@ -122,7 +122,7 @@ section.main-section header.main-section__header .header--inner-container .heade
           filter: drop-shadow(0px 2px 2px #340c5a);
 }
 
-section.main-section header.main-section__header .burger-container {
+.main-section header.main-section__header .burger-container {
   display: none;
   background: transparent;
   border: transparent;
@@ -133,29 +133,29 @@ section.main-section header.main-section__header .burger-container {
   cursor: pointer;
 }
 
-section.main-section header.main-section__header .burger-container:focus {
+.main-section header.main-section__header .burger-container:focus {
   outline: thin dashed;
   outline-color: yellow;
   padding: 0 5px;
 }
 
-section.main-section header.main-section__header .burger-container .burger-elements {
+.main-section header.main-section__header .burger-container .burger-elements {
   width: 35px;
   height: 35px;
   position: relative;
   top: 5px;
 }
 
-section.main-section header.main-section__header .burger-container .burger-elements:hover {
+.main-section header.main-section__header .burger-container .burger-elements:hover {
   -webkit-filter: drop-shadow(0px 2px 2px #340c5a);
           filter: drop-shadow(0px 2px 2px #340c5a);
 }
 
-section.main-section header.main-section__header .burger-container .burger-elements:hover .line {
+.main-section header.main-section__header .burger-container .burger-elements:hover .line {
   background: yellow;
 }
 
-section.main-section header.main-section__header .burger-container .burger-elements .line {
+.main-section header.main-section__header .burger-container .burger-elements .line {
   position: absolute;
   width: 35px;
   height: 4px;
@@ -166,43 +166,43 @@ section.main-section header.main-section__header .burger-container .burger-eleme
   transition: all 0.2s cubic-bezier(0.42, 0, 0.68, 1.78);
 }
 
-section.main-section header.main-section__header .burger-container .burger-elements .line01 {
+.main-section header.main-section__header .burger-container .burger-elements .line01 {
   top: 5%;
 }
 
-section.main-section header.main-section__header .burger-container .burger-elements .line02 {
+.main-section header.main-section__header .burger-container .burger-elements .line02 {
   top: 30%;
 }
 
-section.main-section header.main-section__header .burger-container .burger-elements .line03 {
+.main-section header.main-section__header .burger-container .burger-elements .line03 {
   top: 55%;
 }
 
-section.main-section header.main-section__header .burger-container .burger-elements.close .line01 {
+.main-section header.main-section__header .burger-container .burger-elements.close .line01 {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   top: 30%;
   background: yellow;
 }
 
-section.main-section header.main-section__header .burger-container .burger-elements.close .line02, section.main-section header.main-section__header .burger-container .burger-elements.close .line03 {
+.main-section header.main-section__header .burger-container .burger-elements.close .line02, .main-section header.main-section__header .burger-container .burger-elements.close .line03 {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   top: 30%;
   background: yellow;
 }
 
-section.main-section .main-content {
+.main-section .main-content {
   position: absolute;
 }
 
-section.main-section .main-content .content-wrapper {
+.main-section .main-content .content-wrapper {
   position: relative;
   top: -80px;
   cursor: default;
 }
 
-section.main-section .main-content .content-wrapper h1 {
+.main-section .main-content .content-wrapper h1 {
   font-size: 80px;
   padding: 10px 0;
   color: #ffff99;
@@ -210,19 +210,19 @@ section.main-section .main-content .content-wrapper h1 {
           filter: drop-shadow(0px 2px 2px #340c5a);
 }
 
-section.main-section .main-content .content-wrapper .greeting-loop {
+.main-section .main-content .content-wrapper .greeting-loop {
   color: #fff;
   font-size: 40px;
   text-align: center;
 }
 
-section.main-section .triangle-container {
+.main-section .triangle-container {
   position: absolute;
   top: 90%;
   z-index: 5;
 }
 
-section.main-section .triangle-container .triangle-down {
+.main-section .triangle-container .triangle-down {
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-top: 25px solid yellow;
@@ -230,7 +230,7 @@ section.main-section .triangle-container .triangle-down {
           filter: drop-shadow(0px 3px 2px #340c5a);
 }
 
-section#about-section .about {
+#about-section .about {
   height: 800px;
   position: relative;
   z-index: 1;
@@ -240,7 +240,7 @@ section#about-section .about {
   cursor: default;
 }
 
-section#about-section .about:before {
+#about-section .about:before {
   background: inherit;
   content: '';
   display: block;
@@ -253,7 +253,7 @@ section#about-section .about:before {
           backface-visibility: hidden;
 }
 
-section#about-section .about:before {
+#about-section .about:before {
   top: 0;
   -webkit-transform: skewY(6deg);
           transform: skewY(6deg);
@@ -261,7 +261,7 @@ section#about-section .about:before {
           transform-origin: 100% 0;
 }
 
-section#about-section .about h2.about-title {
+#about-section .about h2.about-title {
   font-size: 50px;
   font-weight: 800;
   color: blueviolet;
@@ -269,7 +269,7 @@ section#about-section .about h2.about-title {
   margin-left: 80px;
 }
 
-section#about-section .about p.about-info {
+#about-section .about p.about-info {
   padding: 50px 0;
   font-size: 22px;
   width: 80%;
@@ -293,7 +293,7 @@ section#about-section .about p.about-info {
           hyphens: auto;
 }
 
-section#portfolio-section .portfolio {
+#portfolio-section .portfolio {
   height: 600px;
   position: relative;
   z-index: 1;
@@ -301,7 +301,7 @@ section#portfolio-section .portfolio {
   cursor: default;
 }
 
-section#portfolio-section .portfolio:before, section#portfolio-section .portfolio:after {
+#portfolio-section .portfolio:before, #portfolio-section .portfolio:after {
   background: inherit;
   content: '';
   display: block;
@@ -314,7 +314,7 @@ section#portfolio-section .portfolio:before, section#portfolio-section .portfoli
           backface-visibility: hidden;
 }
 
-section#portfolio-section .portfolio:before {
+#portfolio-section .portfolio:before {
   top: 0;
   -webkit-transform: skewY(6deg);
           transform: skewY(6deg);
@@ -322,7 +322,7 @@ section#portfolio-section .portfolio:before {
           transform-origin: 100% 0;
 }
 
-section#portfolio-section .portfolio:after {
+#portfolio-section .portfolio:after {
   bottom: 0;
   -webkit-transform: skewY(-6deg);
           transform: skewY(-6deg);
@@ -330,7 +330,7 @@ section#portfolio-section .portfolio:after {
           transform-origin: 100%;
 }
 
-section#portfolio-section .portfolio h2.portfolio-title {
+#portfolio-section .portfolio h2.portfolio-title {
   font-weight: 800;
   text-align: center;
   font-size: 50px;
@@ -338,7 +338,7 @@ section#portfolio-section .portfolio h2.portfolio-title {
   text-transform: uppercase;
 }
 
-section#portfolio-section .portfolio .grid-container {
+#portfolio-section .portfolio .grid-container {
   margin: 75px 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -351,7 +351,7 @@ section#portfolio-section .portfolio .grid-container {
           align-items: center;
 }
 
-section#portfolio-section .portfolio .grid-container .portfolio-grid {
+#portfolio-section .portfolio .grid-container .portfolio-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -365,7 +365,7 @@ section#portfolio-section .portfolio .grid-container .portfolio-grid {
           perspective: 600px;
 }
 
-section#portfolio-section .portfolio .grid-container .portfolio-grid .box {
+#portfolio-section .portfolio .grid-container .portfolio-grid .box {
   border-radius: 10px;
   background: #262626;
   -webkit-transition: .5s ease-in-out;
@@ -379,57 +379,57 @@ section#portfolio-section .portfolio .grid-container .portfolio-grid .box {
           transform-style: preserve-3d;
 }
 
-section#portfolio-section .portfolio .grid-container .portfolio-grid .box:hover {
+#portfolio-section .portfolio .grid-container .portfolio-grid .box:hover {
   -webkit-filter: drop-shadow(0px 8px 8px #340c5a);
           filter: drop-shadow(0px 8px 8px #340c5a);
 }
 
-section#portfolio-section .portfolio .grid-container .portfolio-grid .rotate {
+#portfolio-section .portfolio .grid-container .portfolio-grid .rotate {
   z-index: 10;
   -webkit-transform: scale(2) rotateY(180deg);
           transform: scale(2) rotateY(180deg);
 }
 
-section#portfolio-section .portfolio .grid-container .portfolio-grid .box1 {
+#portfolio-section .portfolio .grid-container .portfolio-grid .box1 {
   border-top-left-radius: 15px;
   background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
   background-size: cover;
   background-position: center center;
 }
 
-section#portfolio-section .portfolio .grid-container .portfolio-grid .box2 {
+#portfolio-section .portfolio .grid-container .portfolio-grid .box2 {
   background-image: url("/IMG/portfolio-img/Task-Manager.png");
   background-size: cover;
   background-position: center center;
 }
 
-section#portfolio-section .portfolio .grid-container .portfolio-grid .box3 {
+#portfolio-section .portfolio .grid-container .portfolio-grid .box3 {
   background-image: url("/IMG/portfolio-img/Rock-Paper-Pokemon.png");
   background-size: cover;
   background-position: center center;
   border-top-right-radius: 15px;
 }
 
-section#portfolio-section .portfolio .grid-container .portfolio-grid .box4 {
+#portfolio-section .portfolio .grid-container .portfolio-grid .box4 {
   border-bottom-left-radius: 15px;
 }
 
-section#portfolio-section .portfolio .grid-container .portfolio-grid .box6 {
+#portfolio-section .portfolio .grid-container .portfolio-grid .box6 {
   border-bottom-right-radius: 15px;
 }
 
-section#contact-section {
+#contact-section {
   padding-top: 100px;
   height: 700px;
   background: #fff;
   cursor: default;
 }
 
-section#contact-section .contact {
+#contact-section .contact {
   text-align: center;
 }
 
-section#contact-section .contact h2.contact-title {
+#contact-section .contact h2.contact-title {
   margin-top: 40px;
   font-weight: 800;
   font-size: 50px;
@@ -437,13 +437,13 @@ section#contact-section .contact h2.contact-title {
   text-transform: uppercase;
 }
 
-section#contact-section .contact form.cfForm {
+#contact-section .contact form.cfForm {
   max-width: 600px;
   text-align: center;
   margin: 55px auto;
 }
 
-section#contact-section .contact form.cfForm input, section#contact-section .contact form.cfForm textarea {
+#contact-section .contact form.cfForm input, #contact-section .contact form.cfForm textarea {
   font-size: 18px;
   border: 1px solid blueviolet;
   padding: 1em;
@@ -457,13 +457,13 @@ section#contact-section .contact form.cfForm input, section#contact-section .con
   resize: none;
 }
 
-section#contact-section .contact form.cfForm input:focus, section#contact-section .contact form.cfForm textarea:focus {
+#contact-section .contact form.cfForm input:focus, #contact-section .contact form.cfForm textarea:focus {
   outline-color: yellow;
   -webkit-filter: drop-shadow(1px 2px 2px blueviolet);
           filter: drop-shadow(1px 2px 2px blueviolet);
 }
 
-section#contact-section .contact form.cfForm #input-submit {
+#contact-section .contact form.cfForm #input-submit {
   color: #fff;
   font-size: 30px;
   font-weight: bold;
@@ -477,30 +477,30 @@ section#contact-section .contact form.cfForm #input-submit {
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
 
-section#contact-section .contact form.cfForm #input-submit:hover {
+#contact-section .contact form.cfForm #input-submit:hover {
   -webkit-filter: drop-shadow(0px 1px 1px gray);
           filter: drop-shadow(0px 1px 1px gray);
 }
 
-section#contact-section .contact form.cfForm textarea {
+#contact-section .contact form.cfForm textarea {
   height: 214px;
 }
 
-section#contact-section .contact .half {
+#contact-section .contact .half {
   float: left;
   width: 48%;
   margin-bottom: 1em;
 }
 
-section#contact-section .contact .right {
+#contact-section .contact .right {
   width: 50%;
 }
 
-section#contact-section .contact .left {
+#contact-section .contact .left {
   margin-right: 2%;
 }
 
-footer.footer-section {
+.footer-section {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -513,7 +513,7 @@ footer.footer-section {
   height: 70px;
 }
 
-footer.footer-section .social-media {
+.footer-section .social-media {
   width: 20%;
   margin: 0 auto;
   display: -webkit-box;
@@ -524,19 +524,19 @@ footer.footer-section .social-media {
   cursor: pointer;
 }
 
-footer.footer-section .social-media a {
+.footer-section .social-media a {
   color: #fff;
 }
 
-footer.footer-section .social-media a:hover {
+.footer-section .social-media a:hover {
   color: blueviolet;
 }
 
-footer.footer-section .social-media a .fab {
+.footer-section .social-media a .fab {
   font-size: 40px;
 }
 
-footer.footer-section .web-dev {
+.footer-section .web-dev {
   font-size: 18px;
   position: absolute;
   right: 0;
@@ -548,14 +548,17 @@ footer.footer-section .web-dev {
   .main-content .content-wrapper h1 {
     font-size: 60px !important;
   }
-  .portfolio-grid {
+  section#portfolio-section .portfolio {
+    height: 800px !important;
+  }
+  section#portfolio-section .portfolio .portfolio-grid {
     -ms-grid-columns: 1fr 1fr !important;
         grid-template-columns: 1fr 1fr !important;
     -ms-grid-rows: (1fr)[3] !important;
         grid-template-rows: repeat(3, 1fr) !important;
     width: 90% !important;
   }
-  .portfolio-grid .box {
+  section#portfolio-section .portfolio .portfolio-grid .box {
     height: 200px !important;
   }
 }
@@ -569,6 +572,32 @@ footer.footer-section .web-dev {
   }
   .main-content .content-wrapper h1 {
     font-size: 50px !important;
+  }
+  section#portfolio-section .portfolio {
+    height: 1500px !important;
+  }
+  section#portfolio-section .portfolio .portfolio-grid {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+    -ms-grid-rows: (1fr)[6] !important;
+        grid-template-rows: repeat(6, 1fr) !important;
+    width: 80% !important;
+  }
+  section#portfolio-section .portfolio .portfolio-grid .box {
+    height: 200px !important;
+  }
+  #contact-section {
+    width: 100% !important;
+    height: 900px !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  #contact-section .contact .cf-form {
+    margin: 0 auto !important;
+  }
+  #contact-section .contact .half {
+    width: 80% !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */
