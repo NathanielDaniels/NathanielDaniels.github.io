@@ -8,6 +8,7 @@
 $menu = $('.burger-elements')
 
 $menu.click(function () {
+  $('#sidebar-menu').toggleClass('active')
   $(this).toggleClass('close')
 })
 
