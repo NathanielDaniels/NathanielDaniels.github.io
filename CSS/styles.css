@@ -549,11 +549,14 @@ footer.footer-section .web-dev {
     font-size: 60px !important;
   }
   .portfolio-grid {
-    -ms-grid-columns: 1fr !important;
-        grid-template-columns: 1fr !important;
-    -ms-grid-rows: (1fr)[6] !important;
-        grid-template-rows: repeat(6, 1fr) !important;
-    width: 80% !important;
+    -ms-grid-columns: 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
+    -ms-grid-rows: (1fr)[3] !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+    width: 90% !important;
+  }
+  .portfolio-grid .box {
+    height: 200px !important;
   }
 }
 

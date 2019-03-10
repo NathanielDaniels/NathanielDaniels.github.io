@@ -509,10 +509,12 @@ footer.footer-section {
     }
   }
   .portfolio-grid { 
-    grid-template-columns: 1fr !important;
-    grid-template-rows: repeat(6, 1fr) !important;
-    width: 80% !important;
-
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: repeat(3, 1fr) !important;
+    width: 90% !important;
+    .box {
+      height: 200px !important ;
+    }
   }
 }
 
