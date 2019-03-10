@@ -368,7 +368,7 @@ html,body {
         }
         .rotate {
           z-index: 10;
-          transform: scale(2) rotateY(180deg);
+          transform: scale(1.5) rotateY(180deg);
         }
         
         .box1 {
@@ -540,6 +540,12 @@ html,body {
   }
 }
 
+@media screen and (min-width: 600px) {
+  #sidebar-menu {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .main-section__header {
     .header--inner-container {
@@ -576,6 +582,9 @@ html,body {
         .box {
           height: 200px !important;
         }
+        .rotate {
+          transform: scale(1) rotateY(180deg) !important;
+        }
       }
     }
   }
@@ -602,12 +611,6 @@ html,body {
     }
   }
 
-}
-
-@media screen and (min-width: 600px) {
-  #sidebar-menu {
-    display: none !important;
-  }
 }
 
 @media screen and (max-width: 500px) {
