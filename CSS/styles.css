@@ -280,7 +280,7 @@ html, body {
 }
 
 #about-section .about {
-  height: 800px;
+  height: 700px;
   position: relative;
   z-index: 1;
   background: #fff;
@@ -315,7 +315,7 @@ html, body {
   font-weight: 800;
   color: blueviolet;
   text-transform: uppercase;
-  margin-left: 80px;
+  text-align: center;
 }
 
 #about-section .about p.about-info {
@@ -343,6 +343,7 @@ html, body {
 }
 
 #portfolio-section .portfolio {
+  padding-top: 10px;
   height: 600px;
   position: relative;
   z-index: 1;
@@ -597,7 +598,12 @@ html, body {
   .main-content .content-wrapper h1 {
     font-size: 60px !important;
   }
+  #about-section .about {
+    padding-top: 50px !important;
+    height: 800px !important;
+  }
   section#portfolio-section .portfolio {
+    padding-top: 50px !important;
     height: 800px !important;
   }
   section#portfolio-section .portfolio .portfolio-grid {
@@ -610,6 +616,9 @@ html, body {
   section#portfolio-section .portfolio .portfolio-grid .box {
     height: 200px !important;
   }
+  section#contact-section {
+    padding-top: 75px !important;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -621,6 +630,9 @@ html, body {
   }
   .main-content .content-wrapper h1 {
     font-size: 50px !important;
+  }
+  #about-section .about {
+    height: 800px !important;
   }
   section#portfolio-section .portfolio {
     height: 1500px !important;
@@ -666,8 +678,20 @@ html, body {
   .main-content .content-wrapper .greeting-loop {
     font-size: 26px !important;
   }
-  #about-section .about {
-    height: 920px;
+  #about-section .about p.about-info {
+    font-size: 18px !important;
+  }
+  footer.footer-section .social-media {
+    width: 100% !important;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+  footer.footer-section .social-media a {
+    padding: 5px;
+  }
+  footer.footer-section .web-dev {
+    font-size: 16px !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */

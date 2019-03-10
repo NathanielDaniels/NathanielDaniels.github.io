@@ -95,7 +95,7 @@ html,body {
   height: 100%;
 }
 
-  // MAIN Section (Hero) ===========================
+// MAIN Section (Hero) ===========================
 .main-section {
   height: 125vh;
   display: flex;
@@ -288,10 +288,11 @@ html,body {
   }
 }
   
-  // ABOUT Section =================================
+// ABOUT Section =================================
 #about-section {
   .about {
-    height: 800px;
+    // padding-top: 50px;
+    height: 700px;
     @include angle(before);
     background: #fff;
     width: 100%;
@@ -302,7 +303,8 @@ html,body {
       font-weight: 800;
       color: blueviolet;
       text-transform: uppercase;
-      margin-left: 80px;
+      // margin-left: 80px;
+      text-align: center;
     }
     p.about-info {
       padding: 50px 0;
@@ -322,9 +324,10 @@ html,body {
   }
 }
  
-  // PORTFOLIO Section =============================
+// PORTFOLIO Section =============================
 #portfolio-section {
   .portfolio {
+    padding-top: 10px;
     height: 600px;
     @include angle(both);
     background: blueviolet;
@@ -405,7 +408,7 @@ html,body {
   
 }
 
-  // CONTACT Section ===============================
+// CONTACT Section ===============================
 #contact-section {
   padding-top: 100px;
   height: 700px;
@@ -468,8 +471,7 @@ html,body {
   }
 }
 
-
-  // FOOTER Section ================================
+// FOOTER Section ================================
 .footer-section {
   width: 100%;
   display: flex;
@@ -502,6 +504,7 @@ html,body {
   }
 }
 
+// @MEDIA Section ================================
 @media screen and (max-width: 800px) {
   .main-content {
     .content-wrapper {
@@ -510,8 +513,15 @@ html,body {
       }
     }
   }
+  #about-section {
+    .about {
+      padding-top: 50px !important;
+      height: 800px !important;
+    }
+  }
   section#portfolio-section {
     .portfolio { 
+      padding-top: 50px !important;
       height: 800px !important;
       .portfolio-grid { 
         grid-template-columns: 1fr 1fr !important;
@@ -521,6 +531,11 @@ html,body {
           height: 200px !important;
         }
       }
+    }
+  }
+  section#contact-section {
+    padding-top: 75px !important;
+    .contact {
     }
   }
 }
@@ -544,6 +559,11 @@ html,body {
       h1 {
         font-size: 50px !important;
       }
+    }
+  }
+  #about-section {
+    .about {
+      height: 800px !important;
     }
   }
   section#portfolio-section {
@@ -598,7 +618,22 @@ html,body {
 
   #about-section {
     .about {
-      height: 920px ;
+      // height: 800px !important;
+      p.about-info {
+        font-size: 18px !important;
+      }
+    }
+  }
+  footer.footer-section {
+    .social-media {
+      width: 100% !important;
+      justify-content: flex-start !important;
+      a {
+        padding: 5px;
+      }
+    }
+    .web-dev {
+      font-size: 16px !important;
     }
   }
 }
