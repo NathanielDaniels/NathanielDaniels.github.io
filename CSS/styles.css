@@ -280,7 +280,7 @@ html, body {
 }
 
 #about-section .about {
-  height: 700px;
+  height: 1300px;
   position: relative;
   z-index: 1;
   background: #fff;
@@ -318,28 +318,19 @@ html, body {
   text-align: center;
 }
 
-#about-section .about p.about-info {
-  padding: 50px 0;
-  font-size: 22px;
-  width: 80%;
-  max-width: 80%;
-  line-height: 1.4em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: justify;
-  margin: 0 auto;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+#about-section .about .about-info {
+  font-size: 18px;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
+  line-height: 1.4em;
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow-wrap: break-word;
+  padding: 50px 0;
+  text-align: justify;
+  width: 80%;
+  word-wrap: break-word;
 }
 
 #portfolio-section .portfolio {
@@ -638,7 +629,7 @@ html, body {
     font-size: 50px !important;
   }
   #about-section .about {
-    height: 800px !important;
+    height: 1900px !important;
   }
   section#portfolio-section .portfolio {
     height: 1500px !important;
@@ -688,8 +679,12 @@ html, body {
   .main-content .content-wrapper .greeting-loop {
     font-size: 26px !important;
   }
+  #about-section .about {
+    height: auto !important;
+  }
   #about-section .about p.about-info {
     font-size: 18px !important;
+    width: 95% !important;
   }
   footer.footer-section .social-media {
     width: 100% !important;
