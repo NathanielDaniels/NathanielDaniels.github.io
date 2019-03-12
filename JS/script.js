@@ -35,23 +35,23 @@ setInterval(function () {
   docLink.effect('bounce', { times: 1 }, 1000)
 })
 
-//  ====================================
-// $('.box').magnificPopup({
-//   delegate: 'a',
-//   type: 'image',
-//   gallery: {
-//     enabled: true
-//   }
-// })
+// Show-More (about) ====================================
 
-//  ====================================
-// var box = $('.box')
+$('.show-more a').on('click', function () {
+  var $this = $(this)
+  var $content = $this.parent().prev('div.past')
+  var linkText = $this.text().toUpperCase()
 
-// box.click(function () {
-//   $(this).toggleClass('rotate')
+  if (linkText === 'SHOW MORE') {
+    linkText = 'Show less'
+    $content.switchClass('hideContent', 'showContent', 400)
+  } else {
+    linkText = 'Show more'
+    $content.switchClass('showContent', 'hideContent', 400)
+  }
 
-// console.log(rotateBox())
-// })
+  $this.text(linkText)
+})
 
 // PORTFOLIO CLICK FUNCTION =====================
 $(function () {

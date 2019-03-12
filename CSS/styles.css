@@ -279,8 +279,11 @@ html, body {
           filter: drop-shadow(0px 3px 2px #340c5a);
 }
 
+#about-section {
+  height: 1200px;
+}
+
 #about-section .about {
-  height: 1300px;
   position: relative;
   z-index: 1;
   background: #fff;
@@ -331,6 +334,26 @@ html, body {
   text-align: justify;
   width: 80%;
   word-wrap: break-word;
+}
+
+#about-section .about .about-info .past {
+  width: 100%;
+}
+
+#about-section .about .about-info .hideContent {
+  height: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#about-section .about .about-info .showContent {
+  line-height: 1em;
+  height: auto;
+}
+
+#about-section .about .about-info .show-more {
+  padding: 10px 0;
+  text-align: center;
 }
 
 #portfolio-section .portfolio {

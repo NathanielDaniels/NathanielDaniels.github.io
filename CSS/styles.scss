@@ -290,9 +290,10 @@ html,body {
   
 // ABOUT Section =================================
 #about-section {
+  height: 1200px;
+  // height: calc(100% + 250px);
   .about {
-    // padding-top: 50px;
-    height: 1300px;
+    // height: 1300px;
     @include angle(before);
     background: #fff;
     width: 100%;
@@ -319,6 +320,31 @@ html,body {
       text-align: justify;
       width: 80%;
       word-wrap: break-word;
+      .past {
+        width: 100%;
+        
+      }
+      .hideContent {
+        // line-height: 1em;
+        height: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        // white-space: nowrap;
+      }
+      .showContent {
+        line-height: 1em;
+        height: auto;
+      }
+      .show-more {
+        padding: 10px 0;
+        text-align: center;
+      }
+      // .present {
+
+      // }
+      // .future {
+
+      // }
     }
   }
 }
