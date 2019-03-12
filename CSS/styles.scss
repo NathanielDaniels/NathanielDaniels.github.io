@@ -114,14 +114,15 @@ html,body {
   }
       // HEADER/NAVBAR Section =========================
   header.main-section__header {
-    position: absolute;
+    position: fixed;
+    z-index: 100;
+    transition: top 0.2s ease-in-out;
     top:0;
     align-items: center;
     justify-content: center;
     display: flex;
     height: 70px;
     width: 100%;
-    // flex-direction: row-reverse;
     .header--inner-container {
       display: flex;
       width: 98%;
@@ -255,7 +256,12 @@ html,body {
     #sidebar-menu.active {
       top: 0;
     }
+    
   }
+  header.nav-up {
+    top: -70px;
+  }
+  
   .main-content {
     position: absolute;
     .content-wrapper {
