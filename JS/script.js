@@ -28,7 +28,7 @@ setInterval(function () {
     hasScrolled()
     didScroll = false
   }
-}, 250)
+}, 100)
 
 function hasScrolled () {
   var st = $(this).scrollTop()
@@ -80,21 +80,21 @@ setInterval(function () {
 
 // Show-More (about) ====================================
 
-$('.show-more a').on('click', function () {
-  var $this = $(this)
-  var $content = $this.parent().prev('div.past')
-  var linkText = $this.text().toUpperCase()
+// $('.show-more a').on('click', function () {
+//   var $this = $(this)
+//   var $content = $this.parent().prev('.past')
+//   var linkText = $this.text().toUpperCase()
 
-  if (linkText === 'SHOW MORE') {
-    linkText = 'Show less'
-    $content.switchClass('hideContent', 'showContent', 400)
-  } else {
-    linkText = 'Show more'
-    $content.switchClass('showContent', 'hideContent', 400)
-  }
+//   if (linkText === 'SHOW MORE') {
+//     linkText = 'Show less'
+//     $content.switchClass('hideContent', 'showContent', 400)
+//   } else {
+//     linkText = 'Show more'
+//     $content.switchClass('showContent', 'hideContent', 400)
+//   }
 
-  $this.text(linkText)
-})
+//   $this.text(linkText)
+// })
 
 // PORTFOLIO CLICK FUNCTION =====================
 $(function () {
