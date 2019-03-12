@@ -4,7 +4,7 @@
 //   mainTitle.innerHTML = 'Welcome!'
 // })
 
-// Hamburger Menu Animation ===============================
+// Hamburger Menu Animation! ======================
 $menu = $('.burger-elements')
 
 $menu.click(function () {
