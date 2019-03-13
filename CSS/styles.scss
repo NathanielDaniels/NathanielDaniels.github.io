@@ -602,6 +602,11 @@ span.face.blink:before, span.face.blink:after{
 
 // @MEDIA QUERIES Section ================================
 @media screen and (max-width: 800px) {
+  .main-section {
+    .header--logo {
+      display: none;
+    }
+  }
   .main-content {
     .content-wrapper {
       h1 {
@@ -715,6 +720,7 @@ span.face.blink:before, span.face.blink:after{
 }
 
 @media screen and (max-width: 500px) {
+  
   .main-content {
     .content-wrapper {
       h1 {

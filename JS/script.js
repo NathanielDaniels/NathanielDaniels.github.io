@@ -46,8 +46,8 @@ function trackMouse (event) {
   let faceBox = face.getBoundingClientRect()
 
   // the magic
-  let calcX = (headBox.width - faceBox.width) * (mX / vpW)
-  let calcY = (headBox.height - faceBox.height + 50) * (mY / vpH)
+  let calcX = (headBox.width - faceBox.width + 1000) * (mX / vpW)
+  let calcY = (headBox.height - faceBox.height - 50) * (mY / vpH)
 
   // add bounding restrictions to face
   calcX = clamp(calcX, 60, 150)
@@ -145,12 +145,12 @@ function change () {
   })
 }
 
-// Bounce Animation ====================================
-var docLink = $('#bounce')
+// Triangle Bounce Animation ====================================
+// var docLink = $('#bounce')
 
-setInterval(function () {
-  docLink.effect('bounce', { times: 1 }, 1000)
-})
+// setInterval(function () {
+//   docLink.effect('bounce', { times: 1 }, 1000)
+// })
 
 // Show-More (about) ====================================
 

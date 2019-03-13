@@ -679,6 +679,9 @@ html, body {
 }
 
 @media screen and (max-width: 800px) {
+  .main-section .header--logo {
+    display: none;
+  }
   .main-content .content-wrapper h1 {
     font-size: 60px !important;
   }
