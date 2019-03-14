@@ -47,7 +47,7 @@ function trackMouse (event) {
 
   // the magic
   let calcX = (headBox.width - faceBox.width + 1000) * (mX / vpW)
-  let calcY = (headBox.height - faceBox.height - 50) * (mY / vpH)
+  let calcY = (headBox.height - faceBox.height) * (mY / vpH)
 
   // add bounding restrictions to face
   calcX = clamp(calcX, 60, 150)

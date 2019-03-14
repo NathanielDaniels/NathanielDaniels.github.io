@@ -263,7 +263,7 @@ html, body {
   background: inherit;
   content: '';
   display: block;
-  height: 200px;
+  height: 500px;
   left: 0;
   position: absolute;
   right: 0;
@@ -358,7 +358,7 @@ html, body {
 }
 
 #about-section {
-  height: 1200px;
+  height: 800px;
 }
 
 #about-section .about {
@@ -374,7 +374,7 @@ html, body {
   background: inherit;
   content: '';
   display: block;
-  height: 200px;
+  height: 500px;
   left: 0;
   position: absolute;
   right: 0;
@@ -384,6 +384,7 @@ html, body {
 }
 
 #about-section .about:before {
+  border-top: 5px solid #333333;
   top: 0;
   -webkit-transform: skewY(6deg);
           transform: skewY(6deg);
@@ -447,7 +448,7 @@ html, body {
   background: inherit;
   content: '';
   display: block;
-  height: 200px;
+  height: 500px;
   left: 0;
   position: absolute;
   right: 0;
@@ -458,6 +459,7 @@ html, body {
 
 #portfolio-section .portfolio:before {
   top: 0;
+  border-top: 5px solid #333333;
   -webkit-transform: skewY(6deg);
           transform: skewY(6deg);
   -webkit-transform-origin: 100% 0;
@@ -466,6 +468,7 @@ html, body {
 
 #portfolio-section .portfolio:after {
   bottom: 0;
+  border-bottom: 5px solid #333333;
   -webkit-transform: skewY(-6deg);
           transform: skewY(-6deg);
   -webkit-transform-origin: 100%;
@@ -517,11 +520,19 @@ html, body {
           filter: drop-shadow(0px 4px 4px #340c5a);
   overflow: hidden;
   z-index: 5;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 #portfolio-section .portfolio .grid-container .portfolio-grid .box:hover {
   -webkit-filter: drop-shadow(0px 8px 8px #340c5a);
           filter: drop-shadow(0px 8px 8px #340c5a);
+}
+
+#portfolio-section .portfolio .grid-container .portfolio-grid .rotate {
+  z-index: 10;
+  -webkit-transform: scale(2) rotateY(180deg);
+          transform: scale(2) rotateY(180deg);
 }
 
 #portfolio-section .portfolio .grid-container .portfolio-grid .box1 {
@@ -722,7 +733,10 @@ html, body {
     display: block !important;
   }
   .main-content .content-wrapper h1 {
-    font-size: 50px !important;
+    font-size: 40px !important;
+  }
+  .main-content .content-wrapper .greeting-loop {
+    font-size: 26px !important;
   }
   #about-section .about {
     height: 1900px !important;
@@ -774,6 +788,9 @@ html, body {
   }
   .main-content .content-wrapper .greeting-loop {
     font-size: 26px !important;
+  }
+  #about-section {
+    height: 1000px !important;
   }
   #about-section .about {
     height: auto !important;

@@ -12,16 +12,18 @@
       // background: yellow;
       content: '';
       display: block;
-      height: 200px;
+      height: 500px;
       left: 0;
       position: absolute;
       right: 0;
       z-index: -1;
+      
       backface-visibility: hidden; // for Chrome Windows
     }
 
     @if $pseudo == 'before' {
       #{$selector} {
+        border-top: 5px solid hsl(0, 0%, 20%);
         top: 0;
 
         @if $flip {
@@ -37,7 +39,7 @@
     @if $pseudo == 'after' {
       #{$selector} {
         bottom: 0;
-
+        
         @if $flip {
           transform: skewY($angle);
           transform-origin: 0 100%;
@@ -51,7 +53,8 @@
     @if $pseudo == 'both' {
       &:before {
         top: 0;
-
+        border-top: 5px solid hsl(0, 0%, 20%);
+        // border-bottom: 2px solid red;
         @if $flip {
           transform: skewY($angle * -1);
           transform-origin: 0 0;
@@ -63,7 +66,7 @@
 
       &:after {
         bottom: 0;
-
+        border-bottom: 5px solid hsl(0, 0%, 20%);
         @if $flip {
           transform: skewY($angle);
           transform-origin: 0 0;
@@ -107,7 +110,6 @@ html,body {
   .header--logo{
   position: absolute;
   left: 8%;
-  // top: 50%;
   top: 90%;
   width: 100%;
   max-width: 300px;
@@ -361,7 +363,7 @@ span.face.blink:before, span.face.blink:after{
   
 // ABOUT Section =================================
 #about-section {
-  height: 1200px;
+  height: 800px;
   // height: calc(100% + 250px);
   .about {
     // height: 1300px;
@@ -456,16 +458,16 @@ span.face.blink:before, span.face.blink:after{
           filter: drop-shadow(0px 4px 4px hsl(271, 76%, 20%));
           overflow: hidden;
           z-index: 5;
-          // transform-style: preserve-3d;
+          transform-style: preserve-3d;
           &:hover {
             // transform: scale(1.01);
             filter: drop-shadow(0px 8px 8px hsl(271, 76%, 20%));
           }
         }
-        // .rotate {
-        //   z-index: 10;
-        //   // transform:perspective(0);
-        // }
+        .rotate {
+          z-index: 10;
+          transform: scale(2) rotateY(180deg);
+        }
         
         .box1 {
           border-top-left-radius: 15px;
@@ -669,7 +671,10 @@ span.face.blink:before, span.face.blink:after{
   .main-content {
     .content-wrapper {
       h1 {
-        font-size: 50px !important;
+        font-size: 40px !important;
+      }
+      .greeting-loop {
+        font-size: 26px !important;
       }
     }
   }
@@ -733,6 +738,7 @@ span.face.blink:before, span.face.blink:after{
   }
 
   #about-section {
+    height: 1000px !important;
     .about {
       height: auto !important;
       p.about-info {
@@ -741,6 +747,7 @@ span.face.blink:before, span.face.blink:after{
       }
     }
   }
+  
   footer.footer-section {
     .social-media {
       width: 100% !important;
