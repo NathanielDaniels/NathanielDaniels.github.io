@@ -363,11 +363,10 @@ span.face.blink:before, span.face.blink:after{
   
 // ABOUT Section =================================
 #about-section {
-  // height: 800px;
+  height: 800px;
   // height: calc(110% + 201px);
-  height: 150%;
+  // height: 110%;
   .about {
-    // height: 1300px;
     @include angle(before);
     background: #fff;
     width: 100%;
@@ -605,9 +604,10 @@ span.face.blink:before, span.face.blink:after{
 // @MEDIA QUERIES Section ================================
 @media screen and (max-width: 1000px) {
   #about-section {
-    .about {
-      height: calc(100% + 1000px) !important;
-    }
+    height: 1000px;
+    // .about {
+
+    // }
   }
 }
 
@@ -625,9 +625,9 @@ span.face.blink:before, span.face.blink:after{
     }
   }
   #about-section {
+    // height: 170% !important;
     .about {
       padding-top: 50px !important;
-      // height: 800px !important;
     }
   }
   section#portfolio-section {
@@ -690,6 +690,7 @@ span.face.blink:before, span.face.blink:after{
     }
   }
   // #about-section {
+  //   height: 180% !important;
   //   .about {
   //     // height: 1900px !important;
   //     // height: calc(100% + 1000px) !important;
@@ -750,9 +751,9 @@ span.face.blink:before, span.face.blink:after{
   }
 
   #about-section {
-    height: 170% !important;
+    height: 1200px !important;
     .about {
-      height: auto !important;
+      // height: auto !important;
       p.about-info {
         font-size: 18px !important;
         width: 95% !important;

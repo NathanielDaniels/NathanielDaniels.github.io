@@ -345,7 +345,7 @@ html, body {
 }
 
 #about-section {
-  height: 150%;
+  height: 800px;
 }
 
 #about-section .about {
@@ -675,8 +675,8 @@ html, body {
 }
 
 @media screen and (max-width: 1000px) {
-  #about-section .about {
-    height: calc(100% + 1000px) !important;
+  #about-section {
+    height: 1000px;
   }
 }
 
@@ -780,10 +780,7 @@ html, body {
     font-size: 26px !important;
   }
   #about-section {
-    height: 170% !important;
-  }
-  #about-section .about {
-    height: auto !important;
+    height: 1200px !important;
   }
   #about-section .about p.about-info {
     font-size: 18px !important;
