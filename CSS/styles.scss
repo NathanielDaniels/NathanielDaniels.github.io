@@ -105,8 +105,8 @@ html,body {
   justify-content: center;
   align-items: center;
   background: hsl(271, 76%, 45%);
+  // below is a very cool background texture
   // background: linear-gradient(90deg,rgba(76,5,113,.7) 0,rgba(76,5,113,.7)), url("/IMG/desk-background.jpg");
-  // background-size: cover;
   .header--logo{
   position: absolute;
   left: 8%;
@@ -119,8 +119,6 @@ html,body {
   margin: -150px;
   border-radius: 150px;
   content: "";
-  // background: #4fc3f7;
-  // background: hsl(271, 76%, 25%);
   background: hsl(60, 100%, 80%);
   // z-index: 1;
   span.face{
@@ -605,9 +603,6 @@ span.face.blink:before, span.face.blink:after{
 @media screen and (max-width: 1000px) {
   #about-section {
     height: 1000px;
-    // .about {
-
-    // }
   }
 }
 
@@ -656,9 +651,6 @@ span.face.blink:before, span.face.blink:after{
     display: none !important;
   }
   // #about-section {
-  //   .about {
-  //     height: 1800px !important;
-  //   }
   // }
 }
 
@@ -691,10 +683,6 @@ span.face.blink:before, span.face.blink:after{
   }
   // #about-section {
   //   height: 180% !important;
-  //   .about {
-  //     // height: 1900px !important;
-  //     // height: calc(100% + 1000px) !important;
-  //   }
   // }
   section#portfolio-section {
     .portfolio { 
