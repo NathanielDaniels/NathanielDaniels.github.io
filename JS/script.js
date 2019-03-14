@@ -1,9 +1,3 @@
-// mainTitle = document.getElementById('switch-title')
-
-// mainTitle.addEventListener('click', function () {
-//   mainTitle.innerHTML = 'Welcome!'
-// })
-
 // Smiley Face Animation ======================
 let face = $('.header--logo span')[0]
 let head = $('.header--logo')[0]
@@ -84,6 +78,12 @@ $menu = $('.burger-elements')
 $menu.click(function () {
   $('#sidebar-menu').toggleClass('active')
   $(this).toggleClass('close')
+
+  // Trying to get the menu to close when clicking a link or anywhere else
+  // Not Working
+  $('.sidebar-menu--links').on('click', function () {
+    $(this).removeClass('close')
+  })
 })
 
 // Navbar Scroll Animation ===============================
@@ -145,13 +145,6 @@ function change () {
   })
 }
 
-// Triangle Bounce Animation ====================================
-// var docLink = $('#bounce')
-
-// setInterval(function () {
-//   docLink.effect('bounce', { times: 1 }, 1000)
-// })
-
 // Show-More (about) ====================================
 
 // $('.show-more a').on('click', function () {
@@ -179,8 +172,3 @@ $(function () {
       .removeClass('rotate')
   })
 })
-
-// ONLY WORKS ONE CLICK ===================
-// $('.box').one('click', function () {
-//   $(this).toggleClass('rotate')
-// })
