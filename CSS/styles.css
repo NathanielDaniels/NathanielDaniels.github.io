@@ -330,6 +330,7 @@ html, body {
 }
 
 .main-section .main-content .content-wrapper h1 {
+  z-index: 10;
   font-size: 80px;
   padding: 10px 0;
   color: #ffff99;
@@ -344,7 +345,7 @@ html, body {
 }
 
 #about-section {
-  height: 800px;
+  height: 150%;
 }
 
 #about-section .about {
@@ -492,8 +493,6 @@ html, body {
   grid-gap: 15px;
   width: 1000px;
   height: 400px;
-  -webkit-perspective: 600px;
-          perspective: 600px;
 }
 
 #portfolio-section .portfolio .grid-container .portfolio-grid .box {
@@ -675,6 +674,12 @@ html, body {
   cursor: default;
 }
 
+@media screen and (max-width: 1000px) {
+  #about-section .about {
+    height: calc(100% + 1000px) !important;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .main-section .header--logo {
     display: none;
@@ -684,7 +689,6 @@ html, body {
   }
   #about-section .about {
     padding-top: 50px !important;
-    height: 800px !important;
   }
   section#portfolio-section .portfolio {
     padding-top: 50px !important;
@@ -712,6 +716,9 @@ html, body {
 }
 
 @media screen and (max-width: 600px) {
+  .main-section {
+    height: 110vh !important;
+  }
   .main-section__header .header--inner-container .header--nav-links {
     display: none !important;
   }
@@ -723,9 +730,6 @@ html, body {
   }
   .main-content .content-wrapper .greeting-loop {
     font-size: 26px !important;
-  }
-  #about-section .about {
-    height: 1900px !important;
   }
   section#portfolio-section .portfolio {
     height: 1500px !important;
@@ -776,7 +780,7 @@ html, body {
     font-size: 26px !important;
   }
   #about-section {
-    height: 1000px !important;
+    height: 170% !important;
   }
   #about-section .about {
     height: auto !important;

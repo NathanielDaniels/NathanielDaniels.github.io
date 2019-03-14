@@ -122,7 +122,7 @@ html,body {
   // background: #4fc3f7;
   // background: hsl(271, 76%, 25%);
   background: hsl(60, 100%, 80%);
-  // z-index: -1;
+  // z-index: 1;
   span.face{
     position: absolute;
     left: 100px;
@@ -335,6 +335,7 @@ span.face.blink:before, span.face.blink:after{
       top: -80px;
       cursor: default;
       h1 {
+        z-index: 10;
         font-size: 80px;
         padding: 10px 0;
         color: hsl(60, 100%, 80%);
@@ -362,8 +363,9 @@ span.face.blink:before, span.face.blink:after{
   
 // ABOUT Section =================================
 #about-section {
-  height: 800px;
-  // height: calc(100% + 250px);
+  // height: 800px;
+  // height: calc(110% + 201px);
+  height: 150%;
   .about {
     // height: 1300px;
     @include angle(before);
@@ -448,7 +450,7 @@ span.face.blink:before, span.face.blink:after{
         grid-gap: 15px;
         width: 1000px;
         height: 400px;
-        perspective: 600px;
+        // perspective: 600px;
         .box {
           border-radius: 10px;
           background: hsl(0, 0%, 15%);
@@ -459,7 +461,6 @@ span.face.blink:before, span.face.blink:after{
           z-index: 5;
           transform-style: preserve-3d;
           &:hover {
-            // transform: scale(1.01);
             filter: drop-shadow(0px 8px 8px hsl(271, 76%, 20%));
           }
         }
@@ -602,6 +603,14 @@ span.face.blink:before, span.face.blink:after{
 }
 
 // @MEDIA QUERIES Section ================================
+@media screen and (max-width: 1000px) {
+  #about-section {
+    .about {
+      height: calc(100% + 1000px) !important;
+    }
+  }
+}
+
 @media screen and (max-width: 800px) {
   .main-section {
     .header--logo {
@@ -618,7 +627,7 @@ span.face.blink:before, span.face.blink:after{
   #about-section {
     .about {
       padding-top: 50px !important;
-      height: 800px !important;
+      // height: 800px !important;
     }
   }
   section#portfolio-section {
@@ -654,6 +663,9 @@ span.face.blink:before, span.face.blink:after{
 }
 
 @media screen and (max-width: 600px) {
+  .main-section {
+    height: 110vh !important;
+  }
   .main-section__header {
     .header--inner-container {
     // width: 100% !important;
@@ -677,11 +689,12 @@ span.face.blink:before, span.face.blink:after{
       }
     }
   }
-  #about-section {
-    .about {
-      height: 1900px !important;
-    }
-  }
+  // #about-section {
+  //   .about {
+  //     // height: 1900px !important;
+  //     // height: calc(100% + 1000px) !important;
+  //   }
+  // }
   section#portfolio-section {
     .portfolio { 
       height: 1500px !important;
@@ -737,7 +750,7 @@ span.face.blink:before, span.face.blink:after{
   }
 
   #about-section {
-    height: 1000px !important;
+    height: 170% !important;
     .about {
       height: auto !important;
       p.about-info {
