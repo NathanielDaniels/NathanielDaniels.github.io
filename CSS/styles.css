@@ -65,6 +65,41 @@ html, body {
   transition: all 250ms ease-out;
 }
 
+.main-section .header--logo span.speechBubble {
+  position: absolute;
+  left: 300px;
+  width: 200px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50px;
+}
+
+.main-section .header--logo span.speechBubble h2 {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-section .header--logo span.speechBubble .triangle {
+  position: absolute;
+  top: 75px;
+  left: -15px;
+  -webkit-transform: rotate(48deg);
+          transform: rotate(48deg);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 30px solid #fff;
+}
+
 .main-section span.face:before, .main-section span.face:after {
   position: absolute;
   content: "◝";

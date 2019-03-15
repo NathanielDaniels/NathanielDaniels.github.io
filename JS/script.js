@@ -72,6 +72,18 @@ function clamp (num, min, max) {
 //   face.style.opacity = 1.6 - squishP
 // }
 
+// Speech Bubble Animation! (for face_)======================
+
+function noSpeechBox () {
+  document.querySelector('.speechBubble').style.display = 'none'
+}
+
+console.log(noSpeechBox())
+
+// function hideSpeechBox () {
+//   setTimeout('noSpeechBox()', 5000)
+// }
+
 // Hamburger Menu Animation! ======================
 $menu = $('.burger-elements')
 

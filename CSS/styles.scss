@@ -107,7 +107,7 @@ html,body {
   background: hsl(271, 76%, 45%);
   // below is a very cool background texture
   // background: linear-gradient(90deg,rgba(76,5,113,.7) 0,rgba(76,5,113,.7)), url("/IMG/desk-background.jpg");
-  .header--logo{
+  .header--logo {
   position: absolute;
   left: 8%;
   top: 90%;
@@ -130,6 +130,31 @@ html,body {
     border-bottom: solid 30px #000000;
     border-radius: 200px;
     transition: all 250ms ease-out;
+  }
+  span.speechBubble {
+    position: absolute;
+    left: 300px;
+    width: 200px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50px;
+    h2 {
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .triangle {
+      position: absolute;
+      top: 75px;
+      left: -15px;
+      transform: rotate(48deg);
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 25px solid transparent;
+      border-top: 30px solid #fff;
+    }
   }
 }
   /* Eyes */
@@ -165,6 +190,7 @@ span.face.blink:before, span.face.blink:after{
   border-radius: 0px;
   font-size: 2px;
 }
+
 
   .bg {
     background-image: url("/IMG/desk-background.jpg");
