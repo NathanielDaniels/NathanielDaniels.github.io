@@ -66,6 +66,8 @@ html, body {
 }
 
 .main-section .header--logo span.speechBubble {
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
   position: absolute;
   left: 300px;
   width: 200px;

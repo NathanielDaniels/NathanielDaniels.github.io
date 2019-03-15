@@ -74,15 +74,9 @@ function clamp (num, min, max) {
 
 // Speech Bubble Animation! (for face_)======================
 
-function noSpeechBox () {
+setInterval(function () {
   document.querySelector('.speechBubble').style.display = 'none'
-}
-
-console.log(noSpeechBox())
-
-// function hideSpeechBox () {
-//   setTimeout('noSpeechBox()', 5000)
-// }
+}, 3000)
 
 // Hamburger Menu Animation! ======================
 $menu = $('.burger-elements')

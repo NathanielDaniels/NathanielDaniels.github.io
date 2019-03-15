@@ -132,6 +132,7 @@ html,body {
     transition: all 250ms ease-out;
   }
   span.speechBubble {
+    transition: .4s ease-in-out;
     position: absolute;
     left: 300px;
     width: 200px;
