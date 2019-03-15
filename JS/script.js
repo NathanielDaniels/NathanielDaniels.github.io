@@ -76,7 +76,7 @@ function clamp (num, min, max) {
 
 setInterval(function () {
   document.querySelector('.speechBubble').style.display = 'none'
-}, 3000)
+}, 2500)
 
 // Hamburger Menu Animation! ======================
 $menu = $('.burger-elements')
