@@ -135,13 +135,18 @@ $('#sidebar-menu ul li a').click(function () {
 // }
 
 // Greeting-Loop Animation ================================
-var text = ['Web Designer', 'Web Enthusiast', 'Front-End Developer', 'Freelancer']
+var text = [
+  'Web Designer',
+  'Freelancer',
+  'Web Enthusiast',
+  'Front-End Developer'
+]
 var counter = 0
 var elem = $('#greeting')
 setInterval(change, 3000)
 function change () {
   elem.fadeOut(function () {
-    elem.html(text[counter])
+    elem.text(text[counter])
     counter++
     if (counter >= text.length) {
       counter = 0

@@ -712,7 +712,7 @@ html, body {
 
 @media screen and (max-width: 1000px) {
   #about-section {
-    height: 1000px;
+    height: 1300px;
   }
 }
 
@@ -816,7 +816,7 @@ html, body {
     font-size: 26px !important;
   }
   #about-section {
-    height: 1200px !important;
+    height: 2100px !important;
   }
   #about-section .about p.about-info {
     font-size: 18px !important;

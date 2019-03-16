@@ -202,7 +202,7 @@ span.face.blink:before, span.face.blink:after{
     height: 100%;
     filter: opacity(.15);
   }
-      // HEADER/NAVBAR Section =========================
+      // HEADER/NAVBAR Section ====
   header.main-section__header {
     position: absolute;
     z-index: 100;
@@ -601,7 +601,7 @@ span.face.blink:before, span.face.blink:after{
 // @MEDIA QUERIES Section ================================
 @media screen and (max-width: 1000px) {
   #about-section {
-    height: 1000px;
+    height: 1300px;
   }
 }
 
@@ -738,7 +738,7 @@ span.face.blink:before, span.face.blink:after{
   }
 
   #about-section {
-    height: 1200px !important;
+    height: 2100px !important;
     .about {
       // height: auto !important;
       p.about-info {
