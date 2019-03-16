@@ -84,12 +84,10 @@ $menu = $('.burger-elements')
 $menu.click(function () {
   $('#sidebar-menu').toggleClass('active')
   $(this).toggleClass('close')
+})
 
-  // Trying to get the menu to close when clicking a link or anywhere else
-  // Not Working
-  $('.sidebar-menu--links').on('click', function () {
-    $(this).removeClass('close')
-  })
+$('#sidebar-menu ul li a').click(function () {
+  $('#sidebar-menu').removeClass('active')
 })
 
 // Navbar Scroll Animation ===============================
