@@ -86,6 +86,7 @@ $menu.click(function () {
   $(this).toggleClass('close')
 })
 
+// Close Menu on Click of Link! ============
 $('#sidebar-menu ul li a').click(function () {
   $('#sidebar-menu').removeClass('active')
 })
@@ -134,7 +135,7 @@ $('#sidebar-menu ul li a').click(function () {
 // }
 
 // Greeting-Loop Animation ================================
-var text = ['Web Designer', 'Web Enthusiast', 'Front-End Developer']
+var text = ['Web Designer', 'Web Enthusiast', 'Front-End Developer', 'Freelancer']
 var counter = 0
 var elem = $('#greeting')
 setInterval(change, 3000)
@@ -148,24 +149,6 @@ function change () {
     elem.fadeIn()
   })
 }
-
-// Show-More (about) ====================================
-
-// $('.show-more a').on('click', function () {
-//   var $this = $(this)
-//   var $content = $this.parent().prev('.past')
-//   var linkText = $this.text().toUpperCase()
-
-//   if (linkText === 'SHOW MORE') {
-//     linkText = 'Show less'
-//     $content.switchClass('hideContent', 'showContent', 400)
-//   } else {
-//     linkText = 'Show more'
-//     $content.switchClass('showContent', 'hideContent', 400)
-//   }
-
-//   $this.text(linkText)
-// })
 
 // PORTFOLIO CLICK FUNCTION =====================
 $(function () {

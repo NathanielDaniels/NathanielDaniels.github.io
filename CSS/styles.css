@@ -384,7 +384,7 @@ html, body {
 }
 
 #about-section {
-  height: 800px;
+  height: 1000px;
 }
 
 #about-section .about {
@@ -427,6 +427,19 @@ html, body {
 }
 
 #about-section .about .about-info {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 18px;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
@@ -443,22 +456,6 @@ html, body {
 
 #about-section .about .about-info .past {
   width: 100%;
-}
-
-#about-section .about .about-info .hideContent {
-  height: 200px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-#about-section .about .about-info .showContent {
-  line-height: 1em;
-  height: auto;
-}
-
-#about-section .about .about-info .show-more {
-  padding: 10px 0;
-  text-align: center;
 }
 
 #portfolio-section .portfolio {
