@@ -384,15 +384,15 @@ html, body {
 }
 
 #about-section {
-  height: 1000px;
+  height: 1100px;
 }
 
 #about-section .about {
   position: relative;
   z-index: 1;
   background: #fff;
-  width: 100%;
   max-width: 100%;
+  width: 100%;
   cursor: default;
 }
 
@@ -419,11 +419,11 @@ html, body {
 }
 
 #about-section .about h2.about-title {
+  color: blueviolet;
   font-size: 50px;
   font-weight: 800;
-  color: blueviolet;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
 }
 
 #about-section .about .about-info {
@@ -437,14 +437,14 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   font-size: 18px;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
-  line-height: 1.4em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 1.5em;
   margin: 0 auto;
   max-width: 1200px;
   overflow-wrap: break-word;
@@ -712,7 +712,7 @@ html, body {
 
 @media screen and (max-width: 1000px) {
   #about-section {
-    height: 1300px;
+    height: 1400px;
   }
 }
 
@@ -816,7 +816,7 @@ html, body {
     font-size: 26px !important;
   }
   #about-section {
-    height: 2100px !important;
+    height: 2200px !important;
   }
   #about-section .about p.about-info {
     font-size: 18px !important;
