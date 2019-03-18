@@ -436,8 +436,9 @@ span.face.blink:before, span.face.blink:after{
       align-items: center;
       .portfolio-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        // grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        // grid-template-rows: 1fr 1fr;
         grid-gap: 15px;
         width: 1000px;
         height: 400px;
@@ -624,8 +625,9 @@ span.face.blink:before, span.face.blink:after{
       padding-top: 50px !important;
       height: 800px !important;
       .portfolio-grid { 
-        grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: repeat(3, 1fr) !important;
+        // grid-template-columns: 1fr 1fr !important;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        // grid-template-rows: repeat(3, 1fr) !important;
         width: 90% !important;
         .box {
           height: 200px !important;
@@ -682,8 +684,9 @@ span.face.blink:before, span.face.blink:after{
     .portfolio { 
       height: 1500px !important;
       .portfolio-grid { 
-        grid-template-columns: 1fr !important;
-        grid-template-rows: repeat(6, 1fr) !important;
+        // grid-template-columns: 1fr !important;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) !important;
+        // grid-template-rows: repeat(6, 1fr) !important;
         width: 80% !important;
         .box {
           height: 200px !important;
