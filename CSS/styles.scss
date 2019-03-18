@@ -318,7 +318,6 @@ span.face.blink:before, span.face.blink:after{
       opacity: .98;
       @include angle(after);
       position: absolute;
-      // right: 0;
       top: -150vh;
       transition: .4s ease-in-out;
       .sidebar-menu--links {
@@ -327,7 +326,6 @@ span.face.blink:before, span.face.blink:after{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // padding-bottom: 50px;
         text-align: left;
         li {
           list-style: none;

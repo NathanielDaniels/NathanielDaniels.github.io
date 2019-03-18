@@ -89,6 +89,7 @@ $menu.click(function () {
 // Close Menu on Click of Link! ============
 $('#sidebar-menu ul li a').click(function () {
   $('#sidebar-menu').removeClass('active')
+  $menu.removeClass('close')
 })
 
 // Navbar Scroll Animation ===============================
