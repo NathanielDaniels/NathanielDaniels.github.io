@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800");
 
 @mixin angle($pseudo, $flip: false, $angle: 6deg) {
   // Possible values for $pseudo are: before, after, both
-  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+  @if $pseudo == "before" or $pseudo == "after" or $pseudo == "both" {
     position: relative;
     z-index: 1;
-    $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
+    $selector: if($pseudo == "both", "&:before,&:after", "&:#{$pseudo}");
 
     #{$selector} {
       background: inherit;
-      content: '';
+      content: "";
       display: block;
       height: 500px;
       left: 0;
@@ -19,7 +19,7 @@
       backface-visibility: hidden; // for Chrome Windows
     }
 
-    @if $pseudo == 'before' {
+    @if $pseudo == "before" {
       #{$selector} {
         border-top: 5px solid hsl(0, 0%, 20%);
         top: 0;
@@ -34,10 +34,10 @@
       }
     }
 
-    @if $pseudo == 'after' {
+    @if $pseudo == "after" {
       #{$selector} {
         bottom: 0;
-        
+
         @if $flip {
           transform: skewY($angle);
           transform-origin: 0 100%;
@@ -48,7 +48,7 @@
       }
     }
 
-    @if $pseudo == 'both' {
+    @if $pseudo == "both" {
       &:before {
         top: 0;
         border-top: 5px solid hsl(0, 0%, 20%);
@@ -81,15 +81,18 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: .05rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.05rem;
   scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
 }
-*::before, *::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html,body {
+html,
+body {
   max-width: 100%;
   width: 100%;
   height: 100%;
@@ -105,90 +108,91 @@ html,body {
   // below is a very cool background texture
   // background: linear-gradient(90deg,rgba(76,5,113,.7) 0,rgba(76,5,113,.7)), url("/IMG/desk-background.jpg");
   .header--logo {
-  position: absolute;
-  left: 8%;
-  top: 90%;
-  width: 100%;
-  max-width: 300px;
-  height: 100%;
-  max-height: 300px;
-  background: rgba(169,3,41,0);
-  margin: -150px;
-  border-radius: 150px;
-  content: "";
-  background: hsl(60, 100%, 80%);
-  span.face{
     position: absolute;
-    left: 100px;
-    top: 100px;
-    width: 33.333%;
-    height: 100px;
-    border-bottom: solid 30px #000000;
-    border-radius: 200px;
-    transition: all 250ms ease-out;
-  }
-  span.speechBubble {
-    transition: .4s ease-in-out;
-    position: absolute;
-    left: 260px;
-    width: 200px;
-    height: 100px;
-    background: #fff;
-    border-radius: 20px;
-    filter: drop-shadow(2px 2px 4px hsl(0, 0%, 10%));
-    h2 {
-      height: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .triangle {
+    left: 8%;
+    top: 90%;
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height: 300px;
+    background: rgba(169, 3, 41, 0);
+    margin: -150px;
+    border-radius: 150px;
+    content: "";
+    background: hsl(60, 100%, 80%);
+    span.face {
       position: absolute;
-      top: 80px;
-      left: -15px;
-      transform: rotate(48deg);
-      width: 0;
-      height: 0;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-top: 30px solid #fff;
+      left: 100px;
+      top: 100px;
+      width: 33.333%;
+      height: 100px;
+      border-bottom: solid 30px #000000;
+      border-radius: 200px;
+      transition: all 250ms ease-out;
+    }
+    span.speechBubble {
+      transition: 0.4s ease-in-out;
+      position: absolute;
+      left: 260px;
+      width: 200px;
+      height: 100px;
+      background: #fff;
+      border-radius: 20px;
+      filter: drop-shadow(2px 2px 4px hsl(0, 0%, 10%));
+      h2 {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .triangle {
+        position: absolute;
+        top: 80px;
+        left: -15px;
+        transform: rotate(48deg);
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 30px solid #fff;
+      }
     }
   }
-}
   /* Eyes */
-span.face:before, span.face:after{
-  position: absolute;
-  content: "◝";
-  text-indent: 12px;
-  font-weight: bold;
-  font-size: 26px;
-  left: 0%;
-  top: 40%;
-  width: 40px;
-  height: 40px;
-  background: #000000;
-  margin: -25px;
-  border-radius: 50px;
-  color: rgba(255,255,255,.7);
-  transition: all 150ms ease-out;
-}
+  span.face:before,
+  span.face:after {
+    position: absolute;
+    content: "◝";
+    text-indent: 12px;
+    font-weight: bold;
+    font-size: 26px;
+    left: 0%;
+    top: 40%;
+    width: 40px;
+    height: 40px;
+    background: #000000;
+    margin: -25px;
+    border-radius: 50px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 150ms ease-out;
+  }
 
-/* Right Eye */
-span.face:after{
-  left: auto;
-  right: 0%;
-}
+  /* Right Eye */
+  span.face:after {
+    left: auto;
+    right: 0%;
+  }
 
-/* Blink Effect */
-span.face.blink:before, span.face.blink:after{
-  top: calc(40% + 15px);
-  height: 2px;
-  background: #000000;
-  color: rgba(255,255,255,0);
-  border-radius: 0px;
-  font-size: 2px;
-}
-
+  /* Blink Effect */
+  span.face.blink:before,
+  span.face.blink:after {
+    top: calc(40% + 15px);
+    height: 2px;
+    background: #000000;
+    color: rgba(255, 255, 255, 0);
+    border-radius: 0px;
+    font-size: 2px;
+  }
 
   .bg {
     background-image: url("/IMG/desk-background.jpg");
@@ -196,14 +200,14 @@ span.face.blink:before, span.face.blink:after{
     background-position: 50% 100%;
     width: 100%;
     height: 100%;
-    filter: opacity(.15);
+    filter: opacity(0.15);
   }
-      // HEADER/NAVBAR Section ====
+  // HEADER/NAVBAR Section ====
   header.main-section__header {
     position: absolute;
     z-index: 100;
     transition: top 0.2s ease-in-out;
-    top:0;
+    top: 0;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -212,8 +216,7 @@ span.face.blink:before, span.face.blink:after{
     .header--inner-container {
       display: flex;
       width: 98%;
-      
-      
+
       // .header--logo {
       //   color: yellow;
       //   padding-left: 20px;
@@ -232,13 +235,13 @@ span.face.blink:before, span.face.blink:after{
         li {
           list-style: none;
           padding: 0 20px;
-          
+
           a {
             color: #fff;
             font-size: 20px;
             text-decoration: none;
             text-transform: uppercase;
-            transition: .3s ease-in-out;
+            transition: 0.3s ease-in-out;
             cursor: pointer;
             &:hover {
               color: yellow;
@@ -246,7 +249,7 @@ span.face.blink:before, span.face.blink:after{
             }
             &:focus {
               outline: 1.45px dashed;
-              outline-color:yellow;
+              outline-color: yellow;
               padding: 2px 5px;
               filter: drop-shadow(0px 2px 2px hsl(271, 76%, 20%));
             }
@@ -266,9 +269,9 @@ span.face.blink:before, span.face.blink:after{
       cursor: pointer;
       &:focus {
         outline: thin dashed;
-        outline-color:yellow;
+        outline-color: yellow;
         padding: 0 5px;
-        // filter: drop-shadow(0px 2px 2px hsl(271, 76%, 20%));   
+        // filter: drop-shadow(0px 2px 2px hsl(271, 76%, 20%));
       }
       .burger-elements {
         width: 35px;
@@ -288,7 +291,7 @@ span.face.blink:before, span.face.blink:after{
           left: 0px;
           background: #fff;
           border-radius: 2.5px;
-          transition: all .2s cubic-bezier(0.42, 0, 0.68, 1.78);
+          transition: all 0.2s cubic-bezier(0.42, 0, 0.68, 1.78);
         }
         .line01 {
           top: 5%;
@@ -305,21 +308,22 @@ span.face.blink:before, span.face.blink:after{
         top: 30%;
         background: yellow;
       }
-      .burger-elements.close .line02, .burger-elements.close .line03 {
-        transform: rotate(-45deg);
-        top: 30%;
+      .burger-elements.close .line02,
+      .burger-elements.close .line03 {
         background: yellow;
+        top: 30%;
+        transform: rotate(-45deg);
       }
     }
-    #sidebar-menu{
+    #sidebar-menu {
       width: 100%;
       height: 100vh;
       background: hsl(271, 76%, 20%);
-      opacity: .98;
+      opacity: 0.98;
       @include angle(after);
       position: absolute;
       top: -150vh;
-      transition: .4s ease-in-out;
+      transition: 0.4s ease-in-out;
       .sidebar-menu--links {
         height: 100vh;
         display: flex;
@@ -347,7 +351,7 @@ span.face.blink:before, span.face.blink:after{
   header.nav-up {
     top: -70px;
   }
-  
+
   .main-content {
     position: absolute;
     .content-wrapper {
@@ -369,15 +373,14 @@ span.face.blink:before, span.face.blink:after{
     }
   }
 }
-  
+
 // ABOUT Section =================================
 #about-section {
   height: 1100px;
-  
+
   // height: calc(110% + 201px);
   // height: 110%;
   .about {
-    
     @include angle(before);
     background: #fff;
     max-width: 100%;
@@ -411,7 +414,7 @@ span.face.blink:before, span.face.blink:after{
     }
   }
 }
- 
+
 // PORTFOLIO Section =============================
 #portfolio-section {
   .portfolio {
@@ -444,7 +447,7 @@ span.face.blink:before, span.face.blink:after{
         .box {
           border-radius: 10px;
           background: hsl(0, 0%, 15%);
-          transition: .5s ease-in-out;
+          transition: 0.5s ease-in-out;
           cursor: pointer;
           filter: drop-shadow(0px 4px 4px hsl(271, 76%, 20%));
           overflow: hidden;
@@ -458,21 +461,21 @@ span.face.blink:before, span.face.blink:after{
           z-index: 10;
           transform: scale(2) rotateY(180deg);
         }
-        
+
         .box1 {
           border-top-left-radius: 15px;
-          background-image: url('/IMG/portfolio-img/Simones-recipe-box.png');
+          background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
           background-size: cover;
           background-position: center center;
           // backface-visibility: hidden;
         }
         .box2 {
-          background-image: url('/IMG/portfolio-img/Task-Manager.png');
+          background-image: url("/IMG/portfolio-img/Task-Manager.png");
           background-size: cover;
           background-position: center center;
         }
         .box3 {
-          background-image: url('/IMG/portfolio-img/Rock-Paper-Pokemon.png');
+          background-image: url("/IMG/portfolio-img/Rock-Paper-Pokemon.png");
           background-size: cover;
           background-position: center center;
           border-top-right-radius: 15px;
@@ -488,12 +491,9 @@ span.face.blink:before, span.face.blink:after{
           // background: #fff;
           border-bottom-right-radius: 15px;
         }
-        
       }
-      
     }
   }
-  
 }
 
 // CONTACT Section ===============================
@@ -515,11 +515,12 @@ span.face.blink:before, span.face.blink:after{
       max-width: 600px;
       text-align: center;
       margin: 55px auto;
-      input, textarea {
+      input,
+      textarea {
         font-size: 18px;
         border: 1px solid blueviolet;
         padding: 1em;
-        border-radius:8px;
+        border-radius: 8px;
         display: block;
         width: 100%;
         margin-top: 1em;
@@ -532,7 +533,7 @@ span.face.blink:before, span.face.blink:after{
         }
       }
       textarea {
-          height: 214px;
+        height: 214px;
       }
       #input-submit {
         color: #fff;
@@ -541,9 +542,10 @@ span.face.blink:before, span.face.blink:after{
         background: blueviolet;
         cursor: pointer;
         filter: drop-shadow(0px 4px 2px gray);
-        letter-spacing: .1rem;
-        transition: .3s ease-in-out;
-        text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+        letter-spacing: 0.1rem;
+        transition: 0.3s ease-in-out;
+        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
+          0px -1px 0px rgba(0, 0, 0, 0.7);
         &:hover {
           filter: drop-shadow(0px 1px 1px gray);
         }
@@ -554,8 +556,12 @@ span.face.blink:before, span.face.blink:after{
       width: 48%;
       margin-bottom: 1em;
     }
-    .right { width: 50%; }
-    .left { margin-right: 2%; }
+    .right {
+      width: 50%;
+    }
+    .left {
+      margin-right: 2%;
+    }
   }
 }
 
@@ -579,7 +585,7 @@ span.face.blink:before, span.face.blink:after{
         color: blueviolet;
       }
       .fab {
-      font-size: 40px;
+        font-size: 40px;
       }
     }
   }
@@ -619,10 +625,10 @@ span.face.blink:before, span.face.blink:after{
     }
   }
   section#portfolio-section {
-    .portfolio { 
+    .portfolio {
       padding-top: 50px !important;
       height: 800px !important;
-      .portfolio-grid { 
+      .portfolio-grid {
         // grid-template-columns: 1fr 1fr !important;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
         // grid-template-rows: repeat(3, 1fr) !important;
@@ -640,7 +646,7 @@ span.face.blink:before, span.face.blink:after{
   }
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) {
   #sidebar-menu {
     display: none !important;
   }
@@ -654,7 +660,7 @@ span.face.blink:before, span.face.blink:after{
   }
   .main-section__header {
     .header--inner-container {
-    // width: 100% !important;
+      // width: 100% !important;
       .header--nav-links {
         display: none !important;
       }
@@ -679,9 +685,9 @@ span.face.blink:before, span.face.blink:after{
   //   height: 180% !important;
   // }
   section#portfolio-section {
-    .portfolio { 
+    .portfolio {
       height: 1500px !important;
-      .portfolio-grid { 
+      .portfolio-grid {
         // grid-template-columns: 1fr !important;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) !important;
         // grid-template-rows: repeat(6, 1fr) !important;
@@ -717,11 +723,9 @@ span.face.blink:before, span.face.blink:after{
       }
     }
   }
-
 }
 
 @media screen and (max-width: 500px) {
-  
   .main-content {
     .content-wrapper {
       h1 {
@@ -743,7 +747,7 @@ span.face.blink:before, span.face.blink:after{
       }
     }
   }
-  
+
   footer.footer-section {
     .social-media {
       width: 100% !important;

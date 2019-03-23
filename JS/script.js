@@ -1,57 +1,57 @@
 // Smiley Face Animation ======================
-let face = $('.header--logo span')[0]
-let head = $('.header--logo')[0]
-let isDead = true
-let canBlink = true
+let face = $(".header--logo span")[0];
+let head = $(".header--logo")[0];
+let isDead = true;
+let canBlink = true;
 
-document.onmousemove = trackMouse
+document.onmousemove = trackMouse;
 // window.onresize = squish
 
 // Blink every 5.5 seconds
-setInterval(function () {
+setInterval(function() {
   if (!canBlink) {
-    return
+    return;
   }
 
-  face.classList.add('blink')
+  face.classList.add("blink");
 
-  setTimeout(function () {
-    face.classList.remove('blink')
-  }, 200)
-}, 5500)
+  setTimeout(function() {
+    face.classList.remove("blink");
+  }, 200);
+}, 5500);
 
-function trackMouse (event) {
+function trackMouse(event) {
   if (!isDead) {
-    return
+    return;
   }
 
   // mouse coordinates
-  let mX = event.clientX
-  let mY = event.clientY
+  let mX = event.clientX;
+  let mY = event.clientY;
 
   // viewport dimentions
-  let vpH = window.innerHeight
-  let vpW = window.innerWidth
+  let vpH = window.innerHeight;
+  let vpW = window.innerWidth;
 
   // head boundingbox
-  let headBox = head.getBoundingClientRect()
+  let headBox = head.getBoundingClientRect();
 
   // face boundingbox
-  let faceBox = face.getBoundingClientRect()
+  let faceBox = face.getBoundingClientRect();
 
   // the magic
-  let calcX = (headBox.width - faceBox.width + 1000) * (mX / vpW)
-  let calcY = (headBox.height - faceBox.height) * (mY / vpH)
+  let calcX = (headBox.width - faceBox.width + 1000) * (mX / vpW);
+  let calcY = (headBox.height - faceBox.height) * (mY / vpH);
 
   // add bounding restrictions to face
-  calcX = clamp(calcX, 60, 150)
-  calcY = clamp(calcY, 60, 130)
+  calcX = clamp(calcX, 60, 150);
+  calcY = clamp(calcY, 60, 130);
 
-  face.setAttribute('style', 'top: ' + calcY + 'px; left: ' + calcX + 'px;')
+  face.setAttribute("style", "top: " + calcY + "px; left: " + calcX + "px;");
 }
 
-function clamp (num, min, max) {
-  return num <= min ? min : num >= max ? max : num
+function clamp(num, min, max) {
+  return num <= min ? min : num >= max ? max : num;
 }
 
 // add squish effect when viewport minimizes
@@ -74,23 +74,23 @@ function clamp (num, min, max) {
 
 // Speech Bubble Animation! (for face_)======================
 
-setInterval(function () {
-  document.querySelector('.speechBubble').style.display = 'none'
-}, 2500)
+setInterval(function() {
+  document.querySelector(".speechBubble").style.display = "none";
+}, 2500);
 
 // Hamburger Menu Animation! ======================
-$menu = $('.burger-elements')
+$menu = $(".burger-elements");
 
-$menu.click(function () {
-  $('#sidebar-menu').toggleClass('active')
-  $(this).toggleClass('close')
-})
+$menu.click(function() {
+  $("#sidebar-menu").toggleClass("active");
+  $(this).toggleClass("close");
+});
 
 // Close Menu on Click of Link! ============
-$('#sidebar-menu ul li a').click(function () {
-  $('#sidebar-menu').removeClass('active')
-  $menu.removeClass('close')
-})
+$("#sidebar-menu ul li a").click(function() {
+  $("#sidebar-menu").removeClass("active");
+  $menu.removeClass("close");
+});
 
 // Navbar Scroll Animation ===============================
 // Hide Header on on scroll down
@@ -137,31 +137,31 @@ $('#sidebar-menu ul li a').click(function () {
 
 // Greeting-Loop Animation ================================
 var text = [
-  'Web Designer',
-  'Freelancer',
-  'Web Enthusiast',
-  'Front-End Developer'
-]
-var counter = 0
-var elem = $('#greeting')
-setInterval(change, 3000)
-function change () {
-  elem.fadeOut(function () {
-    elem.text(text[counter])
-    counter++
+  "Web Designer",
+  "Freelancer",
+  "Web Enthusiast",
+  "Front-End Developer"
+];
+var counter = 0;
+var elem = $("#greeting");
+setInterval(change, 3000);
+function change() {
+  elem.fadeOut(function() {
+    elem.text(text[counter]);
+    counter++;
     if (counter >= text.length) {
-      counter = 0
+      counter = 0;
     }
-    elem.fadeIn()
-  })
+    elem.fadeIn();
+  });
 }
 
 // PORTFOLIO CLICK FUNCTION =====================
-$(function () {
-  $('.box').click(function () {
+$(function() {
+  $(".box").click(function() {
     $(this)
-      .toggleClass('rotate')
-      .siblings('.rotate')
-      .removeClass('rotate')
-  })
-})
+      .toggleClass("rotate")
+      .siblings(".rotate")
+      .removeClass("rotate");
+  });
+});

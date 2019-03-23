@@ -5,17 +5,20 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: .05rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.05rem;
   scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
 }
 
-*::before, *::after {
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   max-width: 100%;
   width: 100%;
   height: 100%;
@@ -66,8 +69,8 @@ html, body {
 }
 
 .main-section .header--logo span.speechBubble {
-  -webkit-transition: .4s ease-in-out;
-  transition: .4s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
   position: absolute;
   left: 260px;
   width: 200px;
@@ -104,7 +107,8 @@ html, body {
   border-top: 30px solid #fff;
 }
 
-.main-section span.face:before, .main-section span.face:after {
+.main-section span.face:before,
+.main-section span.face:after {
   position: absolute;
   content: "◝";
   text-indent: 12px;
@@ -127,7 +131,8 @@ html, body {
   right: 0%;
 }
 
-.main-section span.face.blink:before, .main-section span.face.blink:after {
+.main-section span.face.blink:before,
+.main-section span.face.blink:after {
   top: calc(40% + 15px);
   height: 2px;
   background: #000000;
@@ -195,8 +200,8 @@ html, body {
   font-size: 20px;
   text-decoration: none;
   text-transform: uppercase;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   cursor: pointer;
 }
 
@@ -278,29 +283,30 @@ html, body {
   background: yellow;
 }
 
-.main-section header.main-section__header .burger-container .burger-elements.close .line02, .main-section header.main-section__header .burger-container .burger-elements.close .line03 {
+.main-section header.main-section__header .burger-container .burger-elements.close .line02,
+.main-section header.main-section__header .burger-container .burger-elements.close .line03 {
+  background: yellow;
+  top: 30%;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  top: 30%;
-  background: yellow;
 }
 
 .main-section header.main-section__header #sidebar-menu {
   width: 100%;
   height: 100vh;
   background: #340c5a;
-  opacity: .98;
+  opacity: 0.98;
   position: relative;
   z-index: 1;
   position: absolute;
   top: -150vh;
-  -webkit-transition: .4s ease-in-out;
-  transition: .4s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .main-section header.main-section__header #sidebar-menu:after {
   background: inherit;
-  content: '';
+  content: "";
   display: block;
   height: 500px;
   left: 0;
@@ -398,7 +404,7 @@ html, body {
 
 #about-section .about:before {
   background: inherit;
-  content: '';
+  content: "";
   display: block;
   height: 500px;
   left: 0;
@@ -469,7 +475,7 @@ html, body {
 
 #portfolio-section .portfolio:before, #portfolio-section .portfolio:after {
   background: inherit;
-  content: '';
+  content: "";
   display: block;
   height: 500px;
   left: 0;
@@ -532,8 +538,8 @@ html, body {
 #portfolio-section .portfolio .grid-container .portfolio-grid .box {
   border-radius: 10px;
   background: #262626;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
   -webkit-filter: drop-shadow(0px 4px 4px #340c5a);
           filter: drop-shadow(0px 4px 4px #340c5a);
@@ -607,7 +613,8 @@ html, body {
   margin: 55px auto;
 }
 
-#contact-section .contact form.cfForm input, #contact-section .contact form.cfForm textarea {
+#contact-section .contact form.cfForm input,
+#contact-section .contact form.cfForm textarea {
   font-size: 18px;
   border: 1px solid blueviolet;
   padding: 1em;
@@ -621,7 +628,8 @@ html, body {
   resize: none;
 }
 
-#contact-section .contact form.cfForm input:focus, #contact-section .contact form.cfForm textarea:focus {
+#contact-section .contact form.cfForm input:focus,
+#contact-section .contact form.cfForm textarea:focus {
   outline-color: yellow;
   -webkit-filter: drop-shadow(1px 2px 2px blueviolet);
           filter: drop-shadow(1px 2px 2px blueviolet);
@@ -639,9 +647,9 @@ html, body {
   cursor: pointer;
   -webkit-filter: drop-shadow(0px 4px 2px gray);
           filter: drop-shadow(0px 4px 2px gray);
-  letter-spacing: .1rem;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  letter-spacing: 0.1rem;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
 
