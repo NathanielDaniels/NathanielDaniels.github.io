@@ -1,6 +1,6 @@
 // Smiley Face Animation ======================
-let face = $(".header--logo span")[0];
-let head = $(".header--logo")[0];
+let face = $(".smiley-face span")[0];
+let head = $(".smiley-face")[0];
 let isDead = true;
 let canBlink = true;
 
