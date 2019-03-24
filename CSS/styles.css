@@ -8,7 +8,6 @@
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.05rem;
   scroll-behavior: smooth;
-  text-rendering: optimizeLegibility;
 }
 
 *::before,
@@ -170,14 +169,14 @@ body {
   width: 100%;
 }
 
-.main-section header.main-section__header .header--inner-container {
+.main-section header.main-section__header .header__inner-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 98%;
 }
 
-.main-section header.main-section__header .header--inner-container .header--nav-links {
+.main-section header.main-section__header .header__inner-container ul.header__nav-links {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,28 +189,43 @@ body {
           justify-content: flex-end;
 }
 
-.main-section header.main-section__header .header--inner-container .header--nav-links li {
+.main-section header.main-section__header .header__inner-container ul.header__nav-links:hover li a {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 0.6;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+
+.main-section header.main-section__header .header__inner-container ul.header__nav-links li {
   list-style: none;
   padding: 0 20px;
 }
 
-.main-section header.main-section__header .header--inner-container .header--nav-links li a {
+.main-section header.main-section__header .header__inner-container ul.header__nav-links li a {
+  display: block;
+  position: relative;
   color: #fff;
   font-size: 20px;
   text-decoration: none;
   text-transform: uppercase;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
   cursor: pointer;
 }
 
-.main-section header.main-section__header .header--inner-container .header--nav-links li a:hover {
+.main-section header.main-section__header .header__inner-container ul.header__nav-links li a:hover {
   color: yellow;
   -webkit-filter: drop-shadow(0px 2px 2px #340c5a);
           filter: drop-shadow(0px 2px 2px #340c5a);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 1;
+  -webkit-filter: blur(0);
+          filter: blur(0);
 }
 
-.main-section header.main-section__header .header--inner-container .header--nav-links li a:focus {
+.main-section header.main-section__header .header__inner-container ul.header__nav-links li a:focus {
   outline: 1.45px dashed;
   outline-color: yellow;
   padding: 2px 5px;
@@ -433,6 +447,7 @@ body {
 }
 
 #about-section .about .about-info {
+  text-rendering: optimizeLegibility;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
