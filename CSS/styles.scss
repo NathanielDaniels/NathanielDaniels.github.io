@@ -394,20 +394,20 @@ body {
   height: 1100px;
   // height: calc(110% + 201px);
   // height: 110%;
-  .about-container {
+  .about__container {
     @include angle(before);
     background: #fff;
     max-width: 100%;
     width: 100%;
     cursor: default;
-    h2.about-title {
+    h2.about__title {
       color: blueviolet;
       font-size: 50px;
       font-weight: 800;
       text-align: center;
       text-transform: uppercase;
     }
-    .about-info {
+    .about__info {
       text-rendering: optimizeLegibility;
       align-items: center;
       display: flex;
@@ -423,9 +423,6 @@ body {
       text-align: justify;
       width: 80%;
       word-wrap: break-word;
-      .past {
-        width: 100%;
-      }
     }
   }
 }
@@ -615,7 +612,7 @@ body {
 
 // @MEDIA QUERIES Section ================================
 @media screen and (max-width: 1000px) {
-  #about-section {
+  .about#about-section {
     height: 1400px;
   }
 }
@@ -633,9 +630,9 @@ body {
       }
     }
   }
-  #about-section {
+  .about#about-section {
     // height: 170% !important;
-    .about-container {
+    .about__container {
       padding-top: 50px !important;
     }
   }
@@ -665,8 +662,6 @@ body {
   #sidebar-menu {
     display: none !important;
   }
-  // #about-section {
-  // }
 }
 
 @media screen and (max-width: 600px) {
@@ -696,9 +691,6 @@ body {
       }
     }
   }
-  // #about-section {
-  //   height: 180% !important;
-  // }
   section#portfolio-section {
     .portfolio {
       height: 1500px !important;
@@ -752,11 +744,11 @@ body {
     }
   }
 
-  #about-section {
-    height: 2200px !important;
+  .about#about-section {
+    height: 2300px !important;
     .about {
       // height: auto !important;
-      p.about-info {
+      p.about__top {
         font-size: 18px !important;
         width: 95% !important;
       }

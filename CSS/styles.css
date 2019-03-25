@@ -432,7 +432,7 @@ body {
   height: 1100px;
 }
 
-#about-section .about-container {
+#about-section .about__container {
   position: relative;
   z-index: 1;
   background: #fff;
@@ -441,7 +441,7 @@ body {
   cursor: default;
 }
 
-#about-section .about-container:before {
+#about-section .about__container:before {
   background: inherit;
   content: "";
   display: block;
@@ -454,7 +454,7 @@ body {
           backface-visibility: hidden;
 }
 
-#about-section .about-container:before {
+#about-section .about__container:before {
   border-top: 5px solid #333333;
   top: 0;
   -webkit-transform: skewY(6deg);
@@ -463,7 +463,7 @@ body {
           transform-origin: 100% 0;
 }
 
-#about-section .about-container h2.about-title {
+#about-section .about__container h2.about__title {
   color: blueviolet;
   font-size: 50px;
   font-weight: 800;
@@ -471,7 +471,7 @@ body {
   text-transform: uppercase;
 }
 
-#about-section .about-container .about-info {
+#about-section .about__container .about__info {
   text-rendering: optimizeLegibility;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -498,10 +498,6 @@ body {
   text-align: justify;
   width: 80%;
   word-wrap: break-word;
-}
-
-#about-section .about-container .about-info .past {
-  width: 100%;
 }
 
 #portfolio-section .portfolio {
@@ -757,7 +753,7 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-  #about-section {
+  .about#about-section {
     height: 1400px;
   }
 }
@@ -769,7 +765,7 @@ body {
   .main-content .content-wrapper h1 {
     font-size: 60px !important;
   }
-  #about-section .about-container {
+  .about#about-section .about__container {
     padding-top: 50px !important;
   }
   section#portfolio-section .portfolio {
@@ -857,10 +853,10 @@ body {
   .main-content .content-wrapper .greeting-loop {
     font-size: 26px !important;
   }
-  #about-section {
-    height: 2200px !important;
+  .about#about-section {
+    height: 2300px !important;
   }
-  #about-section .about p.about-info {
+  .about#about-section .about p.about__top {
     font-size: 18px !important;
     width: 95% !important;
   }
