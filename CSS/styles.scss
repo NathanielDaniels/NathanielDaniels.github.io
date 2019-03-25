@@ -333,7 +333,6 @@ body {
         text-align: center;
         &:hover li a {
           transform: scale(1);
-
           opacity: 0.6;
           filter: blur(1px);
         }
@@ -395,7 +394,7 @@ body {
   height: 1100px;
   // height: calc(110% + 201px);
   // height: 110%;
-  .about {
+  .about-container {
     @include angle(before);
     background: #fff;
     max-width: 100%;
@@ -636,7 +635,7 @@ body {
   }
   #about-section {
     // height: 170% !important;
-    .about {
+    .about-container {
       padding-top: 50px !important;
     }
   }

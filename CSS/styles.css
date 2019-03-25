@@ -432,7 +432,7 @@ body {
   height: 1100px;
 }
 
-#about-section .about {
+#about-section .about-container {
   position: relative;
   z-index: 1;
   background: #fff;
@@ -441,7 +441,7 @@ body {
   cursor: default;
 }
 
-#about-section .about:before {
+#about-section .about-container:before {
   background: inherit;
   content: "";
   display: block;
@@ -454,7 +454,7 @@ body {
           backface-visibility: hidden;
 }
 
-#about-section .about:before {
+#about-section .about-container:before {
   border-top: 5px solid #333333;
   top: 0;
   -webkit-transform: skewY(6deg);
@@ -463,7 +463,7 @@ body {
           transform-origin: 100% 0;
 }
 
-#about-section .about h2.about-title {
+#about-section .about-container h2.about-title {
   color: blueviolet;
   font-size: 50px;
   font-weight: 800;
@@ -471,7 +471,7 @@ body {
   text-transform: uppercase;
 }
 
-#about-section .about .about-info {
+#about-section .about-container .about-info {
   text-rendering: optimizeLegibility;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -500,7 +500,7 @@ body {
   word-wrap: break-word;
 }
 
-#about-section .about .about-info .past {
+#about-section .about-container .about-info .past {
   width: 100%;
 }
 
@@ -769,7 +769,7 @@ body {
   .main-content .content-wrapper h1 {
     font-size: 60px !important;
   }
-  #about-section .about {
+  #about-section .about-container {
     padding-top: 50px !important;
   }
   section#portfolio-section .portfolio {
