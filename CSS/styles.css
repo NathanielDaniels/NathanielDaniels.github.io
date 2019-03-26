@@ -524,6 +524,14 @@ body {
   padding-bottom: 10px;
 }
 
+#about-section .about__container .about__info .currently {
+  padding-bottom: 50px;
+}
+
+#about-section .about__container .about__info .future {
+  padding-top: 50px;
+}
+
 #portfolio-section .portfolio {
   padding-top: 10px;
   height: 600px;
