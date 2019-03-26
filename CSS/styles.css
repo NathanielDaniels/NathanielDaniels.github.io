@@ -428,13 +428,10 @@ body {
   text-align: center;
 }
 
-#about-section {
-  height: 1100px;
-}
-
 #about-section .about__container {
   position: relative;
   z-index: 1;
+  height: 1400px;
   background: #fff;
   max-width: 100%;
   width: 100%;
@@ -472,7 +469,6 @@ body {
 }
 
 #about-section .about__container .about__info {
-  text-rendering: optimizeLegibility;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -492,12 +488,40 @@ body {
           justify-content: center;
   line-height: 1.5em;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 800px;
   overflow-wrap: break-word;
   padding: 50px 0;
   text-align: justify;
+  text-rendering: optimizeLegibility;
   width: 80%;
   word-wrap: break-word;
+}
+
+#about-section .about__container .about__info hr {
+  width: 75%;
+  margin: 0 auto;
+}
+
+#about-section .about__container .about__info span {
+  font-weight: 500;
+}
+
+#about-section .about__container .about__info .about__me--main {
+  padding-bottom: 50px;
+}
+
+#about-section .about__container .about__info .about__me--main .about__top {
+  font-size: 1.2em;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+#about-section .about__container .about__info .front-end {
+  padding: 50px 0 35px;
+}
+
+#about-section .about__container .about__info .back-end {
+  padding-bottom: 10px;
 }
 
 #portfolio-section .portfolio {
@@ -754,7 +778,7 @@ body {
 
 @media screen and (max-width: 1000px) {
   .about#about-section {
-    height: 1400px;
+    height: 1600px;
   }
 }
 
@@ -764,6 +788,9 @@ body {
   }
   .main-content .content-wrapper h1 {
     font-size: 60px !important;
+  }
+  .about#about-section {
+    height: 1800px !important;
   }
   .about#about-section .about__container {
     padding-top: 50px !important;
@@ -807,18 +834,21 @@ body {
   .main-content .content-wrapper .greeting-loop {
     font-size: 26px !important;
   }
-  section#portfolio-section .portfolio {
+  .about#about-section {
+    height: 1900px !important;
+  }
+  s section#portfolio-section .portfolio {
     height: 1500px !important;
   }
-  section#portfolio-section .portfolio .portfolio-grid {
+  s section#portfolio-section .portfolio .portfolio-grid {
     -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit] !important;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) !important;
     width: 80% !important;
   }
-  section#portfolio-section .portfolio .portfolio-grid .box {
+  s section#portfolio-section .portfolio .portfolio-grid .box {
     height: 200px !important;
   }
-  section#portfolio-section .portfolio .portfolio-grid .rotate {
+  s section#portfolio-section .portfolio .portfolio-grid .rotate {
     -webkit-transform: scale(1) rotateY(180deg) !important;
             transform: scale(1) rotateY(180deg) !important;
   }
