@@ -434,6 +434,8 @@ body {
           font-size: 1.2em;
           text-align: center;
           padding-bottom: 40px;
+          max-width: 600px;
+          margin: 0 auto;
         }
       }
       .front-end {
@@ -659,6 +661,9 @@ body {
     height: 1800px !important;
     .about__container {
       padding-top: 50px !important;
+    }
+    .about__top {
+      width: 100%;
     }
   }
   section#portfolio-section {
