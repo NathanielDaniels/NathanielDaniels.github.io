@@ -358,10 +358,13 @@ body {
           }
         }
       }
+      &.active {
+        top: 0;
+      }
     }
-    #sidebar-menu.active {
-      top: 0;
-    }
+    // #sidebar-menu.active {
+    //   top: 0;
+    // }
   }
   header.nav-up {
     top: -70px;
