@@ -338,7 +338,7 @@ body {
         }
         li {
           list-style: none;
-          padding: 20px;
+          padding: 20px 0px 40px;
           a {
             transition: 0.4s;
             display: block;
@@ -347,13 +347,18 @@ body {
             text-decoration: none;
             color: #fff;
             font-size: 20px;
-            padding-bottom: 20px;
             &:hover {
               color: hsl(60, 100%, 80%);
               filter: drop-shadow(0px 2px 2px hsl(271, 76%, 20%));
               transform: scale(1.1);
               opacity: 1;
               filter: blur(0);
+            }
+            &:focus {
+              outline: thin dashed;
+              outline-color: hsl(60, 100%, 80%);
+              padding: 5px 0px;
+              // filter: drop-shadow(0px 2px 2px hsl(271, 76%, 20%));
             }
           }
         }
@@ -404,7 +409,7 @@ body {
 #about-section {
   .about__container {
     @include angle(before);
-    height: 1400px;
+    height: 1500px;
     background: #fff;
     max-width: 100%;
     width: 100%;
@@ -460,6 +465,24 @@ body {
       }
       .future {
         padding-top: 50px;
+        blockquote {
+          // background: #f9f9f9;
+          border-left: 10px solid hsl(271, 76%, 63%);
+          margin: 0 10px;
+          padding: 0.5em 10px;
+          quotes: "\201C""\201D""\2018""\2019";
+        }
+        blockquote:before {
+          color: blueviolet;
+          content: open-quote;
+          font-size: 4em;
+          line-height: 0.1em;
+          margin-right: 0.2em;
+          vertical-align: -0.4em;
+        }
+        blockquote p {
+          display: inline;
+        }
       }
     }
   }

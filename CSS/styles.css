@@ -369,7 +369,7 @@ body {
 
 .main-section header.main-section__header #sidebar-menu ul.sidebar-menu__links li {
   list-style: none;
-  padding: 20px;
+  padding: 20px 0px 40px;
 }
 
 .main-section header.main-section__header #sidebar-menu ul.sidebar-menu__links li a {
@@ -381,7 +381,6 @@ body {
   text-decoration: none;
   color: #fff;
   font-size: 20px;
-  padding-bottom: 20px;
 }
 
 .main-section header.main-section__header #sidebar-menu ul.sidebar-menu__links li a:hover {
@@ -393,6 +392,12 @@ body {
   opacity: 1;
   -webkit-filter: blur(0);
           filter: blur(0);
+}
+
+.main-section header.main-section__header #sidebar-menu ul.sidebar-menu__links li a:focus {
+  outline: thin dashed;
+  outline-color: #ffff99;
+  padding: 5px 0px;
 }
 
 .main-section header.main-section__header #sidebar-menu.active {
@@ -440,7 +445,7 @@ body {
 #about-section .about__container {
   position: relative;
   z-index: 1;
-  height: 1400px;
+  height: 1500px;
   background: #fff;
   max-width: 100%;
   width: 100%;
@@ -541,6 +546,26 @@ body {
 
 #about-section .about__container .about__info .future {
   padding-top: 50px;
+}
+
+#about-section .about__container .about__info .future blockquote {
+  border-left: 10px solid #a359e8;
+  margin: 0 10px;
+  padding: 0.5em 10px;
+  quotes: "“" "”" "‘" "’";
+}
+
+#about-section .about__container .about__info .future blockquote:before {
+  color: blueviolet;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.2em;
+  vertical-align: -0.4em;
+}
+
+#about-section .about__container .about__info .future blockquote p {
+  display: inline;
 }
 
 #portfolio-section .portfolio {
