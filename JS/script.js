@@ -149,7 +149,9 @@ var text = [
 ];
 var counter = 0;
 var elem = $("#greeting");
-setInterval(change, 3000);
+setTimeout(function() {
+  setInterval(change, 3000);
+}, 3000);
 function change() {
   elem.fadeOut(function() {
     elem.text(text[counter]);

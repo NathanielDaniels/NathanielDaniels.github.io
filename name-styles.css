@@ -100,6 +100,6 @@ svg#logo {
     fill: transparent;
   }
   to {
-    fill: hsl(60, 100%, 85%);
+    fill: hsl(60, 100%, 80%);
   }
 }
