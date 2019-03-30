@@ -874,7 +874,7 @@ body {
   section#portfolio-section .portfolio .portfolio-grid {
     -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit] !important;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) !important;
-    width: 80% !important;
+    width: 70% !important;
   }
   section#portfolio-section .portfolio .portfolio-grid .box {
     height: 200px !important;
@@ -920,6 +920,9 @@ body {
   .about#about-section .about p.about__top {
     font-size: 18px !important;
     width: 95% !important;
+  }
+  section#portfolio-section .portfolio .portfolio-grid {
+    width: 80% !important;
   }
   footer.footer-section .social-media {
     width: 100% !important;

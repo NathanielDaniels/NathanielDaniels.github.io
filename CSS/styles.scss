@@ -751,7 +751,7 @@ body {
         // grid-template-columns: 1fr !important;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) !important;
         // grid-template-rows: repeat(6, 1fr) !important;
-        width: 80% !important;
+        width: 70% !important;
         .box {
           height: 200px !important;
         }
@@ -804,6 +804,14 @@ body {
       p.about__top {
         font-size: 18px !important;
         width: 95% !important;
+      }
+    }
+  }
+
+  section#portfolio-section {
+    .portfolio {
+      .portfolio-grid {
+        width: 80% !important;
       }
     }
   }
