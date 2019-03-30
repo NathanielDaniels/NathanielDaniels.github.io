@@ -868,18 +868,18 @@ body {
   .about#about-section {
     height: 1900px !important;
   }
-  s section#portfolio-section .portfolio {
+  section#portfolio-section .portfolio {
     height: 1500px !important;
   }
-  s section#portfolio-section .portfolio .portfolio-grid {
+  section#portfolio-section .portfolio .portfolio-grid {
     -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit] !important;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) !important;
     width: 80% !important;
   }
-  s section#portfolio-section .portfolio .portfolio-grid .box {
+  section#portfolio-section .portfolio .portfolio-grid .box {
     height: 200px !important;
   }
-  s section#portfolio-section .portfolio .portfolio-grid .rotate {
+  section#portfolio-section .portfolio .portfolio-grid .rotate {
     -webkit-transform: scale(1) rotateY(180deg) !important;
             transform: scale(1) rotateY(180deg) !important;
   }
