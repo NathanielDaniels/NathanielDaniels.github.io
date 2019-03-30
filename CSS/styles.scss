@@ -239,7 +239,7 @@ body {
             transition: 0.4s ease-in-out;
             cursor: pointer;
             &:hover {
-              color: yellow;
+              color: hsl(60, 100%, 80%);
               filter: drop-shadow(0px 2px 2px hsl(271, 76%, 20%));
               transform: scale(1.1);
               opacity: 1;
@@ -247,7 +247,7 @@ body {
             }
             &:focus {
               outline: 1.45px dashed;
-              outline-color: yellow;
+              outline-color: hsl(60, 100%, 80%);
               padding: 2px 5px;
               filter: drop-shadow(0px 2px 2px hsl(271, 76%, 20%));
             }
@@ -267,7 +267,7 @@ body {
       cursor: pointer;
       &:focus {
         outline: thin dashed;
-        outline-color: yellow;
+        outline-color: hsl(60, 100%, 80%);
         padding: 0 5px;
         // filter: drop-shadow(0px 2px 2px hsl(271, 76%, 20%));
       }
@@ -280,7 +280,7 @@ body {
           filter: drop-shadow(0px 2px 2px hsl(271, 76%, 20%));
         }
         &:hover .line {
-          background: yellow;
+          background: hsl(60, 100%, 80%);
         }
         .line {
           position: absolute;
@@ -349,7 +349,7 @@ body {
             font-size: 20px;
             padding-bottom: 20px;
             &:hover {
-              color: yellow;
+              color: hsl(60, 100%, 80%);
               filter: drop-shadow(0px 2px 2px hsl(271, 76%, 20%));
               transform: scale(1.1);
               opacity: 1;

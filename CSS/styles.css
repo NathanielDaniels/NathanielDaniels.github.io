@@ -215,7 +215,7 @@ body {
 }
 
 .main-section header.main-section__header .header__inner-container .header__nav-links li a:hover {
-  color: yellow;
+  color: #ffff99;
   -webkit-filter: drop-shadow(0px 2px 2px #340c5a);
           filter: drop-shadow(0px 2px 2px #340c5a);
   -webkit-transform: scale(1.1);
@@ -227,7 +227,7 @@ body {
 
 .main-section header.main-section__header .header__inner-container .header__nav-links li a:focus {
   outline: 1.45px dashed;
-  outline-color: yellow;
+  outline-color: #ffff99;
   padding: 2px 5px;
   -webkit-filter: drop-shadow(0px 2px 2px #340c5a);
           filter: drop-shadow(0px 2px 2px #340c5a);
@@ -247,7 +247,7 @@ body {
 
 .main-section header.main-section__header .burger-container:focus {
   outline: thin dashed;
-  outline-color: yellow;
+  outline-color: #ffff99;
   padding: 0 5px;
 }
 
@@ -264,7 +264,7 @@ body {
 }
 
 .main-section header.main-section__header .burger-container .burger-elements:hover .line {
-  background: yellow;
+  background: #ffff99;
 }
 
 .main-section header.main-section__header .burger-container .burger-elements .line {
@@ -385,7 +385,7 @@ body {
 }
 
 .main-section header.main-section__header #sidebar-menu ul.sidebar-menu__links li a:hover {
-  color: yellow;
+  color: #ffff99;
   -webkit-filter: drop-shadow(0px 2px 2px #340c5a);
           filter: drop-shadow(0px 2px 2px #340c5a);
   -webkit-transform: scale(1.1);
