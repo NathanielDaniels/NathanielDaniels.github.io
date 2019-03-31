@@ -551,6 +551,7 @@ body {
 #about-section .about__container .about__info .future blockquote {
   border-left: 10px solid #a359e8;
   margin: 0 10px;
+  max-width: 700px;
   padding: 0.5em 10px;
   quotes: "“" "”" "‘" "’";
 }
