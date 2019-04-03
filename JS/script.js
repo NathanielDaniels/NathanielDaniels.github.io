@@ -141,14 +141,14 @@ $("#sidebar-menu ul li a").click(function() {
 // }
 
 // Greeting-Loop Animation ================================
-var text = [
+const text = [
   "Web Designer",
   "Freelancer",
   "Web Enthusiast",
   "Front-End Developer"
 ];
-var counter = 0;
-var elem = $("#greeting");
+let counter = 0;
+const elem = $("#greeting");
 setTimeout(function() {
   setInterval(change, 3000);
 }, 3000);
@@ -172,3 +172,58 @@ $(function() {
       .removeClass("rotate");
   });
 });
+
+//=====================================================
+
+let i = 0;
+for (i = 0; i < 3; i++) {
+  console.log("Nathan");
+}
+
+const brands = ["brand1", "brand2", "brand3", "brand4"];
+
+let e = 0;
+while (e < brands.length) {
+  console.log(brands[i]);
+  e++;
+}
+
+let brandObjects = [
+  {
+    name: "Puma",
+    product: "clothes",
+    price: "$50+"
+  },
+  {
+    name: "Nike",
+    product: "Shoes",
+    price: "$100+"
+  }
+];
+
+// let a = 0;
+// for (a; a < brand.length; a++) {
+//   console.log(brand[a]);
+//   console.log(`${brand[a].name}'s ${brand[a].product} cost ${brand[a].price}`);
+// }
+
+for (firstBrand of brandObjects) {
+  console.log(
+    `${firstBrand.name}'s ${firstBrand.product} costs ${firstBrand.price}`
+  );
+  break;
+}
+
+console.log(firstBrand);
+
+var man = ["big", "strong", "fierce"];
+
+var fierce = man.toString();
+
+console.log(man);
+console.log(fierce);
+
+if (5 < 6) {
+  // document.write("5 is less than 6");
+  console.log(`5 is less than 6`);
+}
