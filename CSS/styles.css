@@ -640,56 +640,104 @@ body {
   height: 400px;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .box {
-  border-radius: 10px;
-  background: #262626;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+#portfolio-section .portfolio .grid-container .portfolio-grid .card {
   cursor: pointer;
-  -webkit-filter: drop-shadow(0px 4px 4px #340c5a);
-          filter: drop-shadow(0px 4px 4px #340c5a);
-  overflow: hidden;
-  z-index: 5;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  z-index: 1;
+  -webkit-box-shadow: 0px 4px 6px #340c5a;
+          box-shadow: 0px 4px 6px #340c5a;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .box:hover {
-  -webkit-filter: drop-shadow(0px 8px 8px #340c5a);
-          filter: drop-shadow(0px 8px 8px #340c5a);
-}
-
-#portfolio-section .portfolio .grid-container .portfolio-grid .rotate {
+#portfolio-section .portfolio .grid-container .portfolio-grid .card.is-flipped {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   z-index: 10;
-  -webkit-transform: scale(2) rotateY(180deg);
-          transform: scale(2) rotateY(180deg);
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .box1 {
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face {
+  border-radius: 5px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+}
+
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--front {
+  background: transparent;
+}
+
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back {
+  background: linear-gradient(-45deg, #101010, #2c3e50);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  overflow: hidden;
+}
+
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back:before, #portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back:after {
+  position: absolute;
+}
+
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back:before {
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  top: -20px;
+  right: 10px;
+  content: "";
+  width: 200px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+  z-index: 1;
+}
+
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back:after {
+  content: "+";
+  top: 5px;
+  right: 5px;
+  font-size: 30px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 2;
+}
+
+#portfolio-section .portfolio .grid-container .card1 {
   border-top-left-radius: 15px;
   background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
   background-size: cover;
   background-position: center center;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .box2 {
+#portfolio-section .portfolio .grid-container .card2 {
   background-image: url("/IMG/portfolio-img/Task-Manager.png");
   background-size: cover;
   background-position: center center;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .box3 {
+#portfolio-section .portfolio .grid-container .card3 {
   background-image: url("/IMG/portfolio-img/Rock-Paper-Pokemon.png");
   background-size: cover;
   background-position: center center;
   border-top-right-radius: 15px;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .box4 {
+#portfolio-section .portfolio .grid-container .card4 {
   border-bottom-left-radius: 15px;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .box6 {
+#portfolio-section .portfolio .grid-container .card6 {
   border-bottom-right-radius: 15px;
 }
 

@@ -165,11 +165,11 @@ function change() {
 
 // PORTFOLIO CLICK FUNCTION =====================
 $(function() {
-  $(".box").click(function() {
+  $(".card").click(function() {
     $(this)
-      .toggleClass("rotate")
-      .siblings(".rotate")
-      .removeClass("rotate");
+      .toggleClass("is-flipped")
+      .siblings(".is-flipped")
+      .removeClass("is-flipped");
   });
 });
 
