@@ -939,7 +939,7 @@ body {
     display: none;
   }
   .about#about-section {
-    height: 1800px !important;
+    height: 2000px !important;
   }
   .about#about-section .about__container {
     padding-top: 50px !important;
@@ -987,7 +987,7 @@ body {
     font-size: 28px !important;
   }
   .about#about-section {
-    height: 1900px !important;
+    height: 2200px !important;
   }
   section#portfolio-section .portfolio {
     height: 1500px !important;
@@ -1033,7 +1033,7 @@ body {
     width: 380px !important;
   }
   .about#about-section {
-    height: 2300px !important;
+    height: 2400px !important;
   }
   .about#about-section .about p.about__top {
     font-size: 18px !important;
