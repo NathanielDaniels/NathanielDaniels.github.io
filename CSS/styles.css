@@ -436,7 +436,13 @@ body {
           filter: drop-shadow(0px 4px 4px #340c5a);
 }
 
-.main-section .main-content .content-wrapper .greeting-loop {
+.main-section .main-content .greeting-loop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #fff;
   font-size: 40px;
   text-align: center;
@@ -714,7 +720,6 @@ body {
 }
 
 #portfolio-section .portfolio .grid-container .card1 {
-  border-top-left-radius: 15px;
   background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
   background-size: cover;
   background-position: center center;
@@ -731,14 +736,6 @@ body {
   background-size: cover;
   background-position: center center;
   border-top-right-radius: 15px;
-}
-
-#portfolio-section .portfolio .grid-container .card4 {
-  border-bottom-left-radius: 15px;
-}
-
-#portfolio-section .portfolio .grid-container .card6 {
-  border-bottom-right-radius: 15px;
 }
 
 #contact-section {
@@ -934,10 +931,10 @@ body {
     display: block !important;
   }
   .main-content .content-wrapper h1 {
-    font-size: 40px !important;
+    font-size: 45px !important;
   }
-  .main-content .content-wrapper .greeting-loop {
-    font-size: 26px !important;
+  .main-content .greeting-loop {
+    font-size: 28px !important;
   }
   .about#about-section {
     height: 1900px !important;
@@ -985,8 +982,8 @@ body {
   .main-content .content-wrapper h1 {
     font-size: 36px !important;
   }
-  .main-content .content-wrapper .greeting-loop {
-    font-size: 26px !important;
+  .main-content .greeting-loop {
+    font-size: 24px !important;
   }
   .about#about-section {
     height: 2300px !important;

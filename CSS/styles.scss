@@ -399,11 +399,21 @@ body {
         color: hsl(60, 100%, 80%);
         filter: drop-shadow(0px 4px 4px hsl(271, 76%, 20%));
       }
-      .greeting-loop {
-        color: #fff;
-        font-size: 40px;
-        text-align: center;
-      }
+      // .greeting-loop {
+      //   color: #fff;
+      //   font-size: 40px;
+      //   text-align: center;
+      // }
+    }
+    .greeting-loop {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 500px;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 40px;
+      text-align: center;
     }
   }
 }
@@ -579,7 +589,7 @@ body {
       }
 
       .card1 {
-        border-top-left-radius: 15px;
+        // border-top-left-radius: 15px;
         background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
         background-size: cover;
         background-position: center center;
@@ -596,17 +606,17 @@ body {
         background-position: center center;
         border-top-right-radius: 15px;
       }
-      .card4 {
-        // background: red;
-        border-bottom-left-radius: 15px;
-      }
+      // .card4 {
+      //   // background: red;
+      //   // border-bottom-left-radius: 15px;
+      // }
       // .card5 {
       //   // background: purple;
       // }
-      .card6 {
-        // background: #fff;
-        border-bottom-right-radius: 15px;
-      }
+      // .card6 {
+      //   // background: #fff;
+      //   // border-bottom-right-radius: 15px;
+      // }
     }
   }
 }
@@ -799,11 +809,14 @@ body {
   .main-content {
     .content-wrapper {
       h1 {
-        font-size: 40px !important;
+        font-size: 45px !important;
       }
-      .greeting-loop {
-        font-size: 26px !important;
-      }
+      // .greeting-loop {
+      //   font-size: 26px !important;
+      // }
+    }
+    .greeting-loop {
+      font-size: 28px !important;
     }
   }
   .about#about-section {
@@ -856,9 +869,12 @@ body {
       h1 {
         font-size: 36px !important;
       }
-      .greeting-loop {
-        font-size: 26px !important;
-      }
+      // .greeting-loop {
+      //   font-size: 26px !important;
+      // }
+    }
+    .greeting-loop {
+      font-size: 24px !important;
     }
   }
 
