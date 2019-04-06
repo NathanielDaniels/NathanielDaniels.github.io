@@ -686,6 +686,7 @@ body {
 }
 
 #portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back {
+  cursor: default;
   background: linear-gradient(-45deg, #101010, #2c3e50);
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
@@ -710,6 +711,7 @@ body {
 }
 
 #portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back:after {
+  cursor: pointer;
   content: "+";
   top: 5px;
   right: 5px;
@@ -719,23 +721,50 @@ body {
   z-index: 2;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .fab {
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .left-side a i {
+  color: #b478ed;
+  -webkit-filter: drop-shadow(1px 2px 2px #1a062d);
+          filter: drop-shadow(1px 2px 2px #1a062d);
+}
+
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .left-side a i.fab {
   position: absolute;
   left: 15%;
-  top: 15%;
+  top: 10%;
   font-size: 60px;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .fab:hover p {
-  opacity: 1;
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .left-side p {
+  color: #ffffcc;
+  -webkit-filter: drop-shadow(1px 1px 1px #1a1a1a);
+          filter: drop-shadow(1px 1px 1px #1a1a1a);
+  left: 13%;
+  position: absolute;
+  text-transform: uppercase;
+  top: 42%;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back p {
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .right-side a i {
+  z-index: 2;
+  color: #b478ed;
+  -webkit-filter: drop-shadow(1px 2px 2px #1a062d);
+          filter: drop-shadow(1px 2px 2px #1a062d);
+}
+
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .right-side a i.fas {
   position: absolute;
-  left: 13%;
-  top: 46%;
+  right: 20%;
+  top: 50%;
+  font-size: 50px;
+}
+
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .right-side p {
+  color: #ffffcc;
+  -webkit-filter: drop-shadow(1px 1px 1px #1a1a1a);
+          filter: drop-shadow(1px 1px 1px #1a1a1a);
+  right: 10%;
+  top: 80%;
+  position: absolute;
   text-transform: uppercase;
 }
 
@@ -879,6 +908,7 @@ body {
 }
 
 .footer-section .web-dev {
+  font-weight: 500;
   font-size: 18px;
   position: absolute;
   right: 0;

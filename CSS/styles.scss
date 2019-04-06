@@ -556,6 +556,7 @@ body {
               background: transparent;
             }
             &--back {
+              cursor: default;
               background: linear-gradient(-45deg, $black-dark, $black-light);
               transform: rotateY(180deg);
               overflow: hidden;
@@ -575,6 +576,7 @@ body {
                 z-index: 1;
               }
               &:after {
+                cursor: pointer;
                 content: "+";
                 top: 5px;
                 right: 5px;
@@ -582,29 +584,52 @@ body {
                 transform: rotate(45deg);
                 z-index: 2;
               }
-              .fab {
-                position: absolute;
-                left: 15%;
-                top: 15%;
-                font-size: 60px;
-                // &:hover p {
-                //   position: absolute;
-                //   left: 13%;
-                //   top: 46%;
-                //   text-transform: uppercase;
-                //   opacity: 1;
-                // }
+              .left-side {
+                a {
+                  i {
+                    color: hsl(271, 76%, 70%);
+                    filter: drop-shadow(1px 2px 2px hsl(271, 76%, 10%));
+                    &.fab {
+                      position: absolute;
+                      left: 15%;
+                      top: 10%;
+                      font-size: 60px;
+                    }
+                  }
+                }
+                p {
+                  color: hsl(60, 100%, 90%);
+                  filter: drop-shadow(1px 1px 1px hsl(0, 0%, 10%));
+                  left: 13%;
+                  position: absolute;
+                  text-transform: uppercase;
+                  top: 42%;
+                  // transition: 0.3s ease-in-out;
+                }
               }
-              .fab:hover p {
-                opacity: 1;
-              }
-              p {
-                // opacity: 0;
-                transition: 0.3s ease-in-out;
-                position: absolute;
-                left: 13%;
-                top: 46%;
-                text-transform: uppercase;
+              .right-side {
+                a {
+                  i {
+                    z-index: 2;
+                    color: hsl(271, 76%, 70%);
+                    filter: drop-shadow(1px 2px 2px hsl(271, 76%, 10%));
+                    &.fas {
+                      position: absolute;
+                      right: 20%;
+                      top: 50%;
+                      font-size: 50px;
+                    }
+                  }
+                }
+                p {
+                  color: hsl(60, 100%, 90%);
+                  filter: drop-shadow(1px 1px 1px hsl(0, 0%, 10%));
+                  right: 10%;
+                  top: 80%;
+                  position: absolute;
+                  text-transform: uppercase;
+                  // transition: 0.3s ease-in-out;
+                }
               }
             }
           }
@@ -612,11 +637,9 @@ body {
       }
 
       .card1 {
-        // border-top-left-radius: 15px;
         background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
         background-size: cover;
         background-position: center center;
-        // backface-visibility: hidden;
       }
       .card2 {
         background-image: url("/IMG/portfolio-img/Task-Manager.png");
@@ -738,6 +761,8 @@ body {
     }
   }
   .web-dev {
+    // color: hsl(271, 76%, 75%);
+    font-weight: 500;
     font-size: 18px;
     position: absolute;
     right: 0;
