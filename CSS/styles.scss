@@ -3,6 +3,17 @@
 $black-dark: #101010;
 $black-light: #2c3e50;
 
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1200px) rotate(360deg);
+    opacity: 1;
+  }
+}
+
 @mixin angle($pseudo, $flip: false, $angle: 6deg) {
   // Possible values for $pseudo are: before, after, both
   @if $pseudo == "before" or $pseudo == "after" or $pseudo == "both" {
@@ -510,6 +521,70 @@ body {
     @include angle(both);
     background: blueviolet;
     cursor: default;
+    .box-area {
+      position: absolute;
+      top: -120px;
+      left: 0;
+      width: 100%;
+      height: 145%;
+      overflow: hidden;
+      li {
+        position: absolute;
+        display: block;
+        list-style: none;
+        width: 25px;
+        height: 25px;
+        background: rgba(255, 255, 255, 0.2);
+        animation: animate 20s linear infinite;
+        bottom: -180px;
+        &:nth-child(1) {
+          left: 86%;
+          width: 80px;
+          height: 80px;
+          animation-delay: 0s;
+          animation-duration: 10s;
+          // background: blue;
+        }
+        &:nth-child(2) {
+          left: 12%;
+          width: 30px;
+          height: 30px;
+          animation-delay: 1.5s;
+          animation-duration: 10s;
+          // background: green;
+        }
+        &:nth-child(3) {
+          left: 70%;
+          width: 100px;
+          height: 100px;
+          animation-delay: 5.5s;
+          // background: yellow;
+        }
+        &:nth-child(4) {
+          left: 42%;
+          width: 150px;
+          height: 150px;
+          animation-delay: 0s;
+          animation-duration: 15s;
+          // background: orangered;
+        }
+        &:nth-child(5) {
+          left: 55%;
+          width: 40px;
+          height: 40px;
+          animation-delay: 5s;
+          // background: white;
+        }
+        &:nth-child(6) {
+          left: 15%;
+          width: 110px;
+          height: 110px;
+          animation-delay: 3.5s;
+          // background: red;
+        }
+      }
+    }
+
     h2.portfolio-title {
       font-weight: 800;
       text-align: center;
