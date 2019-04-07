@@ -662,7 +662,7 @@ body {
 }
 
 #portfolio-section .portfolio .box-area li:nth-child(1) {
-  left: 86%;
+  left: 92%;
   width: 80px;
   height: 80px;
   -webkit-animation-delay: 0s;
@@ -672,7 +672,7 @@ body {
 }
 
 #portfolio-section .portfolio .box-area li:nth-child(2) {
-  left: 12%;
+  left: 5%;
   width: 30px;
   height: 30px;
   -webkit-animation-delay: 1.5s;
@@ -685,8 +685,8 @@ body {
   left: 70%;
   width: 100px;
   height: 100px;
-  -webkit-animation-delay: 5.5s;
-          animation-delay: 5.5s;
+  -webkit-animation-delay: 6.5s;
+          animation-delay: 6.5s;
 }
 
 #portfolio-section .portfolio .box-area li:nth-child(4) {
@@ -1091,6 +1091,11 @@ body {
   }
   section#portfolio-section .portfolio {
     height: 1500px !important;
+  }
+  section#portfolio-section .portfolio .box-area {
+    top: -1400px;
+    bottom: -500px li;
+    bottom-bottom: -500px;
   }
   section#portfolio-section .portfolio .portfolio-grid {
     -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit] !important;
