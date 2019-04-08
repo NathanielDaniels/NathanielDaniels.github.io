@@ -679,7 +679,6 @@ body {
           animation-delay: 2s;
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
-  background: green;
 }
 
 #portfolio-section .portfolio .box-area li:nth-child(3) {
