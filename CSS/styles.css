@@ -642,10 +642,10 @@ body {
 
 #portfolio-section .portfolio .box-area {
   position: absolute;
-  top: -120px;
+  top: -160px;
   left: 0;
   width: 100%;
-  height: 145%;
+  height: 152%;
   overflow: hidden;
 }
 
@@ -679,6 +679,7 @@ body {
           animation-delay: 2s;
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
+  background: green;
 }
 
 #portfolio-section .portfolio .box-area li:nth-child(3) {
@@ -1051,6 +1052,10 @@ body {
   .about#about-section {
     height: 1600px;
   }
+  section#portfolio-section .portfolio .box-area {
+    top: -100px !important;
+    height: 135%;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -1078,6 +1083,10 @@ body {
   section#portfolio-section .portfolio {
     padding-top: 50px !important;
     height: 800px !important;
+  }
+  section#portfolio-section .portfolio .box-area {
+    top: -100px !important;
+    height: 125%;
   }
   section#portfolio-section .portfolio .portfolio-grid {
     -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
@@ -1121,9 +1130,7 @@ body {
     height: 1500px !important;
   }
   section#portfolio-section .portfolio .box-area {
-    top: -1400px;
-    bottom: -500px li;
-    bottom-bottom: -500px;
+    display: none;
   }
   section#portfolio-section .portfolio .portfolio-grid {
     -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit] !important;
