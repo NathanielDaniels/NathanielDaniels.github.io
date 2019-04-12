@@ -1,6 +1,6 @@
 // Title SVG Animation ======================
 $(function() {
-  $("#name-svg").load("name-svg.html");
+  $("#name-svg").load("/titleName-anim/name-svg.html");
 });
 
 // Smiley Face Animation ======================
