@@ -175,55 +175,65 @@ $(function() {
 
 //=====================================================
 
-let i = 0;
-for (i = 0; i < 3; i++) {
-  console.log("Nathan");
-}
+//JAVASCRIPT PRACTICE
 
-const brands = ["brand1", "brand2", "brand3", "brand4"];
-
-let e = 0;
-while (e < brands.length) {
-  console.log(brands[i]);
-  e++;
-}
-
-let brandObjects = [
-  {
-    name: "Puma",
-    product: "clothes",
-    price: "$50+"
-  },
-  {
-    name: "Nike",
-    product: "Shoes",
-    price: "$100+"
-  }
-];
-
-// let a = 0;
-// for (a; a < brand.length; a++) {
-//   console.log(brand[a]);
-//   console.log(`${brand[a].name}'s ${brand[a].product} cost ${brand[a].price}`);
+// let i = 0;
+// for (i = 0; i < 3; i++) {
+//   console.log("Nathan");
 // }
 
-for (firstBrand of brandObjects) {
-  console.log(
-    `${firstBrand.name}'s ${firstBrand.product} costs ${firstBrand.price}`
-  );
-  break;
-}
+// const brands = ["brand1", "brand2", "brand3", "brand4"];
 
-console.log(firstBrand);
+// let e = 0;
+// while (e < brands.length) {
+//   console.log(brands[i]);
+//   e++;
+// }
 
-var man = ["big", "strong", "fierce"];
+// let brandObjects = [
+//   {
+//     name: "Puma",
+//     product: "clothes",
+//     price: "$50+"
+//   },
+//   {
+//     name: "Nike",
+//     product: "Shoes",
+//     price: "$100+"
+//   }
+// ];
 
-var fierce = man.toString();
+// // let a = 0;
+// // for (a; a < brand.length; a++) {
+// //   console.log(brand[a]);
+// //   console.log(`${brand[a].name}'s ${brand[a].product} cost ${brand[a].price}`);
+// // }
 
-console.log(man);
-console.log(fierce);
+// for (firstBrand of brandObjects) {
+//   console.log(
+//     `${firstBrand.name}'s ${firstBrand.product} costs ${firstBrand.price}`
+//   );
+//   break;
+// }
 
-if (5 < 6) {
-  // document.write("5 is less than 6");
-  console.log(`5 is less than 6`);
-}
+// console.log(firstBrand);
+
+// var man = ["big", "strong", "fierce"];
+
+// var fierce = man.toString();
+
+// console.log(man);
+// console.log(fierce);
+
+// if (5 < 6) {
+//   // document.write("5 is less than 6");
+//   console.log(`5 is less than 6`);
+// }
+
+// document.getElementsByClassName("header__nav-links").style.color = "red";
+
+var test = document.querySelector(".header__nav-links").querySelectorAll("a");
+
+console.log(test);
+
+test.style.color = "red";
