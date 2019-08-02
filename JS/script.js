@@ -117,10 +117,10 @@ $("#sidebar-menu ul li a").click(function() {
 
 // Navbar Scroll Animation ===============================
 // Hide Header on on scroll down
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $("header").outerHeight();
+let didScroll;
+let lastScrollTop = 0;
+let delta = 5;
+let navbarHeight = $("header").outerHeight();
 
 $(window).scroll(function(event) {
   didScroll = true;
@@ -134,7 +134,7 @@ setInterval(function() {
 }, 100);
 
 function hasScrolled() {
-  var st = $(this).scrollTop();
+  let st = $(this).scrollTop();
 
   // Make sure they scroll more than delta
   if (Math.abs(lastScrollTop - st) <= delta) return;
