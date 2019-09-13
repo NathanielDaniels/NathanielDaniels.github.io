@@ -192,3 +192,15 @@ $(function() {
 });
 
 //=====================================================
+let header = document.getElementById("header__nav-links");
+
+let a = header.getElementsByTagName("a");
+
+for (let i = 0; i < a.length; i++) {
+  a[i];
+  console.log(i);
+}
+
+console.log(a);
+
+a.style.color = "red";
