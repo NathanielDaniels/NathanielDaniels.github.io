@@ -192,15 +192,15 @@ $(function() {
 });
 
 //=====================================================
-let header = document.getElementById("header__nav-links");
+// let header = document.getElementById("header__nav-links");
 
-let a = header.getElementsByTagName("a");
+// let a = header.getElementsByTagName("a");
 
-for (let i = 0; i < a.length; i++) {
-  a[i];
-  console.log(i);
-}
+// for (let i = 0; i < a.length; i++) {
+//   a[i];
+//   console.log(i);
+// }
 
-console.log(a);
+// console.log(a);
 
-a.style.color = "red";
+// a.style.color = "red";
