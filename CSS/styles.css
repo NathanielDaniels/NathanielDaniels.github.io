@@ -1084,7 +1084,7 @@ body {
     display: none;
   }
   .about#about-section {
-    height: 1600px;
+    height: 1550px;
   }
   section#portfolio-section .portfolio .box-area {
     top: -100px !important;
@@ -1106,7 +1106,7 @@ body {
     display: none;
   }
   .about#about-section {
-    height: 2000px !important;
+    height: 1700px !important;
   }
   .about#about-section .about__container {
     padding-top: 50px !important;
@@ -1132,6 +1132,18 @@ body {
   }
   section#contact-section {
     padding-top: 75px !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about#about-section {
+    height: 1900px !important;
+  }
+  .about#about-section .about__container {
+    padding-top: 50px !important;
+  }
+  .about#about-section .about__top {
+    width: 100%;
   }
 }
 
@@ -1207,7 +1219,7 @@ body {
     width: 380px !important;
   }
   .about#about-section {
-    height: 2400px !important;
+    height: 2200px !important;
   }
   .about#about-section .about p.about__top {
     font-size: 18px !important;
