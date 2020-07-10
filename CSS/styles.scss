@@ -126,7 +126,7 @@ body {
   height: 100%;
 }
 
-// MAIN Section (Hero) ===========================
+//! MAIN Section (Hero) ===========================
 .main-section {
   height: 125vh;
   display: flex;
@@ -443,7 +443,7 @@ body {
   }
 }
 
-// ABOUT Section =================================
+//! ABOUT Section =================================
 #about-section {
   .about__container {
     @include angle(before);
@@ -529,7 +529,7 @@ body {
   }
 }
 
-// PORTFOLIO Section =============================
+//! PORTFOLIO Section =============================
 #portfolio-section {
   .portfolio {
     padding-top: 10px;
@@ -781,7 +781,7 @@ body {
   }
 }
 
-// CONTACT Section ===============================
+//! CONTACT Section ===============================
 #contact-section {
   padding-top: 100px;
   height: 700px;
@@ -851,7 +851,7 @@ body {
   }
 }
 
-// FOOTER Section ================================
+//! FOOTER Section ================================
 .footer-section {
   width: 100%;
   display: flex;
@@ -886,7 +886,7 @@ body {
   }
 }
 
-// @MEDIA QUERIES Section ================================
+//! @MEDIA QUERIES Section ================================
 @media screen and (max-width: 1000px) {
   section.main-section {
     .speechBubble {
