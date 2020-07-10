@@ -93,8 +93,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background: #761cca;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #d9d963), color-stop(50%, #4c0571));
-  background: linear-gradient(180deg, #d9d963 1%, #4c0571 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ffff99), color-stop(50%, #4c0571));
+  background: linear-gradient(180deg, #ffff99 1%, #4c0571 50%);
   /* Eyes */
   /* Right Eye */
   /* Blink Effect */
@@ -481,7 +481,7 @@ body {
 .main-section .main-content .content-wrapper .title-name {
   z-index: 10;
   font-size: 80px;
-  color: #d9d963;
+  color: #ffff99;
   -webkit-filter: drop-shadow(0px 4px 4px #340c5a);
           filter: drop-shadow(0px 4px 4px #340c5a);
 }
@@ -490,8 +490,7 @@ body {
   display: none;
   z-index: 10;
   font-size: 80px;
-  padding: 10px 0;
-  color: #d9d963;
+  color: #ffff99;
   -webkit-filter: drop-shadow(0px 4px 4px #340c5a);
           filter: drop-shadow(0px 4px 4px #340c5a);
 }
@@ -511,7 +510,8 @@ body {
 #about-section .about__container {
   position: relative;
   z-index: 1;
-  height: 1500px;
+  padding-top: 2rem;
+  height: 1000px;
   background: #fff;
   max-width: 100%;
   width: 100%;
@@ -542,7 +542,7 @@ body {
 
 #about-section .about__container h2.about__title {
   color: blueviolet;
-  font-size: 60px;
+  font-size: 4rem;
   font-weight: 800;
   text-align: center;
   text-transform: uppercase;
@@ -588,6 +588,7 @@ body {
 
 #about-section .about__container .about__info .about__me--main {
   padding-bottom: 50px;
+  text-align: center;
 }
 
 #about-section .about__container .about__info .about__me--main .about__top {
@@ -781,7 +782,7 @@ body {
   position: relative;
   font-weight: 800;
   text-align: center;
-  font-size: 60px;
+  font-size: 4rem;
   color: #ffff99;
   text-transform: uppercase;
 }
@@ -964,7 +965,7 @@ body {
 #contact-section .contact h2.contact-title {
   margin-top: 40px;
   font-weight: 800;
-  font-size: 60px;
+  font-size: 4rem;
   color: blueviolet;
   text-transform: uppercase;
 }
@@ -1083,9 +1084,6 @@ body {
   section.main-section .speechBubble {
     display: none;
   }
-  .about#about-section {
-    height: 1550px;
-  }
   section#portfolio-section .portfolio .box-area {
     top: -100px !important;
     height: 135%;
@@ -1106,7 +1104,7 @@ body {
     display: none;
   }
   .about#about-section {
-    height: 1700px !important;
+    height: 1000px !important;
   }
   .about#about-section .about__container {
     padding-top: 50px !important;
@@ -1137,13 +1135,7 @@ body {
 
 @media screen and (max-width: 700px) {
   .about#about-section {
-    height: 1900px !important;
-  }
-  .about#about-section .about__container {
-    padding-top: 50px !important;
-  }
-  .about#about-section .about__top {
-    width: 100%;
+    height: 1100px !important;
   }
 }
 
@@ -1164,13 +1156,14 @@ body {
     display: block !important;
   }
   .main-content .content-wrapper h1 {
-    font-size: 45px !important;
+    font-size: 2.8rem !important;
   }
   .main-content .greeting-loop {
-    font-size: 28px !important;
+    top: 0px !important;
+    font-size: 30px !important;
   }
   .about#about-section {
-    height: 2200px !important;
+    height: 1200px !important;
   }
   section#portfolio-section .portfolio {
     height: 1500px !important;
@@ -1211,15 +1204,9 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-  .main-content .content-wrapper h1 {
-    font-size: 36px !important;
-  }
   .main-content .greeting-loop {
     font-size: 24px !important;
     width: 380px !important;
-  }
-  .about#about-section {
-    height: 2200px !important;
   }
   .about#about-section .about p.about__top {
     font-size: 18px !important;
