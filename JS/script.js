@@ -16,29 +16,29 @@
 //   location.hash = document.title = s.join("");
 // }
 
-// Title SVG Animation ======================
-$(function() {
+//! Title SVG Animation ======================
+$(function () {
   $("#name-svg").load("/titleName-anim/name-svg.html");
 });
 
-// Smiley Face Animation ======================
+//! Smiley Face Animation ======================
 let face = $(".smiley-face span")[0];
 let head = $(".smiley-face")[0];
 let isDead = true;
 let canBlink = true;
 
 document.onmousemove = trackMouse;
-// window.onresize = squish
+// window.onresize = squish;
 
 // Blink every 5.5 seconds
-setInterval(function() {
+setInterval(function () {
   if (!canBlink) {
     return;
   }
 
   face.classList.add("blink");
 
-  setTimeout(function() {
+  setTimeout(function () {
     face.classList.remove("blink");
   }, 200);
 }, 5500);
@@ -95,38 +95,38 @@ function clamp(num, min, max) {
 //   face.style.opacity = 1.6 - squishP
 // }
 
-// Speech Bubble Animation! (for face_)======================
+//! Speech Bubble Animation! (for face_)======================
 
-setInterval(function() {
+setInterval(function () {
   document.querySelector(".speechBubble").style.display = "none";
 }, 2500);
 
 // Hamburger Menu Animation! ======================
 $menu = $(".burger-elements");
 
-$menu.click(function() {
+$menu.click(function () {
   $("#sidebar-menu").toggleClass("active");
   $(this).toggleClass("close");
 });
 
 // Close Menu on Click of Link! ============
-$("#sidebar-menu ul li a").click(function() {
+$("#sidebar-menu ul li a").click(function () {
   $("#sidebar-menu").removeClass("active");
   $menu.removeClass("close");
 });
 
-// Navbar Scroll Animation ===============================
+//! Navbar Scroll Animation ===============================
 // Hide Header on on scroll down
 let didScroll;
 let lastScrollTop = 0;
 let delta = 5;
 let navbarHeight = $("header").outerHeight();
 
-$(window).scroll(function(event) {
+$(window).scroll(function (event) {
   didScroll = true;
 });
 
-setInterval(function() {
+setInterval(function () {
   if (didScroll) {
     hasScrolled();
     didScroll = false;
@@ -143,35 +143,31 @@ function hasScrolled() {
   // This is necessary so you never see what is "behind" the navbar.
   if (st > lastScrollTop && st > navbarHeight) {
     // Scroll Down
-    $("header")
-      .removeClass("nav-down")
-      .addClass("nav-up");
+    $("header").removeClass("nav-down").addClass("nav-up");
   } else {
     // Scroll Up
     if (st + $(window).height() < $(document).height()) {
-      $("header")
-        .removeClass("nav-up")
-        .addClass("nav-down");
+      $("header").removeClass("nav-up").addClass("nav-down");
     }
   }
 
   lastScrollTop = st;
 }
 
-// Greeting-Loop Animation ================================
+//! Greeting-Loop Animation ================================
 const text = [
   "Web Designer",
   "Freelancer",
   "Web Enthusiast",
-  "Front-End Developer"
+  "Front-End Developer",
 ];
 let counter = 0;
 const elem = $("#greeting");
-setTimeout(function() {
+setTimeout(() => {
   setInterval(change, 3000);
 }, 3000);
 function change() {
-  elem.fadeOut(function() {
+  elem.fadeOut(function () {
     elem.text(text[counter]);
     counter++;
     if (counter >= text.length) {
@@ -182,8 +178,8 @@ function change() {
 }
 
 // PORTFOLIO CLICK FUNCTION =====================
-$(function() {
-  $(".card").click(function() {
+$(function () {
+  $(".card").click(function () {
     $(this)
       .toggleClass("is-flipped")
       .siblings(".is-flipped")
@@ -197,7 +193,7 @@ $(function() {
 // let a = header.getElementsByTagName("a");
 
 // for (let i = 0; i < a.length; i++) {
-//   a[i];
+//q   a[i];
 //   console.log(i);
 // }
 
