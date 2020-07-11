@@ -3,6 +3,8 @@
 $black-dark: #101010;
 $black-light: #2c3e50;
 
+//! CSS Animations =======================
+
 @keyframes animate {
   0% {
     transform: translateY(0) rotate(0deg);
@@ -28,6 +30,7 @@ $black-light: #2c3e50;
   }
 }
 
+//! Section Angle ========================
 @mixin angle($pseudo, $flip: false, $angle: 6deg) {
   // Possible values for $pseudo are: before, after, both
   @if $pseudo == "before" or $pseudo == "after" or $pseudo == "both" {
@@ -64,6 +67,7 @@ $black-light: #2c3e50;
 
     @if $pseudo == "after" {
       #{$selector} {
+        box-shadow: 0px 2px 5px hsl(0, 0, 0.9), 0px 5px 10px hsl(0, 0, 0.5);
         bottom: 0;
 
         @if $flip {
@@ -350,7 +354,7 @@ body {
       height: 100vh;
       background: hsl(271, 76%, 20%);
       opacity: 0.98;
-      @include angle(after);
+      @include angle(after, true);
       position: absolute;
       top: -150vh;
       transition: 0.4s ease-in-out;
@@ -403,9 +407,6 @@ body {
     //   top: 0;
     // }
   }
-  header.nav-up {
-    top: -70px;
-  }
 
   .main-content {
     position: absolute;
@@ -415,9 +416,9 @@ body {
       cursor: default;
       .title-name {
         z-index: 10;
-        font-size: 80px;
+        // font-size: 80px;
+        font-size: 5rem;
         color: hsl(60, 100%, 80%);
-        // color: rgba(217, 217, 99, 1);
         filter: drop-shadow(0px 4px 4px hsl(271, 76%, 20%));
       }
       h1 {
@@ -426,7 +427,6 @@ body {
         font-size: 80px;
         // padding: 10px 0;
         color: hsl(60, 100%, 80%);
-        // color: rgba(217, 217, 99, 1);
         filter: drop-shadow(0px 4px 4px hsl(271, 76%, 20%));
       }
     }
@@ -434,10 +434,11 @@ body {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 460px;
+      width: 30rem;
       transform: translate(-50%, -50%);
       color: #fff;
-      font-size: 40px;
+      // font-size: 40px;
+      font-size: 2.5rem;
       text-align: center;
     }
   }
@@ -822,6 +823,8 @@ body {
         height: 214px;
       }
       #input-submit {
+        position: relative;
+        top: 1rem;
         color: #fff;
         font-size: 30px;
         font-weight: bold;
@@ -840,7 +843,7 @@ body {
     .half {
       float: left;
       width: 48%;
-      margin-bottom: 1em;
+      // margin-bottom: 1em;
     }
     .right {
       width: 50%;
@@ -1039,7 +1042,7 @@ body {
           width: 80%;
           position: relative;
           left: 50%;
-          top: 20px;
+          // top: 20px;
           transform: translate(-50%);
         }
       }
@@ -1089,13 +1092,13 @@ body {
   footer.footer-section {
     .social-media {
       width: 100% !important;
-      justify-content: flex-start !important;
+      justify-content: center !important;
       a {
-        padding: 5px;
+        padding: 0 1rem;
       }
     }
-    .web-dev {
-      font-size: 16px !important;
-    }
+    // .web-dev {
+    //   font-size: 16px !important;
+    // }
   }
 }
