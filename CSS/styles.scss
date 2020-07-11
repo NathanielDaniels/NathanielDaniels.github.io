@@ -43,8 +43,8 @@ $black-light: #2c3e50;
       content: "";
       display: block;
       height: 500px;
-      left: 0;
       position: absolute;
+      left: 0;
       right: 0;
       z-index: -1;
       backface-visibility: hidden; // for Chrome Windows
@@ -54,6 +54,7 @@ $black-light: #2c3e50;
       #{$selector} {
         border-top: 5px solid hsl(0, 0%, 20%);
         top: 0;
+        height: 1000px;
 
         @if $flip {
           transform: skewY($angle * -1);
@@ -67,7 +68,7 @@ $black-light: #2c3e50;
 
     @if $pseudo == "after" {
       #{$selector} {
-        box-shadow: 0px 2px 5px hsl(0, 0, 0.9), 0px 5px 10px hsl(0, 0, 0.5);
+        // box-shadow: 0px 2px 5px hsl(0, 0, 0.9), 0px 5px 10px hsl(0, 0, 0.5);
         bottom: 0;
 
         @if $flip {
@@ -143,6 +144,7 @@ body {
     rgba(76, 5, 113, 1) 50%
   );
 
+  //? Face
   .smiley-face {
     position: absolute;
     left: 8%;
@@ -194,7 +196,7 @@ body {
       }
     }
   }
-  /* Eyes */
+  /*? Eyes */
   span.face:before,
   span.face:after {
     position: absolute;
@@ -448,8 +450,8 @@ body {
 #about-section {
   .about__container {
     @include angle(before);
-    padding-top: 2rem;
-    height: 1000px;
+    padding: 2rem 0 10rem;
+    // height: 1000px;
     background: #fff;
     max-width: 100%;
     width: 100%;
@@ -469,10 +471,10 @@ body {
       hyphens: auto;
       justify-content: center;
       line-height: 1.5em;
-      margin: 0 auto;
+      margin: 3rem auto;
       max-width: 800px;
       overflow-wrap: break-word;
-      padding: 50px 0;
+      // padding: 50px 0;
       text-align: justify;
       text-rendering: optimizeLegibility;
       width: 80%;
@@ -533,9 +535,10 @@ body {
 //! PORTFOLIO Section =============================
 #portfolio-section {
   .portfolio {
-    padding-top: 10px;
-    height: 600px;
     @include angle(both);
+    // padding-top: 10px;
+    padding: 2rem 0 5rem;
+    // height: 600px;
     background: blueviolet;
     cursor: default;
     .box-area {
@@ -892,6 +895,7 @@ body {
 //! @MEDIA QUERIES Section ================================
 @media screen and (max-width: 1000px) {
   section.main-section {
+    height: 115vh;
     .speechBubble {
       display: none;
     }
@@ -937,8 +941,8 @@ body {
   }
   section#portfolio-section {
     .portfolio {
-      padding-top: 50px !important;
-      height: 800px !important;
+      // padding-top: 50px !important;
+      height: 55rem !important;
       .box-area {
         top: -100px !important;
         height: 125%;

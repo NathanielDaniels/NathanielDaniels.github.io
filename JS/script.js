@@ -30,7 +30,7 @@ let canBlink = true;
 document.onmousemove = trackMouse;
 // window.onresize = squish;
 
-// Blink every 5.5 seconds
+//? Blink every 5.5 seconds
 setInterval(function () {
   if (!canBlink) {
     return;
@@ -48,29 +48,31 @@ function trackMouse(event) {
     return;
   }
 
-  // mouse coordinates
+  //? mouse coordinates
   let mX = event.clientX;
   let mY = event.clientY;
 
-  // viewport dimentions
+  //? viewport dimentions
   let vpH = window.innerHeight;
   let vpW = window.innerWidth;
 
-  // head boundingbox
+  //? head boundingbox
   let headBox = head.getBoundingClientRect();
 
-  // face boundingbox
+  //? face boundingbox
   let faceBox = face.getBoundingClientRect();
 
-  // the magic
+  //? the magic
   let calcX = (headBox.width - faceBox.width + 1000) * (mX / vpW);
   let calcY = (headBox.height - faceBox.height) * (mY / vpH);
 
-  // add bounding restrictions to face
+  // //? add bounding restrictions to face
+  // calcX = clamp(calcX, 60, 150);
+  // calcY = clamp(calcY, 60, 130);
   calcX = clamp(calcX, 60, 150);
-  calcY = clamp(calcY, 60, 130);
+  calcY = clamp(calcY, 40, 160);
 
-  face.setAttribute("style", "top: " + calcY + "px; left: " + calcX + "px;");
+  face.setAttribute("style", `top: ${calcY}px; left: ${calcX}px;`);
 }
 
 function clamp(num, min, max) {
