@@ -69,7 +69,7 @@ function trackMouse(event) {
   // //? add bounding restrictions to face
   // calcX = clamp(calcX, 60, 150);
   // calcY = clamp(calcY, 60, 130);
-  calcX = clamp(calcX, 60, 150);
+  calcX = clamp(calcX, 80, 150);
   calcY = clamp(calcY, 40, 160);
 
   face.setAttribute("style", `top: ${calcY}px; left: ${calcX}px;`);
@@ -97,7 +97,7 @@ function clamp(num, min, max) {
 //   face.style.opacity = 1.6 - squishP
 // }
 
-//! Speech Bubble Animation! (for face_)======================
+//! Speech Bubble Animation! (smileyface)======================
 
 setInterval(function () {
   document.querySelector(".speechBubble").style.display = "none";
@@ -188,6 +188,9 @@ $(function () {
       .removeClass("is-flipped");
   });
 });
+
+//==================================================
+// Projects
 
 //=====================================================
 // let header = document.getElementById("header__nav-links");
