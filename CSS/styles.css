@@ -907,62 +907,68 @@ body {
           filter: drop-shadow(1px 2px 2px #1a062d);
 }
 
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .left-side a i.fab, #portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .left-side a i.fas,
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .right-side a i.fab,
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .right-side a i.fas {
+  position: absolute;
+}
+
 #portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .left-side a i:hover,
 #portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .right-side a i:hover {
   color: #ffff99;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .left-side a i.fab {
-  position: absolute;
-  left: 15%;
-  top: 10%;
-  font-size: 60px;
-}
-
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .left-side p {
-  color: #ffffcc;
-  -webkit-filter: drop-shadow(1px 1px 1px #1a1a1a);
-          filter: drop-shadow(1px 1px 1px #1a1a1a);
-  left: 13%;
-  position: absolute;
-  text-transform: uppercase;
-  top: 42%;
-}
-
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .right-side a i.fas {
-  position: absolute;
-  right: 20%;
-  top: 50%;
-  font-size: 50px;
-}
-
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .left-side p,
 #portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .right-side p {
   color: #ffffcc;
   -webkit-filter: drop-shadow(1px 1px 1px #1a1a1a);
           filter: drop-shadow(1px 1px 1px #1a1a1a);
-  right: 10%;
-  top: 80%;
   position: absolute;
   text-transform: uppercase;
 }
 
-#portfolio-section .portfolio .grid-container .card1 {
-  background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .left-side a i.fab {
+  left: 15%;
+  top: 10%;
+  font-size: 3.7rem;
+}
+
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .left-side p {
+  left: 13%;
+  top: 42%;
+}
+
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .right-side a i.fas {
+  right: 20%;
+  top: 50%;
+  font-size: 3rem;
+}
+
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .right-side p {
+  right: 10%;
+  top: 80%;
+}
+
+#portfolio-section .portfolio .grid-container .card1,
+#portfolio-section .portfolio .grid-container .card2,
+#portfolio-section .portfolio .grid-container .card3,
+#portfolio-section .portfolio .grid-container .card4,
+#portfolio-section .portfolio .grid-container .card5,
+#portfolio-section .portfolio .grid-container .card6 {
   background-size: cover;
   background-position: center center;
+}
+
+#portfolio-section .portfolio .grid-container .card1 {
+  background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
 }
 
 #portfolio-section .portfolio .grid-container .card2 {
   background-image: url("/IMG/portfolio-img/Task-Manager.png");
-  background-size: cover;
-  background-position: center center;
 }
 
 #portfolio-section .portfolio .grid-container .card3 {
   background-image: url("/IMG/portfolio-img/Rock-Paper-Pokemon.png");
-  background-size: cover;
-  background-position: center center;
-  border-top-right-radius: 15px;
 }
 
 #contact-section {

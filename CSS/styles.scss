@@ -555,10 +555,9 @@ body {
 //! PORTFOLIO Section =============================
 #portfolio-section {
   .portfolio {
-    @include angle(both);
-    // padding-top: 10px;
-    padding: 3rem 0 5rem;
     // height: 600px;
+    @include angle(both);
+    padding: 3rem 0 5rem;
     background: blueviolet;
     cursor: default;
     .box-area {
@@ -728,52 +727,51 @@ body {
                   i {
                     color: hsl(271, 76%, 70%);
                     filter: drop-shadow(1px 2px 2px hsl(271, 76%, 10%));
+                    &.fab,
+                    &.fas {
+                      position: absolute;
+                    }
                     &:hover {
                       color: hsl(60, 100%, 80%);
                     }
                   }
+                }
+                p {
+                  color: hsl(60, 100%, 90%);
+                  filter: drop-shadow(1px 1px 1px hsl(0, 0%, 10%));
+                  position: absolute;
+                  text-transform: uppercase;
+                  // transition: 0.3s ease-in-out;
                 }
               }
               .left-side {
                 a {
                   i {
                     &.fab {
-                      position: absolute;
                       left: 15%;
                       top: 10%;
-                      font-size: 60px;
+                      font-size: 3.7rem;
                     }
                   }
                 }
                 p {
-                  color: hsl(60, 100%, 90%);
-                  filter: drop-shadow(1px 1px 1px hsl(0, 0%, 10%));
                   left: 13%;
-                  position: absolute;
-                  text-transform: uppercase;
                   top: 42%;
-                  // transition: 0.3s ease-in-out;
                 }
               }
               .right-side {
                 a {
                   i {
                     &.fas {
-                      position: absolute;
                       right: 20%;
                       top: 50%;
-                      font-size: 50px;
+                      font-size: 3rem;
                     }
                   }
                 }
                 p {
-                  color: hsl(60, 100%, 90%);
-                  filter: drop-shadow(1px 1px 1px hsl(0, 0%, 10%));
                   right: 10%;
                   top: 80%;
-                  position: absolute;
-                  text-transform: uppercase;
-                  // transition: 0.3s ease-in-out;
                 }
               }
             }
@@ -781,21 +779,25 @@ body {
         }
       }
 
-      .card1 {
-        background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
+      .card1,
+      .card2,
+      .card3,
+      .card4,
+      .card5,
+      .card6 {
         background-size: cover;
         background-position: center center;
+      }
+
+      .card1 {
+        background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
       }
       .card2 {
         background-image: url("/IMG/portfolio-img/Task-Manager.png");
-        background-size: cover;
-        background-position: center center;
       }
       .card3 {
         background-image: url("/IMG/portfolio-img/Rock-Paper-Pokemon.png");
-        background-size: cover;
-        background-position: center center;
-        border-top-right-radius: 15px;
+        // border-top-right-radius: 15px;
       }
       // .card4 {
       //   // background: red;
