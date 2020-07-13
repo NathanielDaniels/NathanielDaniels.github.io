@@ -564,11 +564,11 @@ body {
           justify-content: center;
   line-height: 1.5em;
   margin: 3rem auto;
+  width: 80%;
   max-width: 800px;
   overflow-wrap: break-word;
   text-align: justify;
   text-rendering: optimizeLegibility;
-  width: 80%;
   word-wrap: break-word;
 }
 
@@ -581,17 +581,41 @@ body {
   font-weight: 500;
 }
 
-#about-section .about__container .about__info .about__me--main {
+#about-section .about__container .about__info .about__top {
   padding-bottom: 50px;
   text-align: center;
 }
 
-#about-section .about__container .about__info .about__me--main .about__top {
+#about-section .about__container .about__info .about__top .about__headline {
   font-size: 1.2em;
   text-align: center;
   padding-bottom: 40px;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
+}
+
+#about-section .about__container .about__info .about__top .about__job {
+  padding: 20px;
+  width: 80%;
+  border: 2px solid blueviolet;
+  border-radius: 20px;
+  margin: 0 auto;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#about-section .about__container .about__info .about__top .about__job p {
+  margin: 0 auto;
+  max-width: 400px;
+  color: blueviolet;
+}
+
+#about-section .about__container .about__info .about__top .about__job:hover {
+  background-color: blueviolet;
+}
+
+#about-section .about__container .about__info .about__top .about__job:hover p {
+  color: #fff;
 }
 
 #about-section .about__container .about__info .front-end {
@@ -602,15 +626,11 @@ body {
   padding-bottom: 10px;
 }
 
-#about-section .about__container .about__info .currently {
-  padding-bottom: 50px;
-}
-
-#about-section .about__container .about__info .future {
+#about-section .about__container .about__info .about__future {
   padding-top: 50px;
 }
 
-#about-section .about__container .about__info .future blockquote {
+#about-section .about__container .about__info .about__future blockquote {
   border-left: 10px solid #a359e8;
   margin: 0 10px;
   max-width: 700px;
@@ -618,7 +638,7 @@ body {
   quotes: "“" "”" "‘" "’";
 }
 
-#about-section .about__container .about__info .future blockquote:before {
+#about-section .about__container .about__info .about__future blockquote:before {
   color: blueviolet;
   content: open-quote;
   font-size: 4em;
@@ -627,7 +647,7 @@ body {
   vertical-align: -0.4em;
 }
 
-#about-section .about__container .about__info .future blockquote p {
+#about-section .about__container .about__info .about__future blockquote p {
   display: inline;
 }
 
@@ -1102,7 +1122,7 @@ body {
     display: none;
   }
   .about#about-section {
-    height: 1000px !important;
+    height: 1100px !important;
   }
   .about#about-section .about__container {
     padding-top: 50px !important;
@@ -1132,7 +1152,10 @@ body {
 
 @media screen and (max-width: 700px) {
   .about#about-section {
-    height: 1100px !important;
+    height: 1200px !important;
+  }
+  .about#about-section .about__container {
+    padding: 2rem 0 15rem;
   }
 }
 
@@ -1160,7 +1183,7 @@ body {
     font-size: 30px !important;
   }
   .about#about-section {
-    height: 1200px !important;
+    height: 1250px !important;
   }
   section#portfolio-section .portfolio {
     height: 1500px !important;
@@ -1206,6 +1229,9 @@ body {
   .main-content .greeting-loop {
     font-size: 24px !important;
     width: 380px !important;
+  }
+  .about#about-section {
+    height: 1300px !important;
   }
   .about#about-section .about p.about__top {
     font-size: 18px !important;

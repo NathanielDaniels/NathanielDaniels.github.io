@@ -473,12 +473,12 @@ body {
       justify-content: center;
       line-height: 1.5em;
       margin: 3rem auto;
+      width: 80%;
       max-width: 800px;
       overflow-wrap: break-word;
       // padding: 50px 0;
       text-align: justify;
       text-rendering: optimizeLegibility;
-      width: 80%;
       word-wrap: break-word;
       hr {
         width: 75%;
@@ -487,15 +487,34 @@ body {
       span {
         font-weight: 500;
       }
-      .about__me--main {
+      .about__top {
         padding-bottom: 50px;
         text-align: center;
-        .about__top {
+        .about__headline {
           font-size: 1.2em;
           text-align: center;
           padding-bottom: 40px;
-          max-width: 600px;
+          max-width: 700px;
           margin: 0 auto;
+        }
+        .about__job {
+          padding: 20px;
+          width: 80%;
+          border: 2px solid blueviolet;
+          border-radius: 20px;
+          margin: 0 auto;
+          transition: background-color 0.3s ease-in-out;
+          p {
+            margin: 0 auto;
+            max-width: 400px;
+            color: blueviolet;
+          }
+          &:hover {
+            background-color: blueviolet;
+            p {
+              color: #fff;
+            }
+          }
         }
       }
       .front-end {
@@ -504,10 +523,10 @@ body {
       .back-end {
         padding-bottom: 10px;
       }
-      .currently {
-        padding-bottom: 50px;
-      }
-      .future {
+      // .currently {
+      //   padding-bottom: 50px;
+      // }
+      .about__future {
         padding-top: 50px;
         blockquote {
           // background: #f9f9f9;
@@ -933,7 +952,7 @@ body {
     }
   }
   .about#about-section {
-    height: 1000px !important;
+    height: 1100px !important;
     .about__container {
       padding-top: 50px !important;
     }
@@ -970,7 +989,10 @@ body {
 
 @media screen and (max-width: 700px) {
   .about#about-section {
-    height: 1100px !important;
+    height: 1200px !important;
+    .about__container {
+      padding: 2rem 0 15rem;
+    }
   }
 }
 @media screen and (min-width: 600px) {
@@ -1011,7 +1033,7 @@ body {
     }
   }
   .about#about-section {
-    height: 1200px !important;
+    height: 1250px !important;
   }
   section#portfolio-section {
     .portfolio {
@@ -1076,7 +1098,7 @@ body {
   }
 
   .about#about-section {
-    // height: 2200px !important;
+    height: 1300px !important;
     // height: auto !important;
     .about {
       // height: auto !important;
