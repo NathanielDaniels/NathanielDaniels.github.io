@@ -587,10 +587,10 @@ body {
 }
 
 #about-section .about__container .about__info .about__top .about__headline {
-  padding-bottom: 4rem;
-  font-size: 1.2em;
-  text-align: center;
   max-width: 700px;
+  padding-bottom: 4rem;
+  font-size: 1.4rem;
+  text-align: center;
   margin: 0 auto;
 }
 
@@ -602,9 +602,14 @@ body {
   margin: 0 auto;
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
+  font-size: 1.2rem;
 }
 
-#about-section .about__container .about__info .about__top .about__job p {
+#about-section .about__container .about__info .about__top .about__job a {
+  text-decoration: none;
+}
+
+#about-section .about__container .about__info .about__top .about__job a p {
   margin: 0 auto;
   max-width: 400px;
   color: blueviolet;
@@ -887,18 +892,24 @@ body {
 #portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back:after {
   cursor: pointer;
   content: "+";
-  top: 5px;
+  top: 0;
   right: 5px;
-  font-size: 30px;
+  font-size: 3rem;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   z-index: 2;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .left-side a i {
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .left-side a i,
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .right-side a i {
   color: #b478ed;
   -webkit-filter: drop-shadow(1px 2px 2px #1a062d);
           filter: drop-shadow(1px 2px 2px #1a062d);
+}
+
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .left-side a i:hover,
+#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .right-side a i:hover {
+  color: #ffff99;
 }
 
 #portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .left-side a i.fab {
@@ -916,13 +927,6 @@ body {
   position: absolute;
   text-transform: uppercase;
   top: 42%;
-}
-
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .right-side a i {
-  z-index: 2;
-  color: #b478ed;
-  -webkit-filter: drop-shadow(1px 2px 2px #1a062d);
-          filter: drop-shadow(1px 2px 2px #1a062d);
 }
 
 #portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back .right-side a i.fas {

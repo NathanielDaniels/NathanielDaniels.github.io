@@ -493,12 +493,10 @@ body {
         padding-bottom: 4rem;
         text-align: center;
         .about__headline {
-          padding-bottom: 4rem;
-
-          font-size: 1.2em;
-          text-align: center;
-          // padding-bottom: 40px;
           max-width: 700px;
+          padding-bottom: 4rem;
+          font-size: 1.4rem;
+          text-align: center;
           margin: 0 auto;
         }
         .about__job {
@@ -508,16 +506,19 @@ body {
           border-radius: 20px;
           margin: 0 auto;
           transition: background-color 0.3s ease-in-out;
-          p {
-            margin: 0 auto;
-            max-width: 400px;
-            color: blueviolet;
+          font-size: 1.2rem;
+          a {
+            text-decoration: none;
+            p {
+              margin: 0 auto;
+              max-width: 400px;
+              color: blueviolet;
+            }
           }
           &:hover {
             background-color: blueviolet;
             p {
               color: #fff;
-              // color: hsl(60, 100%, 80%);
             }
           }
         }
@@ -650,7 +651,6 @@ body {
       font-weight: 800;
       text-align: center;
       font-size: 4rem;
-
       color: hsl(60, 100%, 80%);
       text-transform: uppercase;
       // animation: slideUp 1s cubic-bezier(0.19, 1, 0.3, 1) 0.5s forwards;
@@ -716,17 +716,27 @@ body {
               &:after {
                 cursor: pointer;
                 content: "+";
-                top: 5px;
+                top: 0;
                 right: 5px;
-                font-size: 30px;
+                font-size: 3rem;
                 transform: rotate(45deg);
                 z-index: 2;
               }
-              .left-side {
+              .left-side,
+              .right-side {
                 a {
                   i {
                     color: hsl(271, 76%, 70%);
                     filter: drop-shadow(1px 2px 2px hsl(271, 76%, 10%));
+                    &:hover {
+                      color: hsl(60, 100%, 80%);
+                    }
+                  }
+                }
+              }
+              .left-side {
+                a {
+                  i {
                     &.fab {
                       position: absolute;
                       left: 15%;
@@ -748,9 +758,6 @@ body {
               .right-side {
                 a {
                   i {
-                    z-index: 2;
-                    color: hsl(271, 76%, 70%);
-                    filter: drop-shadow(1px 2px 2px hsl(271, 76%, 10%));
                     &.fas {
                       position: absolute;
                       right: 20%;
