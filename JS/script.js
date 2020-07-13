@@ -52,6 +52,8 @@ function trackMouse(event) {
   let mX = event.clientX;
   let mY = event.clientY;
 
+  // console.log(mX, mY);
+
   //? viewport dimentions
   let vpH = window.innerHeight;
   let vpW = window.innerWidth;
@@ -59,8 +61,12 @@ function trackMouse(event) {
   //? head boundingbox
   let headBox = head.getBoundingClientRect();
 
+  // console.log(headBox);
+
   //? face boundingbox
   let faceBox = face.getBoundingClientRect();
+
+  // console.log(faceBox);
 
   //? the magic
   let calcX = (headBox.width - faceBox.width + 1000) * (mX / vpW);
@@ -103,7 +109,7 @@ setInterval(function () {
   document.querySelector(".speechBubble").style.display = "none";
 }, 2500);
 
-// Hamburger Menu Animation! ======================
+// Hamburger Menu Animation! JQuery ======================
 $menu = $(".burger-elements");
 
 $menu.click(function () {
@@ -111,13 +117,13 @@ $menu.click(function () {
   $(this).toggleClass("close");
 });
 
-// Close Menu on Click of Link! ============
+// Close Menu on Click of Link! JQuery ============
 $("#sidebar-menu ul li a").click(function () {
   $("#sidebar-menu").removeClass("active");
   $menu.removeClass("close");
 });
 
-//! Navbar Scroll Animation ===============================
+//! Navbar Scroll Animation (JQuery)===============================
 // Hide Header on on scroll down
 let didScroll;
 let lastScrollTop = 0;
@@ -156,7 +162,7 @@ function hasScrolled() {
   lastScrollTop = st;
 }
 
-//! Greeting-Loop Animation ================================
+//! Greeting-Loop Animation (JQuery)================================
 const text = [
   "Web Designer",
   "Freelancer",
@@ -179,7 +185,7 @@ function change() {
   });
 }
 
-// PORTFOLIO CLICK FUNCTION =====================
+// PORTFOLIO CLICK FUNCTION (JQuery)=====================
 $(function () {
   $(".card").click(function () {
     $(this)
