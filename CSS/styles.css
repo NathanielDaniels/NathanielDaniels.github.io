@@ -582,14 +582,14 @@ body {
 }
 
 #about-section .about__container .about__info .about__top {
-  padding-bottom: 50px;
+  padding-bottom: 4rem;
   text-align: center;
 }
 
 #about-section .about__container .about__info .about__top .about__headline {
+  padding-bottom: 4rem;
   font-size: 1.2em;
   text-align: center;
-  padding-bottom: 40px;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -619,7 +619,7 @@ body {
 }
 
 #about-section .about__container .about__info .front-end {
-  padding: 50px 0 35px;
+  padding: 50px 0 30px;
 }
 
 #about-section .about__container .about__info .back-end {
@@ -627,7 +627,7 @@ body {
 }
 
 #about-section .about__container .about__info .about__future {
-  padding-top: 50px;
+  padding-top: 3rem;
 }
 
 #about-section .about__container .about__info .about__future blockquote {
@@ -1122,7 +1122,7 @@ body {
     display: none;
   }
   .about#about-section {
-    height: 1100px !important;
+    height: 1150px !important;
   }
   .about#about-section .about__container {
     padding-top: 50px !important;
@@ -1183,7 +1183,7 @@ body {
     font-size: 30px !important;
   }
   .about#about-section {
-    height: 1250px !important;
+    height: 1325px !important;
   }
   section#portfolio-section .portfolio {
     height: 1500px !important;
@@ -1231,7 +1231,7 @@ body {
     width: 380px !important;
   }
   .about#about-section {
-    height: 1300px !important;
+    height: 1350px !important;
   }
   .about#about-section .about p.about__top {
     font-size: 18px !important;
