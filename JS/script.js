@@ -24,7 +24,7 @@ $(function () {
 //! Smiley Face Animation ======================
 let face = $(".smiley-face span")[0];
 let head = $(".smiley-face")[0];
-let isDead = true;
+// let isDead = true;
 let canBlink = true;
 
 document.onmousemove = trackMouse;
@@ -44,9 +44,9 @@ setInterval(function () {
 }, 5500);
 
 function trackMouse(event) {
-  if (!isDead) {
-    return;
-  }
+  // if (!isDead) {
+  //   return;
+  // }
 
   //? mouse coordinates
   let mX = event.clientX;
@@ -55,7 +55,7 @@ function trackMouse(event) {
   // console.log(mX, mY);
 
   //? viewport dimentions
-  let vpH = window.innerHeight;
+  let vpH = window.innerHeight + 250;
   let vpW = window.innerWidth;
 
   //? head boundingbox
@@ -70,7 +70,10 @@ function trackMouse(event) {
 
   //? the magic
   let calcX = (headBox.width - faceBox.width + 1000) * (mX / vpW);
+
   let calcY = (headBox.height - faceBox.height) * (mY / vpH);
+
+  console.log(calcX, calcY);
 
   // //? add bounding restrictions to face
   // calcX = clamp(calcX, 60, 150);
@@ -109,7 +112,7 @@ setInterval(function () {
   document.querySelector(".speechBubble").style.display = "none";
 }, 2500);
 
-// Hamburger Menu Animation! JQuery ======================
+//! Hamburger Menu Animation! JQuery ======================
 $menu = $(".burger-elements");
 
 $menu.click(function () {
@@ -117,7 +120,7 @@ $menu.click(function () {
   $(this).toggleClass("close");
 });
 
-// Close Menu on Click of Link! JQuery ============
+//! Close Menu on Click of Link! JQuery ============
 $("#sidebar-menu ul li a").click(function () {
   $("#sidebar-menu").removeClass("active");
   $menu.removeClass("close");

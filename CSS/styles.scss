@@ -326,7 +326,9 @@ body {
           width: 35px;
           height: 4px;
           left: 0px;
-          background: #fff;
+          // background: #fff;
+          background: blueviolet;
+          // background: hsl(271, 76%, 20%);
           border-radius: 2.5px;
           transition: all 0.2s cubic-bezier(0.42, 0, 0.68, 1.78);
         }
@@ -554,7 +556,7 @@ body {
   .portfolio {
     @include angle(both);
     // padding-top: 10px;
-    padding: 2rem 0 5rem;
+    padding: 3rem 0 5rem;
     // height: 600px;
     background: blueviolet;
     cursor: default;
@@ -884,7 +886,7 @@ body {
   color: #fff;
   height: 70px;
   .social-media {
-    width: 20%;
+    width: 25%;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
