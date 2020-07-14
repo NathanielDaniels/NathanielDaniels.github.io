@@ -816,27 +816,27 @@ body {
 
 //! CONTACT Section ===============================
 #contact-section {
-  padding-top: 100px;
-  height: 700px;
+  position: relative;
+  padding-top: 6.2rem;
+  height: 44rem;
   background: #fff;
   cursor: default;
   .contact {
     text-align: center;
     h2.contact-title {
-      margin-top: 40px;
+      margin-top: 2.5rem;
       font-weight: 800;
       font-size: 4rem;
-
       color: blueviolet;
       text-transform: uppercase;
     }
     form.cfForm {
-      max-width: 600px;
+      max-width: 37rem;
       text-align: center;
-      margin: 55px auto;
+      margin: 3.4rem auto;
       input,
       textarea {
-        font-size: 18px;
+        font-size: 1.2rem;
         border: 1px solid blueviolet;
         padding: 1em;
         border-radius: 8px;
@@ -852,7 +852,7 @@ body {
         }
       }
       textarea {
-        height: 214px;
+        height: 14rem;
       }
       #input-submit {
         position: relative;
@@ -875,7 +875,6 @@ body {
     .half {
       float: left;
       width: 48%;
-      // margin-bottom: 1em;
     }
     .right {
       width: 50%;
@@ -888,24 +887,31 @@ body {
 
 //! FOOTER Section ================================
 .footer-section {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background: black;
-  color: #fff;
-  height: 70px;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  // background: hsla(0, 0%, 0%, 0.8);
+  background: transparent;
+  hr {
+    // display: inherit;
+    width: 2rem;
+    transform: rotate(90deg);
+    margin-bottom: 1.5rem;
+  }
   .social-media {
-    width: 25%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
+    // width: 25%;
+    // margin: 0 auto;
+    // display: flex;
+    // justify-content: space-around;
     cursor: pointer;
     a {
-      color: #fff;
+      // color: #fff;
+      color: hsl(60, 100%, 80%);
       &:hover {
         color: blueviolet;
       }
       .fab {
+        margin: 0.25rem 0;
         font-size: 40px;
       }
     }

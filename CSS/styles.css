@@ -972,8 +972,9 @@ body {
 }
 
 #contact-section {
-  padding-top: 100px;
-  height: 700px;
+  position: relative;
+  padding-top: 6.2rem;
+  height: 44rem;
   background: #fff;
   cursor: default;
 }
@@ -983,7 +984,7 @@ body {
 }
 
 #contact-section .contact h2.contact-title {
-  margin-top: 40px;
+  margin-top: 2.5rem;
   font-weight: 800;
   font-size: 4rem;
   color: blueviolet;
@@ -991,14 +992,14 @@ body {
 }
 
 #contact-section .contact form.cfForm {
-  max-width: 600px;
+  max-width: 37rem;
   text-align: center;
-  margin: 55px auto;
+  margin: 3.4rem auto;
 }
 
 #contact-section .contact form.cfForm input,
 #contact-section .contact form.cfForm textarea {
-  font-size: 18px;
+  font-size: 1.2rem;
   border: 1px solid blueviolet;
   padding: 1em;
   border-radius: 8px;
@@ -1019,7 +1020,7 @@ body {
 }
 
 #contact-section .contact form.cfForm textarea {
-  height: 214px;
+  height: 14rem;
 }
 
 #contact-section .contact form.cfForm #input-submit {
@@ -1057,31 +1058,25 @@ body {
 }
 
 .footer-section {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: black;
-  color: #fff;
-  height: 70px;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: transparent;
+}
+
+.footer-section hr {
+  width: 2rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-bottom: 1.5rem;
 }
 
 .footer-section .social-media {
-  width: 25%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   cursor: pointer;
 }
 
 .footer-section .social-media a {
-  color: #fff;
+  color: #ffff99;
 }
 
 .footer-section .social-media a:hover {
@@ -1089,6 +1084,7 @@ body {
 }
 
 .footer-section .social-media a .fab {
+  margin: 0.25rem 0;
   font-size: 40px;
 }
 
