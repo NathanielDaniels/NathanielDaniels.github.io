@@ -973,8 +973,7 @@ body {
 
 #contact-section {
   position: relative;
-  padding-top: 6.2rem;
-  height: 44rem;
+  height: 40rem;
   background: #fff;
   cursor: default;
 }
@@ -984,7 +983,6 @@ body {
 }
 
 #contact-section .contact h2.contact-title {
-  margin-top: 2.5rem;
   font-weight: 800;
   font-size: 4rem;
   color: blueviolet;
@@ -1060,15 +1058,8 @@ body {
 .footer-section {
   position: fixed;
   bottom: 1rem;
-  right: 1rem;
+  right: 0.8rem;
   background: transparent;
-}
-
-.footer-section hr {
-  width: 2rem;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  margin-bottom: 1.5rem;
 }
 
 .footer-section .social-media {
@@ -1076,11 +1067,12 @@ body {
 }
 
 .footer-section .social-media a {
-  color: #ffff99;
+  color: blueviolet;
+  text-shadow: 0px 1px 1px #22083a;
 }
 
 .footer-section .social-media a:hover {
-  color: blueviolet;
+  text-shadow: 0px 2px 2px #22083a;
 }
 
 .footer-section .social-media a .fab {
@@ -1108,6 +1100,10 @@ body {
     top: -100px !important;
     height: 135%;
   }
+}
+
+section#contact-section {
+  padding-top: 8rem;
 }
 
 @media screen and (max-width: 800px) {
@@ -1148,7 +1144,8 @@ body {
     height: 200px !important;
   }
   section#contact-section {
-    padding-top: 75px !important;
+    width: 80%;
+    margin: 0 auto;
   }
 }
 
@@ -1202,15 +1199,18 @@ body {
     height: 200px !important;
   }
   section#contact-section {
-    width: 100%;
-    height: 900px;
+    width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin: 0 auto;
+  }
+  section#contact-section h2.contact-title {
+    margin-top: 2rem !important;
   }
   section#contact-section .contact form.cfForm input#input-submit {
-    width: 80%;
     position: relative;
+    width: 80%;
     left: 50%;
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
@@ -1247,9 +1247,6 @@ body {
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
-  }
-  footer.footer-section .social-media a {
-    padding: 0 1rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
