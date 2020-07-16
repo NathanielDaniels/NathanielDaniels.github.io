@@ -877,16 +877,15 @@ body {
 }
 
 #portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back:before {
+  content: "";
   border-left: 2px solid rgba(255, 255, 255, 0.2);
   top: -20px;
   right: 10px;
-  content: "";
   width: 200px;
   height: 400px;
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-transform: rotate(60deg);
           transform: rotate(60deg);
-  z-index: 1;
 }
 
 #portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face--back:after {
@@ -973,6 +972,7 @@ body {
 
 #contact-section {
   position: relative;
+  padding-top: 8rem;
   height: 40rem;
   background: #fff;
   cursor: default;
@@ -1102,10 +1102,6 @@ body {
   }
 }
 
-section#contact-section {
-  padding-top: 8rem;
-}
-
 @media screen and (max-width: 800px) {
   .main-section .smiley-face {
     display: none;
@@ -1199,6 +1195,7 @@ section#contact-section {
     height: 200px !important;
   }
   section#contact-section {
+    padding-top: 4rem;
     width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
