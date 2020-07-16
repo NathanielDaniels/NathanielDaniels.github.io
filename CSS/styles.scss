@@ -83,14 +83,15 @@ $black-light: #2c3e50;
 
     @if $pseudo == "both" {
       &:before {
-        top: 0;
+        // height: 20rem;
+        // top: 0;
         border-top: 5px solid hsl(0, 0%, 20%);
         @if $flip {
           transform: skewY($angle * -1);
           transform-origin: 0 0;
         } @else {
           transform: skewY($angle);
-          transform-origin: 100% 0;
+          transform-origin: 120% 0;
         }
       }
 
@@ -102,7 +103,7 @@ $black-light: #2c3e50;
           transform-origin: 0 0;
         } @else {
           transform: skewY($angle * -1);
-          transform-origin: 100%;
+          transform-origin: 120%;
         }
       }
     }
@@ -452,6 +453,8 @@ body {
 //! ABOUT Section =================================
 #about-section {
   .about__container {
+    position: relative;
+    z-index: 5;
     @include angle(before);
     padding: 2rem 0 10rem;
     // height: 1000px;
@@ -555,18 +558,19 @@ body {
 //! PORTFOLIO Section =============================
 #portfolio-section {
   .portfolio {
-    // height: 600px;
+    z-index: 5;
+    // height: 35rem;
     @include angle(both);
-    padding: 3rem 0 5rem;
+    // padding: 3rem 0 5rem;
     background: blueviolet;
     cursor: default;
     .box-area {
       //? Floating Boxes
       position: absolute;
-      top: -160px;
+      top: -10rem;
       left: 0;
       width: 100%;
-      height: 152%;
+      height: 55rem;
       overflow: hidden;
       li {
         position: absolute;
@@ -817,7 +821,7 @@ body {
 //! CONTACT Section ===============================
 #contact-section {
   position: relative;
-  padding-top: 8rem;
+  padding-top: 12rem;
   // height: 44rem;
   height: 40rem;
   background: #fff;
@@ -888,6 +892,7 @@ body {
 
 //! FOOTER Section ================================
 .footer-section {
+  // z-index: 1;
   position: fixed;
   // bottom: 0.5rem;
   bottom: 1rem;

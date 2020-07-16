@@ -505,6 +505,8 @@ body {
 
 #about-section .about__container {
   position: relative;
+  z-index: 5;
+  position: relative;
   z-index: 1;
   padding: 2rem 0 10rem;
   background: #fff;
@@ -653,9 +655,9 @@ body {
 }
 
 #portfolio-section .portfolio {
+  z-index: 5;
   position: relative;
   z-index: 1;
-  padding: 3rem 0 5rem;
   background: blueviolet;
   cursor: default;
 }
@@ -674,12 +676,11 @@ body {
 }
 
 #portfolio-section .portfolio:before {
-  top: 0;
   border-top: 5px solid #333333;
   -webkit-transform: skewY(6deg);
           transform: skewY(6deg);
-  -webkit-transform-origin: 100% 0;
-          transform-origin: 100% 0;
+  -webkit-transform-origin: 120% 0;
+          transform-origin: 120% 0;
 }
 
 #portfolio-section .portfolio:after {
@@ -687,16 +688,16 @@ body {
   border-bottom: 5px solid #333333;
   -webkit-transform: skewY(-6deg);
           transform: skewY(-6deg);
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
+  -webkit-transform-origin: 120%;
+          transform-origin: 120%;
 }
 
 #portfolio-section .portfolio .box-area {
   position: absolute;
-  top: -160px;
+  top: -10rem;
   left: 0;
   width: 100%;
-  height: 152%;
+  height: 55rem;
   overflow: hidden;
 }
 
@@ -972,7 +973,7 @@ body {
 
 #contact-section {
   position: relative;
-  padding-top: 8rem;
+  padding-top: 12rem;
   height: 40rem;
   background: #fff;
   cursor: default;
