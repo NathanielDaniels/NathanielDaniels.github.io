@@ -130,6 +130,8 @@ body {
   max-width: 100%;
   width: 100%;
   height: 100%;
+  // max-width: 1200px;
+  // margin: 0 auto;
 }
 
 //! MAIN Section (Hero) ===========================
@@ -526,8 +528,67 @@ body {
           }
         }
       }
+      .about__skills {
+        padding-top: 3rem;
+        // width: 50%;
+        height: 100%;
+        // background: blue;
+        // display: flex;
+        // align-items: center;
+        // margin: 0 auto;
+        h1 {
+          color: blueviolet;
+          font-size: 2rem;
+          text-transform: uppercase;
+          text-align: center;
+          padding-bottom: 2rem;
+        }
+        .skills-icons {
+          width: 80%;
+          margin: 0 auto;
+          ul {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            li {
+              width: 5rem;
+              height: 5rem;
+              margin: 1rem;
+              list-style: none;
+              display: inherit;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              // padding: 0 1.5rem;
+              i {
+                font-size: 2rem;
+                padding-bottom: 5px;
+                &:hover {
+                  color: blue;
+                }
+              }
+              .fa-bootstrap,
+              .fa-jquery {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 35px;
+                height: 35px;
+                width: 35px;
+                filter: grayscale(100%);
+              }
+              .fa-bootstrap {
+                background-image: url("/IMG/bootstrap-4.png");
+              }
+              .fa-jquery {
+                background-image: url("/IMG/jquery.png");
+              }
+            }
+          }
+        }
+      }
+
       .front-end {
-        padding: 50px 0 30px;
+        padding: 2rem 0;
       }
       .about__future {
         padding-top: 3rem;
@@ -981,7 +1042,7 @@ body {
     }
   }
   .about#about-section {
-    height: 1150px !important;
+    // height: 1150px !important;
     .about__container {
       padding-top: 50px !important;
     }
@@ -1018,7 +1079,7 @@ body {
 
 @media screen and (max-width: 700px) {
   .about#about-section {
-    height: 1200px !important;
+    height: 1600px !important;
     .about__container {
       padding: 2rem 0 15rem;
     }
@@ -1070,7 +1131,7 @@ body {
     }
   }
   .about#about-section {
-    height: 1325px !important;
+    // height: 1800px !important;
   }
   section#portfolio-section {
     .portfolio {
@@ -1141,7 +1202,7 @@ body {
   }
 
   .about#about-section {
-    height: 1350px !important;
+    height: 2000px !important;
     // height: auto !important;
     .about {
       // height: auto !important;
@@ -1155,7 +1216,7 @@ body {
   section#portfolio-section {
     .portfolio {
       .portfolio-grid {
-        width: 80% !important;
+        // width: 80% !important;
       }
     }
   }

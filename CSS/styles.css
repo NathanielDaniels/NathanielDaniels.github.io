@@ -625,8 +625,83 @@ body {
   color: #fff;
 }
 
+#about-section .about__container .about__info .about__skills {
+  padding-top: 3rem;
+  height: 100%;
+}
+
+#about-section .about__container .about__info .about__skills h1 {
+  color: blueviolet;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+#about-section .about__container .about__info .about__skills .skills-icons {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#about-section .about__container .about__info .about__skills .skills-icons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#about-section .about__container .about__info .about__skills .skills-icons ul li {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+  list-style: none;
+  display: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about-section .about__container .about__info .about__skills .skills-icons ul li i {
+  font-size: 2rem;
+  padding-bottom: 5px;
+}
+
+#about-section .about__container .about__info .about__skills .skills-icons ul li i:hover {
+  color: blue;
+}
+
+#about-section .about__container .about__info .about__skills .skills-icons ul li .fa-bootstrap,
+#about-section .about__container .about__info .about__skills .skills-icons ul li .fa-jquery {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+  height: 35px;
+  width: 35px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+#about-section .about__container .about__info .about__skills .skills-icons ul li .fa-bootstrap {
+  background-image: url("/IMG/bootstrap-4.png");
+}
+
+#about-section .about__container .about__info .about__skills .skills-icons ul li .fa-jquery {
+  background-image: url("/IMG/jquery.png");
+}
+
 #about-section .about__container .about__info .front-end {
-  padding: 50px 0 30px;
+  padding: 2rem 0;
 }
 
 #about-section .about__container .about__info .about__future {
@@ -1116,9 +1191,6 @@ body {
   .main-content .content-wrapper .title-name {
     display: none;
   }
-  .about#about-section {
-    height: 1150px !important;
-  }
   .about#about-section .about__container {
     padding-top: 50px !important;
   }
@@ -1148,7 +1220,7 @@ body {
 
 @media screen and (max-width: 700px) {
   .about#about-section {
-    height: 1200px !important;
+    height: 1600px !important;
   }
   .about#about-section .about__container {
     padding: 2rem 0 15rem;
@@ -1177,9 +1249,6 @@ body {
   .main-content .greeting-loop {
     top: 0px !important;
     font-size: 30px !important;
-  }
-  .about#about-section {
-    height: 1325px !important;
   }
   section#portfolio-section .portfolio {
     height: 1500px !important;
@@ -1231,14 +1300,11 @@ body {
     width: 380px !important;
   }
   .about#about-section {
-    height: 1350px !important;
+    height: 2000px !important;
   }
   .about#about-section .about p.about__top {
     font-size: 18px !important;
     width: 95% !important;
-  }
-  section#portfolio-section .portfolio .portfolio-grid {
-    width: 80% !important;
   }
   footer.footer-section .social-media {
     width: 100% !important;
