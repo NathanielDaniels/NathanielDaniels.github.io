@@ -575,6 +575,9 @@ body {
                 height: 35px;
                 width: 35px;
                 filter: grayscale(100%);
+                &:hover {
+                  filter: grayscale(0%);
+                }
               }
               .fa-bootstrap {
                 background-image: url("/IMG/bootstrap-4.png");

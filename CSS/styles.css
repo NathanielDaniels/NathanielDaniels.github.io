@@ -692,6 +692,12 @@ body {
           filter: grayscale(100%);
 }
 
+#about-section .about__container .about__info .about__skills .skills-icons ul li .fa-bootstrap:hover,
+#about-section .about__container .about__info .about__skills .skills-icons ul li .fa-jquery:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
 #about-section .about__container .about__info .about__skills .skills-icons ul li .fa-bootstrap {
   background-image: url("/IMG/bootstrap-4.png");
 }
