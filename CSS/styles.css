@@ -1045,11 +1045,15 @@ body {
 }
 
 #portfolio-section .portfolio .grid-container .card2 {
-  background-image: url("/IMG/portfolio-img/Task-Manager.png");
+  background-image: url("/IMG/portfolio-img/SneakerEcommerce.png");
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
 #portfolio-section .portfolio .grid-container .card3 {
-  background-image: url("/IMG/portfolio-img/Rock-Paper-Pokemon.png");
+  background-image: url("/IMG/portfolio-img/Artist-website.png");
+  background-position: center;
+  background-size: 115%;
 }
 
 #contact-section {
