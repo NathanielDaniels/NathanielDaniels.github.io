@@ -895,7 +895,7 @@ body {
   height: 40rem;
   background: #fff;
   cursor: default;
-  .contact {
+  .contract-container {
     text-align: center;
     h2.contact-title {
       // margin-top: 3rem;
@@ -904,7 +904,7 @@ body {
       color: blueviolet;
       text-transform: uppercase;
     }
-    form.cfForm {
+    form.cf-form {
       max-width: 37rem;
       text-align: center;
       margin: 3.4rem auto;
@@ -1176,8 +1176,8 @@ body {
       margin-top: 2rem !important;
     }
 
-    .contact {
-      form.cfForm {
+    .contact-container {
+      form.cf-form {
         input#input-submit {
           position: relative;
           width: 80%;
