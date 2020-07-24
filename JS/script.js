@@ -109,7 +109,7 @@ function clamp(num, min, max) {
 //! Speech Bubble Animation! (smileyface)======================
 
 setInterval(function () {
-  document.querySelector(".speechBubble").style.display = "none";
+  document.querySelector(".speech-bubble").style.display = "none";
 }, 2500);
 
 //! Hamburger Menu Animation! JQuery ======================
