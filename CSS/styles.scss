@@ -161,7 +161,7 @@ body {
     border-radius: 150px;
     content: "";
     background: hsl(60, 100%, 80%);
-    span.face {
+    .smiley-face__face {
       position: absolute;
       left: 100px;
       top: 100px;
@@ -171,7 +171,7 @@ body {
       border-radius: 200px;
       transition: all 250ms ease-out;
     }
-    span.speechBubble {
+    .speech-bubble {
       transition: 0.4s ease-in-out;
       position: absolute;
       left: 260px;
@@ -200,8 +200,8 @@ body {
     }
   }
   /*? Eyes */
-  span.face:before,
-  span.face:after {
+  span.smiley-face__face:before,
+  span.smiley-face__face:after {
     position: absolute;
     content: "◝";
     text-indent: 12px;
@@ -219,14 +219,14 @@ body {
   }
 
   /* Right Eye */
-  span.face:after {
+  span.smiley-face__face:after {
     left: auto;
     right: 0%;
   }
 
   /* Blink Effect */
-  span.face.blink:before,
-  span.face.blink:after {
+  span.smiley-face__face.blink:before,
+  span.smiley-face__face.blink:after {
     top: calc(40% + 15px);
     height: 2px;
     background: #000000;

@@ -115,7 +115,7 @@ body {
   background: #ffff99;
 }
 
-.main-section .smiley-face span.face {
+.main-section .smiley-face .smiley-face__face {
   position: absolute;
   left: 100px;
   top: 100px;
@@ -127,7 +127,7 @@ body {
   transition: all 250ms ease-out;
 }
 
-.main-section .smiley-face span.speechBubble {
+.main-section .smiley-face .speech-bubble {
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   position: absolute;
@@ -140,7 +140,7 @@ body {
           filter: drop-shadow(2px 2px 4px #1a1a1a);
 }
 
-.main-section .smiley-face span.speechBubble h2 {
+.main-section .smiley-face .speech-bubble h2 {
   height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,7 +153,7 @@ body {
           align-items: center;
 }
 
-.main-section .smiley-face span.speechBubble .triangle {
+.main-section .smiley-face .speech-bubble .triangle {
   position: absolute;
   top: 80px;
   left: -15px;
@@ -166,8 +166,8 @@ body {
   border-top: 30px solid #fff;
 }
 
-.main-section span.face:before,
-.main-section span.face:after {
+.main-section span.smiley-face__face:before,
+.main-section span.smiley-face__face:after {
   position: absolute;
   content: "◝";
   text-indent: 12px;
@@ -185,13 +185,13 @@ body {
   transition: all 150ms ease-out;
 }
 
-.main-section span.face:after {
+.main-section span.smiley-face__face:after {
   left: auto;
   right: 0%;
 }
 
-.main-section span.face.blink:before,
-.main-section span.face.blink:after {
+.main-section span.smiley-face__face.blink:before,
+.main-section span.smiley-face__face.blink:after {
   top: calc(40% + 15px);
   height: 2px;
   background: #000000;
