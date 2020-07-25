@@ -757,10 +757,10 @@ body {
             line-height: 1.5;
             color: #fff;
             text-align: center;
-            &--front {
+            &.card__front {
               background: transparent;
             }
-            &--back {
+            &.card__back {
               cursor: default;
               background: linear-gradient(-45deg, $black-dark, $black-light);
               transform: rotateY(180deg);
