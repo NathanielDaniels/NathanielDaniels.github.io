@@ -503,7 +503,12 @@ body {
   text-align: center;
 }
 
+#about-section {
+  display: block;
+}
+
 #about-section .about__container {
+  display: block;
   position: relative;
   z-index: 5;
   position: relative;
@@ -1064,25 +1069,25 @@ body {
   cursor: default;
 }
 
-#contact-section .contract-container {
+#contact-section .contact-container {
   text-align: center;
 }
 
-#contact-section .contract-container h2.contact-title {
+#contact-section .contact-container h2.contact-title {
   font-weight: 800;
   font-size: 4rem;
   color: blueviolet;
   text-transform: uppercase;
 }
 
-#contact-section .contract-container form.cf-form {
+#contact-section .contact-container form.cf-form {
   max-width: 37rem;
   text-align: center;
   margin: 3.4rem auto;
 }
 
-#contact-section .contract-container form.cf-form input,
-#contact-section .contract-container form.cf-form textarea {
+#contact-section .contact-container form.cf-form input,
+#contact-section .contact-container form.cf-form textarea {
   font-size: 1.2rem;
   border: 1px solid blueviolet;
   padding: 1em;
@@ -1096,18 +1101,18 @@ body {
   resize: none;
 }
 
-#contact-section .contract-container form.cf-form input:focus,
-#contact-section .contract-container form.cf-form textarea:focus {
+#contact-section .contact-container form.cf-form input:focus,
+#contact-section .contact-container form.cf-form textarea:focus {
   outline-color: yellow;
   -webkit-filter: drop-shadow(1px 2px 2px blueviolet);
           filter: drop-shadow(1px 2px 2px blueviolet);
 }
 
-#contact-section .contract-container form.cf-form textarea {
+#contact-section .contact-container form.cf-form textarea {
   height: 14rem;
 }
 
-#contact-section .contract-container form.cf-form #input-submit {
+#contact-section .contact-container form.cf-form #input-submit {
   position: relative;
   top: 1rem;
   color: #fff;
@@ -1123,21 +1128,21 @@ body {
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
 
-#contact-section .contract-container form.cf-form #input-submit:hover {
+#contact-section .contact-container form.cf-form #input-submit:hover {
   -webkit-filter: drop-shadow(0px 1px 1px gray);
           filter: drop-shadow(0px 1px 1px gray);
 }
 
-#contact-section .contract-container .half {
+#contact-section .contact-container .half {
   float: left;
   width: 48%;
 }
 
-#contact-section .contract-container .right {
+#contact-section .contact-container .right {
   width: 50%;
 }
 
-#contact-section .contract-container .left {
+#contact-section .contact-container .left {
   margin-right: 2%;
 }
 

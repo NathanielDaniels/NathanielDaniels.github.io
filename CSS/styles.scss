@@ -454,7 +454,9 @@ body {
 
 //! ABOUT Section =================================
 #about-section {
+  display: block;
   .about__container {
+    display: block;
     position: relative;
     z-index: 5;
     @include angle(before);
@@ -895,7 +897,7 @@ body {
   height: 40rem;
   background: #fff;
   cursor: default;
-  .contract-container {
+  .contact-container {
     text-align: center;
     h2.contact-title {
       // margin-top: 3rem;
