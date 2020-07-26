@@ -68,8 +68,8 @@ $black-light: #2c3e50;
 
     @if $pseudo == "after" {
       #{$selector} {
-        // box-shadow: 0px 2px 5px hsl(0, 0, 0.9), 0px 5px 10px hsl(0, 0, 0.5);
         bottom: 0;
+        border-bottom: 5px solid hsl(0, 0%, 20%);
 
         @if $flip {
           transform: skewY($angle);
@@ -456,7 +456,8 @@ body {
 #about-section {
   display: block;
   .about-container {
-    @include angle(before);
+    // @include angle(before);
+    @include angle(both);
     display: block;
     // position: relative;
     z-index: 5;
@@ -497,7 +498,7 @@ body {
         font-weight: 500;
       }
       .about-me {
-        // display: block;
+        display: block;
         padding-bottom: 4rem;
         text-align: center;
         .about-me__headline {
@@ -624,19 +625,21 @@ body {
 
 //! PORTFOLIO Section =============================
 #portfolio-section {
-  @include angle(both);
-  display: block;
   .portfolio {
-    z-index: 5;
+    @include angle(after);
+    // z-index: 5;
+    display: relative;
+    top: -2em;
+    padding: 3rem 0 5rem;
     background: blueviolet;
     cursor: default;
     .box-area {
       //? Floating Boxes
-      // position: absolute;
-      // top: -10rem;
-      // left: 0;
+      position: absolute;
+      top: -10rem;
+      left: 0;
       width: 100%;
-      // height: 55rem;
+      height: 55rem;
       overflow: hidden;
       li {
         position: absolute;
@@ -716,7 +719,8 @@ body {
 
     h2.portfolio-title {
       z-index: 5;
-      position: relative;
+      padding-top: 2em;
+      // position: relative;
       font-weight: 800;
       text-align: center;
       font-size: 4rem;
@@ -861,6 +865,7 @@ body {
       }
       .card2 {
         background-image: url("/IMG/portfolio-img/SneakerEcommerce.png");
+        // background-size: 120%;
         background-position: left;
         background-repeat: no-repeat;
       }
@@ -876,8 +881,7 @@ body {
 //! CONTACT Section ===============================
 #contact-section {
   position: relative;
-  padding-top: 12rem;
-  // height: 44rem;
+  padding-top: 8em;
   height: 40rem;
   background: #fff;
   cursor: default;
