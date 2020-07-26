@@ -566,10 +566,10 @@ body {
                 font-size: 2rem;
                 padding-bottom: 5px;
                 transition: all 0.3s ease-in-out;
-                &:hover {
-                  transform: scale(1.3);
-                  color: blue;
-                }
+                // &:hover {
+                //   transform: scale(1.3);
+                //   color: blueviolet;
+                // }
               }
               .fa-bootstrap,
               .fa-jquery {
@@ -588,6 +588,10 @@ body {
               }
               .fa-jquery {
                 background-image: url("/IMG/jquery.png");
+              }
+              &:hover i {
+                transform: scale(1.3);
+                color: blueviolet;
               }
             }
           }

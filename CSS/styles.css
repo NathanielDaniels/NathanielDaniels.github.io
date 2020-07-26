@@ -691,12 +691,6 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-#about-section .about-container .about-info .about-me__skills .skills-icons ul li i:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-  color: blue;
-}
-
 #about-section .about-container .about-info .about-me__skills .skills-icons ul li .fa-bootstrap,
 #about-section .about-container .about-info .about-me__skills .skills-icons ul li .fa-jquery {
   background-position: center;
@@ -720,6 +714,12 @@ body {
 
 #about-section .about-container .about-info .about-me__skills .skills-icons ul li .fa-jquery {
   background-image: url("/IMG/jquery.png");
+}
+
+#about-section .about-container .about-info .about-me__skills .skills-icons ul li:hover i {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  color: blueviolet;
 }
 
 #about-section .about-container .about-info .skills-description {
