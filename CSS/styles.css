@@ -507,20 +507,18 @@ body {
   display: block;
 }
 
-#about-section .about__container {
-  display: block;
-  position: relative;
-  z-index: 5;
+#about-section .about-container {
   position: relative;
   z-index: 1;
-  padding: 2rem 0 10rem;
+  display: block;
+  z-index: 5;
   background: #fff;
   max-width: 100%;
   width: 100%;
   cursor: default;
 }
 
-#about-section .about__container:before {
+#about-section .about-container:before {
   background: inherit;
   content: "";
   display: block;
@@ -533,7 +531,7 @@ body {
           backface-visibility: hidden;
 }
 
-#about-section .about__container:before {
+#about-section .about-container:before {
   border-top: 5px solid #333333;
   top: 0;
   height: 1000px;
@@ -543,7 +541,7 @@ body {
           transform-origin: 100% 0;
 }
 
-#about-section .about__container h2.about__title {
+#about-section .about-container h2.about-title {
   color: blueviolet;
   font-size: 4rem;
   font-weight: 800;
@@ -551,7 +549,7 @@ body {
   text-transform: uppercase;
 }
 
-#about-section .about__container .about__info {
+#about-section .about-container .about-info {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -579,21 +577,21 @@ body {
   word-wrap: break-word;
 }
 
-#about-section .about__container .about__info hr {
+#about-section .about-container .about-info hr {
   width: 75%;
   margin: 0 auto;
 }
 
-#about-section .about__container .about__info span {
+#about-section .about-container .about-info span {
   font-weight: 500;
 }
 
-#about-section .about__container .about__info .about__top {
+#about-section .about-container .about-info .about-me {
   padding-bottom: 4rem;
   text-align: center;
 }
 
-#about-section .about__container .about__info .about__top .about__headline {
+#about-section .about-container .about-info .about-me .about-me__headline {
   max-width: 700px;
   padding-bottom: 4rem;
   font-size: 1.4rem;
@@ -601,7 +599,7 @@ body {
   margin: 0 auto;
 }
 
-#about-section .about__container .about__info .about__top .about__job {
+#about-section .about-container .about-info .about-me .about-me__job {
   padding: 20px;
   width: 80%;
   border: 2px solid blueviolet;
@@ -612,30 +610,30 @@ body {
   font-size: 1.2rem;
 }
 
-#about-section .about__container .about__info .about__top .about__job a {
+#about-section .about-container .about-info .about-me .about-me__job a {
   text-decoration: none;
 }
 
-#about-section .about__container .about__info .about__top .about__job a p {
+#about-section .about-container .about-info .about-me .about-me__job a p {
   margin: 0 auto;
   max-width: 400px;
   color: blueviolet;
 }
 
-#about-section .about__container .about__info .about__top .about__job:hover {
+#about-section .about-container .about-info .about-me .about-me__job:hover {
   background-color: blueviolet;
 }
 
-#about-section .about__container .about__info .about__top .about__job:hover p {
+#about-section .about-container .about-info .about-me .about-me__job:hover p {
   color: #fff;
 }
 
-#about-section .about__container .about__info .about__skills {
+#about-section .about-container .about-info .about-me__skills {
   padding-top: 3rem;
   height: 100%;
 }
 
-#about-section .about__container .about__info .about__skills h1 {
+#about-section .about-container .about-info .about-me__skills h1 {
   color: blueviolet;
   font-size: 2rem;
   text-transform: uppercase;
@@ -643,12 +641,12 @@ body {
   padding-bottom: 2rem;
 }
 
-#about-section .about__container .about__info .about__skills .skills-icons {
+#about-section .about-container .about-info .about-me__skills .skills-icons {
   width: 80%;
   margin: 0 auto;
 }
 
-#about-section .about__container .about__info .about__skills .skills-icons ul {
+#about-section .about-container .about-info .about-me__skills .skills-icons ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -659,7 +657,7 @@ body {
       flex-wrap: wrap;
 }
 
-#about-section .about__container .about__info .about__skills .skills-icons ul li {
+#about-section .about-container .about-info .about-me__skills .skills-icons ul li {
   width: 5rem;
   height: 5rem;
   margin: 1rem;
@@ -677,17 +675,17 @@ body {
           align-items: center;
 }
 
-#about-section .about__container .about__info .about__skills .skills-icons ul li i {
+#about-section .about-container .about-info .about-me__skills .skills-icons ul li i {
   font-size: 2rem;
   padding-bottom: 5px;
 }
 
-#about-section .about__container .about__info .about__skills .skills-icons ul li i:hover {
+#about-section .about-container .about-info .about-me__skills .skills-icons ul li i:hover {
   color: blue;
 }
 
-#about-section .about__container .about__info .about__skills .skills-icons ul li .fa-bootstrap,
-#about-section .about__container .about__info .about__skills .skills-icons ul li .fa-jquery {
+#about-section .about-container .about-info .about-me__skills .skills-icons ul li .fa-bootstrap,
+#about-section .about-container .about-info .about-me__skills .skills-icons ul li .fa-jquery {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 35px;
@@ -697,29 +695,29 @@ body {
           filter: grayscale(100%);
 }
 
-#about-section .about__container .about__info .about__skills .skills-icons ul li .fa-bootstrap:hover,
-#about-section .about__container .about__info .about__skills .skills-icons ul li .fa-jquery:hover {
+#about-section .about-container .about-info .about-me__skills .skills-icons ul li .fa-bootstrap:hover,
+#about-section .about-container .about-info .about-me__skills .skills-icons ul li .fa-jquery:hover {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
 }
 
-#about-section .about__container .about__info .about__skills .skills-icons ul li .fa-bootstrap {
+#about-section .about-container .about-info .about-me__skills .skills-icons ul li .fa-bootstrap {
   background-image: url("/IMG/bootstrap-4.png");
 }
 
-#about-section .about__container .about__info .about__skills .skills-icons ul li .fa-jquery {
+#about-section .about-container .about-info .about-me__skills .skills-icons ul li .fa-jquery {
   background-image: url("/IMG/jquery.png");
 }
 
-#about-section .about__container .about__info .front-end {
+#about-section .about-container .about-info .skills-description {
   padding: 2rem 0;
 }
 
-#about-section .about__container .about__info .about__future {
+#about-section .about-container .about-info .about-me__quote {
   padding-top: 3rem;
 }
 
-#about-section .about__container .about__info .about__future blockquote {
+#about-section .about-container .about-info .about-me__quote blockquote {
   border-left: 10px solid #a359e8;
   margin: 0 10px;
   max-width: 700px;
@@ -727,7 +725,7 @@ body {
   quotes: "“" "”" "‘" "’";
 }
 
-#about-section .about__container .about__info .about__future blockquote:before {
+#about-section .about-container .about-info .about-me__quote blockquote:before {
   color: blueviolet;
   content: open-quote;
   font-size: 4em;
@@ -736,19 +734,17 @@ body {
   vertical-align: -0.4em;
 }
 
-#about-section .about__container .about__info .about__future blockquote p {
+#about-section .about-container .about-info .about-me__quote blockquote p {
   display: inline;
 }
 
-#portfolio-section .portfolio {
-  z-index: 5;
+#portfolio-section {
   position: relative;
   z-index: 1;
-  background: blueviolet;
-  cursor: default;
+  display: block;
 }
 
-#portfolio-section .portfolio:before, #portfolio-section .portfolio:after {
+#portfolio-section:before, #portfolio-section:after {
   background: inherit;
   content: "";
   display: block;
@@ -761,7 +757,7 @@ body {
           backface-visibility: hidden;
 }
 
-#portfolio-section .portfolio:before {
+#portfolio-section:before {
   border-top: 5px solid #333333;
   -webkit-transform: skewY(6deg);
           transform: skewY(6deg);
@@ -769,7 +765,7 @@ body {
           transform-origin: 120% 0;
 }
 
-#portfolio-section .portfolio:after {
+#portfolio-section:after {
   bottom: 0;
   border-bottom: 5px solid #333333;
   -webkit-transform: skewY(-6deg);
@@ -778,12 +774,14 @@ body {
           transform-origin: 120%;
 }
 
+#portfolio-section .portfolio {
+  z-index: 5;
+  background: blueviolet;
+  cursor: default;
+}
+
 #portfolio-section .portfolio .box-area {
-  position: absolute;
-  top: -10rem;
-  left: 0;
   width: 100%;
-  height: 55rem;
   overflow: hidden;
 }
 

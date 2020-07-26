@@ -455,25 +455,25 @@ body {
 //! ABOUT Section =================================
 #about-section {
   display: block;
-  .about__container {
-    display: block;
-    position: relative;
-    z-index: 5;
+  .about-container {
     @include angle(before);
-    padding: 2rem 0 10rem;
+    display: block;
+    // position: relative;
+    z-index: 5;
+    // padding: 2rem 0 10rem;
     // height: 1000px;
     background: #fff;
     max-width: 100%;
     width: 100%;
     cursor: default;
-    h2.about__title {
+    h2.about-title {
       color: blueviolet;
       font-size: 4rem;
       font-weight: 800;
       text-align: center;
       text-transform: uppercase;
     }
-    .about__info {
+    .about-info {
       align-items: center;
       display: flex;
       flex-direction: column;
@@ -496,17 +496,18 @@ body {
       span {
         font-weight: 500;
       }
-      .about__top {
+      .about-me {
+        // display: block;
         padding-bottom: 4rem;
         text-align: center;
-        .about__headline {
+        .about-me__headline {
           max-width: 700px;
           padding-bottom: 4rem;
           font-size: 1.4rem;
           text-align: center;
           margin: 0 auto;
         }
-        .about__job {
+        .about-me__job {
           padding: 20px;
           width: 80%;
           border: 2px solid blueviolet;
@@ -530,7 +531,7 @@ body {
           }
         }
       }
-      .about__skills {
+      .about-me__skills {
         padding-top: 3rem;
         // width: 50%;
         height: 100%;
@@ -592,10 +593,10 @@ body {
         }
       }
 
-      .front-end {
+      .skills-description {
         padding: 2rem 0;
       }
-      .about__future {
+      .about-me__quote {
         padding-top: 3rem;
         blockquote {
           // background: #f9f9f9;
@@ -623,20 +624,19 @@ body {
 
 //! PORTFOLIO Section =============================
 #portfolio-section {
+  @include angle(both);
+  display: block;
   .portfolio {
     z-index: 5;
-    // height: 35rem;
-    @include angle(both);
-    // padding: 3rem 0 5rem;
     background: blueviolet;
     cursor: default;
     .box-area {
       //? Floating Boxes
-      position: absolute;
-      top: -10rem;
-      left: 0;
+      // position: absolute;
+      // top: -10rem;
+      // left: 0;
       width: 100%;
-      height: 55rem;
+      // height: 55rem;
       overflow: hidden;
       li {
         position: absolute;
@@ -735,7 +735,6 @@ body {
         grid-gap: 15px;
         width: 1000px;
         height: 400px;
-        // perspective: 600px;
         .card {
           cursor: pointer;
           border-radius: 10px;
@@ -780,7 +779,6 @@ body {
                 height: 400px;
                 background-color: rgba(white, 0.1);
                 transform: rotate(60deg);
-                // z-index: 1;
               }
               &:after {
                 cursor: pointer;
@@ -811,7 +809,6 @@ body {
                   filter: drop-shadow(1px 1px 1px hsl(0, 0%, 10%));
                   position: absolute;
                   text-transform: uppercase;
-                  // transition: 0.3s ease-in-out;
                 }
               }
               .left-side {
@@ -864,7 +861,6 @@ body {
       }
       .card2 {
         background-image: url("/IMG/portfolio-img/SneakerEcommerce.png");
-        // background-size: 120%;
         background-position: left;
         background-repeat: no-repeat;
       }
@@ -872,19 +868,7 @@ body {
         background-image: url("/IMG/portfolio-img/Artist-website.png");
         background-position: center;
         background-size: 115%;
-        // border-top-right-radius: 15px;
       }
-      // .card4 {
-      //   // background: red;
-      //   // border-bottom-left-radius: 15px;
-      // }
-      // .card5 {
-      //   // background: purple;
-      // }
-      // .card6 {
-      //   // background: #fff;
-      //   // border-bottom-right-radius: 15px;
-      // }
     }
   }
 }
