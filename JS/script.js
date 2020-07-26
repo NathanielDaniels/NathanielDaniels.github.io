@@ -16,6 +16,24 @@
 //   location.hash = document.title = s.join("");
 // }
 
+//! skills icon hover  ======================
+
+const skillsUl = document.querySelectorAll(".skills-list > li");
+const skillsLi = document.querySelectorAll(".skills-list > li > i");
+
+for (let index = 0; index < skillsUl.length; index++) {
+  skillsUl[index].addEventListener("mouseenter", () => {
+    if (index % 2 === 0) {
+      skillsLi[index].style.color = "hsl(60, 100%, 44%)";
+    }
+  });
+  skillsUl[index].addEventListener("mouseleave", () => {
+    if (index % 2 === 0) {
+      skillsLi[index].style.color = "black";
+    }
+  });
+}
+
 //! Title SVG Animation ======================
 $(function () {
   $("#name-svg").load("/titleName-anim/name-svg.html");
@@ -73,7 +91,7 @@ function trackMouse(event) {
 
   let calcY = (headBox.height - faceBox.height) * (mY / vpH);
 
-  console.log(calcX, calcY);
+  // console.log(calcX, calcY);
 
   // //? add bounding restrictions to face
   // calcX = clamp(calcX, 60, 150);
@@ -120,50 +138,11 @@ $menu.click(function () {
   $(this).toggleClass("close");
 });
 
-//! Close Menu on Click of Link! JQuery ============
+//! Close SideBar Menu on Click of any Link! JQuery ============
 $("#sidebar-menu ul li a").click(function () {
   $("#sidebar-menu").removeClass("active");
   $menu.removeClass("close");
 });
-
-//! Navbar Scroll Animation (JQuery)===============================
-// Hide Header on on scroll down
-let didScroll;
-let lastScrollTop = 0;
-let delta = 5;
-let navbarHeight = $("header").outerHeight();
-
-$(window).scroll(function (event) {
-  didScroll = true;
-});
-
-setInterval(function () {
-  if (didScroll) {
-    hasScrolled();
-    didScroll = false;
-  }
-}, 100);
-
-function hasScrolled() {
-  let st = $(this).scrollTop();
-
-  // Make sure they scroll more than delta
-  if (Math.abs(lastScrollTop - st) <= delta) return;
-
-  // If they scrolled down and are past the navbar, add class .nav-up.
-  // This is necessary so you never see what is "behind" the navbar.
-  if (st > lastScrollTop && st > navbarHeight) {
-    // Scroll Down
-    $("header").removeClass("nav-down").addClass("nav-up");
-  } else {
-    // Scroll Up
-    if (st + $(window).height() < $(document).height()) {
-      $("header").removeClass("nav-up").addClass("nav-down");
-    }
-  }
-
-  lastScrollTop = st;
-}
 
 //! Greeting-Loop Animation (JQuery)================================
 const text = [
@@ -188,7 +167,46 @@ function change() {
   });
 }
 
-// PORTFOLIO CLICK FUNCTION (JQuery)=====================
+//! Navbar Scroll Animation (JQuery)===============================
+// Hide Header on on scroll down
+// let didScroll;
+// let lastScrollTop = 0;
+// let delta = 5;
+// let navbarHeight = $("header").outerHeight();
+
+// $(window).scroll(function (event) {
+//   didScroll = true;
+// });
+
+// setInterval(function () {
+//   if (didScroll) {
+//     hasScrolled();
+//     didScroll = false;
+//   }
+// }, 100);
+
+// function hasScrolled() {
+//   let st = $(this).scrollTop();
+
+//   // Make sure they scroll more than delta
+//   if (Math.abs(lastScrollTop - st) <= delta) return;
+
+//   // If they scrolled down and are past the navbar, add class .nav-up.
+//   // This is necessary so you never see what is "behind" the navbar.
+//   if (st > lastScrollTop && st > navbarHeight) {
+//     // Scroll Down
+//     $("header").removeClass("nav-down").addClass("nav-up");
+//   } else {
+//     // Scroll Up
+//     if (st + $(window).height() < $(document).height()) {
+//       $("header").removeClass("nav-up").addClass("nav-down");
+//     }
+//   }
+
+//   lastScrollTop = st;
+// }
+
+//! PORTFOLIO CLICK FUNCTION (JQuery)=====================
 $(function () {
   $(".card").click(function () {
     $(this)
