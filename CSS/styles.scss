@@ -630,10 +630,11 @@ body {
     // z-index: 5;
     display: relative;
     top: -2em;
-    padding: 3rem 0 5rem;
+    padding: 1rem 0 5rem;
     background: blueviolet;
     cursor: default;
     .box-area {
+      display: none;
       //? Floating Boxes
       position: absolute;
       top: -10rem;
@@ -729,7 +730,7 @@ body {
       // animation: slideUp 1s cubic-bezier(0.19, 1, 0.3, 1) 0.5s forwards;
     }
     .grid-container {
-      margin: 75px 15px 0;
+      margin: 3em 1em;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1011,14 +1012,18 @@ body {
   }
   section#portfolio-section {
     .portfolio {
+      top: -3em !important;
       .box-area {
         top: -100px !important;
         height: 135%;
       }
+      .portfolio-title {
+        // padding-top: 1em !important;
+      }
     }
   }
   section#contact-section {
-    // padding-top: 8rem;
+    padding-top: 5em;
   }
 }
 
@@ -1040,7 +1045,6 @@ body {
     }
   }
   .about#about-section {
-    // height: 1150px !important;
     .about__container {
       padding-top: 50px !important;
     }
@@ -1051,15 +1055,13 @@ body {
   section#portfolio-section {
     .portfolio {
       // padding-top: 50px !important;
-      height: 55rem !important;
+      height: 60em !important;
       .box-area {
         top: -100px !important;
         height: 125%;
       }
       .portfolio-grid {
-        // grid-template-columns: 1fr 1fr !important;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-        // grid-template-rows: repeat(3, 1fr) !important;
         width: 90% !important;
 
         .card {
@@ -1077,7 +1079,7 @@ body {
 
 @media screen and (max-width: 700px) {
   .about#about-section {
-    height: 1600px !important;
+    // height: 1600px !important;
     .about__container {
       padding: 2rem 0 15rem;
     }
@@ -1133,7 +1135,7 @@ body {
   }
   section#portfolio-section {
     .portfolio {
-      height: 1500px !important;
+      height: 102em !important;
       .box-area {
         display: none;
         // top: -1400px;
@@ -1142,6 +1144,7 @@ body {
         //   bottom: -500px;
         // }
       }
+
       .portfolio-grid {
         // grid-template-columns: 1fr !important;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) !important;
@@ -1200,10 +1203,7 @@ body {
   }
 
   .about#about-section {
-    height: 2000px !important;
-    // height: auto !important;
     .about {
-      // height: auto !important;
       p.about__top {
         font-size: 18px !important;
         width: 95% !important;
