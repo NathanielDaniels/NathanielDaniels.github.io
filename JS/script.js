@@ -11,7 +11,7 @@ for (let index = 0; index < skillsUl.length; index++) {
   });
   skillsUl[index].addEventListener("mouseleave", () => {
     if (index % 2 === 0) {
-      skillsLi[index].style.color = "black";
+      skillsLi[index].style.color = "#474747";
     }
   });
 }

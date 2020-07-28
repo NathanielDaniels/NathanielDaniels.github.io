@@ -685,6 +685,7 @@ body {
 }
 
 #about-section .about-container .about-info .about-me__skills .skills-icons ul li i {
+  color: #474747;
   font-size: 2rem;
   padding-bottom: 5px;
   -webkit-transition: all 0.3s ease-in-out;
