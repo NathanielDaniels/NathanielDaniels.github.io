@@ -148,6 +148,15 @@ function change() {
     elem.fadeIn();
   });
 }
+//! PORTFOLIO CLICK FUNCTION (JQuery)=====================
+$(function () {
+  $(".card").click(function () {
+    $(this)
+      .toggleClass("is-flipped")
+      .siblings(".is-flipped")
+      .removeClass("is-flipped");
+  });
+});
 
 //! Navbar Scroll Animation (JQuery)===============================
 // Hide Header on on scroll down
@@ -187,13 +196,3 @@ function change() {
 
 //   lastScrollTop = st;
 // }
-
-//! PORTFOLIO CLICK FUNCTION (JQuery)=====================
-$(function () {
-  $(".card").click(function () {
-    $(this)
-      .toggleClass("is-flipped")
-      .siblings(".is-flipped")
-      .removeClass("is-flipped");
-  });
-});
