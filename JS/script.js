@@ -149,6 +149,7 @@ function change() {
   });
 }
 //! PORTFOLIO CLICK FUNCTION (JQuery)=====================
+//flipping cards
 $(function () {
   $(".card").click(function () {
     $(this)

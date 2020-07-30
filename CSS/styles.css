@@ -1161,6 +1161,7 @@ body {
 }
 
 .footer-section .social-media {
+  list-style: none;
   cursor: pointer;
 }
 

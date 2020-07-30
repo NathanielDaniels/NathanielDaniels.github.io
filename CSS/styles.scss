@@ -952,34 +952,17 @@ body {
 
 //! FOOTER Section ================================
 .footer-section {
-  // z-index: 1;
   position: fixed;
-  // bottom: 0.5rem;
   bottom: 1rem;
   right: 0.8rem;
-  // right: 0;
-  // background: hsla(0, 0%, 0%, 0.8);
   background: transparent;
-  // hr {
-  //   // display: inherit;
-  //   color: hsl(60, 100%, 80%);
-  //   width: 2rem;
-  //   transform: rotate(90deg);
-  //   margin-bottom: 1.5rem;
-  // }
   .social-media {
-    // width: 25%;
-    // margin: 0 auto;
-    // display: flex;
-    // justify-content: space-around;
+    list-style: none;
     cursor: pointer;
     a {
-      // color: #fff;
-      // color: hsl(60, 100%, 80%);
       color: blueviolet;
       text-shadow: 0px 1px 1px hsl(271, 76%, 13%);
       &:hover {
-        // color: blueviolet;
         text-shadow: 0px 2px 2px hsl(271, 76%, 13%);
       }
       .fab {
