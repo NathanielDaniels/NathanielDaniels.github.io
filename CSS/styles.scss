@@ -613,7 +613,6 @@ body {
 #portfolio-section {
   .portfolio {
     @include angle(after);
-    // z-index: 5;
     display: relative;
     top: -2em;
     padding: 1rem 0 5rem;
