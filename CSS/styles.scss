@@ -454,13 +454,10 @@ body {
 #about-section {
   display: block;
   .about-container {
-    // @include angle(before);
     @include angle(both);
     display: block;
-    // position: relative;
     z-index: 5;
     // padding: 2rem 0 10rem;
-    // height: 1000px;
     background: #fff;
     max-width: 100%;
     width: 100%;
@@ -484,7 +481,6 @@ body {
       width: 80%;
       max-width: 800px;
       overflow-wrap: break-word;
-      // padding: 50px 0;
       text-align: justify;
       text-rendering: optimizeLegibility;
       word-wrap: break-word;
