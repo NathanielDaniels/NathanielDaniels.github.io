@@ -64,7 +64,6 @@
   padding: 0;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.05rem;
-  scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
 }
 
@@ -82,6 +81,23 @@ body {
   scroll-behavior: smooth;
 }
 
+.progress-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 8px;
+  background: #761cca;
+}
+
+.progress-container .progress-bar {
+  height: 8px;
+  background: #ffff99;
+  width: 0%;
+}
+
+/* The progress bar (scroll indicator) */
 .main-section {
   height: 125vh;
   display: -webkit-box;
