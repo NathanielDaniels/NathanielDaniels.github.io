@@ -937,12 +937,12 @@ body {
 }
 
 //! FOOTER Section ================================
-.footer-section {
+.sidebar-section {
   position: fixed;
   bottom: 1rem;
   right: 0.8rem;
   background: transparent;
-  .social-media {
+  .sidebar__social-media {
     list-style: none;
     cursor: pointer;
     a {
@@ -1052,14 +1052,6 @@ body {
     .about__container {
       padding: 2rem 0 15rem;
     }
-  }
-
-  section#contact-section {
-    // width: 40rem;
-  }
-
-  .footer-section {
-    // position: static;
   }
 }
 @media screen and (min-width: 600px) {
@@ -1188,8 +1180,8 @@ body {
     }
   }
 
-  footer.footer-section {
-    .social-media {
+  aside.sidebar-section {
+    .sidebar__social-media {
       width: 100% !important;
       justify-content: center !important;
       a {
