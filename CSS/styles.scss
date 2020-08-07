@@ -662,10 +662,12 @@ body {
 //! PORTFOLIO Section =============================
 #portfolio-section {
   .portfolio {
+    // border: 2px solid red;
+    padding: 10em 0 0;
+
     @include angle(after);
     display: relative;
-    top: -2em;
-    padding: 1rem 0 5rem;
+    // top: -2em;
     background: blueviolet;
     cursor: default;
     .box-area {
@@ -754,8 +756,10 @@ body {
     }
 
     h2.portfolio-title {
+      // border: 2px solid blue;
+      // padding-top: 2em;
+
       z-index: 5;
-      padding-top: 2em;
       // position: relative;
       font-weight: 800;
       text-align: center;
@@ -765,11 +769,15 @@ body {
       // animation: slideUp 1s cubic-bezier(0.19, 1, 0.3, 1) 0.5s forwards;
     }
     .grid-container {
-      margin: 3em 1em;
+      // border: 2px solid green;
+      // margin: 3em 0;
+
       display: flex;
       justify-content: center;
       align-items: center;
       .portfolio-grid {
+        // border: 2px solid red;
+        margin: 3em 0;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
         grid-gap: 15px;

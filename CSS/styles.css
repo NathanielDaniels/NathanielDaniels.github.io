@@ -770,11 +770,10 @@ body {
 }
 
 #portfolio-section .portfolio {
+  padding: 10em 0 0;
   position: relative;
   z-index: 1;
   display: relative;
-  top: -2em;
-  padding: 1rem 0 5rem;
   background: blueviolet;
   cursor: default;
 }
@@ -905,7 +904,6 @@ body {
 
 #portfolio-section .portfolio h2.portfolio-title {
   z-index: 5;
-  padding-top: 2em;
   font-weight: 800;
   text-align: center;
   font-size: 4rem;
@@ -914,7 +912,6 @@ body {
 }
 
 #portfolio-section .portfolio .grid-container {
-  margin: 3em 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -927,6 +924,7 @@ body {
 }
 
 #portfolio-section .portfolio .grid-container .portfolio-grid {
+  margin: 3em 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
