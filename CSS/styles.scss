@@ -675,17 +675,15 @@ body {
 //! Projects Section =============================
 #projects-section {
   .projects {
-    // border: 2px solid red;
-    padding: 10em 0 0;
-
     @include angle(after);
+    padding: 10em 0 0;
     display: relative;
     // top: -2em;
     background: blueviolet;
     cursor: default;
     .box-area {
+      //? Floating Box Animation
       display: none;
-      //? Floating Boxes
       position: absolute;
       top: -10rem;
       left: 0;
@@ -769,11 +767,7 @@ body {
     }
 
     h2.projects-title {
-      // border: 2px solid blue;
-      // padding-top: 2em;
-
       z-index: 5;
-      // position: relative;
       font-weight: 800;
       text-align: center;
       font-size: 4rem;
@@ -781,156 +775,47 @@ body {
       text-transform: uppercase;
       // animation: slideUp 1s cubic-bezier(0.19, 1, 0.3, 1) 0.5s forwards;
     }
-    .grid-container {
-      // border: 2px solid green;
-      // margin: 3em 0;
 
+    .grid-container {
       display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-      .projects-grid {
-        // border: 2px solid red;
-        margin: 3em 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-        grid-gap: 15px;
-        width: 1000px;
-        height: 400px;
-        .card {
-          cursor: pointer;
-          border-radius: 10px;
+      // width: 100%;
+      .card {
+        border: 2px solid red;
+        // width: 100%;
+        img {
           width: 100%;
-          height: 100%;
-          position: relative;
-          transition: transform 1s;
-          transform-style: preserve-3d;
-          z-index: 1;
-          box-shadow: 0px 4px 6px hsl(271, 76%, 20%);
-          &.is-flipped {
-            transform: rotateY(180deg);
-            z-index: 10;
-          }
-          .card__face {
-            border-radius: 5px;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            backface-visibility: hidden;
-            line-height: 1.5;
-            color: #fff;
-            text-align: center;
-            &.card__front {
-              background: transparent;
-            }
-            &.card__back {
-              cursor: default;
-              background: linear-gradient(-45deg, $black-dark, $black-light);
-              transform: rotateY(180deg);
-              overflow: hidden;
-              &:before,
-              &:after {
-                position: absolute;
-              }
-              &:before {
-                content: "";
-                border-left: 2px solid rgba(white, 0.2);
-                top: -20px;
-                right: 10px;
-                width: 200px;
-                height: 400px;
-                background-color: rgba(white, 0.1);
-                transform: rotate(60deg);
-              }
-              &:after {
-                cursor: pointer;
-                content: "+";
-                top: 0;
-                right: 5px;
-                font-size: 3rem;
-                transform: rotate(45deg);
-                z-index: 2;
-              }
-              .left-side,
-              .right-side {
-                a {
-                  i {
-                    color: hsl(271, 76%, 70%);
-                    filter: drop-shadow(1px 2px 2px hsl(271, 76%, 10%));
-                    &.fab,
-                    &.fas {
-                      position: absolute;
-                    }
-                    &:hover,
-                    &:focus {
-                      color: hsl(60, 100%, 80%);
-                    }
-                  }
-                }
-                p {
-                  color: hsl(60, 100%, 90%);
-                  filter: drop-shadow(1px 1px 1px hsl(0, 0%, 10%));
-                  position: absolute;
-                  text-transform: uppercase;
-                }
-              }
-              .left-side {
-                a {
-                  i {
-                    &.fab {
-                      left: 15%;
-                      top: 10%;
-                      font-size: 3.7rem;
-                    }
-                  }
-                }
-                p {
-                  left: 13%;
-                  top: 42%;
-                }
-              }
-              .right-side {
-                a {
-                  i {
-                    &.fas {
-                      right: 20%;
-                      top: 50%;
-                      font-size: 3rem;
-                    }
-                  }
-                }
-                p {
-                  right: 10%;
-                  top: 80%;
-                }
-              }
-            }
-          }
+        }
+      }
+      .card__info {
+        padding: 2em 2em 0;
+        // padding: 1em 0;
+      }
+      .card__links {
+        display: flex;
+        justify-content: space-between;
+        .left-side,
+        .right-side {
+          text-align: center;
         }
       }
 
-      .card1,
-      .card2,
-      .card3,
-      .card4,
-      .card5,
-      .card6 {
-        background-size: cover;
-        background-position: center center;
-      }
-
       .card1 {
-        background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
+        // background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
       }
       .card2 {
-        background-image: url("/IMG/portfolio-img/SneakerEcommerce.png");
+        // background-image: url("/IMG/portfolio-img/SneakerEcommerce.png");
         // background-size: 120%;
-        background-position: left;
-        background-repeat: no-repeat;
+        // background-position: left;
+        // background-repeat: no-repeat;
       }
       .card3 {
-        background-image: url("/IMG/portfolio-img/Artist-website.png");
-        background-position: center;
-        background-size: 115%;
+        // background-image: url("/IMG/portfolio-img/Artist-website.png");
+        // background-position: center;
+        // background-size: 115%;
       }
     }
   }
