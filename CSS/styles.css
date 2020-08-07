@@ -578,6 +578,7 @@ body {
 }
 
 #about-section .about-container .about-info {
+  padding: 2em 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -596,7 +597,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   line-height: 1.5em;
-  margin: 3rem auto;
+  margin: 0 auto;
   width: 80%;
   max-width: 800px;
   overflow-wrap: break-word;
@@ -616,13 +617,14 @@ body {
 
 #about-section .about-container .about-info .about-me {
   display: block;
-  padding-bottom: 4rem;
+  padding: 2em 0;
   text-align: center;
+  border-bottom: 1px solid black;
 }
 
 #about-section .about-container .about-info .about-me .about-me__headline {
+  padding-bottom: 2em;
   max-width: 700px;
-  padding-bottom: 4rem;
   font-size: 1.4rem;
   text-align: center;
   margin: 0 auto;
@@ -658,24 +660,24 @@ body {
 }
 
 #about-section .about-container .about-info .about-me__skills {
-  padding-top: 3rem;
   height: 100%;
 }
 
-#about-section .about-container .about-info .about-me__skills h1 {
+#about-section .about-container .about-info .about-me__skills h2 {
   color: blueviolet;
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
-  padding-bottom: 2rem;
 }
 
 #about-section .about-container .about-info .about-me__skills .skills-icons {
+  padding: 2em 0;
   width: 80%;
   margin: 0 auto;
 }
 
 #about-section .about-container .about-info .about-me__skills .skills-icons ul {
+  padding-top: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -687,9 +689,7 @@ body {
 }
 
 #about-section .about-container .about-info .about-me__skills .skills-icons ul li {
-  width: 5rem;
-  height: 5rem;
-  margin: 1rem;
+  width: 5em;
   list-style: none;
   display: inherit;
   -webkit-box-orient: vertical;
@@ -707,7 +707,7 @@ body {
 #about-section .about-container .about-info .about-me__skills .skills-icons ul li i {
   color: #474747;
   font-size: 2rem;
-  padding-bottom: 5px;
+  padding-bottom: 0.2em;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -744,11 +744,12 @@ body {
 }
 
 #about-section .about-container .about-info .skills-description {
-  padding: 2rem 0;
+  padding-bottom: 2em;
 }
 
 #about-section .about-container .about-info .about-me__quote {
-  padding-top: 3rem;
+  border-top: 1px solid black;
+  padding: 2em 0;
 }
 
 #about-section .about-container .about-info .about-me__quote blockquote {
