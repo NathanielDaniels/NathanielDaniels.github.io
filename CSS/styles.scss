@@ -924,24 +924,32 @@ body {
 
 //! CONTACT Section ===============================
 #contact-section {
+  // border: 2px solid red;
+
   position: relative;
-  padding-top: 8em;
-  height: 40rem;
+  padding: 8em 0 0;
+  // height: 40rem;
   background: #fff;
   cursor: default;
   .contact-container {
+    // border: 2px solid green;
+
     text-align: center;
     h2.contact-title {
-      // margin-top: 3rem;
+      // border: 2px solid blue;
       font-weight: 800;
       font-size: 4rem;
       color: blueviolet;
       text-transform: uppercase;
     }
     form.cf-form {
+      // border: 2px solid red;
+      margin: 3em auto;
+
       max-width: 37rem;
       text-align: center;
-      margin: 3.4rem auto;
+      // margin: 3.4rem auto;
+      // margin: 0 auto;
       input,
       textarea {
         font-size: 1.2rem;
@@ -950,7 +958,7 @@ body {
         border-radius: 8px;
         display: block;
         width: 100%;
-        margin-top: 1em;
+        margin-bottom: 1em;
         font-family: arial, sans-serif;
         filter: drop-shadow(1px 3px 2px gray);
         resize: none;
@@ -958,6 +966,10 @@ body {
           outline-color: yellow;
           filter: drop-shadow(1px 2px 2px blueviolet);
         }
+      }
+      input:nth-child(3),
+      textarea {
+        margin-bottom: 0;
       }
       textarea {
         height: 14rem;

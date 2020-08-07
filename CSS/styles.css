@@ -1085,8 +1085,7 @@ body {
 
 #contact-section {
   position: relative;
-  padding-top: 8em;
-  height: 40rem;
+  padding: 8em 0 0;
   background: #fff;
   cursor: default;
 }
@@ -1103,9 +1102,9 @@ body {
 }
 
 #contact-section .contact-container form.cf-form {
+  margin: 3em auto;
   max-width: 37rem;
   text-align: center;
-  margin: 3.4rem auto;
 }
 
 #contact-section .contact-container form.cf-form input,
@@ -1116,7 +1115,7 @@ body {
   border-radius: 8px;
   display: block;
   width: 100%;
-  margin-top: 1em;
+  margin-bottom: 1em;
   font-family: arial, sans-serif;
   -webkit-filter: drop-shadow(1px 3px 2px gray);
           filter: drop-shadow(1px 3px 2px gray);
@@ -1128,6 +1127,11 @@ body {
   outline-color: yellow;
   -webkit-filter: drop-shadow(1px 2px 2px blueviolet);
           filter: drop-shadow(1px 2px 2px blueviolet);
+}
+
+#contact-section .contact-container form.cf-form input:nth-child(3),
+#contact-section .contact-container form.cf-form textarea {
+  margin-bottom: 0;
 }
 
 #contact-section .contact-container form.cf-form textarea {
