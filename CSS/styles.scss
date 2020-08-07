@@ -42,7 +42,7 @@ $black-light: #2c3e50;
       background: inherit;
       content: "";
       display: block;
-      height: 500px;
+      height: 180px;
       position: absolute;
       left: 0;
       right: 0;
@@ -487,7 +487,6 @@ body {
     cursor: default;
     h2.about-title {
       // border: 2px solid green;
-
       color: blueviolet;
       font-size: 4rem;
       font-weight: 800;
@@ -497,7 +496,7 @@ body {
     .about-info {
       // border: 2px solid green;
 
-      padding: 2em 0;
+      // padding: 2em 0;
       align-items: center;
       display: flex;
       flex-direction: column;
@@ -523,7 +522,7 @@ body {
         // border: 2px solid red;
 
         display: block;
-        padding: 2em 0;
+        padding: 3em 0;
 
         // padding-bottom: 4rem;
         text-align: center;
@@ -564,13 +563,11 @@ body {
       .about-me__skills {
         // border: 2px solid black;
 
-        // padding: 2em 0;
-        // padding-top: 3rem;
+        padding: 3em 0;
         height: 100%;
-        h2 {
+        h3 {
           // border: 2px solid purple;
 
-          // padding: 2em 0;
           color: blueviolet;
           font-size: 2rem;
           text-transform: uppercase;
@@ -579,19 +576,16 @@ body {
         .skills-icons {
           // border: 2px solid yellowgreen;
 
-          padding: 2em 0;
-          width: 80%;
-          max-width: 100%;
+          max-width: 85%;
           margin: 0 auto;
 
           ul {
-            padding-top: 2em;
+            padding: 2em 0;
             display: flex;
             justify-content: space-evenly;
             flex-wrap: wrap;
             li {
               width: 5em;
-              // padding: 0.5em 0;
               margin: 1em 0;
               list-style: none;
               display: inherit;
@@ -634,19 +628,19 @@ body {
       .skills-description {
         // border: 2px solid red;
 
-        padding-bottom: 2em;
+        // padding-bottom: 2em;
         // padding: 2rem 0;
       }
       .about-me__quote {
         // border: 2px solid red;
 
         border-top: 1px solid black;
-        padding: 2em 0;
+        padding: 3em 0;
         blockquote {
           border-left: 10px solid hsl(271, 76%, 63%);
           margin: 0 10px;
           max-width: 700px;
-          padding: 0.5em 10px;
+          padding: 0 10px;
           quotes: "\201C""\201D""\2018""\2019";
         }
         blockquote:before {
@@ -1032,7 +1026,9 @@ body {
     }
   }
   .about#about-section {
-    // height: 1550px;
+    h2.about-title {
+      padding: 0.5em 0 0;
+    }
   }
   section#portfolio-section {
     .portfolio {

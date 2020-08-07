@@ -415,7 +415,7 @@ body {
   background: inherit;
   content: "";
   display: block;
-  height: 500px;
+  height: 180px;
   position: absolute;
   left: 0;
   right: 0;
@@ -543,7 +543,7 @@ body {
   background: inherit;
   content: "";
   display: block;
-  height: 500px;
+  height: 180px;
   position: absolute;
   left: 0;
   right: 0;
@@ -578,7 +578,6 @@ body {
 }
 
 #about-section .about-container .about-info {
-  padding: 2em 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -617,7 +616,7 @@ body {
 
 #about-section .about-container .about-info .about-me {
   display: block;
-  padding: 2em 0;
+  padding: 3em 0;
   text-align: center;
   border-bottom: 1px solid black;
 }
@@ -660,10 +659,11 @@ body {
 }
 
 #about-section .about-container .about-info .about-me__skills {
+  padding: 3em 0;
   height: 100%;
 }
 
-#about-section .about-container .about-info .about-me__skills h2 {
+#about-section .about-container .about-info .about-me__skills h3 {
   color: blueviolet;
   font-size: 2rem;
   text-transform: uppercase;
@@ -671,14 +671,12 @@ body {
 }
 
 #about-section .about-container .about-info .about-me__skills .skills-icons {
-  padding: 2em 0;
-  width: 80%;
-  max-width: 100%;
+  max-width: 85%;
   margin: 0 auto;
 }
 
 #about-section .about-container .about-info .about-me__skills .skills-icons ul {
-  padding-top: 2em;
+  padding: 2em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -745,20 +743,16 @@ body {
   color: blueviolet;
 }
 
-#about-section .about-container .about-info .skills-description {
-  padding-bottom: 2em;
-}
-
 #about-section .about-container .about-info .about-me__quote {
   border-top: 1px solid black;
-  padding: 2em 0;
+  padding: 3em 0;
 }
 
 #about-section .about-container .about-info .about-me__quote blockquote {
   border-left: 10px solid #a359e8;
   margin: 0 10px;
   max-width: 700px;
-  padding: 0.5em 10px;
+  padding: 0 10px;
   quotes: "“" "”" "‘" "’";
 }
 
@@ -789,7 +783,7 @@ body {
   background: inherit;
   content: "";
   display: block;
-  height: 500px;
+  height: 180px;
   position: absolute;
   left: 0;
   right: 0;
@@ -1217,6 +1211,9 @@ body {
   }
   section.main-section .speechBubble {
     display: none;
+  }
+  .about#about-section h2.about-title {
+    padding: 0.5em 0 0;
   }
   section#portfolio-section .portfolio {
     top: -3em !important;
