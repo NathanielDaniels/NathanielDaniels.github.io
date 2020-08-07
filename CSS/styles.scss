@@ -175,6 +175,17 @@ body {
 
   //? Face
   .smiley-face {
+    clip-path: polygon(
+      14% 0,
+      80% 0%,
+      100% 20%,
+      100% 80%,
+      80% 100%,
+      14% 99%,
+      14% 78%,
+      14% 21%
+    );
+
     z-index: 1;
     position: relative;
     left: 8%;
