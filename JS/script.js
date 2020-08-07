@@ -1,34 +1,12 @@
-//! When the user scrolls the page, execute myFunction
-window.onscroll = function () {
-  myFunction();
-};
-
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height =
+//! Page Scroll Indicator.
+window.onscroll = () => {
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height =
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
+  let scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
-}
-
-//! skills icon hover  ======================
-
-const skillsUl = document.querySelectorAll(".skills-list > li");
-const skillsLi = document.querySelectorAll(".skills-list > li > i");
-
-for (let index = 0; index < skillsUl.length; index++) {
-  skillsUl[index].addEventListener("mouseenter", () => {
-    if (index % 2 === 0) {
-      skillsLi[index].style.color = "hsl(60, 100%, 44%)";
-    }
-  });
-  skillsUl[index].addEventListener("mouseleave", () => {
-    if (index % 2 === 0) {
-      skillsLi[index].style.color = "#474747";
-    }
-  });
-}
+};
 
 //! Title SVG Animation ======================
 $(function () {
@@ -162,6 +140,25 @@ function change() {
     elem.fadeIn();
   });
 }
+
+//! skills icon hover  ======================
+
+const skillsUl = document.querySelectorAll(".skills-list > li");
+const skillsLi = document.querySelectorAll(".skills-list > li > i");
+
+for (let index = 0; index < skillsUl.length; index++) {
+  skillsUl[index].addEventListener("mouseenter", () => {
+    if (index % 2 === 0) {
+      skillsLi[index].style.color = "hsl(60, 100%, 44%)";
+    }
+  });
+  skillsUl[index].addEventListener("mouseleave", () => {
+    if (index % 2 === 0) {
+      skillsLi[index].style.color = "#474747";
+    }
+  });
+}
+
 //! PORTFOLIO CLICK FUNCTION (JQuery)=====================
 //flipping cards
 $(function () {
