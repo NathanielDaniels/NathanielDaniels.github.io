@@ -580,8 +580,8 @@ body {
           // border: 2px solid yellowgreen;
 
           padding: 2em 0;
-
-          max-width: 80%;
+          width: 80%;
+          max-width: 100%;
           margin: 0 auto;
 
           ul {
@@ -592,7 +592,7 @@ body {
             li {
               width: 5em;
               // padding: 0.5em 0;
-              // margin: 1rem;
+              margin: 1em 0;
               list-style: none;
               display: inherit;
               flex-direction: column;
