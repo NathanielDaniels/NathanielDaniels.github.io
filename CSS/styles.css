@@ -925,47 +925,71 @@ body {
 }
 
 #projects-section .projects .grid-container {
+  padding: 3em 0;
+}
+
+#projects-section .projects .grid-container .projects-grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  gap: 1em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
-#projects-section .projects .grid-container .card {
-  border: 2px solid red;
-}
-
-#projects-section .projects .grid-container .card img {
-  width: 100%;
-}
-
-#projects-section .projects .grid-container .card__info {
-  padding: 2em 2em 0;
-}
-
-#projects-section .projects .grid-container .card__links {
+#projects-section .projects .grid-container .projects-grid .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25em;
 }
 
-#projects-section .projects .grid-container .card__links .left-side,
-#projects-section .projects .grid-container .card__links .right-side {
+#projects-section .projects .grid-container .projects-grid .card img {
+  width: 100%;
+}
+
+#projects-section .projects .grid-container .projects-grid .card .card__info {
+  padding: 0 1em;
+}
+
+#projects-section .projects .grid-container .projects-grid .card .card__links {
+  position: relative;
+  right: 0;
+}
+
+#projects-section .projects .grid-container .projects-grid .card .card__links .left-side,
+#projects-section .projects .grid-container .projects-grid .card .card__links .right-side {
   text-align: center;
+}
+
+#projects-section .projects .grid-container .projects-grid .card .card__links .left-side i,
+#projects-section .projects .grid-container .projects-grid .card .card__links .right-side i {
+  font-size: 2rem;
+  padding: 0.2em;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#projects-section .projects .grid-container .projects-grid .card .card__links .left-side i:hover,
+#projects-section .projects .grid-container .projects-grid .card .card__links .right-side i:hover {
+  color: #cccc00;
+}
+
+#projects-section .projects .grid-container .projects-grid .card2,
+#projects-section .projects .grid-container .projects-grid .card3,
+#projects-section .projects .grid-container .projects-grid .card6 {
+  background: #fff;
 }
 
 #contact-section {
@@ -1143,21 +1167,6 @@ body {
   .about#about-section .about__top {
     width: 100%;
   }
-  section#projects-section .projects {
-    height: 60em !important;
-  }
-  section#projects-section .projects .box-area {
-    top: -100px !important;
-    height: 125%;
-  }
-  section#projects-section .projects .projects-grid {
-    -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    width: 90% !important;
-  }
-  section#projects-section .projects .projects-grid .card {
-    height: 200px !important;
-  }
   section#contact-section .contact-container form.cf-form {
     width: 80%;
   }
@@ -1192,19 +1201,8 @@ body {
     top: 0px !important;
     font-size: 30px !important;
   }
-  section#projects-section .projects {
-    height: 102em !important;
-  }
   section#projects-section .projects .box-area {
     display: none;
-  }
-  section#projects-section .projects .projects-grid {
-    -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit] !important;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) !important;
-    width: 70% !important;
-  }
-  section#projects-section .projects .projects-grid .card {
-    height: 200px !important;
   }
   section#contact-section {
     padding-top: 4rem;
