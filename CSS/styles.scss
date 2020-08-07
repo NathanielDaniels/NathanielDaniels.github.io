@@ -141,15 +141,15 @@ body {
   top: 0;
   z-index: 100;
   width: 100%;
-  // background-color: #f1f1f1;
-  height: 8px;
-  // background: #ccc;
+  height: 5px;
   background: hsl(271, 76%, 45%);
+  border-bottom: 1px solid black;
   .progress-bar {
-    height: 8px;
-    // background: #4caf50;
+    height: 5px;
     background: hsl(60, 100%, 80%);
     width: 0%;
+    border-bottom: 1px solid black;
+    border-radius: 1rem;
   }
 }
 
