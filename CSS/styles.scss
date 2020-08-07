@@ -175,6 +175,7 @@ body {
 
   //? Face
   .smiley-face {
+    z-index: 1;
     position: relative;
     left: 8%;
     top: 20%;
@@ -938,15 +939,15 @@ body {
 //! CONTACT Section ===============================
 #contact-section {
   // border: 2px solid red;
-
+  margin: -3em 0;
   position: relative;
-  padding: 8em 0 0;
+  padding: 10em 0 0;
   // height: 40rem;
   background: #fff;
   cursor: default;
   .contact-container {
     // border: 2px solid green;
-
+    padding-bottom: 1em;
     text-align: center;
     h2.contact-title {
       // border: 2px solid blue;
@@ -958,11 +959,8 @@ body {
     form.cf-form {
       // border: 2px solid red;
       margin: 3em auto;
-
       max-width: 37rem;
       text-align: center;
-      // margin: 3.4rem auto;
-      // margin: 0 auto;
       input,
       textarea {
         font-size: 1.2rem;
@@ -1131,9 +1129,11 @@ body {
     }
   }
   section#contact-section {
-    width: 80%;
-    margin: 0 auto;
-    // padding-top: 75px !important;
+    .contact-container {
+      form.cf-form {
+        width: 80%;
+      }
+    }
   }
 }
 
@@ -1213,22 +1213,26 @@ body {
   }
   section#contact-section {
     padding-top: 4rem;
-    width: 90%;
+    // width: 90%;
     // height: 900px;
     display: flex;
-    margin: 0 auto;
+    margin: -3em auto;
     h2.contact-title {
       margin-top: 2rem !important;
     }
 
     .contact-container {
       form.cf-form {
+        width: 90%;
         input#input-submit {
           position: relative;
           width: 80%;
           left: 50%;
           // top: 20px;
           transform: translate(-50%);
+        }
+        input:nth-child(3) {
+          margin-bottom: 1em;
         }
       }
       .half {

@@ -109,17 +109,17 @@ function clamp(num, min, max) {
 //   document.querySelector(".speech-bubble").style.display = "none";
 // }
 
-//! Hamburger Menu Animation! JQuery ======================
+//! Hamburger Nav Menu Animation! (JQuery) ======================
 $menu = $(".burger-elements");
 
 $menu.click(function () {
-  $("#sidebar-menu").toggleClass("active");
+  $("#nav-menu").toggleClass("active");
   $(this).toggleClass("close");
 });
 
-//! Close SideBar Menu on Click of any Link! JQuery ============
-$("#sidebar-menu ul li a").click(function () {
-  $("#sidebar-menu").removeClass("active");
+//! Close btn SideBar Nav Menu (JQuery)
+$("#nav-menu ul li a").click(function () {
+  $("#nav-menu").removeClass("active");
   $menu.removeClass("close");
 });
 
