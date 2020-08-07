@@ -659,9 +659,9 @@ body {
   }
 }
 
-//! PORTFOLIO Section =============================
-#portfolio-section {
-  .portfolio {
+//! Projects Section =============================
+#projects-section {
+  .projects {
     // border: 2px solid red;
     padding: 10em 0 0;
 
@@ -755,7 +755,7 @@ body {
       }
     }
 
-    h2.portfolio-title {
+    h2.projects-title {
       // border: 2px solid blue;
       // padding-top: 2em;
 
@@ -775,7 +775,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      .portfolio-grid {
+      .projects-grid {
         // border: 2px solid red;
         margin: 3em 0;
         display: grid;

@@ -769,7 +769,7 @@ body {
   display: inline;
 }
 
-#portfolio-section .portfolio {
+#projects-section .projects {
   padding: 10em 0 0;
   position: relative;
   z-index: 1;
@@ -778,7 +778,7 @@ body {
   cursor: default;
 }
 
-#portfolio-section .portfolio:after {
+#projects-section .projects:after {
   background: inherit;
   content: "";
   display: block;
@@ -791,7 +791,7 @@ body {
           backface-visibility: hidden;
 }
 
-#portfolio-section .portfolio:after {
+#projects-section .projects:after {
   bottom: 0;
   border-bottom: 5px solid #333333;
   -webkit-transform: skewY(-6deg);
@@ -800,7 +800,7 @@ body {
           transform-origin: 100%;
 }
 
-#portfolio-section .portfolio .box-area {
+#projects-section .projects .box-area {
   display: none;
   position: absolute;
   top: -10rem;
@@ -810,7 +810,7 @@ body {
   overflow: hidden;
 }
 
-#portfolio-section .portfolio .box-area li {
+#projects-section .projects .box-area li {
   position: absolute;
   display: block;
   list-style: none;
@@ -822,7 +822,7 @@ body {
   bottom: -180px;
 }
 
-#portfolio-section .portfolio .box-area li:nth-child(1) {
+#projects-section .projects .box-area li:nth-child(1) {
   left: 92%;
   width: 80px;
   height: 80px;
@@ -832,7 +832,7 @@ body {
           animation-duration: 15s;
 }
 
-#portfolio-section .portfolio .box-area li:nth-child(2) {
+#projects-section .projects .box-area li:nth-child(2) {
   left: 5%;
   width: 30px;
   height: 30px;
@@ -842,7 +842,7 @@ body {
           animation-duration: 10s;
 }
 
-#portfolio-section .portfolio .box-area li:nth-child(3) {
+#projects-section .projects .box-area li:nth-child(3) {
   left: 70%;
   width: 100px;
   height: 100px;
@@ -852,7 +852,7 @@ body {
           animation-duration: 15s;
 }
 
-#portfolio-section .portfolio .box-area li:nth-child(4) {
+#projects-section .projects .box-area li:nth-child(4) {
   left: 42%;
   width: 150px;
   height: 150px;
@@ -862,7 +862,7 @@ body {
           animation-duration: 25s;
 }
 
-#portfolio-section .portfolio .box-area li:nth-child(5) {
+#projects-section .projects .box-area li:nth-child(5) {
   left: 60%;
   width: 40px;
   height: 40px;
@@ -872,7 +872,7 @@ body {
           animation-duration: 10s;
 }
 
-#portfolio-section .portfolio .box-area li:nth-child(6) {
+#projects-section .projects .box-area li:nth-child(6) {
   left: 15%;
   width: 110px;
   height: 110px;
@@ -882,7 +882,7 @@ body {
           animation-duration: 15s;
 }
 
-#portfolio-section .portfolio .box-area li:nth-child(7) {
+#projects-section .projects .box-area li:nth-child(7) {
   left: 30%;
   width: 80px;
   height: 80px;
@@ -892,7 +892,7 @@ body {
           animation-duration: 15s;
 }
 
-#portfolio-section .portfolio .box-area li:nth-child(8) {
+#projects-section .projects .box-area li:nth-child(8) {
   left: 50%;
   width: 110px;
   height: 110px;
@@ -902,7 +902,7 @@ body {
           animation-duration: 20s;
 }
 
-#portfolio-section .portfolio h2.portfolio-title {
+#projects-section .projects h2.projects-title {
   z-index: 5;
   font-weight: 800;
   text-align: center;
@@ -911,7 +911,7 @@ body {
   text-transform: uppercase;
 }
 
-#portfolio-section .portfolio .grid-container {
+#projects-section .projects .grid-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -923,7 +923,7 @@ body {
           align-items: center;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid {
+#projects-section .projects .grid-container .projects-grid {
   margin: 3em 0;
   display: -ms-grid;
   display: grid;
@@ -934,7 +934,7 @@ body {
   height: 400px;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card {
+#projects-section .projects .grid-container .projects-grid .card {
   cursor: pointer;
   border-radius: 10px;
   width: 100%;
@@ -951,13 +951,13 @@ body {
           box-shadow: 0px 4px 6px #340c5a;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card.is-flipped {
+#projects-section .projects .grid-container .projects-grid .card.is-flipped {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   z-index: 10;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face {
+#projects-section .projects .grid-container .projects-grid .card .card__face {
   border-radius: 5px;
   position: absolute;
   height: 100%;
@@ -969,11 +969,11 @@ body {
   text-align: center;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__front {
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__front {
   background: transparent;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back {
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back {
   cursor: default;
   background: linear-gradient(-45deg, #101010, #2c3e50);
   -webkit-transform: rotateY(180deg);
@@ -981,11 +981,11 @@ body {
   overflow: hidden;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back:before, #portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back:after {
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back:before, #projects-section .projects .grid-container .projects-grid .card .card__face.card__back:after {
   position: absolute;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back:before {
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back:before {
   content: "";
   border-left: 2px solid rgba(255, 255, 255, 0.2);
   top: -20px;
@@ -997,7 +997,7 @@ body {
           transform: rotate(60deg);
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back:after {
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back:after {
   cursor: pointer;
   content: "+";
   top: 0;
@@ -1008,26 +1008,26 @@ body {
   z-index: 2;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back .left-side a i,
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back .right-side a i {
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back .left-side a i,
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back .right-side a i {
   color: #b478ed;
   -webkit-filter: drop-shadow(1px 2px 2px #1a062d);
           filter: drop-shadow(1px 2px 2px #1a062d);
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back .left-side a i.fab, #portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back .left-side a i.fas,
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back .right-side a i.fab,
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back .right-side a i.fas {
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back .left-side a i.fab, #projects-section .projects .grid-container .projects-grid .card .card__face.card__back .left-side a i.fas,
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back .right-side a i.fab,
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back .right-side a i.fas {
   position: absolute;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back .left-side a i:hover,
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back .right-side a i:hover {
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back .left-side a i:hover,
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back .right-side a i:hover {
   color: #ffff99;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back .left-side p,
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back .right-side p {
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back .left-side p,
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back .right-side p {
   color: #ffffcc;
   -webkit-filter: drop-shadow(1px 1px 1px #1a1a1a);
           filter: drop-shadow(1px 1px 1px #1a1a1a);
@@ -1035,49 +1035,49 @@ body {
   text-transform: uppercase;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back .left-side a i.fab {
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back .left-side a i.fab {
   left: 15%;
   top: 10%;
   font-size: 3.7rem;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back .left-side p {
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back .left-side p {
   left: 13%;
   top: 42%;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back .right-side a i.fas {
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back .right-side a i.fas {
   right: 20%;
   top: 50%;
   font-size: 3rem;
 }
 
-#portfolio-section .portfolio .grid-container .portfolio-grid .card .card__face.card__back .right-side p {
+#projects-section .projects .grid-container .projects-grid .card .card__face.card__back .right-side p {
   right: 10%;
   top: 80%;
 }
 
-#portfolio-section .portfolio .grid-container .card1,
-#portfolio-section .portfolio .grid-container .card2,
-#portfolio-section .portfolio .grid-container .card3,
-#portfolio-section .portfolio .grid-container .card4,
-#portfolio-section .portfolio .grid-container .card5,
-#portfolio-section .portfolio .grid-container .card6 {
+#projects-section .projects .grid-container .card1,
+#projects-section .projects .grid-container .card2,
+#projects-section .projects .grid-container .card3,
+#projects-section .projects .grid-container .card4,
+#projects-section .projects .grid-container .card5,
+#projects-section .projects .grid-container .card6 {
   background-size: cover;
   background-position: center center;
 }
 
-#portfolio-section .portfolio .grid-container .card1 {
+#projects-section .projects .grid-container .card1 {
   background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
 }
 
-#portfolio-section .portfolio .grid-container .card2 {
+#projects-section .projects .grid-container .card2 {
   background-image: url("/IMG/portfolio-img/SneakerEcommerce.png");
   background-position: left;
   background-repeat: no-repeat;
 }
 
-#portfolio-section .portfolio .grid-container .card3 {
+#projects-section .projects .grid-container .card3 {
   background-image: url("/IMG/portfolio-img/Artist-website.png");
   background-position: center;
   background-size: 115%;
