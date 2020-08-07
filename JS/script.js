@@ -104,6 +104,11 @@ setInterval(function () {
   document.querySelector(".speech-bubble").style.display = "none";
 }, 2500);
 
+//? Remove speech bubble under 1200px screen width (mobile/tablet)
+if (window.innerWidth < 1200) {
+  document.querySelector(".speech-bubble").style.display = "none";
+}
+
 //! Hamburger Menu Animation! JQuery ======================
 $menu = $(".burger-elements");
 
