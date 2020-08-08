@@ -792,9 +792,9 @@ body {
       .projects-grid {
         display: flex;
         flex-flow: wrap;
-        gap: 1em;
+        gap: 2em;
         justify-content: center;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
         .card {
           padding: 2em;
@@ -806,11 +806,16 @@ body {
           justify-content: center;
           row-gap: 1em;
           max-width: 35em;
-          width: 40%;
-          // .card-title {
-          //   bottom: 5%;
-          //   right: 15%;
-          // }
+          // width: 40%;
+          width: 450px;
+          .card-title {
+            color: hsl(60, 100%, 80%);
+            left: -1%;
+          }
+          &:nth-child(4) .card-title {
+            bottom: -5%;
+            left: 20%;
+          }
 
           i {
             font-size: 2em;
@@ -818,18 +823,10 @@ body {
             align-items: center;
             justify-content: center;
           }
-          img {
-            border-radius: 10px;
-            width: 100%;
-          }
-          .card-title {
-            position: absolute;
-            bottom: -5%;
-            left: -15%;
-            right: 20%;
-            color: #fff;
-            font-size: 2rem;
-          }
+          // img {
+          //   border-radius: 10px;
+          //   width: 100%;
+          // }
           .card__info {
             padding: 0 1em;
             text-align: justify;
