@@ -764,6 +764,7 @@ body {
 }
 
 #about-section .about-container .about-info .about-me__quote blockquote {
+  letter-spacing: 1px;
   border-left: 10px solid #a359e8;
   margin: 0 10px;
   max-width: 700px;
@@ -778,10 +779,6 @@ body {
   line-height: 0.1em;
   margin-right: 0.2em;
   vertical-align: -0.4em;
-}
-
-#about-section .about-container .about-info .about-me__quote blockquote p {
-  display: inline;
 }
 
 #projects-section .projects {
@@ -987,6 +984,7 @@ body {
 }
 
 #projects-section .projects .grid-container .projects-grid .card .card__info p {
+  letter-spacing: 1px;
   padding: 10px 0;
 }
 
@@ -1007,13 +1005,14 @@ body {
 #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-left,
 #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-right {
   text-align: center;
+  padding: 0.5em 0;
   position: relative;
 }
 
 #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-left i,
 #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-right i {
-  font-size: 2rem;
-  padding: 0.2em;
+  font-size: 2.5rem;
+  padding: 0.1em 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 153, 0.9);
@@ -1025,8 +1024,12 @@ body {
   color: #fff;
 }
 
+#projects-section .projects .grid-container .projects-grid .card .card__links .bottom-left i {
+  font-size: 2.6rem;
+}
+
 #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-right {
-  padding-left: 1em;
+  padding-left: 2em;
 }
 
 #projects-section .projects .grid-container .projects-grid .card:nth-child(3) .card__links {

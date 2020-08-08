@@ -656,11 +656,10 @@ body {
         // padding: 2rem 0;
       }
       .about-me__quote {
-        // border: 2px solid red;
-
         border-top: 1px solid black;
         padding: 3em 0;
         blockquote {
+          letter-spacing: 1px;
           border-left: 10px solid hsl(271, 76%, 63%);
           margin: 0 10px;
           max-width: 700px;
@@ -676,7 +675,7 @@ body {
           vertical-align: -0.4em;
         }
         blockquote p {
-          display: inline;
+          // display: inline;
         }
       }
     }
@@ -822,6 +821,8 @@ body {
           }
           .card__info {
             p {
+              letter-spacing: 1px;
+
               padding: 10px 0;
             }
             // padding: 0 1em;
@@ -837,23 +838,25 @@ body {
             .bottom-left,
             .bottom-right {
               text-align: center;
-              // padding: 0.5em;
+              padding: 0.5em 0;
               position: relative;
             }
             .bottom-left i,
             .bottom-right i {
-              font-size: 2rem;
-              padding: 0.2em;
+              font-size: 2.5rem;
+              padding: 0.1em 0;
               transition: all 0.2s ease-in-out;
               color: hsla(60, 100%, 80%, 0.9);
-              // color: hsla(0, 0%, 0%, 0.616);
               &:hover,
               &:focus {
                 color: #fff;
               }
             }
+            .bottom-left i {
+              font-size: 2.6rem;
+            }
             .bottom-right {
-              padding-left: 1em;
+              padding-left: 2em;
             }
           }
           &:nth-child(3) .card__links {
