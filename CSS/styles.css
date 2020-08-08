@@ -936,7 +936,7 @@ body {
   display: flex;
   -ms-flex-flow: wrap;
       flex-flow: wrap;
-  gap: 2em;
+  gap: 5em 1em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -970,7 +970,7 @@ body {
 
 #projects-section .projects .grid-container .projects-grid .card:nth-child(4) .card-title {
   bottom: -5%;
-  left: 20%;
+  left: 23%;
 }
 
 #projects-section .projects .grid-container .projects-grid .card i {
@@ -986,9 +986,8 @@ body {
           justify-content: center;
 }
 
-#projects-section .projects .grid-container .projects-grid .card .card__info {
-  padding: 0 1em;
-  text-align: justify;
+#projects-section .projects .grid-container .projects-grid .card .card__info p {
+  padding: 10px 0;
 }
 
 #projects-section .projects .grid-container .projects-grid .card .card__links {
@@ -997,9 +996,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -1009,6 +1008,7 @@ body {
 #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-right {
   text-align: center;
   padding: 0.5em;
+  position: relative;
 }
 
 #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-left i,
@@ -1017,22 +1017,36 @@ body {
   padding: 0.2em;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  color: rgba(255, 255, 153, 0.9);
 }
 
-#projects-section .projects .grid-container .projects-grid .card .card__links .bottom-left i:hover,
-#projects-section .projects .grid-container .projects-grid .card .card__links .bottom-right i:hover {
-  color: #990099;
+#projects-section .projects .grid-container .projects-grid .card .card__links .bottom-left i:hover, #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-left i:focus,
+#projects-section .projects .grid-container .projects-grid .card .card__links .bottom-right i:hover,
+#projects-section .projects .grid-container .projects-grid .card .card__links .bottom-right i:focus {
+  color: #fff;
 }
 
 #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-right {
   padding-left: 1em;
 }
 
+#projects-section .projects .grid-container .projects-grid .card:nth-child(3) .card__links {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 #projects-section .projects .grid-container .projects-grid .card2,
 #projects-section .projects .grid-container .projects-grid .card3,
 #projects-section .projects .grid-container .projects-grid .card6 {
-  background: #ffffe6;
-  border: 1px solid #4d004d;
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+#projects-section .projects .grid-container .projects-grid .card3 {
+  text-align: right;
 }
 
 #projects-section .projects .grid-container .projects-grid .card1 {

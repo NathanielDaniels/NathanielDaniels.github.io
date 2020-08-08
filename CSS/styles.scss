@@ -792,7 +792,7 @@ body {
       .projects-grid {
         display: flex;
         flex-flow: wrap;
-        gap: 2em;
+        gap: 5em 1em;
         justify-content: center;
         width: 90%;
         margin: 0 auto;
@@ -802,11 +802,9 @@ body {
           border-radius: 10px;
           display: flex;
           flex-direction: column;
-          // align-items: center;
           justify-content: center;
           row-gap: 1em;
           max-width: 35em;
-          // width: 40%;
           width: 450px;
           .card-title {
             color: hsl(60, 100%, 80%);
@@ -814,58 +812,68 @@ body {
           }
           &:nth-child(4) .card-title {
             bottom: -5%;
-            left: 20%;
+            left: 23%;
           }
-
           i {
             font-size: 2em;
             display: flex;
             align-items: center;
             justify-content: center;
           }
-          // img {
-          //   border-radius: 10px;
-          //   width: 100%;
-          // }
           .card__info {
-            padding: 0 1em;
-            text-align: justify;
+            p {
+              padding: 10px 0;
+            }
+            // padding: 0 1em;
+            // text-align: justify;
           }
           .card__links {
             position: relative;
             right: 0;
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start;
             align-items: flex-end;
+
             .bottom-left,
             .bottom-right {
               text-align: center;
               padding: 0.5em;
+              position: relative;
             }
             .bottom-left i,
             .bottom-right i {
               font-size: 2rem;
               padding: 0.2em;
               transition: all 0.2s ease-in-out;
-              &:hover {
-                color: hsl(300, 100%, 30%);
+              color: hsla(60, 100%, 80%, 0.9);
+              // color: hsla(0, 0%, 0%, 0.616);
+              &:hover,
+              &:focus {
+                color: #fff;
               }
             }
             .bottom-right {
               padding-left: 1em;
             }
           }
+          &:nth-child(3) .card__links {
+            justify-content: flex-end;
+          }
         }
 
         .card2,
         .card3,
         .card6 {
-          // font-size: 1.1rem;
-          // background: #fff;
-          // background: hsl(300, 100%, 13%);
-          background: hsl(60, 100%, 95%);
-          // color: #fff;
-          border: 1px solid hsl(300, 100%, 15%);
+          // background: hsl(60, 100%, 95%);
+          // border: 1px solid hsl(300, 100%, 15%);
+          color: #fff;
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+          text-align: left;
+        }
+
+        .card3 {
+          text-align: right;
         }
 
         .card3,
