@@ -1007,7 +1007,6 @@ body {
 #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-left,
 #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-right {
   text-align: center;
-  padding: 0.5em;
   position: relative;
 }
 
@@ -1052,7 +1051,9 @@ body {
 #projects-section .projects .grid-container .projects-grid .card1 {
   font-size: 3rem;
   padding: 2em;
-  border: 1px solid #4d004d;
+  -webkit-box-shadow: inset 0 0 10px #4d004d;
+          box-shadow: inset 0 0 10px #4d004d;
+  background: #761cca;
 }
 
 #projects-section .projects .grid-container .projects-grid .card1 .card-title {

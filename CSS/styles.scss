@@ -837,7 +837,7 @@ body {
             .bottom-left,
             .bottom-right {
               text-align: center;
-              padding: 0.5em;
+              // padding: 0.5em;
               position: relative;
             }
             .bottom-left i,
@@ -864,8 +864,6 @@ body {
         .card2,
         .card3,
         .card6 {
-          // background: hsl(60, 100%, 95%);
-          // border: 1px solid hsl(300, 100%, 15%);
           color: #fff;
           font-size: 1.1rem;
           letter-spacing: 1px;
@@ -885,28 +883,15 @@ body {
         .card1 {
           font-size: 3rem;
           padding: 2em;
-          border: 1px solid hsl(300, 100%, 15%);
-          // background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
-          // background-size: 100%;
-          // background-position: center;
-          // background-repeat: no-repeat;
+          box-shadow: inset 0 0 10px hsl(300, 100%, 15%);
+          // border: 1px solid hsl(300, 100%, 15%);
+          // background: hsl(271, 76%, 60%);
+          background: hsl(271, 76%, 45%);
           .card-title {
             position: absolute;
             bottom: -5%;
             right: 0;
           }
-        }
-
-        .card2 {
-          // background-image: url("/IMG/portfolio-img/SneakerEcommerce.png");
-          // background-size: 120%;
-          // background-position: left;
-          // background-repeat: no-repeat;
-        }
-        .card3 {
-          // background-image: url("/IMG/portfolio-img/Artist-website.png");
-          // background-position: center;
-          // background-size: 115%;
         }
       }
     }

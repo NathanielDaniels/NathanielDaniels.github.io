@@ -175,6 +175,18 @@ $(function () {
   });
 });
 
+//! Contact Form Click (Legend) Not Complete ======================
+
+// const form = document.querySelectorAll(".cf-form input");
+// console.log(form);
+
+// form.forEach((i) => {
+//   i.addEventListener("click", () => {
+//     const legend = `<legend>${i.placeholder}</legend>`;
+//     // console.log(i.);
+//   });
+// });
+
 //! Navbar Scroll Animation (JQuery)===============================
 // Hide Header on on scroll down
 // let didScroll;
