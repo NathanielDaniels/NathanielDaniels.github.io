@@ -1038,19 +1038,6 @@ body {
           justify-content: flex-end;
 }
 
-#projects-section .projects .grid-container .projects-grid .card2,
-#projects-section .projects .grid-container .projects-grid .card3,
-#projects-section .projects .grid-container .projects-grid .card6 {
-  color: #fff;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  text-align: left;
-}
-
-#projects-section .projects .grid-container .projects-grid .card3 {
-  text-align: right;
-}
-
 #projects-section .projects .grid-container .projects-grid .card1 {
   font-size: 3rem;
   padding: 2em;
@@ -1063,6 +1050,19 @@ body {
   position: absolute;
   bottom: -5%;
   right: 0;
+}
+
+#projects-section .projects .grid-container .projects-grid .card2,
+#projects-section .projects .grid-container .projects-grid .card3,
+#projects-section .projects .grid-container .projects-grid .card6 {
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+#projects-section .projects .grid-container .projects-grid .card3 {
+  text-align: right;
 }
 
 #contact-section {
