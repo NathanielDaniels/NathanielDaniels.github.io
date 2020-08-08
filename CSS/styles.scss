@@ -797,36 +797,65 @@ body {
         width: 80%;
         margin: 0 auto;
         .card {
+          padding: 2em;
+          position: relative;
+          border-radius: 10px;
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          // align-items: center;
           justify-content: center;
-          width: 25em;
+          row-gap: 1em;
+          max-width: 35em;
+          width: 40%;
+          // .card-title {
+          //   bottom: 5%;
+          //   right: 15%;
+          // }
+
+          i {
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
           img {
+            border-radius: 10px;
             width: 100%;
+          }
+          .card-title {
+            position: absolute;
+            bottom: -5%;
+            left: -15%;
+            right: 20%;
+            color: #fff;
+            font-size: 2rem;
           }
           .card__info {
             padding: 0 1em;
-            // padding: 1em 0;
+            text-align: justify;
           }
           .card__links {
             position: relative;
             right: 0;
-            // display: flex;
-            // height: calc(100% - 4em);
-            // justify-content: space-around;
-            // align-items: flex-end;
-            .left-side,
-            .right-side {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            .bottom-left,
+            .bottom-right {
               text-align: center;
+              padding: 0.5em;
             }
-            .left-side i,
-            .right-side i {
+            .bottom-left i,
+            .bottom-right i {
               font-size: 2rem;
               padding: 0.2em;
               transition: all 0.2s ease-in-out;
               &:hover {
-                color: hsl(60, 100%, 40%);
+                color: hsl(300, 100%, 30%);
               }
+            }
+            .bottom-right {
+              padding-left: 1em;
             }
           }
         }
@@ -834,7 +863,12 @@ body {
         .card2,
         .card3,
         .card6 {
-          background: #fff;
+          // font-size: 1.1rem;
+          // background: #fff;
+          // background: hsl(300, 100%, 13%);
+          background: hsl(60, 100%, 95%);
+          // color: #fff;
+          border: 1px solid hsl(300, 100%, 15%);
         }
 
         .card3,
@@ -844,8 +878,20 @@ body {
         }
 
         .card1 {
+          font-size: 3rem;
+          padding: 2em;
+          border: 1px solid hsl(300, 100%, 15%);
           // background-image: url("/IMG/portfolio-img/Simones-recipe-box.png");
+          // background-size: 100%;
+          // background-position: center;
+          // background-repeat: no-repeat;
+          .card-title {
+            position: absolute;
+            bottom: -5%;
+            right: 0;
+          }
         }
+
         .card2 {
           // background-image: url("/IMG/portfolio-img/SneakerEcommerce.png");
           // background-size: 120%;

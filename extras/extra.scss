@@ -1,0 +1,125 @@
+//! Projects Grid Container (old)
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .projects-grid {
+    margin: 3em 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 15px;
+    width: 1000px;
+    height: 400px;
+    .card {
+      cursor: pointer;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition: transform 1s;
+      transform-style: preserve-3d;
+      z-index: 1;
+      box-shadow: 0px 4px 6px hsl(271, 76%, 20%);
+      &.is-flipped {
+        transform: rotateY(180deg);
+        z-index: 10;
+      }
+      .card__face {
+        border-radius: 5px;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+        line-height: 1.5;
+        color: #fff;
+        text-align: center;
+        &.card__front {
+          background: transparent;
+        }
+        &.card__back {
+          cursor: default;
+          background: linear-gradient(-45deg, $black-dark, $black-light);
+          transform: rotateY(180deg);
+          overflow: hidden;
+          &:before,
+          &:after {
+            position: absolute;
+          }
+          &:before {
+            content: "";
+            border-left: 2px solid rgba(white, 0.2);
+            top: -20px;
+            right: 10px;
+            width: 200px;
+            height: 400px;
+            background-color: rgba(white, 0.1);
+            transform: rotate(60deg);
+          }
+          &:after {
+            cursor: pointer;
+            content: "+";
+            top: 0;
+            right: 5px;
+            font-size: 3rem;
+            transform: rotate(45deg);
+            z-index: 2;
+          }
+          .left-side,
+          .right-side {
+            a {
+              i {
+                color: hsl(271, 76%, 70%);
+                filter: drop-shadow(1px 2px 2px hsl(271, 76%, 10%));
+                &.fab,
+                &.fas {
+                  position: absolute;
+                }
+                &:hover,
+                &:focus {
+                  color: hsl(60, 100%, 80%);
+                }
+              }
+            }
+            p {
+              color: hsl(60, 100%, 90%);
+              filter: drop-shadow(1px 1px 1px hsl(0, 0%, 10%));
+              position: absolute;
+              text-transform: uppercase;
+            }
+          }
+          .left-side {
+            a {
+              i {
+                &.fab {
+                  left: 15%;
+                  top: 10%;
+                  font-size: 3.7rem;
+                }
+              }
+            }
+            p {
+              left: 13%;
+              top: 42%;
+            }
+          }
+          .right-side {
+            a {
+              i {
+                &.fas {
+                  right: 20%;
+                  top: 50%;
+                  font-size: 3rem;
+                }
+              }
+            }
+            p {
+              right: 10%;
+              top: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
