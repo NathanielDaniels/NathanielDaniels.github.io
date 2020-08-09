@@ -1051,7 +1051,12 @@ body {
     }
   }
   section#contact-section {
-    padding-top: 5em;
+    padding-top: 6em;
+    .contact-container {
+      .floating-boxes {
+        height: 38em;
+      }
+    }
   }
 }
 
@@ -1083,14 +1088,8 @@ body {
   section#contact-section {
     .contact-container {
       .floating-boxes {
-        // z-index: 500;
         top: 0;
-        height: 37em;
         bottom: -500px;
-        li {
-          // bottom: -500px;
-          // background: red;
-        }
       }
       form.cf-form {
         width: 80%;
@@ -1128,8 +1127,6 @@ body {
   }
   section#contact-section {
     padding-top: 4rem;
-    // width: 90%;
-    // height: 900px;
     display: flex;
     margin: -3em auto;
     .floating-boxes {
@@ -1147,7 +1144,6 @@ body {
           position: relative;
           width: 80%;
           left: 50%;
-          // top: 20px;
           transform: translate(-50%);
         }
         input:nth-child(3) {
@@ -1185,19 +1181,6 @@ body {
       }
     }
   }
-
-  // section#projects-section {
-  //   .projects {
-  //     .projects-grid {
-  //       .card {
-  //         &:nth-child(4) .card-title {
-  //           // left: 18% !important;
-  //           left: -1% !important;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 
   aside.sidebar-section {
     .sidebar__social-media {

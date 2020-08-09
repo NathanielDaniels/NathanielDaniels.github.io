@@ -1242,7 +1242,10 @@ body {
     text-align: left !important;
   }
   section#contact-section {
-    padding-top: 5em;
+    padding-top: 6em;
+  }
+  section#contact-section .contact-container .floating-boxes {
+    height: 38em;
   }
 }
 
@@ -1267,7 +1270,6 @@ body {
   }
   section#contact-section .contact-container .floating-boxes {
     top: 0;
-    height: 37em;
     bottom: -500px;
   }
   section#contact-section .contact-container form.cf-form {
