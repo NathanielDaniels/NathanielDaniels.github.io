@@ -911,7 +911,7 @@ body {
 
 #projects-section .projects .grid-container .projects-grid .card:nth-child(4) .card-title {
   bottom: -5%;
-  left: 23%;
+  left: 0.7em;
 }
 
 #projects-section .projects .grid-container .projects-grid .card i {
