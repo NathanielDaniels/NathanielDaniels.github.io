@@ -1260,6 +1260,11 @@ body {
   .about#about-section .about__top {
     width: 100%;
   }
+  section#contact-section .contact-container .floating-boxes {
+    top: 0;
+    height: 37em;
+    bottom: -500px;
+  }
   section#contact-section .contact-container form.cf-form {
     width: 80%;
   }
@@ -1282,15 +1287,15 @@ body {
     top: 0px !important;
     font-size: 30px !important;
   }
-  section#projects-section .projects .box-area {
-    display: none;
-  }
   section#contact-section {
     padding-top: 4rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin: -3em auto;
+  }
+  section#contact-section .floating-boxes {
+    display: none;
   }
   section#contact-section h2.contact-title {
     margin-top: 2rem !important;

@@ -1094,6 +1094,16 @@ body {
   // }
   section#contact-section {
     .contact-container {
+      .floating-boxes {
+        // z-index: 500;
+        top: 0;
+        height: 37em;
+        bottom: -500px;
+        li {
+          // bottom: -500px;
+          // background: red;
+        }
+      }
       form.cf-form {
         width: 80%;
       }
@@ -1128,24 +1138,16 @@ body {
       font-size: 30px !important;
     }
   }
-  section#projects-section {
-    .projects {
-      .box-area {
-        display: none;
-        // top: -1400px;
-        // bottom: -500px
-        // li {
-        //   bottom: -500px;
-        // }
-      }
-    }
-  }
   section#contact-section {
     padding-top: 4rem;
     // width: 90%;
     // height: 900px;
     display: flex;
     margin: -3em auto;
+    .floating-boxes {
+      display: none;
+    }
+
     h2.contact-title {
       margin-top: 2rem !important;
     }
