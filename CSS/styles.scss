@@ -717,7 +717,7 @@ body {
         width: 95%;
         margin: 0 auto;
         .card {
-          padding: 2em;
+          padding: 1em;
           position: relative;
           border-radius: 10px;
           display: flex;
@@ -1025,21 +1025,22 @@ body {
   section#projects-section {
     .projects {
       top: -3em !important;
-      .box-area {
-        top: -100px !important;
-        height: 135%;
-      }
       .grid-container {
         .projects-grid {
-          gap: 0;
+          gap: 1em;
           &:nth-child(1) .card3 {
             order: 4;
             text-align: left;
+
             .card__links {
               justify-content: flex-start;
             }
           }
           &:nth-child(1) .card4 {
+            .card-title {
+              left: -1% !important;
+            }
+
             order: 3;
           }
           &:nth-child(1) .card6 {
@@ -1185,18 +1186,18 @@ body {
     }
   }
 
-  section#projects-section {
-    .projects {
-      .projects-grid {
-        .card {
-          &:nth-child(4) .card-title {
-            // left: 18% !important;
-            left: -1% !important;
-          }
-        }
-      }
-    }
-  }
+  // section#projects-section {
+  //   .projects {
+  //     .projects-grid {
+  //       .card {
+  //         &:nth-child(4) .card-title {
+  //           // left: 18% !important;
+  //           left: -1% !important;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
   aside.sidebar-section {
     .sidebar__social-media {
