@@ -631,7 +631,7 @@ body {
   display: block;
   padding: 3em 0;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #999;
 }
 
 #about-section .about-container .about-info .about-me .about-me__headline {
@@ -668,12 +668,17 @@ body {
   color: blueviolet;
 }
 
-#about-section .about-container .about-info .about-me .about-me__job:hover, #about-section .about-container .about-info .about-me .about-me__job:focus {
+#about-section .about-container .about-info .about-me .about-me__job:hover {
   background-color: blueviolet;
 }
 
-#about-section .about-container .about-info .about-me .about-me__job:hover p, #about-section .about-container .about-info .about-me .about-me__job:focus p {
+#about-section .about-container .about-info .about-me .about-me__job:hover p {
   color: #fff;
+}
+
+#about-section .about-container .about-info .about-me .about-me__job:focus {
+  outline: 1.45px dashed;
+  outline-color: #ffff99;
 }
 
 #about-section .about-container .about-info .about-me__skills {
@@ -764,7 +769,7 @@ body {
 }
 
 #about-section .about-container .about-info .about-me__quote {
-  border-top: 1px solid black;
+  border-top: 1px solid #999;
   padding: 3em 0;
 }
 
@@ -915,7 +920,7 @@ body {
 #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-left i,
 #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-right i {
   font-size: 2.5rem;
-  padding: 0.1em 0;
+  padding: 0.2em;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: rgba(255, 255, 153, 0.9);
@@ -927,12 +932,26 @@ body {
   color: #fff;
 }
 
+#projects-section .projects .grid-container .projects-grid .card .card__links .bottom-left i:focus,
+#projects-section .projects .grid-container .projects-grid .card .card__links .bottom-right i:focus {
+  outline-color: yellow;
+  -webkit-filter: drop-shadow(1px 2px 2px blueviolet);
+          filter: drop-shadow(1px 2px 2px blueviolet);
+}
+
 #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-left i {
   font-size: 2.6rem;
 }
 
 #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-right {
   padding-left: 2em;
+}
+
+#projects-section .projects .grid-container .projects-grid .card .card__links .bottom-left i:hover, #projects-section .projects .grid-container .projects-grid .card .card__links .bottom-left i:focus,
+#projects-section .projects .grid-container .projects-grid .card .card__links .bottom-right i:hover,
+#projects-section .projects .grid-container .projects-grid .card .card__links .bottom-right i:focus {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 #projects-section .projects .grid-container .projects-grid .card:nth-child(3) .card__links {

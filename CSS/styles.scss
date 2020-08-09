@@ -497,7 +497,6 @@ body {
 //! ABOUT Section =================================
 #about-section {
   display: block;
-  // border: 2px solid red;
   .about-container {
     @include angle(both);
     display: block;
@@ -507,7 +506,6 @@ body {
     width: 100%;
     cursor: default;
     h2.about-title {
-      // border: 2px solid green;
       color: blueviolet;
       font-size: 4rem;
       font-weight: 800;
@@ -515,9 +513,6 @@ body {
       text-transform: uppercase;
     }
     .about-info {
-      // border: 2px solid green;
-
-      // padding: 2em 0;
       align-items: center;
       display: flex;
       flex-direction: column;
@@ -540,14 +535,10 @@ body {
         font-weight: 500;
       }
       .about-me {
-        // border: 2px solid red;
-
         display: block;
         padding: 3em 0;
-
-        // padding-bottom: 4rem;
         text-align: center;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #999;
         .about-me__headline {
           padding-bottom: 2em;
           max-width: 700px;
@@ -560,8 +551,6 @@ body {
           }
         }
         .about-me__job {
-          // border: 2px solid orange;
-
           padding: 20px;
           width: 80%;
           border: 2px solid blueviolet;
@@ -577,31 +566,31 @@ body {
               color: blueviolet;
             }
           }
-          &:hover,
-          &:focus {
+          &:hover {
             background-color: blueviolet;
+
             p {
               color: #fff;
             }
           }
+          &:focus {
+            outline: 1.45px dashed;
+            outline-color: hsl(60, 100%, 80%);
+            // padding: 2px 5px;
+            // filter: drop-shadow(0px 2px 2px hsl(271, 76%, 20%));
+          }
         }
       }
       .about-me__skills {
-        // border: 2px solid black;
-
         padding: 3em 0;
         height: 100%;
         h3 {
-          // border: 2px solid purple;
-
           color: blueviolet;
           font-size: 2rem;
           text-transform: uppercase;
           text-align: center;
         }
         .skills-icons {
-          // border: 2px solid yellowgreen;
-
           max-width: 90%;
           margin: 0 auto;
 
@@ -652,15 +641,8 @@ body {
           }
         }
       }
-
-      .skills-description {
-        // border: 2px solid red;
-
-        // padding-bottom: 2em;
-        // padding: 2rem 0;
-      }
       .about-me__quote {
-        border-top: 1px solid black;
+        border-top: 1px solid #999;
         padding: 3em 0;
         blockquote {
           letter-spacing: 1px;
@@ -762,12 +744,22 @@ body {
             .bottom-left i,
             .bottom-right i {
               font-size: 2.5rem;
-              padding: 0.1em 0;
+              padding: 0.2em;
               transition: all 0.2s ease-in-out;
               color: hsla(60, 100%, 80%, 0.9);
               &:hover,
               &:focus {
                 color: #fff;
+              }
+              // &:focus {
+              //   outline: 1.45px dashed;
+              //   outline-color: hsl(60, 100%, 80%);
+              //   padding: 2px 5px;
+              //   filter: drop-shadow(0px 2px 2px hsl(271, 76%, 20%));
+              // }
+              &:focus {
+                outline-color: yellow;
+                filter: drop-shadow(1px 2px 2px blueviolet);
               }
             }
             .bottom-left i {
@@ -775,6 +767,13 @@ body {
             }
             .bottom-right {
               padding-left: 2em;
+            }
+            .bottom-left i,
+            .bottom-right i {
+              &:hover,
+              &:focus {
+                transform: scale(1.2);
+              }
             }
           }
           &:nth-child(3) .card__links {
