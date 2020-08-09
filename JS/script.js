@@ -169,9 +169,6 @@ $(window).resize(() => {
   }
   // console.log(window.innerWidth);
 });
-
-// console.log(window.innerWidth);
-
 //! skills icon hover  ======================
 
 const skillsUl = document.querySelectorAll(".skills-list > li");
@@ -201,10 +198,9 @@ for (let index = 0; index < skillsUl.length; index++) {
 //   });
 // });
 
-//! Floating Box Animation =====================
-const boxes = document.querySelectorAll(".floating-boxes li");
-
+//! Contact Section - Floating Box Animation (Completely Random) ====
 let boxSize = () => {
+  const boxes = document.querySelectorAll(".floating-boxes li");
   for (let i = 0; i < boxes.length; i++) {
     boxes[i].style.left = Math.floor(Math.random() * 100) + "%";
     let boxWidth = (boxes[i].style.width =
@@ -217,12 +213,7 @@ let boxSize = () => {
       Math.floor(Math.random() * (30 - 10) + 10) + "s";
   }
 };
-
 boxSize();
-
-// console.log(Math.floor(Math.random() * (151 - 25) + 25));
-// console.log(Math.floor(Math.random() * (13, 5) + 5));
-// console.log(Math.floor(Math.random() * 100));
 
 //! Contact Form Click (Legend) Not Complete ======================
 
