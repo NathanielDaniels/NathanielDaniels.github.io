@@ -150,7 +150,7 @@ function change() {
 //! Under Construction
 
 const sidebar = document.querySelector(".sidebar");
-console.log(sidebar);
+// console.log(sidebar);
 
 $(window).resize(() => {
   if (window.innerWidth === 1600) {
@@ -202,8 +202,25 @@ for (let index = 0; index < skillsUl.length; index++) {
 // });
 
 //! Floating Box Animation =====================
+const floatingBoxes = document.querySelector(".floating-boxes");
 const boxes = document.querySelectorAll(".floating-boxes li");
-console.log(boxes[1]);
+
+let boxSize = () => {
+  for (let i = 0; i < boxes.length; i++) {
+    boxes[i].style.left = Math.floor(Math.random() * 100) + "%";
+    // let boxSize = Math.floor(Math.random() * 50) + "px";
+    let boxWidth = (boxes[i].style.width =
+      Math.floor(Math.random() * 150) + "px");
+    boxes[i].style.height = boxWidth;
+  }
+};
+
+boxSize();
+
+let num = 0;
+
+// console.log(Math.floor(Math.random() + 10));
+console.log(Math.floor(Math.random() * 100));
 
 //! Contact Form Click (Legend) Not Complete ======================
 
