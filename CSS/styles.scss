@@ -1232,13 +1232,17 @@ body {
     }
   }
 
-  // section#projects-section {
-  //   .projects {
-  //     .projects-grid {
-  //       // width: 80% !important;
-  //     }
-  //   }
-  // }
+  section#projects-section {
+    .projects {
+      .projects-grid {
+        .card {
+          &:nth-child(4) .card-title {
+            left: 18% !important;
+          }
+        }
+      }
+    }
+  }
 
   aside.sidebar-section {
     .sidebar__social-media {
