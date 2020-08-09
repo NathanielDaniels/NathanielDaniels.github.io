@@ -1009,6 +1009,7 @@ body {
     justify-content: center !important;
   }
 }
+
 @media screen and (max-width: 1000px) {
   section.main-section {
     height: 115vh;
@@ -1033,6 +1034,10 @@ body {
           gap: 0;
           &:nth-child(1) .card3 {
             order: 4;
+            text-align: left;
+            .card__links {
+              justify-content: flex-start;
+            }
           }
           &:nth-child(1) .card4 {
             order: 3;
@@ -1185,7 +1190,8 @@ body {
       .projects-grid {
         .card {
           &:nth-child(4) .card-title {
-            left: 18% !important;
+            // left: 18% !important;
+            left: -1% !important;
           }
         }
       }
