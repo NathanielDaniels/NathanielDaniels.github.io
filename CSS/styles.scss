@@ -159,6 +159,40 @@ body {
 
 /* The progress bar (scroll indicator) */
 
+//! Sidebar Section ================================
+.sidebar-section {
+  z-index: 1;
+  position: fixed;
+  bottom: 1rem;
+  right: 0.8rem;
+  background: transparent;
+  .sidebar__social-media {
+    list-style: none;
+    cursor: pointer;
+    a {
+      color: blueviolet;
+      text-shadow: 0px 1px 1px hsl(271, 76%, 13%);
+      &:hover,
+      &:focus {
+        text-shadow: 0px 2px 2px hsl(271, 76%, 13%);
+      }
+      .fab {
+        margin: 0.25rem 0;
+        font-size: 40px;
+      }
+    }
+  }
+  .web-dev {
+    // color: hsl(271, 76%, 75%);
+    font-weight: 500;
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    padding-right: 10px;
+    cursor: default;
+  }
+}
+
 //! MAIN Section (Hero) ===========================
 .main-section {
   z-index: 1;
@@ -175,6 +209,7 @@ body {
 
   //? Face
   .smiley-face {
+    // left clip to fit container
     clip-path: polygon(
       14% 0,
       80% 0%,
@@ -240,8 +275,8 @@ body {
   /*? Eyes */
   span.smiley-face__face:before,
   span.smiley-face__face:after {
-    position: absolute;
     content: "◝";
+    position: absolute;
     text-indent: 12px;
     font-weight: bold;
     font-size: 26px;
@@ -523,6 +558,7 @@ body {
       margin: 0 auto;
       width: 80%;
       max-width: 800px;
+      // max-width: 900px;
       overflow-wrap: break-word;
       text-align: justify;
       text-rendering: optimizeLegibility;
@@ -967,39 +1003,6 @@ body {
     .left {
       margin-right: 2%;
     }
-  }
-}
-
-//! Sidebar Section ================================
-.sidebar-section {
-  position: fixed;
-  bottom: 1rem;
-  right: 0.8rem;
-  background: transparent;
-  .sidebar__social-media {
-    list-style: none;
-    cursor: pointer;
-    a {
-      color: blueviolet;
-      text-shadow: 0px 1px 1px hsl(271, 76%, 13%);
-      &:hover,
-      &:focus {
-        text-shadow: 0px 2px 2px hsl(271, 76%, 13%);
-      }
-      .fab {
-        margin: 0.25rem 0;
-        font-size: 40px;
-      }
-    }
-  }
-  .web-dev {
-    // color: hsl(271, 76%, 75%);
-    font-weight: 500;
-    font-size: 18px;
-    position: absolute;
-    right: 0;
-    padding-right: 10px;
-    cursor: default;
   }
 }
 

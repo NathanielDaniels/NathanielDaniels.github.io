@@ -107,6 +107,42 @@ body {
 }
 
 /* The progress bar (scroll indicator) */
+.sidebar-section {
+  z-index: 1;
+  position: fixed;
+  bottom: 1rem;
+  right: 0.8rem;
+  background: transparent;
+}
+
+.sidebar-section .sidebar__social-media {
+  list-style: none;
+  cursor: pointer;
+}
+
+.sidebar-section .sidebar__social-media a {
+  color: blueviolet;
+  text-shadow: 0px 1px 1px #22083a;
+}
+
+.sidebar-section .sidebar__social-media a:hover, .sidebar-section .sidebar__social-media a:focus {
+  text-shadow: 0px 2px 2px #22083a;
+}
+
+.sidebar-section .sidebar__social-media a .fab {
+  margin: 0.25rem 0;
+  font-size: 40px;
+}
+
+.sidebar-section .web-dev {
+  font-weight: 500;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  padding-right: 10px;
+  cursor: default;
+}
+
 .main-section {
   z-index: 1;
   height: 125vh;
@@ -198,8 +234,8 @@ body {
 
 .main-section span.smiley-face__face:before,
 .main-section span.smiley-face__face:after {
-  position: absolute;
   content: "◝";
+  position: absolute;
   text-indent: 12px;
   font-weight: bold;
   font-size: 26px;
@@ -1178,41 +1214,6 @@ body {
 
 #contact-section .contact-container .left {
   margin-right: 2%;
-}
-
-.sidebar-section {
-  position: fixed;
-  bottom: 1rem;
-  right: 0.8rem;
-  background: transparent;
-}
-
-.sidebar-section .sidebar__social-media {
-  list-style: none;
-  cursor: pointer;
-}
-
-.sidebar-section .sidebar__social-media a {
-  color: blueviolet;
-  text-shadow: 0px 1px 1px #22083a;
-}
-
-.sidebar-section .sidebar__social-media a:hover, .sidebar-section .sidebar__social-media a:focus {
-  text-shadow: 0px 2px 2px #22083a;
-}
-
-.sidebar-section .sidebar__social-media a .fab {
-  margin: 0.25rem 0;
-  font-size: 40px;
-}
-
-.sidebar-section .web-dev {
-  font-weight: 500;
-  font-size: 18px;
-  position: absolute;
-  right: 0;
-  padding-right: 10px;
-  cursor: default;
 }
 
 @media screen and (min-width: 1366px) {

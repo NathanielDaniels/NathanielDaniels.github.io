@@ -146,6 +146,32 @@ function change() {
   });
 }
 
+//! Sidebar location change (screen size) ====
+//! Under Construction
+
+const sidebar = document.querySelector(".sidebar");
+console.log(sidebar);
+
+$(window).resize(() => {
+  if (window.innerWidth === 1600) {
+    sidebar.style.right = "8em";
+  } else if (window.innerWidth > 1601) {
+    // sidebar.style.position = "absolute";
+    sidebar.style.margin = "0 auto";
+
+    // sidebar.style.bottom = "1rem";
+    // sidebar.style.bottom = "1rem";
+    // sidebar.style.right = "20em";
+  } else {
+    sidebar.style.position = "fixed";
+    sidebar.style.right = "0.8rem";
+    // sidebar.style.bottom = "1rem";
+  }
+  // console.log(window.innerWidth);
+});
+
+// console.log(window.innerWidth);
+
 //! skills icon hover  ======================
 
 const skillsUl = document.querySelectorAll(".skills-list > li");
@@ -174,6 +200,10 @@ for (let index = 0; index < skillsUl.length; index++) {
 //       .removeClass("is-flipped");
 //   });
 // });
+
+//! Floating Box Animation =====================
+const boxes = document.querySelectorAll(".floating-boxes li");
+console.log(boxes[1]);
 
 //! Contact Form Click (Legend) Not Complete ======================
 
