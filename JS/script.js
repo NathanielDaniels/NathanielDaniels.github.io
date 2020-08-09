@@ -202,25 +202,27 @@ for (let index = 0; index < skillsUl.length; index++) {
 // });
 
 //! Floating Box Animation =====================
-const floatingBoxes = document.querySelector(".floating-boxes");
 const boxes = document.querySelectorAll(".floating-boxes li");
 
 let boxSize = () => {
   for (let i = 0; i < boxes.length; i++) {
     boxes[i].style.left = Math.floor(Math.random() * 100) + "%";
-    // let boxSize = Math.floor(Math.random() * 50) + "px";
     let boxWidth = (boxes[i].style.width =
-      Math.floor(Math.random() * 150) + "px");
+      Math.floor(Math.random() * (150 - 25) + 25) + "px");
+
     boxes[i].style.height = boxWidth;
+    boxes[i].style.animationDelay =
+      Math.floor(Math.random() * (1 - 10) + 1) + "s";
+    boxes[i].style.animationDuration =
+      Math.floor(Math.random() * (30 - 10) + 10) + "s";
   }
 };
 
 boxSize();
 
-let num = 0;
-
-// console.log(Math.floor(Math.random() + 10));
-console.log(Math.floor(Math.random() * 100));
+// console.log(Math.floor(Math.random() * (151 - 25) + 25));
+// console.log(Math.floor(Math.random() * (13, 5) + 5));
+// console.log(Math.floor(Math.random() * 100));
 
 //! Contact Form Click (Legend) Not Complete ======================
 

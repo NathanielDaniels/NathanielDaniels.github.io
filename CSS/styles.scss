@@ -872,70 +872,70 @@ body {
         background: hsla(252, 59%, 29%, 0.37);
         animation: animate 20s linear infinite;
         bottom: -180px;
-        &:nth-child(1) {
-          left: 92%;
-          width: 80px;
-          height: 80px;
-          animation-delay: 0s;
-          animation-duration: 15s;
-          // background: blue;
-        }
-        &:nth-child(2) {
-          left: 5%;
-          width: 30px;
-          height: 30px;
-          animation-delay: 2s;
-          animation-duration: 10s;
-          // background: green;
-        }
-        &:nth-child(3) {
-          left: 70%;
-          width: 100px;
-          height: 100px;
-          animation-delay: 7s;
-          animation-duration: 15s;
-          // background: yellow;
-        }
-        &:nth-child(4) {
-          left: 42%;
-          width: 150px;
-          height: 150px;
-          animation-delay: 4s;
-          animation-duration: 25s;
-          // background: orange;
-        }
-        &:nth-child(5) {
-          left: 60%;
-          width: 40px;
-          height: 40px;
-          animation-delay: 6s;
-          animation-duration: 10s;
-          // background: brown;
-        }
-        &:nth-child(6) {
-          left: 15%;
-          width: 110px;
-          height: 110px;
-          animation-delay: 3s;
-          animation-duration: 15s;
-          // background: teal;
-        }
-        &:nth-child(7) {
-          left: 30%;
-          width: 80px;
-          height: 80px;
-          animation-delay: 12s;
-          animation-duration: 15s;
-          // background: red;
-        }
-        &:nth-child(8) {
-          left: 50%;
-          width: 110px;
-          height: 110px;
-          animation-delay: 13s;
-          animation-duration: 20s;
-          // background: purple;
-        }
+        // &:nth-child(1) {
+        //   left: 92%;
+        //   width: 80px;
+        //   height: 80px;
+        //   animation-delay: 0s;
+        //   animation-duration: 15s;
+        //   // background: blue;
+        // }
+        // &:nth-child(2) {
+        //   left: 5%;
+        //   width: 30px;
+        //   height: 30px;
+        //   animation-delay: 2s;
+        //   animation-duration: 10s;
+        //   // background: green;
+        // }
+        // &:nth-child(3) {
+        //   left: 70%;
+        //   width: 100px;
+        //   height: 100px;
+        //   animation-delay: 7s;
+        //   animation-duration: 15s;
+        //   // background: yellow;
+        // }
+        // &:nth-child(4) {
+        //   left: 42%;
+        //   width: 150px;
+        //   height: 150px;
+        //   animation-delay: 4s;
+        //   animation-duration: 25s;
+        //   // background: orange;
+        // }
+        // &:nth-child(5) {
+        //   left: 60%;
+        //   width: 40px;
+        //   height: 40px;
+        //   animation-delay: 6s;
+        //   animation-duration: 10s;
+        //   // background: brown;
+        // }
+        // &:nth-child(6) {
+        //   left: 15%;
+        //   width: 110px;
+        //   height: 110px;
+        //   animation-delay: 3s;
+        //   animation-duration: 15s;
+        //   // background: teal;
+        // }
+        // &:nth-child(7) {
+        //   left: 30%;
+        //   width: 80px;
+        //   height: 80px;
+        //   animation-delay: 12s;
+        //   animation-duration: 15s;
+        //   // background: red;
+        // }
+        // &:nth-child(8) {
+        //   left: 50%;
+        //   width: 110px;
+        //   height: 110px;
+        //   animation-delay: 13s;
+        //   animation-duration: 20s;
+        //   // background: purple;
+        // }
       }
     }
 
