@@ -1083,6 +1083,7 @@ body {
 }
 
 #contact-section .contact-container h2.contact-title {
+  position: relative;
   font-weight: 800;
   font-size: 4rem;
   color: blueviolet;
