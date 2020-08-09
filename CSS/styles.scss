@@ -695,90 +695,6 @@ body {
     // top: -2em;
     background: blueviolet;
     cursor: default;
-    .box-area {
-      //? Floating Box Animation
-      display: none;
-      position: absolute;
-      top: -10rem;
-      left: 0;
-      width: 100%;
-      height: 55rem;
-      overflow: hidden;
-      li {
-        position: absolute;
-        display: block;
-        list-style: none;
-        width: 25px;
-        height: 25px;
-        background: rgba(255, 255, 255, 0.2);
-        animation: animate 20s linear infinite;
-        bottom: -180px;
-        &:nth-child(1) {
-          left: 92%;
-          width: 80px;
-          height: 80px;
-          animation-delay: 0s;
-          animation-duration: 15s;
-          // background: blue;
-        }
-        &:nth-child(2) {
-          left: 5%;
-          width: 30px;
-          height: 30px;
-          animation-delay: 2s;
-          animation-duration: 10s;
-          // background: green;
-        }
-        &:nth-child(3) {
-          left: 70%;
-          width: 100px;
-          height: 100px;
-          animation-delay: 7s;
-          animation-duration: 15s;
-          // background: yellow;
-        }
-        &:nth-child(4) {
-          left: 42%;
-          width: 150px;
-          height: 150px;
-          animation-delay: 4s;
-          animation-duration: 25s;
-          // background: orange;
-        }
-        &:nth-child(5) {
-          left: 60%;
-          width: 40px;
-          height: 40px;
-          animation-delay: 6s;
-          animation-duration: 10s;
-          // background: white;
-        }
-        &:nth-child(6) {
-          left: 15%;
-          width: 110px;
-          height: 110px;
-          animation-delay: 3s;
-          animation-duration: 15s;
-          // background: teal;
-        }
-        &:nth-child(7) {
-          left: 30%;
-          width: 80px;
-          height: 80px;
-          animation-delay: 12s;
-          animation-duration: 15s;
-          // background: red;
-        }
-        &:nth-child(8) {
-          left: 50%;
-          width: 110px;
-          height: 110px;
-          animation-delay: 13s;
-          animation-duration: 20s;
-          // background: purple;
-        }
-      }
-    }
 
     h2.projects-title {
       z-index: 5;
@@ -894,26 +810,107 @@ body {
 
 //! CONTACT Section ===============================
 #contact-section {
-  // border: 2px solid red;
   margin: -3em 0;
   position: relative;
   padding: 10em 0 0;
-  // height: 40rem;
   background: #fff;
   cursor: default;
   .contact-container {
-    // border: 2px solid green;
     padding-bottom: 1em;
     text-align: center;
+    //? Floating Box Animation
+    .floating-boxes {
+      // display: none;
+      position: absolute;
+      top: 0em;
+      left: 0;
+      width: 100%;
+      height: 42em;
+      overflow: hidden;
+      li {
+        position: absolute;
+        display: block;
+        list-style: none;
+        width: 25px;
+        height: 25px;
+        // background: rgba(255, 255, 255, 0.2);
+        background: hsla(252, 59%, 29%, 0.37);
+        animation: animate 20s linear infinite;
+        bottom: -180px;
+        &:nth-child(1) {
+          left: 92%;
+          width: 80px;
+          height: 80px;
+          animation-delay: 0s;
+          animation-duration: 15s;
+          // background: blue;
+        }
+        &:nth-child(2) {
+          left: 5%;
+          width: 30px;
+          height: 30px;
+          animation-delay: 2s;
+          animation-duration: 10s;
+          // background: green;
+        }
+        &:nth-child(3) {
+          left: 70%;
+          width: 100px;
+          height: 100px;
+          animation-delay: 7s;
+          animation-duration: 15s;
+          // background: yellow;
+        }
+        &:nth-child(4) {
+          left: 42%;
+          width: 150px;
+          height: 150px;
+          animation-delay: 4s;
+          animation-duration: 25s;
+          // background: orange;
+        }
+        &:nth-child(5) {
+          left: 60%;
+          width: 40px;
+          height: 40px;
+          animation-delay: 6s;
+          animation-duration: 10s;
+          // background: brown;
+        }
+        &:nth-child(6) {
+          left: 15%;
+          width: 110px;
+          height: 110px;
+          animation-delay: 3s;
+          animation-duration: 15s;
+          // background: teal;
+        }
+        &:nth-child(7) {
+          left: 30%;
+          width: 80px;
+          height: 80px;
+          animation-delay: 12s;
+          animation-duration: 15s;
+          // background: red;
+        }
+        &:nth-child(8) {
+          left: 50%;
+          width: 110px;
+          height: 110px;
+          animation-delay: 13s;
+          animation-duration: 20s;
+          // background: purple;
+        }
+      }
+    }
+
     h2.contact-title {
-      // border: 2px solid blue;
       font-weight: 800;
       font-size: 4rem;
       color: blueviolet;
       text-transform: uppercase;
     }
     form.cf-form {
-      // border: 2px solid red;
       margin: 3em auto;
       max-width: 37rem;
       text-align: center;
@@ -1103,14 +1100,6 @@ body {
     }
   }
 }
-
-// @media screen and (max-width: 700px) {
-//   .about#about-section {
-//     .about__container {
-//       // padding: 2rem 0 15rem;
-//     }
-//   }
-// }
 
 @media screen and (max-width: 600px) {
   .main-section {

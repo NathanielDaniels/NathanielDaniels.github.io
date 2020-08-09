@@ -98,7 +98,7 @@ function clamp(num, min, max) {
 //   face.style.opacity = 1.6 - squishP
 // }
 
-//! Speech Bubble Animation! (smileyface)======================
+//! Speech Bubble Animation! (smileyface)
 
 // setInterval(function () {
 //   document.querySelector(".speech-bubble").style.display = "none";
@@ -165,15 +165,15 @@ for (let index = 0; index < skillsUl.length; index++) {
 }
 
 //! PORTFOLIO CLICK FUNCTION (JQuery)=====================
-//flipping cards
-$(function () {
-  $(".card").click(function () {
-    $(this)
-      .toggleClass("is-flipped")
-      .siblings(".is-flipped")
-      .removeClass("is-flipped");
-  });
-});
+//?flipping cards
+// $(function () {
+//   $(".card").click(function () {
+//     $(this)
+//       .toggleClass("is-flipped")
+//       .siblings(".is-flipped")
+//       .removeClass("is-flipped");
+//   });
+// });
 
 //! Contact Form Click (Legend) Not Complete ======================
 
