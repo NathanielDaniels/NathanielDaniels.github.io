@@ -1071,6 +1071,37 @@ body {
   text-align: center;
 }
 
+#contact-section .contact-container form.cf-form .field-wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+#contact-section .contact-container form.cf-form .field-wrapper label {
+  z-index: 100;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1em;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  display: inline-block;
+  background: #fff;
+  margin: 8px 5px;
+  line-height: 1.4em;
+  padding: 0 10px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  text-transform: capitalize;
+}
+
+#contact-section .contact-container form.cf-form .field-wrapper.focused label {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  top: -20px;
+}
+
 #contact-section .contact-container form.cf-form input,
 #contact-section .contact-container form.cf-form textarea {
   font-size: 1.2rem;

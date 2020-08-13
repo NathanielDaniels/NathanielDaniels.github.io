@@ -215,6 +215,27 @@ let boxSize = () => {
 };
 boxSize();
 
+//! Contact form Label Animation =================
+
+$("input").on("focus", function () {
+  $(this).closest(".field-wrapper").addClass("focused");
+});
+
+$("input").on("blur", function () {
+  if ($(this).val() === "") {
+    $(this).closest(".field-wrapper").removeClass("focused");
+  }
+});
+
+$("textarea").on("focus", function () {
+  $(this).closest(".field-wrapper").addClass("focused");
+});
+$("textarea").on("blur", function () {
+  if ($(this).val() === "") {
+    $(this).closest(".field-wrapper").removeClass("focused");
+  }
+});
+
 //! Contact Form Click (Legend) Not Complete ======================
 
 // const form = document.querySelectorAll(".cf-form input");
