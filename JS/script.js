@@ -220,7 +220,6 @@ boxSize();
 $("input").on("focus", function () {
   $(this).closest(".field-wrapper").addClass("focused");
 });
-
 $("input").on("blur", function () {
   if ($(this).val() === "") {
     $(this).closest(".field-wrapper").removeClass("focused");
@@ -234,6 +233,31 @@ $("textarea").on("blur", function () {
   if ($(this).val() === "") {
     $(this).closest(".field-wrapper").removeClass("focused");
   }
+});
+
+//! Contact form Submit  =================
+
+const form = document.querySelector(".cf-form");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let ourFormData = new FormData(e.target);
+  let userName = ourFormData.get("name");
+  let userEmail = ourFormData.get("email");
+  let userSubject = ourFormData.get("subject");
+  let userMessage = ourFormData.get("message");
+
+  let updatedHTMLContent = `
+    <div class="form-update-container" >
+      <div class="form-update-info" >
+        <h2>Thanks, ${userName}.</h2>
+        <p>You're Message has been sent!</p>
+      </div>
+    </div>
+  `;
+
+  form.innerHTML = updatedHTMLContent;
 });
 
 //! Contact Form Click (Legend) Not Complete ======================

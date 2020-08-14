@@ -1167,6 +1167,38 @@ body {
   margin-right: 2%;
 }
 
+#contact-section .contact-container .form-update-container {
+  height: 20em;
+  -webkit-box-shadow: inset 0 0 10px #4d004d;
+          box-shadow: inset 0 0 10px #4d004d;
+  background: #761cca;
+  border-radius: 8px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact-section .contact-container .form-update-container h2 {
+  color: #ffff99;
+  font-size: 2rem;
+}
+
+#contact-section .contact-container .form-update-container p {
+  padding-top: 5px;
+  font-size: 1.2rem;
+}
+
 @media screen and (min-width: 1366px) {
   .header__nav-links {
     -webkit-box-pack: center !important;
