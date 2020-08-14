@@ -1078,6 +1078,7 @@ body {
 }
 
 #contact-section .contact-container form.cf-form .field-wrapper label {
+  border-radius: 8px;
   z-index: 100;
   position: relative;
   white-space: nowrap;
@@ -1110,7 +1111,6 @@ body {
   border-radius: 8px;
   display: block;
   width: 100%;
-  margin-bottom: 1em;
   font-family: arial, sans-serif;
   -webkit-filter: drop-shadow(1px 3px 2px gray);
           filter: drop-shadow(1px 3px 2px gray);
@@ -1124,13 +1124,12 @@ body {
           filter: drop-shadow(1px 2px 2px blueviolet);
 }
 
-#contact-section .contact-container form.cf-form input:nth-child(3),
-#contact-section .contact-container form.cf-form textarea {
-  margin-bottom: 0;
+#contact-section .contact-container form.cf-form input:nth-child(2) {
+  margin-bottom: 1em;
 }
 
 #contact-section .contact-container form.cf-form textarea {
-  height: calc(14rem + 1px);
+  height: calc(14rem + 2px);
 }
 
 #contact-section .contact-container form.cf-form #input-submit {

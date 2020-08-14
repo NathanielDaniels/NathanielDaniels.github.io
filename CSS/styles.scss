@@ -900,6 +900,7 @@ body {
         // outline: none;
         width: 100%;
         label {
+          border-radius: 8px;
           z-index: 100;
           position: relative;
           white-space: nowrap;
@@ -910,6 +911,7 @@ body {
           left: 0;
           display: inline-block;
           background: #fff;
+
           margin: 8px 5px;
           line-height: 1.4em;
           padding: 0 10px;
@@ -930,7 +932,7 @@ body {
         border-radius: 8px;
         display: block;
         width: 100%;
-        margin-bottom: 1em;
+        // margin-bottom: 1em;
         font-family: arial, sans-serif;
         filter: drop-shadow(1px 3px 2px gray);
         resize: none;
@@ -939,12 +941,15 @@ body {
           filter: drop-shadow(1px 2px 2px blueviolet);
         }
       }
-      input:nth-child(3),
-      textarea {
-        margin-bottom: 0;
+      input:nth-child(2) {
+        margin-bottom: 1em;
       }
+      // input:nth-child(3),
+      // textarea {
+      //   margin-bottom: 0;
+      // }
       textarea {
-        height: calc(14rem + 1px);
+        height: calc(14rem + 2px);
       }
       #input-submit {
         position: relative;
