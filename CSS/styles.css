@@ -1084,6 +1084,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   font-size: 1em;
+  font-family: inherit;
   position: absolute;
   top: 5px;
   left: 0;
