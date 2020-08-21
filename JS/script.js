@@ -310,17 +310,3 @@ form.addEventListener("submit", (e) => {
 
 //   lastScrollTop = st;
 // }
-
-function firstDigit(str) {
-  const strNums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-  const split = str.split("");
-  const foundNums = [];
-  for (let i = 0; i < strNums.length; i++) {
-    if (split.includes(strNums[i])) {
-      foundNums.push(strNums[i]);
-    }
-  }
-  console.log(foundNums);
-}
-
-firstDigit("var_1__Int2");
