@@ -500,9 +500,6 @@ body {
         top: 0;
       }
     }
-    // #sidebar-menu.active {
-    //   top: 0;
-    // }
   }
 
   .main-content {
@@ -874,7 +871,6 @@ body {
         list-style: none;
         width: 25px;
         height: 25px;
-        // background: rgba(255, 255, 255, 0.2);
         background: hsla(252, 59%, 29%, 0.37);
         animation: animate 20s linear infinite;
         bottom: -180px;
@@ -895,9 +891,7 @@ body {
       text-align: center;
       .field-wrapper {
         display: block;
-        // margin: 30px 10px;
         position: relative;
-        // outline: none;
         width: 100%;
         label {
           border-radius: 8px;
