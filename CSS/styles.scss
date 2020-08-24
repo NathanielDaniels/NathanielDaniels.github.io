@@ -326,7 +326,6 @@ body {
     filter: opacity(0.15);
   }
   header.main-section__header {
-    // border: 2px solid red;
     position: absolute;
     z-index: 100;
     transition: top 0.2s ease-in-out;
@@ -337,7 +336,6 @@ body {
     height: 70px;
     width: 100%;
     .header__inner-container {
-      // border: 2px solid red;
       display: flex;
       // width: 98%;
       width: 100%;
