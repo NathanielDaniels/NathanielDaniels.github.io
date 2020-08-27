@@ -311,16 +311,45 @@ form.addEventListener("submit", (e) => {
 //   lastScrollTop = st;
 // }
 
-async function getJoke() {
-  let jokePromise = await fetch(
-    "https://official-joke-api.appspot.com/jokes/programming/random"
-  );
-  let jokes = await jokePromise.json();
-  jokes.forEach((joke) => {
-    let jokeSetup = joke.setup;
-    let jokePunchline = joke.punchline;
-    console.log(jokeSetup, jokePunchline);
-  });
+// async function getJoke() {
+//   let jokePromise = await fetch(
+//     "https://official-joke-api.appspot.com/jokes/programming/random"
+//   );
+//   let jokes = await jokePromise.json();
+//   jokes.forEach((joke) => {
+//     let jokeSetup = joke.setup;
+//     let jokePunchline = joke.punchline;
+//     console.log(jokeSetup, jokePunchline);
+//   });
+// }
+
+// getJoke();
+
+// call user API
+// store random first name in a variable firstUser
+// call user API again, after you finish calling first one
+// store random first name in variable secondUser
+// console log
+
+async function firstUser() {
+  const userApi = "https://randomuser.me/api/";
+
+  let newUsers = await fetch(userApi);
+  let user = await newUsers.json();
+  const firstUser = user.results[0].name.first;
+
+  async function userTwo() {
+    const userApi = "https://randomuser.me/api/";
+
+    let newUsers = await fetch(userApi);
+    let user2 = await newUsers.json();
+    let secondUser2 = user2.results[0].name.first;
+    console.log(secondUser2);
+    return secondUser;
+  }
+  const secondUser = secondUser;
+  console.log(`${firstUser} and ${secondUser} are friends`);
 }
 
-getJoke();
+firstUser();
+// secondUser();
