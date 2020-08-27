@@ -331,25 +331,16 @@ form.addEventListener("submit", (e) => {
 // store random first name in variable secondUser
 // console log
 
-async function firstUser() {
-  const userApi = "https://randomuser.me/api/";
-
-  let newUsers = await fetch(userApi);
-  let user = await newUsers.json();
-  const firstUser = user.results[0].name.first;
-
-  async function userTwo() {
-    const userApi = "https://randomuser.me/api/";
-
-    let newUsers = await fetch(userApi);
-    let user2 = await newUsers.json();
-    let secondUser2 = user2.results[0].name.first;
-    console.log(secondUser2);
-    return secondUser;
-  }
-  const secondUser = secondUser;
-  console.log(`${firstUser} and ${secondUser} are friends`);
+function succesfulPromise() {
+  return new Promise((resolve, reject) => {
+    resolve("success");
+  });
 }
 
-firstUser();
-// secondUser();
+(async function () {
+  try {
+    console.log(succesfulPromise());
+  } catch (err) {
+    console.log(err);
+  }
+})();
