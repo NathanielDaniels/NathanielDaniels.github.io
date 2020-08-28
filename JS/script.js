@@ -331,16 +331,50 @@ form.addEventListener("submit", (e) => {
 // store random first name in variable secondUser
 // console log
 
-function succesfulPromise() {
-  return new Promise((resolve, reject) => {
-    resolve("success");
+const taskW = () => {
+  return new Promise((res) => {
+    setTimeout(() => {
+      res("W");
+    }, 1000);
   });
-}
+};
+const taskO = () => {
+  return new Promise((res) => {
+    setTimeout(() => {
+      res("O");
+    }, 500);
+  });
+};
+const taskExclaim = () => {
+  return new Promise((res) => {
+    setTimeout(() => {
+      res("!");
+    }, Math.floor(Math.random() * 1000));
+  });
+};
+const taskSmiley = () => {
+  return new Promise((res) => {
+    setTimeout(() => {
+      res(":)");
+    }, 300);
+  });
+};
 
-(async function () {
-  try {
-    console.log(succesfulPromise());
-  } catch (err) {
-    console.log(err);
-  }
-})();
+async function task() {
+  let taskW = await taskW();
+  let taskO = await taskO();
+  let taskExclaim = await taskExclaim();
+  let taskSmiley = await taskSmiley();
+
+  console.log(taskW);
+}
+task();
+
+// (async function() {
+//     try{
+//       let wow = ''
+
+//     }catch(err){
+//         console.log(err)
+//     }
+// })();
