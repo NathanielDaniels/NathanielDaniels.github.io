@@ -901,6 +901,7 @@ body {
           padding: 0 10px;
           transition: all 0.2s linear;
           text-transform: capitalize;
+          cursor: pointer;
         }
         &.focused label {
           transition: all 0.2s linear;
