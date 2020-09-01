@@ -331,16 +331,3 @@ form.addEventListener("submit", (e) => {
 // store random first name in variable secondUser
 // console log
 
-const getUser = async () => {
-  const userPromise = await fetch(
-    "https://jsonplaceholder.typicode.com/users/3"
-  );
-  if (userPromise.ok) {
-    const userData = await userPromise.json();
-    console.log(userData);
-  } else {
-    console.error(userPromise.status);
-  }
-};
-
-getUser();
