@@ -1096,7 +1096,7 @@ body {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   text-transform: capitalize;
-  cursor: pointer;
+  cursor: text;
 }
 
 #contact-section .contact-container form.cf-form .field-wrapper.focused label {

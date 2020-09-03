@@ -311,23 +311,21 @@ form.addEventListener("submit", (e) => {
 //   lastScrollTop = st;
 // }
 
-// async function getJoke() {
-//   let jokePromise = await fetch(
-//     "https://official-joke-api.appspot.com/jokes/programming/random"
-//   );
-//   let jokes = await jokePromise.json();
-//   jokes.forEach((joke) => {
-//     let jokeSetup = joke.setup;
-//     let jokePunchline = joke.punchline;
-//     console.log(jokeSetup, jokePunchline);
-//   });
-// }
+//=====================================================================================================\
 
-// getJoke();
+// variables
+const urlBase = "https://api.punkapi.com/v2/beers";
 
-// call user API
-// store random first name in a variable firstUser
-// call user API again, after you finish calling first one
-// store random first name in variable secondUser
-// console log
+// Create an async function called "getBeers" that uses fetch to get our beer data from the urlBase.
+// Render each beer name inside the div with the class of beers that currently exists in the HTML file.
 
+async function getBeers() {
+  let response = await fetch(urlBase);
+  let data = await response.json();
+  // console.log(data[0].name);
+  data.forEach((beer) => {
+    console.log(beer);
+  });
+}
+
+getBeers();
