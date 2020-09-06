@@ -312,20 +312,3 @@ form.addEventListener("submit", (e) => {
 // }
 
 //=====================================================================================================\
-
-// variables
-const urlBase = "https://api.punkapi.com/v2/beers";
-
-// Create an async function called "getBeers" that uses fetch to get our beer data from the urlBase.
-// Render each beer name inside the div with the class of beers that currently exists in the HTML file.
-
-async function getBeers() {
-  let response = await fetch(urlBase);
-  let data = await response.json();
-  // console.log(data[0].name);
-  data.forEach((beer) => {
-    console.log(beer);
-  });
-}
-
-getBeers();
