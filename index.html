@@ -52,9 +52,9 @@
 
     <section class="main-section">
       <div id="smiley-face" class="smiley-face">
-        <span class="smiley-face__face"></span>
-        <!-- <span class="speech-bubble">
-          <span class="triangle"></span>
+        <span class="smiley-face__face" role="Smiley Face"></span>
+        <!-- <span class="speech-bubble" role="Smiley Face Welcome Message">
+          <span class="triangle" role="speech bubble"></span>
           <h2>Welcome!</h2>
         </span> -->
       </div>
@@ -70,9 +70,9 @@
         <div class="burger-menu">
           <button class="burger-container">
             <div class="burger-elements">
-              <span class="line line01"></span>
-              <span class="line line02"></span>
-              <span class="line line03"></span>
+              <span class="line line01" role="Side Menu button"></span>
+              <span class="line line02" role="Side Menu button"></span>
+              <span class="line line03" role="Side Menu button"></span>
             </div>
           </button>
         </div>
@@ -309,7 +309,13 @@
               ></textarea>
             </div>
           </div>
-          <input type="submit" name="submit" value="SUBMIT" id="input-submit" />
+          <input
+            type="submit"
+            name="submit"
+            value="SUBMIT"
+            id="input-submit"
+            aria-label="submit button"
+          />
         </form>
       </div>
     </section>
