@@ -1100,6 +1100,18 @@ body {
       font-size: 30px !important;
     }
   }
+
+  .about#about-section {
+    .about-container {
+      .about-info {
+        width: 90% !important;
+      }
+    }
+    .about__top {
+      width: 100%;
+    }
+  }
+
   section#contact-section {
     padding-top: 4rem;
     display: flex;
@@ -1165,6 +1177,7 @@ body {
   }
 }
 
+//! Remove when done testing
 .colorBox {
   height: 500px;
   width: 100%;

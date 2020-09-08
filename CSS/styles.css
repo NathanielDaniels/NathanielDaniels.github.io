@@ -1299,6 +1299,12 @@ body {
     top: 0px !important;
     font-size: 30px !important;
   }
+  .about#about-section .about-container .about-info {
+    width: 90% !important;
+  }
+  .about#about-section .about__top {
+    width: 100%;
+  }
   section#contact-section {
     padding-top: 4rem;
     display: -webkit-box;
