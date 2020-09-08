@@ -312,10 +312,26 @@ form.addEventListener("submit", (e) => {
 // }
 
 //=====================================================================================================\
-async function getPhotos() {
-  let grabPhoto = await fetch("https://picsum.photos/id/237/200/300");
-  let request = await grabPhoto.json();
-  console.log(request);
+// async function getPhotos() {
+//   let grabPhoto = await fetch("https://picsum.photos/id/237/200/300");
+//   let request = await grabPhoto.json();
+//   console.log(request);
+// }
+
+// getPhotos();
+
+async function grabUsers() {
+  const url = "https://jsonplaceholder.typicode.com/users";
+  const findUsers = await fetch(url);
+  const response = await findUsers.json();
+  firstUser(response);
 }
 
-getPhotos();
+async function firstUser(user) {
+  const userName = await user[0].name;
+  console.log(userName);
+  // document.body.innerHTML = `<div class="userName">${userName}</div>`;
+}
+grabUsers();
+
+// document.body.innerHTML = grabUsers();
