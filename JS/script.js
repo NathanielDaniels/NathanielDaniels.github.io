@@ -312,3 +312,10 @@ form.addEventListener("submit", (e) => {
 // }
 
 //=====================================================================================================\
+async function getPhotos() {
+  let grabPhoto = await fetch("https://picsum.photos/id/237/200/300");
+  let request = await grabPhoto.json();
+  console.log(request);
+}
+
+getPhotos();
