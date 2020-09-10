@@ -320,18 +320,40 @@ form.addEventListener("submit", (e) => {
 
 // getPhotos();
 
-async function grabUsers() {
-  const url = "https://jsonplaceholder.typicode.com/users";
-  const findUsers = await fetch(url);
-  const response = await findUsers.json();
-  firstUser(response);
-}
+//==========================================================
 
-async function firstUser(user) {
-  const userName = await user[0].name;
-  console.log(userName);
-  // document.body.innerHTML = `<div class="userName">${userName}</div>`;
-}
-grabUsers();
+// async function grabUsers() {
+//   const url = "https://jsonplaceholder.typicode.com/users";
+//   const findUsers = await fetch(url);
+//   const response = await findUsers.json();
+//   firstUser(response);
+// }
+
+// async function firstUser(user) {
+//   const userName = await user[0].name;
+//   console.log(userName);
+//   // document.body.innerHTML = `<div class="userName">${userName}</div>`;
+// }
+// grabUsers();
 
 // document.body.innerHTML = grabUsers();
+
+//================================================================
+
+async function getBrew() {
+  const request = await fetch("https://api.openbrewerydb.org/breweries");
+  const breweryList = await request.json();
+  return breweryList;
+}
+
+function brewDiv(brews) {
+  return `
+    <div class="breweryNames">${brews.name}</div>
+  `;
+}
+
+getBrew().then((brew) => {
+  return (document.body.innerHTML = `
+    ${brew.map((eachBrew) => brewDiv(eachBrew)).join("")}
+  `);
+});
