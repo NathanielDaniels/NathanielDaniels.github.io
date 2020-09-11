@@ -340,20 +340,60 @@ form.addEventListener("submit", (e) => {
 
 //================================================================
 
-async function getBrew() {
-  const request = await fetch("https://api.openbrewerydb.org/breweries");
-  const breweryList = await request.json();
-  return breweryList;
+// async function getBrew() {
+//   const request = await fetch("https://api.openbrewerydb.org/breweries");
+//   const breweryList = await request.json();
+//   return breweryList;
+// }
+
+// function brewDiv(brews) {
+//   return `
+//     <div class="breweryNames">${brews.name}</div>
+//   `;
+// }
+
+// getBrew().then((brew) => {
+//   return (document.body.innerHTML = `
+//     ${brew.map((eachBrew) => brewDiv(eachBrew)).join("")}
+//   `);
+// });
+
+//================================================================
+
+/*
+    Create a User Profile using data from
+        https://jsonplaceholder.typicode.com/users/3
+
+    The User Profile must be a Flexbox container with 4 components
+        1. Profile Header
+            - With the User's name and username
+        2. Company
+            - Displaying information about their company
+        3. Contact Details
+            - Contains Email/Phone/Website
+        4. User Address
+*/
+
+async function getData() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users/3");
+  const user = await response.json();
+  console.log(user);
+  return user;
 }
 
-function brewDiv(brews) {
+function userDiv(user) {
   return `
-    <div class="breweryNames">${brews.name}</div>
-  `;
+        <div class="container">
+            <div class="header">
+                <h1>${user.name} a.k.a ${user.username} </h1>
+                <div class="companyInfo">Company: ${user.company["name"]} | ${user.company["catchPhrase"]}</div>
+                <div class="contactInfo">Email: ${user.email} | Phone: ${user.phone} | Website: ${user.website}</div>
+                 <div class="userAddress">Address: ${user.address["street"]}, ${user.address["suite"]}, ${user.address["city"]}</div>
+            </div>
+        </div>
+    `;
 }
 
-getBrew().then((brew) => {
-  return (document.body.innerHTML = `
-    ${brew.map((eachBrew) => brewDiv(eachBrew)).join("")}
-  `);
+getData().then((user) => {
+  return (document.body.innerHTML = `${userDiv(user)}`);
 });
