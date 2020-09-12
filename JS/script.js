@@ -374,26 +374,26 @@ form.addEventListener("submit", (e) => {
         4. User Address
 */
 
-async function getData() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users/3");
-  const user = await response.json();
-  console.log(user);
-  return user;
-}
+// async function getData() {
+//   const response = await fetch("https://jsonplaceholder.typicode.com/users/3");
+//   const user = await response.json();
+//   console.log(user);
+//   return user;
+// }
 
-function userDiv(user) {
-  return `
-        <div class="container">
-            <div class="header">
-                <h1>${user.name} a.k.a ${user.username} </h1>
-                <div class="companyInfo">Company: ${user.company["name"]} | ${user.company["catchPhrase"]}</div>
-                <div class="contactInfo">Email: ${user.email} | Phone: ${user.phone} | Website: ${user.website}</div>
-                 <div class="userAddress">Address: ${user.address["street"]}, ${user.address["suite"]}, ${user.address["city"]}</div>
-            </div>
-        </div>
-    `;
-}
+// function userDiv(user) {
+//   return `
+//         <div class="container">
+//             <div class="header">
+//                 <h1>${user.name} a.k.a ${user.username} </h1>
+//                 <div class="companyInfo">Company: ${user.company["name"]} | ${user.company["catchPhrase"]}</div>
+//                 <div class="contactInfo">Email: ${user.email} | Phone: ${user.phone} | Website: ${user.website}</div>
+//                  <div class="userAddress">Address: ${user.address["street"]}, ${user.address["suite"]}, ${user.address["city"]}</div>
+//             </div>
+//         </div>
+//     `;
+// }
 
-getData().then((user) => {
-  return (document.body.innerHTML = `${userDiv(user)}`);
-});
+// getData().then((user) => {
+//   return (document.body.innerHTML = `${userDiv(user)}`);
+// });
