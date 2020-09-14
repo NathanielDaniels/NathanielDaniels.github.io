@@ -413,27 +413,39 @@ form.addEventListener("submit", (e) => {
         using CSS Grid
 */
 
-async function getCategories() {
-  let response = await fetch(
-    "https://jservice.io/api/categories?count=4&offset=30"
+// async function getCategories() {
+//   let response = await fetch(
+//     "https://jservice.io/api/categories?count=4&offset=30"
+//   );
+//   let data = await response.json();
+//   return data;
+// }
+
+// function getCategoryHtml(category) {
+//   return `
+//         <div class="my-category-title">${category.title}</div>
+//         <div class="my-category-clue">$100</div>
+//         <div class="my-category-clue">$200</div>
+//         <div class="my-category-clue">$300</div>
+//         <div class="my-category-clue">$400</div>
+//     `;
+// }
+
+// getCategories().then((categories) => {
+//   console.log(categories);
+//   document.body.innerHTML = `<div class="board">
+//         ${categories.map(getCategoryHtml).join("")}
+//     </div>`;
+// });
+
+//================================================================
+
+async function findShow() {
+  const request = await fetch(
+    `https://api.tvmaze.com/singlesearch/shows?q=happy`
   );
-  let data = await response.json();
+  const data = await request.json();
   return data;
 }
 
-function getCategoryHtml(category) {
-  return `
-        <div class="my-category-title">${category.title}</div>
-        <div class="my-category-clue">$100</div>
-        <div class="my-category-clue">$200</div>
-        <div class="my-category-clue">$300</div>
-        <div class="my-category-clue">$400</div>
-    `;
-}
-
-getCategories().then((categories) => {
-  console.log(categories);
-  document.body.innerHTML = `<div class="board">
-        ${categories.map(getCategoryHtml).join("")}
-    </div>`;
-});
+findShow().then((shows) => console.log(shows));
