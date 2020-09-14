@@ -440,12 +440,48 @@ form.addEventListener("submit", (e) => {
 
 //================================================================
 
-async function findShow() {
-  const request = await fetch(
-    `https://api.tvmaze.com/singlesearch/shows?q=happy`
-  );
+// async function findShow() {
+//   const request = await fetch(
+//     `https://api.tvmaze.com/singlesearch/shows?q=happy`
+//   );
+//   const data = await request.json();
+//   return data;
+// }
+
+// findShow().then((shows) => console.log(shows));
+
+//=====================================
+/*
+    Bonus Challenge
+
+    Fetch the list of 642 open APIs from
+        https://api.publicapis.org/entries
+
+    Create a my-api component
+        display the name and category of the API,
+        the description, and also display the type
+        of Auth (if any) and whether or not the API
+        supports HTTPS
+
+    Finally, display all of the APIs
+*/
+
+async function getAPIs() {
+  const request = await fetch("https://api.publicapis.org/entries");
   const data = await request.json();
+  // data.entries.map((api) => console.log(api));
   return data;
 }
 
-findShow().then((shows) => console.log(shows));
+function getAPIhtml(myAPI) {}
+
+function displayAPIs(myAPIs) {
+  let sampleAPI = myAPIs.entries[0];
+  document.body.innerHTML = `<div class="my-api">
+        <div class="my-api-name">${sampleAPI.API} (${sampleAPI.Category})</div>
+    </div>`;
+}
+
+getAPIs()
+  .then(displayAPIs)
+  .catch((e) => console.log(`Error: ${e}`));
