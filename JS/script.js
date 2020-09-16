@@ -473,13 +473,22 @@ async function getAPIs() {
   return data;
 }
 
-function getAPIhtml(myAPI) {}
+function getAPIhtml(myAPI) {
+  return `<div class="my-api">
+        <div class="my-api-name">
+            <a href="${myAPI.Link}" target="_blank">${myAPI.API} (${
+    myAPI.Category
+  })</a>
+        </div>
+        <div class="my-api-description">${myAPI.Description}</div>
+        <div class="my-api-auth">Auth: ${myAPI.Auth ? myAPI.Auth : "None"}</div>
+        <div class="my-api-https">HTTPS? ${myAPI.HTTPS}</div>
+    </div>`;
+}
 
 function displayAPIs(myAPIs) {
   let sampleAPI = myAPIs.entries[0];
-  document.body.innerHTML = `<div class="my-api">
-        <div class="my-api-name">${sampleAPI.API} (${sampleAPI.Category})</div>
-    </div>`;
+  // document.body.innerHTML = getAPIhtml(sampleAPI);
 }
 
 getAPIs()
