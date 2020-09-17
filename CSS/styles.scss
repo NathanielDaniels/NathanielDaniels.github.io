@@ -553,7 +553,6 @@ body {
       margin: 0 auto;
       width: 80%;
       max-width: 800px;
-      // max-width: 900px;
       overflow-wrap: break-word;
       text-align: justify;
       text-rendering: optimizeLegibility;
@@ -920,10 +919,6 @@ body {
       input:nth-child(2) {
         margin-bottom: 1em;
       }
-      // input:nth-child(3),
-      // textarea {
-      //   margin-bottom: 0;
-      // }
       textarea {
         height: calc(14rem + 2px);
       }
