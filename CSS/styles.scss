@@ -715,7 +715,6 @@ body {
 
     .grid-container {
       padding: 3em 0;
-
       .projects-grid {
         display: flex;
         flex-flow: wrap;
@@ -791,13 +790,13 @@ body {
         }
         .card-1__info,
         .card-2__info,
-        .card6 {
+        .card-3__info {
           color: #fff;
           font-size: 1.1rem;
           letter-spacing: 1px;
           text-align: left;
         }
-        .card3 {
+        .card-2__info {
           text-align: right;
         }
       }
@@ -976,23 +975,22 @@ body {
       top: -3em !important;
       .grid-container {
         .projects-grid {
-          gap: 1em;
-          &:nth-child(1) .card3 {
+          grid-gap: 1em;
+          &:nth-child(1) .card-2__info {
             order: 4;
             text-align: left;
-
             .card__links {
               justify-content: flex-start;
             }
           }
-          &:nth-child(1) .card4 {
+          &:nth-child(1) .card-2 {
             .card-title {
               left: -1% !important;
             }
 
             order: 3;
           }
-          &:nth-child(1) .card6 {
+          &:nth-child(1) .card-3__info {
             text-align: left !important;
           }
         }
@@ -1149,27 +1147,4 @@ body {
       justify-content: center !important;
     }
   }
-}
-
-//! Remove when done testing
-// .colorBox {
-//   height: 500px;
-//   width: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .colorBox div {
-//   width: 50px;
-//   height: 50px;
-// }
-
-.breweryNames {
-  background: red;
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-  border: 2px solid white;
-  cursor: default;
 }

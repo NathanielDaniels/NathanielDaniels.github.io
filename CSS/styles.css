@@ -985,14 +985,14 @@ body {
 
 #projects-section .projects .grid-container .projects-grid .card-1__info,
 #projects-section .projects .grid-container .projects-grid .card-2__info,
-#projects-section .projects .grid-container .projects-grid .card6 {
+#projects-section .projects .grid-container .projects-grid .card-3__info {
   color: #fff;
   font-size: 1.1rem;
   letter-spacing: 1px;
   text-align: left;
 }
 
-#projects-section .projects .grid-container .projects-grid .card3 {
+#projects-section .projects .grid-container .projects-grid .card-2__info {
   text-align: right;
 }
 
@@ -1195,28 +1195,28 @@ body {
     top: -3em !important;
   }
   section#projects-section .projects .grid-container .projects-grid {
-    gap: 1em;
+    grid-gap: 1em;
   }
-  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card3 {
+  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-2__info {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
     text-align: left;
   }
-  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card3 .card__links {
+  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-2__info .card__links {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card4 {
+  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-2 {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
   }
-  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card4 .card-title {
+  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-2 .card-title {
     left: -1% !important;
   }
-  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card6 {
+  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-3__info {
     text-align: left !important;
   }
   section#contact-section {
@@ -1331,14 +1331,5 @@ body {
         -ms-flex-pack: center !important;
             justify-content: center !important;
   }
-}
-
-.breweryNames {
-  background: red;
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-  border: 2px solid white;
-  cursor: default;
 }
 /*# sourceMappingURL=styles.css.map */
