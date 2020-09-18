@@ -908,11 +908,6 @@ body {
   left: -1%;
 }
 
-#projects-section .projects .grid-container .projects-grid .card:nth-child(4) .card-title {
-  bottom: -5%;
-  left: 0.7em;
-}
-
 #projects-section .projects .grid-container .projects-grid .card i {
   font-size: 2em;
   display: -webkit-box;
@@ -962,7 +957,8 @@ body {
           filter: drop-shadow(1px 2px 2px blueviolet);
 }
 
-#projects-section .projects .grid-container .projects-grid .card:nth-child(3) .card__links {
+#projects-section .projects .grid-container .projects-grid .card:nth-child(3) .card__links,
+#projects-section .projects .grid-container .projects-grid .card:nth-child(7) .card__links {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -984,14 +980,16 @@ body {
 
 #projects-section .projects .grid-container .projects-grid .card-1__info,
 #projects-section .projects .grid-container .projects-grid .card-2__info,
-#projects-section .projects .grid-container .projects-grid .card-3__info {
+#projects-section .projects .grid-container .projects-grid .card-3__info,
+#projects-section .projects .grid-container .projects-grid .card-4__info {
   color: #fff;
   font-size: 1.1rem;
   letter-spacing: 1px;
   text-align: left;
 }
 
-#projects-section .projects .grid-container .projects-grid .card-2__info {
+#projects-section .projects .grid-container .projects-grid .card-2__info,
+#projects-section .projects .grid-container .projects-grid .card-4__info {
   text-align: right;
 }
 
@@ -1212,11 +1210,24 @@ body {
         -ms-flex-order: 3;
             order: 3;
   }
-  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-2 .card-title {
-    left: -1% !important;
-  }
   section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-3__info {
-    text-align: left !important;
+    text-align: left;
+  }
+  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-4__info {
+    text-align: left;
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-4__info .card__links {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-4 {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
   }
   section#contact-section {
     padding-top: 6em;
