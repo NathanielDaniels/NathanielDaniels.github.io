@@ -754,44 +754,23 @@ body {
             }
           }
           .card__links {
-            position: relative;
-            right: 0;
             display: flex;
             justify-content: flex-start;
-            align-items: flex-end;
-
-            .bottom-left,
-            .bottom-right {
-              text-align: center;
-              padding: 0.5em 0;
-              position: relative;
-            }
-            .bottom-left i,
-            .bottom-right i {
-              font-size: 2.5rem;
-              padding: 0.2em;
-              transition: all 0.2s ease-in-out;
+            a {
+              margin-right: 1em;
+              text-decoration: none;
               color: hsla(60, 100%, 80%, 0.9);
+              font-size: 1.2rem;
+              text-align: center;
+              transition: all 0.2s ease-in-out;
               &:hover,
               &:focus {
                 color: #fff;
+                transform: scale(1.1);
               }
               &:focus {
                 outline-color: yellow;
                 filter: drop-shadow(1px 2px 2px blueviolet);
-              }
-            }
-            .bottom-left i {
-              font-size: 2.6rem;
-            }
-            .bottom-right {
-              padding-left: 2em;
-            }
-            .bottom-left i,
-            .bottom-right i {
-              &:hover,
-              &:focus {
-                transform: scale(1.2);
               }
             }
           }
