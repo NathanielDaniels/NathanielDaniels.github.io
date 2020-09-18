@@ -465,32 +465,43 @@ form.addEventListener("submit", (e) => {
 
     Finally, display all of the APIs
 */
+//==========================================
+// const getAPI = fetch("https://api.publicapis.org/entries");
 
-async function getAPIs() {
-  const request = await fetch("https://api.publicapis.org/entries");
-  const data = await request.json();
-  // data.entries.map((api) => console.log(api));
-  return data;
-}
+// getAPI
+//   .then((response) => response.json())
+//   .then((data) => console.table(data.entries.slice(0, 10)));
 
-function getAPIhtml(myAPI) {
-  return `<div class="my-api">
-        <div class="my-api-name">
-            <a href="${myAPI.Link}" target="_blank">${myAPI.API} (${
-    myAPI.Category
-  })</a>
-        </div>
-        <div class="my-api-description">${myAPI.Description}</div>
-        <div class="my-api-auth">Auth: ${myAPI.Auth ? myAPI.Auth : "None"}</div>
-        <div class="my-api-https">HTTPS? ${myAPI.HTTPS}</div>
-    </div>`;
-}
+//========================================
 
-function displayAPIs(myAPIs) {
-  let sampleAPI = myAPIs.entries[0];
-  // document.body.innerHTML = getAPIhtml(sampleAPI);
-}
+// async function getAPIs() {
+//   const request = await fetch("https://api.publicapis.org/entries");
+//   const data = await request.json();
+//   // data.entries.map((api) => console.log(api));
+//   // console.table(data.entries[0].API);
+//   return data;
+// }
 
-getAPIs()
-  .then(displayAPIs)
-  .catch((e) => console.log(`Error: ${e}`));
+// getAPIs().then((data) => console.table(data.entries[0].Link));
+
+// function getAPIhtml(myAPI) {
+//   return `<div class="my-api">
+//         <div class="my-api-name">
+//             <a href="${myAPI.Link}" target="_blank">${myAPI.API} (${
+//     myAPI.Category
+//   })</a>
+//         </div>
+//         <div class="my-api-description">${myAPI.Description}</div>
+//         <div class="my-api-auth">Auth: ${myAPI.Auth ? myAPI.Auth : "None"}</div>
+//         <div class="my-api-https">HTTPS? ${myAPI.HTTPS}</div>
+//     </div>`;
+// }
+
+// function displayAPIs(myAPIs) {
+//   let sampleAPI = myAPIs.entries[0];
+//   // document.body.innerHTML = getAPIhtml(sampleAPI);
+// }
+
+// getAPIs()
+//   .then(displayAPIs)
+//   .catch((e) => console.log(`Error: ${e}`));
