@@ -252,7 +252,7 @@ form.addEventListener("submit", (e) => {
     <div class="form-update-container" >
       <div class="form-update-info" >
         <h2>Thanks, ${userName}.</h2>
-        <p>You're Message has been sent!</p>
+        <p>Your message has been sent!</p>
       </div>
     </div>
   `;
@@ -505,3 +505,5 @@ form.addEventListener("submit", (e) => {
 // getAPIs()
 //   .then(displayAPIs)
 //   .catch((e) => console.log(`Error: ${e}`));
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
