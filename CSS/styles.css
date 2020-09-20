@@ -619,20 +619,20 @@ body {
   word-wrap: break-word;
 }
 
-#about-section .about-container .about-info hr {
-  width: 75%;
-  margin: 0 auto;
-}
-
 #about-section .about-container .about-info span {
   font-weight: 500;
 }
 
 #about-section .about-container .about-info .about-me {
   display: block;
-  padding: 3em 0;
+  padding: 3em;
+  margin: 2em 0;
   text-align: center;
-  border-bottom: 1px solid #999;
+  border: 1px solid blueviolet;
+  border-radius: 1rem;
+  -webkit-box-shadow: inset 0px 0px 10px #290029;
+          box-shadow: inset 0px 0px 10px #290029;
+  background: #f8f8f8;
 }
 
 #about-section .about-container .about-info .about-me .about-me__headline {
@@ -650,13 +650,14 @@ body {
 
 #about-section .about-container .about-info .about-me .about-me__job {
   padding: 20px;
-  width: 80%;
-  border: 2px solid blueviolet;
+  width: 90%;
+  border: 1px solid blueviolet;
   border-radius: 20px;
   margin: 0 auto;
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
   font-size: 1.2rem;
+  background: #fafafa;
 }
 
 #about-section .about-container .about-info .about-me .about-me__job a {
@@ -683,13 +684,13 @@ body {
 }
 
 #about-section .about-container .about-info .about-me__skills {
-  padding: 3em 0;
+  padding: 1.5em 0;
   height: 100%;
 }
 
 #about-section .about-container .about-info .about-me__skills h3 {
   color: blueviolet;
-  font-size: 2rem;
+  font-size: 3rem;
   text-transform: uppercase;
   text-align: center;
 }
@@ -770,7 +771,6 @@ body {
 }
 
 #about-section .about-container .about-info .about-me__quote {
-  border-top: 1px solid #999;
   padding: 3em 0;
 }
 
