@@ -252,7 +252,7 @@ form.addEventListener("submit", (e) => {
     <div class="form-update-container" >
       <div class="form-update-info" >
         <h2>Thanks, ${userName}.</h2>
-        <p>Your message has been sent!</p>
+        <p>Form Test: Successful. <br/>Unfortunately nothing has been sent at this time.</p>
       </div>
     </div>
   `;
