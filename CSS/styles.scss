@@ -561,23 +561,19 @@ body {
       justify-content: center;
       line-height: 1.5em;
       margin: 0 auto;
-      width: 80%;
+      width: 98%;
       max-width: 800px;
       overflow-wrap: break-word;
       text-align: justify;
       text-rendering: optimizeLegibility;
       word-wrap: break-word;
-      // hr {
-      //   width: 75%;
-      //   margin: 0 auto;
-      // }
       span {
         font-weight: 500;
       }
       .about-me {
         display: block;
-        // padding: 3em 0;
-        padding: 3em;
+        padding: 3em 2em;
+        // padding: 3em;
         margin: 2em 0;
         text-align: center;
         // border-bottom: 1px solid #999;
@@ -697,6 +693,11 @@ body {
             }
           }
         }
+      }
+      .skills-description {
+        max-width: 800px;
+        width: 90%;
+        margin: 0 auto;
       }
       .about-me__quote {
         // border-top: 1px solid #999;
@@ -916,7 +917,6 @@ body {
         border-radius: 0.5em;
         display: block;
         width: 100%;
-        // margin-bottom: 1em;
         font-family: arial, sans-serif;
         filter: drop-shadow(1px 3px 2px gray);
         resize: none;
@@ -933,7 +933,6 @@ body {
       }
       #input-submit {
         position: relative;
-        // top: 1rem;
         color: #fff;
         font-size: 30px;
         font-weight: bold;
@@ -1071,6 +1070,10 @@ body {
     .about__container {
       padding-top: 50px !important;
     }
+    .about-me {
+      padding: 3em 1em !important;
+    }
+
     .about__top {
       width: 100%;
     }
@@ -1119,12 +1122,16 @@ body {
   .about#about-section {
     .about-container {
       .about-info {
-        width: 90% !important;
+        width: 98% !important;
       }
     }
     .about__top {
       width: 100%;
     }
+    // .about-me__headline {
+    //   // text-align: justify !important;
+    //   width: 90%;
+    // }
   }
 
   section#contact-section {
