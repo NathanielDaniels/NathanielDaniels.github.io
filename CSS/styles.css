@@ -294,7 +294,11 @@ body {
 }
 
 .main-section header.main-section__header .header__inner-container .header__nav-links li:nth-child(2):hover {
-  color: #831fe0;
+  background: #831fe0;
+}
+
+.main-section header.main-section__header .header__inner-container .header__nav-links li:nth-child(2):hover a {
+  color: #ffff99;
 }
 
 .main-section header.main-section__header .header__inner-container .header__nav-links li a {
