@@ -548,6 +548,7 @@ body {
 
 #about-section .about-container {
   position: relative;
+  position: relative;
   z-index: 1;
   display: block;
   z-index: 5;
@@ -617,9 +618,9 @@ body {
   margin: 0 auto;
   width: 98%;
   max-width: 800px;
-  overflow-wrap: break-word;
   text-align: justify;
   text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
   word-wrap: break-word;
 }
 
@@ -689,10 +690,10 @@ body {
 
 #about-section .about-container .about-info .about-me__skills {
   padding: 1.5em 0;
-  height: 100%;
 }
 
 #about-section .about-container .about-info .about-me__skills h3 {
+  display: none;
   color: blueviolet;
   font-size: 3rem;
   text-transform: uppercase;
@@ -700,20 +701,29 @@ body {
 }
 
 #about-section .about-container .about-info .about-me__skills .skills-icons {
-  max-width: 90%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 10%;
   margin: 0 auto;
 }
 
 #about-section .about-container .about-info .about-me__skills .skills-icons ul {
-  padding: 2em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #about-section .about-container .about-info .about-me__skills .skills-icons ul li {
@@ -1160,6 +1170,37 @@ body {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .about#about-section .about-container h2.about-title {
+    padding: 0.5em 0 0;
+  }
+  .about#about-section .about-container .about-info .about-me__skills h3 {
+    display: block;
+  }
+  .about#about-section .about-container .about-info .skills-icons {
+    position: static;
+    width: 90%;
+    top: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .about#about-section .about-container .about-info .skills-icons ul {
+    padding: 2em 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   section.main-section {
     height: 115vh;
@@ -1167,7 +1208,7 @@ body {
   section.main-section .speechBubble {
     display: none;
   }
-  .about#about-section h2.about-title {
+  .about#about-section .about-container h2.about-title {
     padding: 0.5em 0 0;
   }
   section#projects-section .projects {
