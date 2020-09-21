@@ -849,21 +849,23 @@ body {
     padding-bottom: 1em;
     text-align: center;
     canvas {
-      // z-index: 100;
+      display: none;
+      z-index: 10;
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       width: 100%;
-      height: 43.2em;
+      height: 41em;
     }
     //? Floating Box Animation
     .floating-boxes {
-      display: none;
+      // display: none;
+      // z-index: 100;
       position: absolute;
-      top: 0em;
+      bottom: 0em;
       left: 0;
       width: 100%;
-      height: 43.2em;
+      height: 41em;
       overflow: hidden;
       li {
         position: absolute;
@@ -1124,11 +1126,6 @@ body {
   }
   section#contact-section {
     padding-top: 6em;
-    .contact-container {
-      .floating-boxes {
-        height: 39.1em;
-      }
-    }
   }
 }
 
@@ -1164,9 +1161,7 @@ body {
   section#contact-section {
     .contact-container {
       .floating-boxes {
-        display: none;
-        top: 0;
-        bottom: -500px;
+        // display: none;
       }
       form.cf-form {
         width: 80%;
@@ -1222,15 +1217,17 @@ body {
     padding-top: 4rem;
     display: flex;
     margin: -3em auto;
-    .floating-boxes {
-      display: none;
-    }
 
     h2.contact-title {
       margin-top: 2rem !important;
     }
 
     .contact-container {
+      .floating-boxes {
+        // display: none;
+        height: 55em;
+      }
+
       form.cf-form {
         width: 90%;
         input#input-submit {
