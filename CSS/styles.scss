@@ -160,10 +160,10 @@ body {
 //! Sidebar Section ================================
 .sidebar-section {
   z-index: 100;
-  position: fixed;
-  // position: absolute;
+  // position: fixed;
+  position: absolute;
   bottom: 1em;
-  right: 0.8em;
+  right: 1em;
   background: transparent;
   .sidebar__social-media {
     list-style: none;
