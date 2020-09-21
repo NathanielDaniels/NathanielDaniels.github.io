@@ -4,7 +4,7 @@ window.onscroll = () => {
   let height =
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
-  let scrolled = (winScroll / height) * 100;
+  let scrolled = (winScroll / height) * 101;
   document.getElementById("myBar").style.width = scrolled + "%";
 };
 
@@ -127,6 +127,7 @@ $("#nav-menu ul li a").click(function () {
 const text = [
   "Web Designer",
   "Freelancer",
+  "Problem Solver",
   "Web Enthusiast",
   "Front-End Developer",
 ];
@@ -299,7 +300,7 @@ window.requestAnimationFrame(animate);
 
 var createBubble = function () {
   this.position = { x: 0, y: 0 };
-  this.radius = 8 + Math.random() * 10;
+  this.radius = 8 + Math.random() * 12;
   this.xOff = Math.random() * canvas.width - this.radius;
   this.yOff = Math.random() * canvas.height;
   this.distanceBetweenWaves = 50 + Math.random() * 40;
@@ -325,7 +326,7 @@ var createBubble = function () {
 
   this.resetPosition = function () {
     this.position = { x: 0, y: 0 };
-    this.radius = 8 + Math.random() * 10;
+    this.radius = 8 + Math.random() * 12;
     this.xOff = Math.random() * canvas.width - this.radius;
     this.yOff = Math.random() * canvas.height;
     this.distanceBetweenWaves = 50 + Math.random() * 40;

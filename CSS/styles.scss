@@ -577,12 +577,12 @@ body {
         padding: 3em 2em;
         margin: 2em 0;
         text-align: center;
-        border: 1px solid blueviolet;
         border-radius: 1rem;
-        box-shadow: inset 0px 0px 10px hsl(300, 100%, 8%);
+        border: 1px solid blueviolet;
+        // box-shadow: inset 0px 0px 10px hsl(300, 100%, 8%);
         // box-shadow: 0px 2px 10px hsla(300, 100%, 5%, 0.74);
         // background: hsl(271, 76%, 45%);
-        background: rgb(248, 248, 248);
+        // background: rgb(248, 248, 248);
 
         .about-me__headline {
           padding-bottom: 2em;
@@ -849,8 +849,8 @@ body {
     padding-bottom: 1em;
     text-align: center;
     canvas {
-      display: none;
-      z-index: 10;
+      // display: none;
+      // z-index: 10;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -859,7 +859,7 @@ body {
     }
     //? Floating Box Animation
     .floating-boxes {
-      // display: none;
+      display: none;
       // z-index: 100;
       position: absolute;
       bottom: 0em;
@@ -1224,7 +1224,7 @@ body {
 
     .contact-container {
       .floating-boxes {
-        // display: none;
+        display: none;
         height: 55em;
       }
 

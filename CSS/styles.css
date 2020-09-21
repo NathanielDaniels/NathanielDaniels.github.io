@@ -633,11 +633,8 @@ body {
   padding: 3em 2em;
   margin: 2em 0;
   text-align: center;
-  border: 1px solid blueviolet;
   border-radius: 1rem;
-  -webkit-box-shadow: inset 0px 0px 10px #290029;
-          box-shadow: inset 0px 0px 10px #290029;
-  background: #f8f8f8;
+  border: 1px solid blueviolet;
 }
 
 #about-section .about-container .about-info .about-me .about-me__headline {
@@ -992,8 +989,6 @@ body {
 }
 
 #contact-section .contact-container canvas {
-  display: none;
-  z-index: 10;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1002,6 +997,7 @@ body {
 }
 
 #contact-section .contact-container .floating-boxes {
+  display: none;
   position: absolute;
   bottom: 0em;
   left: 0;
@@ -1326,6 +1322,7 @@ body {
     margin-top: 2rem !important;
   }
   section#contact-section .contact-container .floating-boxes {
+    display: none;
     height: 55em;
   }
   section#contact-section .contact-container form.cf-form {
