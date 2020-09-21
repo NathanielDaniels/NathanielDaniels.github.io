@@ -4,7 +4,7 @@ window.onscroll = () => {
   let height =
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
-  let scrolled = (winScroll / height) * 101;
+  let scrolled = (winScroll / height) * 102;
   document.getElementById("myBar").style.width = scrolled + "%";
 };
 
