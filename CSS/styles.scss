@@ -846,6 +846,8 @@ body {
   background: #fff;
   cursor: default;
   .contact-container {
+    padding-bottom: 1em;
+    text-align: center;
     canvas {
       // z-index: 100;
       position: absolute;
@@ -854,11 +856,9 @@ body {
       width: 100%;
       height: 43.2em;
     }
-    padding-bottom: 1em;
-    text-align: center;
     //? Floating Box Animation
     .floating-boxes {
-      // display: none;
+      display: none;
       position: absolute;
       top: 0em;
       left: 0;
@@ -1043,6 +1043,16 @@ body {
       }
     }
   }
+  #contact-section {
+    .contact-container {
+      .floating-boxes {
+        display: block;
+      }
+      canvas {
+        display: none;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -1154,6 +1164,7 @@ body {
   section#contact-section {
     .contact-container {
       .floating-boxes {
+        display: none;
         top: 0;
         bottom: -500px;
       }

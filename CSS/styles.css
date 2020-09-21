@@ -1000,6 +1000,7 @@ body {
 }
 
 #contact-section .contact-container .floating-boxes {
+  display: none;
   position: absolute;
   top: 0em;
   left: 0;
@@ -1199,6 +1200,12 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  #contact-section .contact-container .floating-boxes {
+    display: block;
+  }
+  #contact-section .contact-container canvas {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -1283,6 +1290,7 @@ body {
     width: 100%;
   }
   section#contact-section .contact-container .floating-boxes {
+    display: none;
     top: 0;
     bottom: -500px;
   }

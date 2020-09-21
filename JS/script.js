@@ -216,6 +216,7 @@ let boxSize = () => {
 boxSize();
 
 //!================================================
+//! Floating Bubbles!!!
 
 var canvas = document.querySelector("canvas");
 canvas.width = document.body.clientWidth;
@@ -253,7 +254,7 @@ function animate() {
     // second num = wave height
     // third num = move the center of the wave away from the edge
     bubbles[i].position.x =
-      Math.sin(bubbles[i].count / bubbles[i].distanceBetweenWaves) * 50 +
+      Math.sin(bubbles[i].count / bubbles[i].distanceBetweenWaves) * 8 +
       bubbles[i].xOff;
     bubbles[i].position.y = bubbles[i].count;
     bubbles[i].render();
@@ -298,7 +299,7 @@ window.requestAnimationFrame(animate);
 
 var createBubble = function () {
   this.position = { x: 0, y: 0 };
-  this.radius = 8 + Math.random() * 25;
+  this.radius = 8 + Math.random() * 10;
   this.xOff = Math.random() * canvas.width - this.radius;
   this.yOff = Math.random() * canvas.height;
   this.distanceBetweenWaves = 50 + Math.random() * 40;
@@ -324,7 +325,7 @@ var createBubble = function () {
 
   this.resetPosition = function () {
     this.position = { x: 0, y: 0 };
-    this.radius = 8 + Math.random() * 15;
+    this.radius = 8 + Math.random() * 10;
     this.xOff = Math.random() * canvas.width - this.radius;
     this.yOff = Math.random() * canvas.height;
     this.distanceBetweenWaves = 50 + Math.random() * 40;
