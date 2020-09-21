@@ -159,10 +159,11 @@ body {
 
 //! Sidebar Section ================================
 .sidebar-section {
-  z-index: 1;
+  z-index: 100;
   position: fixed;
-  bottom: 1rem;
-  right: 0.8rem;
+  // position: absolute;
+  bottom: 1em;
+  right: 0.8em;
   background: transparent;
   .sidebar__social-media {
     list-style: none;
@@ -193,6 +194,7 @@ body {
 
 //! MAIN Section (Hero) ===========================
 .main-section {
+  position: relative;
   z-index: 1;
   height: 125vh;
   display: flex;
@@ -995,9 +997,9 @@ body {
 
 //! @MEDIA QUERIES Section ================================
 @media screen and (min-width: 1366px) {
-  .header__inner-container {
-    justify-content: center !important;
-  }
+  // .header__inner-container {
+  //   justify-content: center !important;
+  // }
   // .header__nav-links {
   //   justify-content: center !important;
   // }

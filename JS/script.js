@@ -1,12 +1,20 @@
 //! Page Scroll Indicator.
-window.onscroll = () => {
-  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  let height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  let scrolled = (winScroll / height) * 102;
-  document.getElementById("myBar").style.width = scrolled + "%";
-};
+function scrollIndicator() {
+  window.onscroll = () => {
+    let winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    let height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    // let scrolled = (winScroll / height) * 100;
+    let scrolled =
+      window.innerWidth < 1200
+        ? (winScroll / height) * 102
+        : (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+  };
+}
+scrollIndicator();
 
 //! Title SVG Animation ======================
 $(function () {
@@ -14,179 +22,198 @@ $(function () {
 });
 
 //! Smiley Face Animation ======================
-let face = $(".smiley-face span")[0];
-let head = $(".smiley-face")[0];
-// let isDead = true;
-let canBlink = true;
 
-document.onmousemove = trackMouse;
-// window.onresize = squish;
+function smileyFace() {
+  let face = $(".smiley-face span")[0];
+  let head = $(".smiley-face")[0];
+  // let isDead = true;
+  let canBlink = true;
 
-//? Blink every 5.5 seconds
-setInterval(function () {
-  if (!canBlink) {
-    return;
+  document.onmousemove = trackMouse;
+  // window.onresize = squish;
+
+  //? Blink every 5.5 seconds
+  setInterval(function () {
+    if (!canBlink) {
+      return;
+    }
+
+    face.classList.add("blink");
+
+    setTimeout(function () {
+      face.classList.remove("blink");
+    }, 200);
+  }, 5500);
+
+  function trackMouse(event) {
+    // if (!isDead) {
+    //   return;
+    // }
+
+    //? mouse coordinates
+    let mX = event.clientX;
+    let mY = event.clientY;
+
+    // console.log(mX, mY);
+
+    //? viewport dimentions
+    let vpH = window.innerHeight + 250;
+    let vpW = window.innerWidth;
+
+    //? head boundingbox
+    let headBox = head.getBoundingClientRect();
+
+    // console.log(headBox);
+
+    //? face boundingbox
+    let faceBox = face.getBoundingClientRect();
+
+    // console.log(faceBox);
+
+    //? the magic
+    let calcX = (headBox.width - faceBox.width + 1000) * (mX / vpW);
+
+    let calcY = (headBox.height - faceBox.height) * (mY / vpH);
+
+    // console.log(calcX, calcY);
+
+    // //? add bounding restrictions to face
+    // calcX = clamp(calcX, 60, 150);
+    // calcY = clamp(calcY, 60, 130);
+    calcX = clamp(calcX, 80, 150);
+    calcY = clamp(calcY, 40, 160);
+
+    face.setAttribute("style", `top: ${calcY}px; left: ${calcX}px;`);
   }
 
-  face.classList.add("blink");
+  function clamp(num, min, max) {
+    return num <= min ? min : num >= max ? max : num;
+  }
 
-  setTimeout(function () {
-    face.classList.remove("blink");
-  }, 200);
-}, 5500);
+  // add squish effect when viewport minimizes
+  // function squish () {
+  //   // head boundingbox
+  //   let headBox = head.getBoundingClientRect()
 
-function trackMouse(event) {
-  // if (!isDead) {
-  //   return;
+  //   let wP = 1 - headBox.width / 300
+  //   let hP = 1 - headBox.height / 300
+
+  //   let squishP = Math.max(wP, hP) * 2
+
+  //   canBlink = !(squishP > 1.2)
+  //   isDead = !(squishP > 1.3)
+
+  //   head.setAttribute('style', 'background: rgba(169,3,41,' + squishP + ');')
+
+  //   face.style.opacity = 1.6 - squishP
   // }
-
-  //? mouse coordinates
-  let mX = event.clientX;
-  let mY = event.clientY;
-
-  // console.log(mX, mY);
-
-  //? viewport dimentions
-  let vpH = window.innerHeight + 250;
-  let vpW = window.innerWidth;
-
-  //? head boundingbox
-  let headBox = head.getBoundingClientRect();
-
-  // console.log(headBox);
-
-  //? face boundingbox
-  let faceBox = face.getBoundingClientRect();
-
-  // console.log(faceBox);
-
-  //? the magic
-  let calcX = (headBox.width - faceBox.width + 1000) * (mX / vpW);
-
-  let calcY = (headBox.height - faceBox.height) * (mY / vpH);
-
-  // console.log(calcX, calcY);
-
-  // //? add bounding restrictions to face
-  // calcX = clamp(calcX, 60, 150);
-  // calcY = clamp(calcY, 60, 130);
-  calcX = clamp(calcX, 80, 150);
-  calcY = clamp(calcY, 40, 160);
-
-  face.setAttribute("style", `top: ${calcY}px; left: ${calcX}px;`);
 }
-
-function clamp(num, min, max) {
-  return num <= min ? min : num >= max ? max : num;
-}
-
-// add squish effect when viewport minimizes
-// function squish () {
-//   // head boundingbox
-//   let headBox = head.getBoundingClientRect()
-
-//   let wP = 1 - headBox.width / 300
-//   let hP = 1 - headBox.height / 300
-
-//   let squishP = Math.max(wP, hP) * 2
-
-//   canBlink = !(squishP > 1.2)
-//   isDead = !(squishP > 1.3)
-
-//   head.setAttribute('style', 'background: rgba(169,3,41,' + squishP + ');')
-
-//   face.style.opacity = 1.6 - squishP
-// }
+smileyFace();
 
 //! Speech Bubble Animation! (smileyface)
 
-// setInterval(function () {
-//   document.querySelector(".speech-bubble").style.display = "none";
-// }, 2500);
-
-// //? Remove speech bubble under 1200px screen width (mobile/tablet)
-// if (window.innerWidth < 1200) {
-//   document.querySelector(".speech-bubble").style.display = "none";
+// function speechBubble() {
+//   setInterval(function () {
+//     document.querySelector(".speech-bubble").style.display = "none";
+//   }, 2500);
+//   //? Remove speech bubble under 1200px screen width (mobile/tablet)
+//   if (window.innerWidth < 1200) {
+//     document.querySelector(".speech-bubble").style.display = "none";
+//   }
 // }
+// speechBubble();
 
 //! Hamburger Nav Menu Animation! (JQuery) ======================
-$menu = $(".burger-elements");
 
-$menu.click(function () {
-  $("#nav-menu").toggleClass("active");
-  $(this).toggleClass("close");
-});
+function hamburgerAnimation() {
+  $menu = $(".burger-elements");
 
-//! Close btn SideBar Nav Menu (JQuery)
-$("#nav-menu ul li a").click(function () {
-  $("#nav-menu").removeClass("active");
-  $menu.removeClass("close");
-});
+  $menu.click(function () {
+    $("#nav-menu").toggleClass("active");
+    $(this).toggleClass("close");
+  });
 
-//! Greeting-Loop Animation (JQuery)================================
-const text = [
-  "Web Designer",
-  "Freelancer",
-  "Problem Solver",
-  "Web Enthusiast",
-  "Front-End Developer",
-];
-let counter = 0;
-const elem = $("#greeting");
-setTimeout(() => {
-  setInterval(change, 3000);
-}, 3000);
-function change() {
-  elem.fadeOut(function () {
-    elem.text(text[counter]);
-    counter++;
-    if (counter >= text.length) {
-      counter = 0;
-    }
-    elem.fadeIn();
+  //! Close btn SideBar Nav Menu (JQuery)
+  $("#nav-menu ul li a").click(function () {
+    $("#nav-menu").removeClass("active");
+    $menu.removeClass("close");
   });
 }
+hamburgerAnimation();
+//! Greeting-Loop Animation (JQuery)================================
+
+function greetingLoop() {
+  const text = [
+    "Web Designer",
+    "Freelancer",
+    "Problem Solver",
+    "Web Enthusiast",
+    "Front-End Developer",
+  ];
+  let counter = 0;
+  const elem = $("#greeting");
+  setTimeout(() => {
+    setInterval(change, 3000);
+  }, 3000);
+  function change() {
+    elem.fadeOut(function () {
+      elem.text(text[counter]);
+      counter++;
+      if (counter >= text.length) {
+        counter = 0;
+      }
+      elem.fadeIn();
+    });
+  }
+}
+greetingLoop();
 
 //! Sidebar location change (screen size) ====
-//! Under Construction
+//? Need to fix new z-index issue on middle two sections
 
-const sidebar = document.querySelector(".sidebar");
-// console.log(sidebar);
+function sidebarPositionChange() {
+  const sidebar = document.querySelector(".sidebar");
+  // console.log(sidebar);
 
-$(window).resize(() => {
-  if (window.innerWidth === 1600) {
-    sidebar.style.right = "8em";
-  } else if (window.innerWidth > 1601) {
-    // sidebar.style.position = "absolute";
-    sidebar.style.margin = "0 auto";
+  $(window).resize(() => {
+    if (window.innerWidth === 1600) {
+      sidebar.style.right = "8em";
+    } else if (window.innerWidth > 1601) {
+      // sidebar.style.position = "absolute";
+      sidebar.style.margin = "0 auto";
 
-    // sidebar.style.bottom = "1rem";
-    // sidebar.style.bottom = "1rem";
-    // sidebar.style.right = "20em";
-  } else {
-    sidebar.style.position = "fixed";
-    sidebar.style.right = "0.8rem";
-    // sidebar.style.bottom = "1rem";
-  }
-  // console.log(window.innerWidth);
-});
-//! skills icon hover  ======================
-
-const skillsUl = document.querySelectorAll(".skills-list > li");
-const skillsLi = document.querySelectorAll(".skills-list > li > i");
-
-for (let index = 0; index < skillsUl.length; index++) {
-  skillsUl[index].addEventListener("mouseenter", () => {
-    if (index % 2 === 0) {
-      skillsLi[index].style.color = "hsl(60, 100%, 44%)";
+      // sidebar.style.bottom = "1rem";
+      // sidebar.style.bottom = "1rem";
+      // sidebar.style.right = "20em";
+    } else {
+      sidebar.style.position = "fixed";
+      sidebar.style.right = "0.8rem";
+      // sidebar.style.bottom = "1rem";
     }
-  });
-  skillsUl[index].addEventListener("mouseleave", () => {
-    if (index % 2 === 0) {
-      skillsLi[index].style.color = "#474747";
-    }
+    // console.log(window.innerWidth);
   });
 }
+sidebarPositionChange();
+//! skills icon hover  ======================
+
+function skillsHover() {
+  const skillsUl = document.querySelectorAll(".skills-list > li");
+  const skillsLi = document.querySelectorAll(".skills-list > li > i");
+
+  for (let index = 0; index < skillsUl.length; index++) {
+    skillsUl[index].addEventListener("mouseenter", () => {
+      if (index % 2 === 0) {
+        skillsLi[index].style.color = "hsl(60, 100%, 44%)";
+      }
+    });
+    skillsUl[index].addEventListener("mouseleave", () => {
+      if (index % 2 === 0) {
+        skillsLi[index].style.color = "#474747";
+      }
+    });
+  }
+}
+skillsHover();
 
 //! PORTFOLIO CLICK FUNCTION (JQuery)=====================
 //?flipping cards
@@ -486,38 +513,43 @@ if (window.innerWidth >= 1200) {
 
 //! Contact form Label Animation =================
 
-$("input").on("focus", function () {
-  $(this).closest(".field-wrapper").addClass("focused");
-});
-$("input").on("blur", function () {
-  if ($(this).val() === "") {
-    $(this).closest(".field-wrapper").removeClass("focused");
-  }
-});
+function animateLabel() {
+  $("input").on("focus", function () {
+    $(this).closest(".field-wrapper").addClass("focused");
+  });
+  $("input").on("blur", function () {
+    if ($(this).val() === "") {
+      $(this).closest(".field-wrapper").removeClass("focused");
+    }
+  });
 
-$("textarea").on("focus", function () {
-  $(this).closest(".field-wrapper").addClass("focused");
-});
-$("textarea").on("blur", function () {
-  if ($(this).val() === "") {
-    $(this).closest(".field-wrapper").removeClass("focused");
-  }
-});
+  $("textarea").on("focus", function () {
+    $(this).closest(".field-wrapper").addClass("focused");
+  });
+  $("textarea").on("blur", function () {
+    if ($(this).val() === "") {
+      $(this).closest(".field-wrapper").removeClass("focused");
+    }
+  });
+}
+animateLabel();
 
 //! Contact form Submit  =================
 
-const form = document.querySelector(".cf-form");
+function submitForm() {
+  const form = document.querySelector(".cf-form");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  let ourFormData = new FormData(e.target);
-  let userName = ourFormData.get("name");
-  let userEmail = ourFormData.get("email");
-  let userSubject = ourFormData.get("subject");
-  let userMessage = ourFormData.get("message");
+    let ourFormData = new FormData(e.target);
+    let userName = ourFormData.get("name");
+    //! Might not need these below
+    let userEmail = ourFormData.get("email");
+    let userSubject = ourFormData.get("subject");
+    let userMessage = ourFormData.get("message");
 
-  let updatedHTMLContent = `
+    let updatedHTMLContent = `
     <div class="form-update-container" >
       <div class="form-update-info" >
         <h2>Thanks, ${userName}.</h2>
@@ -526,8 +558,11 @@ form.addEventListener("submit", (e) => {
     </div>
   `;
 
-  form.innerHTML = updatedHTMLContent;
-});
+    form.innerHTML = updatedHTMLContent;
+  });
+}
+
+submitForm();
 
 //! Contact Form Click (Legend) Not Complete ======================
 
@@ -581,6 +616,7 @@ form.addEventListener("submit", (e) => {
 // }
 
 //=====================================================================================================\
+//! LEARNING ASYNC/AWAIT
 // async function getPhotos() {
 //   let grabPhoto = await fetch("https://picsum.photos/id/237/200/300");
 //   let request = await grabPhoto.json();
@@ -775,4 +811,4 @@ form.addEventListener("submit", (e) => {
 //   .then(displayAPIs)
 //   .catch((e) => console.log(`Error: ${e}`));
 
-console.log(Array.from([1, 2, 3], (x) => x + x));
+// console.log(Array.from([1, 2, 3], (x) => x + x));
