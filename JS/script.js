@@ -545,15 +545,21 @@ function submitForm() {
     let ourFormData = new FormData(e.target);
     let userName = ourFormData.get("name");
     //! Might not need these below
-    let userEmail = ourFormData.get("email");
-    let userSubject = ourFormData.get("subject");
-    let userMessage = ourFormData.get("message");
+    // let userEmail = ourFormData.get("email");
+    // let userSubject = ourFormData.get("subject");
+    // let userMessage = ourFormData.get("message");
 
     let updatedHTMLContent = `
     <div class="form-update-container" >
       <div class="form-update-info" >
         <h2>Thanks, ${userName}.</h2>
         <p>Form Test: Successful. <br/>Unfortunately nothing has been sent at this time.</p>
+        <p>You can reach me on <a
+            target="_blank"
+            rel="noreferrer"
+            title="LinkedIn"
+            href="https://www.linkedin.com/in/nathaniel-daniels-500740139/"
+             style="color:#fff; cursor: pointer; margin-top:2em"><i class="fab fa-linkedin"></i></a></p>
       </div>
     </div>
   `;
