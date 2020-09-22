@@ -16,7 +16,8 @@ function scrollIndicator() {
 }
 scrollIndicator();
 
-//! Title SVG Animation ======================
+//! Main Title SVG Animation ======================
+
 $(function () {
   $("#name-svg").load("/titleName-anim/name-svg.html");
 });
@@ -171,29 +172,29 @@ greetingLoop();
 //! Sidebar location change (screen size) ====
 //? Need to fix new z-index issue on middle two sections
 
-function sidebarPositionChange() {
-  const sidebar = document.querySelector(".sidebar");
-  // console.log(sidebar);
+// function sidebarPositionChange() {
+//   const sidebar = document.querySelector(".sidebar");
+//   // console.log(sidebar);
 
-  $(window).resize(() => {
-    if (window.innerWidth === 1600) {
-      sidebar.style.right = "8em";
-    } else if (window.innerWidth > 1601) {
-      // sidebar.style.position = "absolute";
-      sidebar.style.margin = "0 auto";
+//   $(window).resize(() => {
+//     if (window.innerWidth === 1600) {
+//       sidebar.style.right = "8em";
+//     } else if (window.innerWidth > 1601) {
+//       // sidebar.style.position = "absolute";
+//       sidebar.style.margin = "0 auto";
 
-      // sidebar.style.bottom = "1rem";
-      // sidebar.style.bottom = "1rem";
-      // sidebar.style.right = "20em";
-    } else {
-      sidebar.style.position = "fixed";
-      sidebar.style.right = "0.8rem";
-      // sidebar.style.bottom = "1rem";
-    }
-    // console.log(window.innerWidth);
-  });
-}
-sidebarPositionChange();
+//       // sidebar.style.bottom = "1rem";
+//       // sidebar.style.bottom = "1rem";
+//       // sidebar.style.right = "20em";
+//     } else {
+//       sidebar.style.position = "fixed";
+//       sidebar.style.right = "0.8rem";
+//       // sidebar.style.bottom = "1rem";
+//     }
+//     // console.log(window.innerWidth);
+//   });
+// }
+// sidebarPositionChange();
 //! skills icon hover  ======================
 
 function skillsHover() {
