@@ -1276,7 +1276,7 @@ body {
     width: 100%;
   }
   section#contact-section .contact-container form.cf-form {
-    width: 80%;
+    width: 95%;
   }
 }
 
@@ -1318,7 +1318,7 @@ body {
     height: 55em;
   }
   section#contact-section .contact-container form.cf-form {
-    width: 90%;
+    width: 100%;
   }
   section#contact-section .contact-container form.cf-form input#input-submit {
     top: 1rem;
