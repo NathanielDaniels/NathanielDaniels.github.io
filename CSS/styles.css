@@ -848,7 +848,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 95%;
+  width: 94%;
   margin: 0 auto;
 }
 
@@ -1204,6 +1204,9 @@ body {
   }
   section#projects-section .projects {
     top: -3em !important;
+  }
+  section#projects-section .projects .grid-container .projects-grid {
+    grid-gap: 1.5em;
   }
   section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-2__info {
     -webkit-box-ordinal-group: 5;

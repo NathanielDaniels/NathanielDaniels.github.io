@@ -799,7 +799,7 @@ body {
         flex-flow: wrap;
         grid-gap: 5em 1em;
         justify-content: center;
-        width: 95%;
+        width: 94%;
         margin: 0 auto;
         .card {
           position: relative;
@@ -1047,7 +1047,7 @@ body {
   }
 }
 
-//! @MEDIA QUERIES Section ================================
+//! @MEDIA QUERIES ================================
 // @media screen and (min-width: 1366px) {
 //   // .header__inner-container {
 //   //   justify-content: center !important;
@@ -1159,7 +1159,7 @@ body {
       top: -3em !important;
       .grid-container {
         .projects-grid {
-          // grid-gap: 1.5em;
+          grid-gap: 1.5em;
           // margin-bottom: 1em;
           // padding: 1em;
           &:nth-child(1) .card-2__info {
