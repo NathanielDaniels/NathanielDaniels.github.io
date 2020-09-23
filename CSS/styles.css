@@ -622,7 +622,6 @@ body {
 #about-section .about-container .about-info .about-me {
   display: block;
   padding: 3em 2em;
-  margin: 2em 0;
   text-align: center;
   border-radius: 1rem;
 }
@@ -673,10 +672,6 @@ body {
 #about-section .about-container .about-info .about-me .about-me__job:focus {
   outline: 1.45px dashed;
   outline-color: #ffff99;
-}
-
-#about-section .about-container .about-info .about-me__skills {
-  padding: 1.5em 0;
 }
 
 #about-section .about-container .about-info .about-me__skills h3 {

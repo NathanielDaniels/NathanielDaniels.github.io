@@ -585,12 +585,24 @@ body {
     width: 100%;
     cursor: default;
     h2.about-title {
+      // display: inline-block;
       color: blueviolet;
       font-size: 4rem;
       font-weight: 800;
       text-align: center;
       text-transform: uppercase;
+      // &:before {
+      //   content: "";
+      //   position: absolute;
+      //   height: 8px;
+      //   width: 5em;
+      //   top: 1.6em;
+      //   left: 6em;
+      //   background: blueviolet;
+      //   opacity: 0.8;
+      // }
     }
+
     .about-info {
       align-items: center;
       display: flex;
@@ -612,7 +624,7 @@ body {
       .about-me {
         display: block;
         padding: 3em 2em;
-        margin: 2em 0;
+        // margin: 2em 0;
         text-align: center;
         border-radius: 1rem;
         // border: 1px solid blueviolet;
@@ -664,7 +676,8 @@ body {
         }
       }
       .about-me__skills {
-        padding: 1.5em 0;
+        // padding: 1.5em 0;
+        // padding-top: 2em;
         // height: 100%;
         h3 {
           display: none;
@@ -685,13 +698,10 @@ body {
           width: 10%;
           margin: 0 auto;
           ul {
-            // padding: 2em 0;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
             justify-content: center;
-            // justify-content: space-evenly;
-            // flex-wrap: wrap;
             li {
               width: 6em;
               margin: 1em 0;
@@ -1080,9 +1090,7 @@ body {
         }
         .skills-icons {
           position: static;
-          // max-width: 800px;
           width: 90%;
-          // width: 100%;
           top: 0;
           transform: translate(0, 0);
           ul {
