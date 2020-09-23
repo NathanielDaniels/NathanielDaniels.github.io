@@ -1281,19 +1281,22 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .main-section {
+  section.main-section {
     height: 110vh !important;
   }
-  .main-section__header .header__inner-container .header__nav-links {
+  section.main-section .sidebar-section {
+    bottom: 10em !important;
+  }
+  section.main-section .main-section__header .header__inner-container .header__nav-links {
     display: none !important;
   }
-  .main-section__header .burger-menu button.burger-container {
+  section.main-section .main-section__header .burger-menu button.burger-container {
     display: block !important;
   }
-  .main-content .content-wrapper h1 {
+  section.main-section .main-content .content-wrapper h1 {
     font-size: 2.8rem !important;
   }
-  .main-content .greeting-loop {
+  section.main-section .main-content .greeting-loop {
     top: 0px !important;
     font-size: 30px !important;
   }
