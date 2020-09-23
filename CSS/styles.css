@@ -1205,9 +1205,6 @@ body {
   section#projects-section .projects {
     top: -3em !important;
   }
-  section#projects-section .projects .grid-container .projects-grid {
-    grid-gap: 1.5em;
-  }
   section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-2__info {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;

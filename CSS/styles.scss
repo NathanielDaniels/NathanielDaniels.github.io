@@ -1159,7 +1159,9 @@ body {
       top: -3em !important;
       .grid-container {
         .projects-grid {
-          grid-gap: 1.5em;
+          // grid-gap: 1.5em;
+          // margin-bottom: 1em;
+          // padding: 1em;
           &:nth-child(1) .card-2__info {
             order: 4;
             text-align: left;
@@ -1168,9 +1170,6 @@ body {
             }
           }
           &:nth-child(1) .card-2 {
-            // .card-title {
-            //   left: -1% !important;
-            // }
             order: 3;
           }
           &:nth-child(1) .card-3__info {
