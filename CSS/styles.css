@@ -973,14 +973,6 @@ body {
   text-align: center;
 }
 
-#contact-section .contact-container canvas {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 41em;
-}
-
 #contact-section .contact-container .floating-boxes {
   display: none;
   position: absolute;
