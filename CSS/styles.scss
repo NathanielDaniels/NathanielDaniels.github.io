@@ -369,10 +369,8 @@ body {
         width: 340px;
         display: flex;
         align-items: center;
-        // justify-content: flex-end;
         &:hover li a,
         &:focus li a {
-          // transform: scale(1);
           opacity: 0.6;
           filter: blur(1px);
         }
@@ -387,7 +385,6 @@ body {
             &:hover {
               background: rgb(131, 31, 224);
               a {
-                // color: #fff;
                 color: hsl(60, 100%, 80%);
               }
             }
@@ -406,7 +403,6 @@ body {
               // color: hsl(60, 100%, 80%);
               color: hsl(271, 76%, 50%);
               filter: drop-shadow(0px 2px 2px hsl(271, 76%, 20%));
-              // transform: scale(1.05);
               opacity: 1;
               filter: blur(0);
             }
@@ -453,7 +449,6 @@ body {
           width: 35px;
           height: 4px;
           left: 0px;
-          // background: #fff;
           background: blueviolet;
           // background: hsl(271, 76%, 20%);
           border-radius: 2.5px;
@@ -814,9 +809,6 @@ body {
             color: hsl(60, 100%, 80%);
             left: -1%;
           }
-          // &:nth-child(4) .card-title {
-          //   bottom: -5%;
-          // }
           i {
             font-size: 2em;
             display: flex;
