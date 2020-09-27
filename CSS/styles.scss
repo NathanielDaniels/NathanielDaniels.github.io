@@ -137,24 +137,24 @@ body {
 }
 
 // //? The progress bar (scroll indicator)
-// .progress-container {
-//   position: fixed;
-//   left: 50%;
-//   transform: translate(-50%);
-//   z-index: 100;
-//   width: 101%;
-//   max-width: 1360px;
-//   height: 5px;
-//   background: hsl(271, 76%, 45%);
-//   border-bottom: 1px solid black;
-//   .progress-bar {
-//     height: 5px;
-//     background: hsl(60, 100%, 80%);
-//     width: 0%;
-//     border: 1px solid black;
-//     border-radius: 1rem;
-//   }
-// }
+.progress-container {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 100;
+  width: 101%;
+  max-width: 1360px;
+  height: 5px;
+  background: hsl(271, 76%, 45%);
+  border-bottom: 1px solid black;
+  .progress-bar {
+    height: 5px;
+    background: hsl(60, 100%, 80%);
+    width: 0%;
+    border: 1px solid black;
+    border-radius: 1rem;
+  }
+}
 
 // //! Sidebar Section ================================
 // //? Side Social Media Links
