@@ -278,33 +278,33 @@ body {
       border-radius: 200px;
       transition: all 250ms ease-out;
     }
-    // .speech-bubble {
-    //   transition: 0.4s ease-in-out;
-    //   position: absolute;
-    //   left: 260px;
-    //   width: 200px;
-    //   height: 100px;
-    //   background: #fff;
-    //   border-radius: 20px;
-    //   filter: drop-shadow(2px 2px 4px hsl(0, 0%, 10%));
-    //   h2 {
-    //     height: 100px;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //   }
-    //   .triangle {
-    //     position: absolute;
-    //     top: 80px;
-    //     left: -15px;
-    //     transform: rotate(48deg);
-    //     width: 0;
-    //     height: 0;
-    //     border-left: 20px solid transparent;
-    //     border-right: 20px solid transparent;
-    //     border-top: 30px solid #fff;
-    //   }
-    // }
+    .speech-bubble {
+      transition: 0.4s ease-in-out;
+      position: absolute;
+      left: 260px;
+      width: 200px;
+      height: 100px;
+      background: #fff;
+      border-radius: 20px;
+      filter: drop-shadow(2px 2px 4px hsl(0, 0%, 10%));
+      h2 {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .triangle {
+        position: absolute;
+        top: 80px;
+        left: -15px;
+        transform: rotate(48deg);
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 30px solid #fff;
+      }
+    }
 
     /*? Eyes */
     span.smiley-face__face:before,
