@@ -1,12 +1,7 @@
 svg#logo {
-  /* position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   /* stroke-dasharray: 10px;
   stroke-dashoffset: 20px; */
   animation: fill 2s ease forwards 3.5s;
-  /* filter: drop-shadow(0 4px 4px hsl(0, 0%, 30%)); */
 }
 
 #logo path:nth-child(1) {
@@ -100,6 +95,7 @@ svg#logo {
     fill: transparent;
   }
   to {
-    fill: hsl(60, 100%, 80%);
+    /* fill: hsl(60, 100%, 80%); */
+    fill: hsla(271, 76%, 40%, 60%);
   }
 }
