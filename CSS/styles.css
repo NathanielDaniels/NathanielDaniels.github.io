@@ -308,15 +308,21 @@ body {
 
 .main-section header.main-section__header .header__inner-container .header__nav-links li:nth-child(2) {
   border: 1px solid #831fe0;
+  background: #831fe0;
   border-radius: 0.5em;
 }
 
+.main-section header.main-section__header .header__inner-container .header__nav-links li:nth-child(2) a {
+  color: #ffff99;
+}
+
 .main-section header.main-section__header .header__inner-container .header__nav-links li:nth-child(2):hover {
-  background: #831fe0;
+  background: transparent;
 }
 
 .main-section header.main-section__header .header__inner-container .header__nav-links li:nth-child(2):hover a {
   color: #ffff99;
+  color: #831fe0;
 }
 
 .main-section header.main-section__header .header__inner-container .header__nav-links li a {

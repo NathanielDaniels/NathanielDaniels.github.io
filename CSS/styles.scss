@@ -402,13 +402,20 @@ body {
           padding: 5px 10px;
           margin: 0 5px;
           &:nth-child(2) {
-            // border: 1px solid hsl(271, 76%, 20%);
             border: 1px solid hsl(271, 76%, 50%);
+            background: hsl(271, 76%, 50%);
             border-radius: 0.5em;
+            a {
+              color: hsl(60, 100%, 80%);
+            }
+
             &:hover {
-              background: rgb(131, 31, 224);
+              // background: rgb(131, 31, 224);
+              // background: hsl(60, 100%, 80%);
+              background: transparent;
               a {
                 color: hsl(60, 100%, 80%);
+                color: rgb(131, 31, 224);
               }
             }
           }
