@@ -258,7 +258,7 @@ body {
 
 .main-section header.main-section__header .header__inner-container .title-content-wrapper {
   position: absolute;
-  top: 0.5em;
+  top: 0.1em;
   left: 0.5em;
   cursor: default;
 }
@@ -266,8 +266,8 @@ body {
 .main-section header.main-section__header .header__inner-container .title-content-wrapper .title-name {
   font-size: 2rem;
   color: #340c5a;
-  -webkit-filter: drop-shadow(0px 4px 4px #340c5a);
-          filter: drop-shadow(0px 4px 4px #340c5a);
+  -webkit-filter: drop-shadow(0px 1px 1px #340c5a);
+          filter: drop-shadow(0px 1px 1px #340c5a);
 }
 
 .main-section header.main-section__header .header__inner-container .title-content-wrapper h1 {
