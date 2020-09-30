@@ -529,7 +529,7 @@ body {
   font-size: clamp(1rem, 2.5vw, 1.8rem);
   width: 25em;
   bottom: 50%;
-  right: 5em;
+  right: 3em;
   color: #ffff99;
   text-shadow: 1px 1px #000;
 }
@@ -622,61 +622,6 @@ body {
 
 #about-section .about-container .about-info span {
   font-weight: 500;
-}
-
-#about-section .about-container .about-info .about-me {
-  display: block;
-  padding: 3em 2em;
-  text-align: center;
-  border-radius: 1rem;
-}
-
-#about-section .about-container .about-info .about-me .about-me__headline {
-  padding-bottom: 2em;
-  max-width: 700px;
-  font-size: 1.4rem;
-  text-align: center;
-  margin: 0 auto;
-}
-
-#about-section .about-container .about-info .about-me .about-me__headline .sub-headline {
-  padding-top: 1em;
-  font-weight: 500;
-}
-
-#about-section .about-container .about-info .about-me .about-me__job {
-  padding: 20px;
-  width: 90%;
-  border: 1px solid blueviolet;
-  border-radius: 20px;
-  margin: 0 auto;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
-  font-size: 1.2rem;
-  background: #fafafa;
-}
-
-#about-section .about-container .about-info .about-me .about-me__job a {
-  text-decoration: none;
-}
-
-#about-section .about-container .about-info .about-me .about-me__job a p {
-  margin: 0 auto;
-  max-width: 400px;
-  color: blueviolet;
-}
-
-#about-section .about-container .about-info .about-me .about-me__job:hover {
-  background-color: blueviolet;
-}
-
-#about-section .about-container .about-info .about-me .about-me__job:hover p {
-  color: #fff;
-}
-
-#about-section .about-container .about-info .about-me .about-me__job:focus {
-  outline: 1.45px dashed;
-  outline-color: #ffff99;
 }
 
 #about-section .about-container .about-info .about-me__skills h3 {
@@ -775,6 +720,41 @@ body {
   max-width: 800px;
   width: 90%;
   margin: 0 auto;
+}
+
+#about-section .about-container .about-info .about-me__job {
+  padding: 20px;
+  width: 90%;
+  border: 1px solid blueviolet;
+  border-radius: 20px;
+  margin: 0 auto;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 1.2rem;
+  background: #fafafa;
+}
+
+#about-section .about-container .about-info .about-me__job a {
+  text-decoration: none;
+}
+
+#about-section .about-container .about-info .about-me__job a p {
+  margin: 0 auto;
+  max-width: 400px;
+  color: blueviolet;
+}
+
+#about-section .about-container .about-info .about-me__job:hover {
+  background-color: blueviolet;
+}
+
+#about-section .about-container .about-info .about-me__job:hover p {
+  color: #fff;
+}
+
+#about-section .about-container .about-info .about-me__job:focus {
+  outline: 1.45px dashed;
+  outline-color: #ffff99;
 }
 
 #about-section .about-container .about-info .about-me__quote {

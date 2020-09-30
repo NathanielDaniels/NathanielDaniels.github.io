@@ -125,18 +125,29 @@ smileyFace();
 // speechBubble();
 
 //! Hamburger Nav Menu Animation! (JQuery) ======================
+//? Change this back to vanilla JS.
+
+function hamburgerAnimation2() {
+  const menu = document.querySelector(".burger-elements");
+
+  menu.addEventListener("click", () => {
+    const navMenu = document.querySelector("#mobile-nav-menu");
+    navMenu.classList.toggle("active");
+  });
+}
+// hamburgerAnimation2();
 
 function hamburgerAnimation() {
   $menu = $(".burger-elements");
 
   $menu.click(function () {
-    $("#nav-menu").toggleClass("active");
+    $("#mobile-nav-menu").toggleClass("active");
     $(this).toggleClass("close");
   });
 
   //! Close btn SideBar Nav Menu (JQuery)
-  $("#nav-menu ul li a").click(function () {
-    $("#nav-menu").removeClass("active");
+  $("#mobile-nav-menu ul li a").click(function () {
+    $("#mobile-nav-menu").removeClass("active");
     $menu.removeClass("close");
   });
 }
