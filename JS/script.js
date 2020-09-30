@@ -145,11 +145,11 @@ hamburgerAnimation();
 
 function greetingLoop() {
   const text = [
-    "Web Designer",
-    "Freelancer",
-    "Problem Solver",
-    "Web Enthusiast",
-    "Front-End Developer",
+    "web designer",
+    "freelancer",
+    "problem solver",
+    "web enthusiast",
+    "web developer",
   ];
   let counter = 0;
   const elem = $("#greeting");

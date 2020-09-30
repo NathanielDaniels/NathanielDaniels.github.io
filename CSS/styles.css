@@ -126,7 +126,7 @@ body {
 .main-section .sidebar-section {
   z-index: 100;
   position: absolute;
-  bottom: 12em;
+  bottom: 50%;
   right: 1em;
   background: transparent;
 }
@@ -271,7 +271,16 @@ body {
 }
 
 .main-section header.main-section__header .header__inner-container .title-content-wrapper h1 {
+  width: 10em;
   display: none;
+  position: absolute;
+  top: 0.4em;
+  left: 0.2em;
+  font-size: 1.8rem;
+  color: #6918b4;
+  text-shadow: 0px 0.1px #ffff99;
+  -webkit-filter: drop-shadow(0px 1px 1px #340c5a);
+          filter: drop-shadow(0px 1px 1px #340c5a);
 }
 
 .main-section header.main-section__header .header__inner-container .header__nav-links {
@@ -513,11 +522,13 @@ body {
 }
 
 .main-section .main-content {
+  padding-right: 1em;
+  border-right: 5px solid rgba(52, 12, 90, 0.63);
   text-align: right;
   position: absolute;
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 2.5vw, 1.8rem);
   width: 50%;
-  top: 10em;
+  bottom: 50%;
   right: 5em;
   color: #ffff99;
   text-shadow: 1px 1px #000;
@@ -1182,9 +1193,6 @@ body {
   section.main-section {
     height: 115vh;
   }
-  section.main-section .sidebar-section {
-    bottom: 7em !important;
-  }
   .about#about-section .about-container h2.about-title {
     padding: 0.5em 0 0;
   }
@@ -1238,14 +1246,13 @@ body {
   .main-section .smiley-face {
     display: none;
   }
-  .main-content .content-wrapper h1 {
+  .header__inner-container .title-content-wrapper .title-name {
+    display: none;
+  }
+  .header__inner-container .title-content-wrapper h1 {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
-    font-size: 60px !important;
-  }
-  .main-content .content-wrapper .title-name {
-    display: none;
   }
   .about#about-section .about__container {
     padding-top: 50px !important;
@@ -1265,21 +1272,11 @@ body {
   section.main-section {
     height: 110vh !important;
   }
-  section.main-section .sidebar-section {
-    bottom: 10em !important;
-  }
   section.main-section .main-section__header .header__inner-container .header__nav-links {
     display: none !important;
   }
   section.main-section .main-section__header .burger-menu button.burger-container {
     display: block !important;
-  }
-  section.main-section .main-content .content-wrapper h1 {
-    font-size: 2.8rem !important;
-  }
-  section.main-section .main-content .greeting-loop {
-    top: 0px !important;
-    font-size: 30px !important;
   }
   .about#about-section .about-container .about-info {
     width: 98% !important;
@@ -1325,13 +1322,6 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-  .main-content .content-wrapper h1 {
-    font-size: 2.5rem !important;
-  }
-  .main-content .greeting-loop {
-    font-size: 24px !important;
-    width: 380px !important;
-  }
   .about#about-section .about p.about__top {
     font-size: 18px !important;
     width: 95% !important;
