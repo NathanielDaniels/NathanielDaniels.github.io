@@ -157,7 +157,7 @@ hamburgerAnimation();
 function greetingLoop() {
   const text = [
     "web designer",
-    "freelancer",
+    // "freelancer",
     "problem solver",
     "web enthusiast",
     "web developer",

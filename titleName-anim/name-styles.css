@@ -95,7 +95,7 @@ svg#logo {
     fill: transparent;
   }
   to {
-    /* fill: hsl(60, 100%, 80%); */
-    fill: hsl(271, 76%, 40%);
+    fill: hsl(60, 100%, 80%);
+    /* fill: hsl(271, 76%, 40%); */
   }
 }
