@@ -123,33 +123,6 @@ body {
   background: linear-gradient(120deg, #990be6 1%, #4c0571 50%);
 }
 
-.main-section .sidebar-section {
-  z-index: 100;
-  position: absolute;
-  bottom: 50%;
-  right: 1em;
-  background: transparent;
-}
-
-.main-section .sidebar-section .sidebar__social-media {
-  list-style: none;
-  cursor: pointer;
-}
-
-.main-section .sidebar-section .sidebar__social-media a {
-  color: blueviolet;
-  text-shadow: 0px 1px 1px #22083a;
-}
-
-.main-section .sidebar-section .sidebar__social-media a:hover, .main-section .sidebar-section .sidebar__social-media a:focus {
-  text-shadow: 0px 2px 2px #22083a;
-}
-
-.main-section .sidebar-section .sidebar__social-media a .fab {
-  margin: 0.25rem 0;
-  font-size: 40px;
-}
-
 .main-section .smiley-face {
   -webkit-clip-path: polygon(14% 0, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 14% 99%, 14% 78%, 14% 21%);
           clip-path: polygon(14% 0, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 14% 99%, 14% 78%, 14% 21%);
@@ -516,22 +489,64 @@ body {
   top: 0;
 }
 
-.main-section .main-content {
+.main-section .main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-section .main-container .main-content {
   padding-right: 2em;
-  border-right: 5px solid rgba(52, 12, 90, 0.63);
+  border-right: 10px solid rgba(168, 106, 226, 0.4);
   text-align: right;
   position: absolute;
-  font-size: clamp(1rem, 2.5vw, 1.8rem);
-  width: 26em;
+  width: 40em;
+  max-width: 85%;
   text-transform: capitalize;
   bottom: 50%;
   right: 4em;
-  color: #ffff99;
   text-shadow: 1px 1px #000;
 }
 
-.main-section .main-container {
+.main-section .main-container .main-content .main-content__greeting {
+  color: #ffff99;
+  font-size: clamp(2rem, 2.5vw, 5rem);
+  width: 100%;
+}
+
+.main-section .main-container .main-content .main-content__greeting .greeting-loop:after {
+  content: "";
   position: absolute;
+  top: 37px;
+  right: 44%;
+  z-index: -1;
+  width: 39%;
+  height: 10px;
+  background: rgba(168, 106, 226, 0.4);
+}
+
+.main-section .main-container .sidebar-social {
+  z-index: 100;
+  background: #ffff99;
+}
+
+.main-section .main-container .sidebar-social .sidebar__social-media {
+  list-style: none;
+  cursor: pointer;
+}
+
+.main-section .main-container .sidebar-social .sidebar__social-media a {
+  color: #a86ae2;
+  text-shadow: 0px 1px 1px #22083a;
+}
+
+.main-section .main-container .sidebar-social .sidebar__social-media a:hover, .main-section .main-container .sidebar-social .sidebar__social-media a:focus {
+  text-shadow: 0px 2px 2px #22083a;
+}
+
+.main-section .main-container .sidebar-social .sidebar__social-media a .fab {
+  margin: 0.25rem 0;
+  font-size: 40px;
 }
 
 #about-section {
