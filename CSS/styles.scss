@@ -577,7 +577,6 @@ body {
   }
   .main-container {
     display: flex;
-    // flex-direction: column;
     .main-content {
       padding-right: 2em;
       // padding: 1em 2em 1em 0;
@@ -594,11 +593,6 @@ body {
       right: 4em;
       text-shadow: 1px 1px #000;
       // font-size: clamp(1rem, 2.5vw, 1.8rem);
-
-      // .content-start {
-      //   position: absolute;
-      //   left: 0em;
-      // }
       .main-content__greeting {
         color: hsl(60, 100%, 80%);
         // font-size: 2.5em;
@@ -626,11 +620,17 @@ body {
     //? Side Social Media Links
     .sidebar-social {
       z-index: 100;
+
       // position: absolute;
       // bottom: 50%;
       // right: 1em;
       background: transparent;
       .sidebar__social-media {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        // flex-direction: row;
+
         list-style: none;
         cursor: pointer;
         a {
@@ -642,7 +642,7 @@ body {
             text-shadow: 0px 2px 2px hsl(271, 76%, 13%);
           }
           .fab {
-            margin: 0.25rem 0;
+            // margin: 0.25rem 0;
             font-size: 40px;
           }
         }
@@ -658,44 +658,6 @@ body {
       // }
     }
   }
-
-  // .main-container {
-  //   // display: none;
-  //   position: absolute;
-  //   .content-wrapper {
-  //     position: absolute;
-  //     // top: -80px;
-  //     top: 0;
-  //     left: 0;
-  //     cursor: default;
-  //     .title-name {
-  //       z-index: 10;
-  //       font-size: 5rem;
-  //       // color: hsl(60, 100%, 80%);
-  //       color: hsl(271, 76%, 20%);
-  //       filter: drop-shadow(0px 4px 4px hsl(271, 76%, 20%));
-  //     }
-  //     h1 {
-  //       display: none;
-  //       z-index: 10;
-  //       font-size: 80px;
-  //       color: hsl(60, 100%, 80%);
-  //       color: hsl(271, 76%, 20%);
-  //       filter: drop-shadow(0px 4px 4px hsl(271, 76%, 20%));
-  //     }
-  //   }
-
-  //   .greeting-loop {
-  //     position: absolute;
-  //     top: 50%;
-  //     left: 50%;
-  //     width: 30rem;
-  //     transform: translate(-50%, -50%);
-  //     color: #fff;
-  //     font-size: 2.5rem;
-  //     text-align: center;
-  //   }
-  // }
 }
 
 //! ABOUT Section =================================

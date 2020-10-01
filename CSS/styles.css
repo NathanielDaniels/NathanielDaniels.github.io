@@ -527,10 +527,18 @@ body {
 
 .main-section .main-container .sidebar-social {
   z-index: 100;
-  background: #ffff99;
+  background: transparent;
 }
 
 .main-section .main-container .sidebar-social .sidebar__social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
   list-style: none;
   cursor: pointer;
 }
@@ -545,7 +553,6 @@ body {
 }
 
 .main-section .main-container .sidebar-social .sidebar__social-media a .fab {
-  margin: 0.25rem 0;
   font-size: 40px;
 }
 
