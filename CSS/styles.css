@@ -505,7 +505,7 @@ body {
 }
 
 .main-section .main-container .main-container__content {
-  padding-right: 2em;
+  padding-right: 1em;
   border-right: 10px solid rgba(168, 106, 226, 0.4);
   text-align: right;
   width: 48em;
@@ -723,7 +723,7 @@ body {
 
 #about-section .about-container .about-info .about-me__skills .skills-icons ul li {
   width: 6em;
-  margin: 1em 0;
+  padding: 1em 0;
   list-style: none;
   display: inherit;
   -webkit-box-orient: vertical;
@@ -782,19 +782,20 @@ body {
 #about-section .about-container .about-info .skills-description {
   max-width: 800px;
   width: 90%;
-  margin: 0 auto;
+  margin: 2em auto;
 }
 
 #about-section .about-container .about-info .about-me__job {
   padding: 20px;
-  width: 90%;
+  width: 80%;
   border: 1px solid blueviolet;
   border-radius: 20px;
-  margin: 0 auto;
+  margin: 2em auto 0;
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
   font-size: 1.2rem;
   background: #fafafa;
+  text-align: center;
 }
 
 #about-section .about-container .about-info .about-me__job a {
@@ -1208,7 +1209,6 @@ body {
             transform: translate(0, 0);
   }
   .about#about-section .about-container .about-info .skills-icons ul {
-    padding: 2em 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1287,6 +1287,12 @@ body {
   .main-section .smiley-face {
     display: none;
   }
+  .main-section__header .header__inner-container .header__nav-links {
+    display: none !important;
+  }
+  .main-section__header .mobile-burger-menu button.mobile-burger-menu__container {
+    display: block !important;
+  }
   .header__inner-container .title-content-wrapper .title-name {
     display: none;
   }
@@ -1324,9 +1330,6 @@ body {
   .about#about-section .about__container {
     padding-top: 50px !important;
   }
-  .about#about-section .about-me {
-    padding: 3em 1em !important;
-  }
   .about#about-section .about__top {
     width: 100%;
   }
@@ -1338,12 +1341,6 @@ body {
 @media screen and (max-width: 600px) {
   section.main-section {
     height: 110vh !important;
-  }
-  section.main-section .main-section__header .header__inner-container .header__nav-links {
-    display: none !important;
-  }
-  section.main-section .main-section__header .mobile-burger-menu button.mobile-burger-menu__container {
-    display: block !important;
   }
   .about#about-section .about-container .about-info {
     width: 98% !important;

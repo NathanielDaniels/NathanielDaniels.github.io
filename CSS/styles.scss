@@ -559,7 +559,7 @@ body {
     justify-content: flex-end;
     padding: 1em;
     .main-container__content {
-      padding-right: 2em;
+      padding-right: 1em;
       border-right: 10px solid hsla(271, 67%, 65%, 0.4);
       // border-radius: 50%;
       text-align: right;
@@ -604,6 +604,7 @@ body {
         margin-top: 1em;
         border: 1px solid hsl(271, 76%, 50%);
         background: hsl(271, 76%, 50%);
+        // background: hsl(271, 67%, 65%);
         border-radius: 0.5em;
         color: hsl(60, 100%, 80%);
         transition: background 0.3s ease-in-out;
@@ -628,6 +629,8 @@ body {
         cursor: pointer;
         a {
           color: hsl(271, 67%, 65%);
+          // color: hsl(271, 76%, 50%);
+
           text-shadow: 0px 1px 1px hsl(271, 76%, 13%);
           transition: color 0.3s ease-in-out;
           &:hover,
@@ -775,7 +778,7 @@ body {
             justify-content: center;
             li {
               width: 6em;
-              margin: 1em 0;
+              padding: 1em 0;
               list-style: none;
               display: inherit;
               flex-direction: column;
@@ -818,18 +821,18 @@ body {
       .skills-description {
         max-width: 800px;
         width: 90%;
-        margin: 0 auto;
+        margin: 2em auto;
       }
       .about-me__job {
         padding: 20px;
-        width: 90%;
+        width: 80%;
         border: 1px solid blueviolet;
         border-radius: 20px;
-        margin: 0 auto;
+        margin: 2em auto 0;
         transition: background-color 0.3s ease-in-out;
         font-size: 1.2rem;
         background: rgb(250, 250, 250);
-
+        text-align: center;
         a {
           text-decoration: none;
           p {
@@ -1186,7 +1189,7 @@ body {
           top: 0;
           transform: translate(0, 0);
           ul {
-            padding: 2em 0;
+            // padding: 2em 0;
             flex-direction: row;
             align-items: center;
             justify-content: space-evenly;
@@ -1246,6 +1249,7 @@ body {
       // }
     }
   }
+
   section#projects-section {
     .projects {
       top: -3em !important;
@@ -1281,6 +1285,7 @@ body {
       }
     }
   }
+
   section#contact-section {
     padding-top: 6em;
   }
@@ -1292,6 +1297,19 @@ body {
       display: none;
     }
   }
+  .main-section__header {
+    .header__inner-container {
+      .header__nav-links {
+        display: none !important;
+      }
+    }
+    .mobile-burger-menu {
+      button.mobile-burger-menu__container {
+        display: block !important;
+      }
+    }
+  }
+
   .header__inner-container {
     .title-content-wrapper {
       .title-name {
@@ -1326,6 +1344,7 @@ body {
         // }
       }
     }
+
     .main-container__sidebar-social {
       margin: 1em 0 !important;
       justify-content: flex-end;
@@ -1353,7 +1372,7 @@ body {
       padding-top: 50px !important;
     }
     .about-me {
-      padding: 3em 1em !important;
+      // padding: 3em 1em !important;
     }
 
     .about__top {
@@ -1378,18 +1397,18 @@ body {
     // .sidebar-social {
     //   bottom: 10em !important;
     // }
-    .main-section__header {
-      .header__inner-container {
-        .header__nav-links {
-          display: none !important;
-        }
-      }
-      .mobile-burger-menu {
-        button.mobile-burger-menu__container {
-          display: block !important;
-        }
-      }
-    }
+    // .main-section__header {
+    //   .header__inner-container {
+    //     .header__nav-links {
+    //       display: none !important;
+    //     }
+    //   }
+    //   .mobile-burger-menu {
+    //     button.mobile-burger-menu__container {
+    //       display: block !important;
+    //     }
+    //   }
+    // }
     .main-content {
       .content-wrapper {
         // h1 {
