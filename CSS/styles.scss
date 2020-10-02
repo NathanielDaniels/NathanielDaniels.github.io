@@ -232,7 +232,7 @@ body {
     // left: 8%;
 
     // left: -14em; //? without background image
-    left: -24em;
+    left: -25em;
 
     top: 12em;
     width: 100%;
@@ -384,6 +384,8 @@ body {
             border: 1px solid hsl(271, 76%, 50%);
             background: hsl(271, 76%, 50%);
             border-radius: 0.5em;
+            transition: background 0.3s ease-in-out;
+
             a {
               color: hsl(60, 100%, 80%);
             }
@@ -552,14 +554,12 @@ body {
     max-width: 100%;
     padding: 1em 0;
     display: flex;
-    margin-top: -7em;
+    margin-top: -5em;
     // transform: translate(0, -20%); //same as top
     justify-content: flex-end;
     padding: 1em;
-    // align-items: flex-start;
     .main-container__content {
       padding-right: 2em;
-      // margin-right: 1em;
       border-right: 10px solid hsla(271, 67%, 65%, 0.4);
       // border-radius: 50%;
       text-align: right;
@@ -569,26 +569,27 @@ body {
       text-shadow: 1px 1px #000;
       // font-size: clamp(1rem, 2.5vw, 1.8rem);
       .main-content__greeting {
+        position: relative;
         color: hsl(60, 100%, 80%);
         // font-size: 2.5em;
         font-size: clamp(2rem, 2.5vw, 5rem);
-        // width: 100%;
-        // .greeting-loop {
-        //   &:after {
-        //     content: "";
-        //     position: absolute;
-        //     top: 37px;
-        //     right: 44%;
-        //     z-index: -1;
-        //     width: 39%;
-        //     height: 10px;
-        //     background: hsla(271, 67%, 65%, 0.4);
-        //     // border-radius: 50px;
-        //   }
-        // }
+        .greeting-loop {
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0.8em;
+            right: 37%;
+            z-index: -1;
+            width: 45%;
+            height: 10px;
+            background: hsla(271, 67%, 65%, 0.4);
+            // border-radius: 50px;
+          }
+        }
       }
 
       .main-content__CTA {
+        margin-top: 0.5em;
         font-size: clamp(1rem, 2.5vw, 1.4rem);
         width: 60%;
         float: right;
@@ -596,17 +597,18 @@ body {
         // line-height: 1.5rem;
       }
       .cta-btn {
+        text-transform: uppercase;
         display: inline-block;
         text-decoration: none;
-        padding: 0.5em;
-        margin-top: 0.5em;
+        padding: 0.5em 1em;
+        margin-top: 1em;
         border: 1px solid hsl(271, 76%, 50%);
         background: hsl(271, 76%, 50%);
         border-radius: 0.5em;
         color: hsl(60, 100%, 80%);
+        transition: background 0.3s ease-in-out;
         &:hover {
           background: transparent;
-          // color: hsl(60, 100%, 80%);
         }
       }
     }
@@ -627,6 +629,7 @@ body {
         a {
           color: hsl(271, 67%, 65%);
           text-shadow: 0px 1px 1px hsl(271, 76%, 13%);
+          transition: color 0.3s ease-in-out;
           &:hover,
           &:focus {
             text-shadow: 0px 2px 2px hsl(271, 76%, 13%);
@@ -647,7 +650,6 @@ body {
   display: block;
   .about-container {
     position: relative;
-
     @include angle(both);
     display: block;
     z-index: 5;
@@ -1306,18 +1308,31 @@ body {
   }
   .main-container {
     flex-direction: column !important;
+    // justify-content: space-between;
     .main-container__content {
+      padding-right: 0em !important;
+      border-right: 0 !important;
       // margin: 0 !important;
       // padding: 0 !important
-      right: 0 !important;
+      max-width: 100% !important;
+      // width: 20em;
+      // width: 100% !important;
+      // margin-left: 5em;
+      .main-content__CTA {
+        width: 75% !important;
+        // margin-top: 1em;
+        // .cta-btn {
+        //   margin-top: 1em;
+        // }
+      }
     }
     .main-container__sidebar-social {
-      margin: 1em !important;
-
+      margin: 1em 0 !important;
+      justify-content: flex-end;
       .sidebar__social-media {
         // display: flex;
         flex-direction: row !important;
-        float: right;
+        // float: right;
       }
     }
   }

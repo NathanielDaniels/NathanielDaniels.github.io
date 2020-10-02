@@ -128,7 +128,7 @@ body {
           clip-path: polygon(14% 0, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 14% 99%, 14% 78%, 14% 21%);
   z-index: 1;
   position: relative;
-  left: -24em;
+  left: -25em;
   top: 12em;
   width: 100%;
   max-width: 300px;
@@ -272,6 +272,8 @@ body {
   border: 1px solid #831fe0;
   background: #831fe0;
   border-radius: 0.5em;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
 .main-section .main-section__header .header__inner-container .header__nav-links li:nth-child(2) a {
@@ -495,7 +497,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: -7em;
+  margin-top: -5em;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -513,11 +515,24 @@ body {
 }
 
 .main-section .main-container .main-container__content .main-content__greeting {
+  position: relative;
   color: #ffff99;
   font-size: clamp(2rem, 2.5vw, 5rem);
 }
 
+.main-section .main-container .main-container__content .main-content__greeting .greeting-loop:after {
+  content: "";
+  position: absolute;
+  top: 0.8em;
+  right: 37%;
+  z-index: -1;
+  width: 45%;
+  height: 10px;
+  background: rgba(168, 106, 226, 0.4);
+}
+
 .main-section .main-container .main-container__content .main-content__CTA {
+  margin-top: 0.5em;
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   width: 60%;
   float: right;
@@ -525,14 +540,17 @@ body {
 }
 
 .main-section .main-container .main-container__content .cta-btn {
+  text-transform: uppercase;
   display: inline-block;
   text-decoration: none;
-  padding: 0.5em;
-  margin-top: 0.5em;
+  padding: 0.5em 1em;
+  margin-top: 1em;
   border: 1px solid #831fe0;
   background: #831fe0;
   border-radius: 0.5em;
   color: #ffff99;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
 .main-section .main-container .main-container__content .cta-btn:hover {
@@ -570,6 +588,8 @@ body {
 .main-section .main-container .main-container__sidebar-social .sidebar__social-media a {
   color: #a86ae2;
   text-shadow: 0px 1px 1px #22083a;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .main-section .main-container .main-container__sidebar-social .sidebar__social-media a:hover, .main-section .main-container .main-container__sidebar-social .sidebar__social-media a:focus {
@@ -1282,17 +1302,24 @@ body {
             flex-direction: column !important;
   }
   .main-container .main-container__content {
-    right: 0 !important;
+    padding-right: 0em !important;
+    border-right: 0 !important;
+    max-width: 100% !important;
+  }
+  .main-container .main-container__content .main-content__CTA {
+    width: 75% !important;
   }
   .main-container .main-container__sidebar-social {
-    margin: 1em !important;
+    margin: 1em 0 !important;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .main-container .main-container__sidebar-social .sidebar__social-media {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
             flex-direction: row !important;
-    float: right;
   }
   .about#about-section .about__container {
     padding-top: 50px !important;
