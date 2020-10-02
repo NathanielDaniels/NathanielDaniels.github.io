@@ -492,6 +492,7 @@ body {
     }
 
     #mobile-nav-menu {
+      z-index: 1000;
       width: 100%;
       height: 100vh;
       background: hsl(271, 76%, 20%);
@@ -612,11 +613,8 @@ body {
     //? Side Social Media Links
     .main-container__sidebar-social {
       display: flex;
-      z-index: 100;
+      z-index: 1;
       margin-left: 1em;
-      // position: absolute;
-      // bottom: 50%;
-      // right: 1em;
       background: transparent;
       .sidebar__social-media {
         display: flex;
@@ -628,7 +626,6 @@ body {
         cursor: pointer;
         a {
           color: hsl(271, 67%, 65%);
-          // color:  hsl(60, 100%, 80%);
           text-shadow: 0px 1px 1px hsl(271, 76%, 13%);
           &:hover,
           &:focus {
@@ -641,15 +638,6 @@ body {
           }
         }
       }
-      // .web-dev {
-      //   // color: hsl(271, 76%, 75%);
-      //   font-weight: 500;
-      //   font-size: 18px;
-      //   position: absolute;
-      //   right: 0;
-      //   padding-right: 10px;
-      //   cursor: default;
-      // }
     }
   }
 }
