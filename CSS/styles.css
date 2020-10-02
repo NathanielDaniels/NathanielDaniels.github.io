@@ -222,7 +222,7 @@ body {
 .main-section .main-section__header .header__inner-container .title-content-wrapper {
   position: absolute;
   top: 0.4em;
-  left: 0.5em;
+  left: 0.8em;
   cursor: default;
 }
 
@@ -517,7 +517,7 @@ body {
 .main-section .main-container .main-container__content .main-content__greeting {
   position: relative;
   color: #ffff99;
-  font-size: clamp(2rem, 2.5vw, 5rem);
+  font-size: clamp(1.8rem, 2.5vw, 5rem);
 }
 
 .main-section .main-container .main-container__content .main-content__greeting .greeting-loop:after {
