@@ -26,7 +26,6 @@
     </div>
 
     <!--! MAIN Section (Hero) -->
-    <!-- <section class="main-container"></section> -->
     <section class="main-section">
       <!--? Sidebar Section -->
       <!-- <aside class="sidebar-social sidebar">
@@ -80,9 +79,9 @@
             <li><a href="#contact-section">Get In Touch</a></li>
           </ul>
         </div>
-        <div class="burger-menu">
-          <button class="burger-container">
-            <div class="burger-elements">
+        <div class="mobile-burger-menu">
+          <button class="mobile-burger-menu__container">
+            <div class="mobile-burger-menu__elements">
               <span class="line line01" role="Side Menu button"></span>
               <span class="line line02" role="Side Menu button"></span>
               <span class="line line03" role="Side Menu button"></span>
@@ -98,19 +97,19 @@
           </ul>
         </div>
       </header>
-      <section class="main-container">
-        <div class="main-content">
+      <div class="main-container">
+        <div class="main-container__content">
           <h2 class="main-content__greeting">
             <!-- <span class="content-start">Your local premier</span><br /> -->
             <span id="greeting" class="greeting-loop">web developer</span>
             who loves building high quality websites from scratch.
           </h2>
-          <p class="main-content__CTA">
-            Have a idea or project you want to get off the ground?
-            <a href="#">Let's chat.</a>
-          </p>
+          <div class="main-content__CTA">
+            <p>Have a idea or project you want to get off the ground?</p>
+            <a class="cta-btn" href="#">Let's chat.</a>
+          </div>
         </div>
-        <aside class="sidebar-social sidebar">
+        <aside class="main-container__sidebar-social sidebar">
           <ul class="sidebar__social-media">
             <li>
               <a
@@ -141,7 +140,7 @@
             </li>
           </ul>
         </aside>
-      </section>
+      </div>
     </section>
     <!--!  ABOUT Section -->
     <section id="about-section" class="about">

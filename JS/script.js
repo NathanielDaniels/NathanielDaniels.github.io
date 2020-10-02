@@ -128,7 +128,7 @@ smileyFace();
 //? Change this back to vanilla JS.
 
 function hamburgerAnimation2() {
-  const menu = document.querySelector(".burger-elements");
+  const menu = document.querySelector(".mobile-burger-menu__elements");
 
   menu.addEventListener("click", () => {
     const navMenu = document.querySelector("#mobile-nav-menu");
@@ -138,7 +138,7 @@ function hamburgerAnimation2() {
 // hamburgerAnimation2();
 
 function hamburgerAnimation() {
-  $menu = $(".burger-elements");
+  $menu = $(".mobile-burger-menu__elements");
 
   $menu.click(function () {
     $("#mobile-nav-menu").toggleClass("active");
