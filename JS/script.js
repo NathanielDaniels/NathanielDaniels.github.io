@@ -125,7 +125,7 @@ smileyFace();
 // speechBubble();
 
 //! Hamburger Nav Menu Animation! (JQuery) ======================
-//? Change this back to vanilla JS.
+//? Change this back to vanilla JS (hamburgerAnimation2).
 
 function hamburgerAnimation2() {
   const menu = document.querySelector(".mobile-burger-menu__elements");
@@ -523,7 +523,7 @@ boxSize();
 //   });
 // }
 
-//! Contact form Label Animation =================
+//! Contact form Label Animation (to legend) =================
 
 function animateLabel() {
   $("input").on("focus", function () {
@@ -565,8 +565,8 @@ function submitForm() {
     <div class="form-update-container" >
       <div class="form-update-info" >
         <h2>Thanks, ${userName}.</h2>
-        <p>Form Test: Successful. <br/>Unfortunately nothing has been sent at this time.</p>
-        <p>You can reach me on <a
+        <p>Form Test: Successful. <br/>Unfortunately, nothing has been sent at this time.</p>
+        <p>You can contact me on <a
             target="_blank"
             rel="noreferrer"
             title="LinkedIn"
