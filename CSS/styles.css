@@ -505,8 +505,6 @@ body {
   padding-right: 1em;
   border-right: 10px solid rgba(168, 106, 226, 0.4);
   text-align: right;
-  width: 50em;
-  max-width: 100%;
   text-transform: capitalize;
   text-shadow: 1px 1px #000;
 }
@@ -514,24 +512,30 @@ body {
 .main-section .main-container .main-container__content .main-content__greeting {
   position: relative;
   color: #ffff99;
-  font-size: clamp(1.9rem, 2.3vw, 2.5rem);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  width: 75%;
+  margin-left: auto;
+}
+
+.main-section .main-container .main-container__content .main-content__greeting .greeting-loop {
+  position: relative;
+  color: #fff;
 }
 
 .main-section .main-container .main-container__content .main-content__greeting .greeting-loop:after {
   content: "";
   position: absolute;
   top: 0.8em;
-  right: clamp(11em, 2.5vw, 100em);
+  left: 10%;
   z-index: -1;
-  width: clamp(16rem, 2.5vw, 1rem);
+  width: 18rem;
   height: 10px;
   background: rgba(168, 106, 226, 0.4);
 }
 
 .main-section .main-container .main-container__content .main-content__CTA {
   margin-top: 0.5em;
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
-  width: 60%;
+  font-size: clamp(1rem, 3vw, 1.3rem);
   float: right;
   color: #fff;
 }
@@ -1200,8 +1204,9 @@ body {
   section.main-section .smiley-face {
     left: -40.5%;
   }
-  section.main-section .main-container__content {
-    width: 45em !important;
+  section.main-section .main-container .main-container__content .main-content__greeting .greeting-loop:after {
+    width: 12rem !important;
+    left: 14% !important;
   }
   .about#about-section .about-container h2.about-title {
     padding: 0.5em 0 0;
@@ -1322,11 +1327,11 @@ body {
   .main-container .main-container__content {
     padding-right: 0em !important;
     border-right: 0 !important;
-    max-width: 80% !important;
     margin-left: auto;
   }
-  .main-container .main-container__content .main-content__CTA {
-    width: 75% !important;
+  .main-container .main-container__content .main-content__greeting {
+    font-size: 1.6rem !important;
+    width: 100% !important;
   }
   .main-container .main-container__sidebar-social {
     margin: 1em 0 !important;
@@ -1352,9 +1357,6 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  section.main-section {
-    height: 110vh !important;
-  }
   .about#about-section .about-container .about-info {
     width: 98% !important;
   }
