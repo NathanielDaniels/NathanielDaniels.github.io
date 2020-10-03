@@ -156,42 +156,6 @@ body {
   }
 }
 
-// //! Sidebar Section ================================
-// //? Side Social Media Links
-//! Moved into main section for now
-// .sidebar-social {
-//   z-index: 100;
-//   position: absolute;
-//   bottom: 1em;
-//   right: 1em;
-//   background: transparent;
-//   .sidebar__social-media {
-//     list-style: none;
-//     cursor: pointer;
-//     a {
-//       color: blueviolet;
-//       text-shadow: 0px 1px 1px hsl(271, 76%, 13%);
-//       &:hover,
-//       &:focus {
-//         text-shadow: 0px 2px 2px hsl(271, 76%, 13%);
-//       }
-//       .fab {
-//         margin: 0.25rem 0;
-//         font-size: 40px;
-//       }
-//     }
-//   }
-//   .web-dev {
-//     // color: hsl(271, 76%, 75%);
-//     font-weight: 500;
-//     font-size: 18px;
-//     position: absolute;
-//     right: 0;
-//     padding-right: 10px;
-//     cursor: default;
-//   }
-// }
-
 //! MAIN Section (Hero) ===========================
 .main-section {
   position: relative;
@@ -576,7 +540,7 @@ body {
             content: "";
             position: absolute;
             top: 0.8em;
-            left: 10%;
+            right: -0.1em;
             z-index: -1;
             width: 18rem;
             // width: clamp(14rem, 2.5vw, 18rem);
@@ -1160,20 +1124,15 @@ body {
 @media screen and (max-width: 1200px) {
   section.main-section {
     .smiley-face {
-      // top: 12.5em;
-      // left: 6em;
       left: -40.5%;
-    }
-    .main-container__content {
-      // width: 45em !important;
     }
     .main-container {
       .main-container__content {
+        //   // width: 45em !important;
         .main-content__greeting {
           .greeting-loop {
             &:after {
-              width: 12rem !important;
-              left: 14% !important;
+              width: 14rem !important;
             }
           }
         }
@@ -1210,7 +1169,6 @@ body {
           top: 0;
           transform: translate(0, 0);
           ul {
-            // padding: 2em 0;
             flex-direction: row;
             align-items: center;
             justify-content: space-evenly;
@@ -1345,10 +1303,6 @@ body {
       }
       h1 {
         display: flex !important;
-        // font-size: 1.8rem !important;
-        // position: absolute;
-        // top: 1em !important;
-        // left: 1em !important;
       }
     }
   }
@@ -1363,7 +1317,6 @@ body {
         font-size: 1.6rem !important;
         width: 100% !important;
       }
-
       // .main-content__CTA {
       //   width: 75% !important;
       //   width: clamp(55%, 2.5em, 75%) !important;
@@ -1378,41 +1331,23 @@ body {
       margin: 1em 0 !important;
       justify-content: flex-end;
       .sidebar__social-media {
-        // display: flex;
         flex-direction: row !important;
-        // float: right;
       }
     }
   }
-
-  // .main-content {
-  //   .content-wrapper {
-  //     h1 {
-  //       display: flex !important;
-  //       font-size: 1rem !important;
-  //     }
-  //     .title-name {
-  //       display: none;
-  //     }
-  //   }
-  // }
   .about#about-section {
     .about__container {
       padding-top: 50px !important;
     }
-    .about-me {
-      // padding: 3em 1em !important;
-    }
-
     .about__top {
       width: 100%;
     }
   }
   section#contact-section {
     .contact-container {
-      .floating-boxes {
-        // display: none;
-      }
+      // .floating-boxes {
+      //   // display: none;
+      // }
       form.cf-form {
         width: 95%;
       }
@@ -1491,21 +1426,6 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-  // section.main-section {
-  //   .main-container {
-  //     .main-container__content {
-  //       .main-content__greeting {
-  //         .greeting-loop {
-  //           &:after {
-  //             width: 12rem !important;
-  //             left: 14% !important;
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-
   .about#about-section {
     .about {
       p.about__top {

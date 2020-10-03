@@ -526,7 +526,7 @@ body {
   content: "";
   position: absolute;
   top: 0.8em;
-  left: 10%;
+  right: -0.1em;
   z-index: -1;
   width: 18rem;
   height: 10px;
@@ -1205,8 +1205,7 @@ body {
     left: -40.5%;
   }
   section.main-section .main-container .main-container__content .main-content__greeting .greeting-loop:after {
-    width: 12rem !important;
-    left: 14% !important;
+    width: 14rem !important;
   }
   .about#about-section .about-container h2.about-title {
     padding: 0.5em 0 0;
