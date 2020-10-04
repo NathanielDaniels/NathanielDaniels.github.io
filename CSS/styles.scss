@@ -878,6 +878,7 @@ body {
         .card {
           position: relative;
           border-radius: 10px;
+          // border-radius: 5px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -939,22 +940,29 @@ body {
         .cardImg {
           font-size: 3rem;
           padding: 2em;
-          // margin: 0 1em;
           box-shadow: inset 0 0 10px hsl(300, 100%, 15%);
           background: hsl(271, 76%, 45%);
           transform: 0.5s;
           transform-style: preserve-3d;
           transform: perspective(1000px);
+          transition: filter 0.5s ease-in-out;
           transform: translateZ(20px);
+          // &:hover .icon,
+          // &:hover .card-title {
+          //   // transform: translateZ(20px);
+          //   filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.2));
+          // }
           .icon {
+            transition: 0.5s ease-in-out;
             transform: translateZ(20px);
-            filter: drop-shadow(5px 5px rgba(0, 0, 0, 0.2));
+            // filter: drop-shadow(2px 2px 2px hsl(300, 100%, 15%));
           }
           .card-title {
             transform: translateZ(20px);
             position: absolute;
             bottom: -5%;
             right: 0;
+            transition: 0.5s ease-in-out;
           }
         }
         .card-1__info,

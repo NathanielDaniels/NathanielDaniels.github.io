@@ -1001,15 +1001,19 @@ body {
           transform-style: preserve-3d;
   -webkit-transform: perspective(1000px);
           transform: perspective(1000px);
+  -webkit-transition: -webkit-filter 0.5s ease-in-out;
+  transition: -webkit-filter 0.5s ease-in-out;
+  transition: filter 0.5s ease-in-out;
+  transition: filter 0.5s ease-in-out, -webkit-filter 0.5s ease-in-out;
   -webkit-transform: translateZ(20px);
           transform: translateZ(20px);
 }
 
 #projects-section .projects .grid-container .projects-grid .cardImg .icon {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   -webkit-transform: translateZ(20px);
           transform: translateZ(20px);
-  -webkit-filter: drop-shadow(5px 5px rgba(0, 0, 0, 0.2));
-          filter: drop-shadow(5px 5px rgba(0, 0, 0, 0.2));
 }
 
 #projects-section .projects .grid-container .projects-grid .cardImg .card-title {
@@ -1018,6 +1022,8 @@ body {
   position: absolute;
   bottom: -5%;
   right: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 #projects-section .projects .grid-container .projects-grid .card-1__info,
