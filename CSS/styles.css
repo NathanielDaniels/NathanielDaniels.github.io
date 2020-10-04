@@ -918,10 +918,6 @@ body {
   row-gap: 1em;
   max-width: 35em;
   width: 450px;
-  -webkit-transform: 0.5s;
-          transform: 0.5s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
 }
 
 #projects-section .projects .grid-container .projects-grid .card:nth-child(4) .card-title {
@@ -999,9 +995,26 @@ body {
   -webkit-box-shadow: inset 0 0 10px #4d004d;
           box-shadow: inset 0 0 10px #4d004d;
   background: #761cca;
+  -webkit-transform: 0.5s;
+          transform: 0.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(1000px);
+          transform: perspective(1000px);
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
+}
+
+#projects-section .projects .grid-container .projects-grid .cardImg .icon {
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
+  -webkit-filter: drop-shadow(5px 5px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(5px 5px rgba(0, 0, 0, 0.2));
 }
 
 #projects-section .projects .grid-container .projects-grid .cardImg .card-title {
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
   position: absolute;
   bottom: -5%;
   right: 0;

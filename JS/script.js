@@ -240,6 +240,17 @@ function tiltAnimation() {
 }
 tiltAnimation();
 
+//! PORTFOLIO CLICK FUNCTION (JQuery)=====================
+//?flipping cards
+// $(function () {
+//   $(".card").click(function () {
+//     $(this)
+//       .toggleClass("is-flipped")
+//       .siblings(".is-flipped")
+//       .removeClass("is-flipped");
+//   });
+// });
+
 //! Contact Section - Floating Box Animation (Completely Random) ====
 let boxSize = () => {
   const boxes = document.querySelectorAll(".floating-boxes li");
@@ -256,17 +267,6 @@ let boxSize = () => {
   }
 };
 boxSize();
-
-//! PORTFOLIO CLICK FUNCTION (JQuery)=====================
-//?flipping cards
-// $(function () {
-//   $(".card").click(function () {
-//     $(this)
-//       .toggleClass("is-flipped")
-//       .siblings(".is-flipped")
-//       .removeClass("is-flipped");
-//   });
-// });
 
 //! Contact form Label Animation (to legend) =================
 
@@ -307,7 +307,7 @@ function submitForm() {
     // let userMessage = ourFormData.get("message");
 
     let updatedHTMLContent = `
-    <div class="form-update-container" >
+    <div class="form-update-container cardImg" >
       <div class="form-update-info" >
         <h2>Thanks, ${userName}.</h2>
         <p>Form Test: Successful. <br/>Unfortunately, nothing has been sent at this time.</p>

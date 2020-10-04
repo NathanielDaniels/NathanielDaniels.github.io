@@ -884,8 +884,9 @@ body {
           row-gap: 1em;
           max-width: 35em;
           width: 450px;
-          transform: 0.5s;
-          transform-style: preserve-3d;
+          // transform: 0.5s;
+          // transform-style: preserve-3d;
+          // transform: perspective(1000px);
           // transform: translate3d(0%, 0%, 0px);
           &:nth-child(4) .card-title {
             left: 0.6em;
@@ -941,7 +942,16 @@ body {
           // margin: 0 1em;
           box-shadow: inset 0 0 10px hsl(300, 100%, 15%);
           background: hsl(271, 76%, 45%);
+          transform: 0.5s;
+          transform-style: preserve-3d;
+          transform: perspective(1000px);
+          transform: translateZ(20px);
+          .icon {
+            transform: translateZ(20px);
+            filter: drop-shadow(5px 5px rgba(0, 0, 0, 0.2));
+          }
           .card-title {
+            transform: translateZ(20px);
             position: absolute;
             bottom: -5%;
             right: 0;
@@ -977,8 +987,6 @@ body {
     text-align: center;
     //? Floating Box Animation
     .floating-boxes {
-      // display: none;
-      // z-index: 100;
       position: absolute;
       bottom: 0em;
       left: 0;
