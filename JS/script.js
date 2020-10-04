@@ -229,16 +229,17 @@ skillsHover();
 
 //! Tilt Animation (projects)
 //!=================================
-function tiltAnimation() {
-  VanillaTilt.init(document.querySelectorAll(".cardImg"), {
-    // max: 95,
-    // speed: 400,
-    // perspective: 500,
-    // glare: true,
-    // "max-glare": 1,
-  });
-}
-tiltAnimation();
+
+// function tiltAnimation() {
+//   VanillaTilt.init(document.querySelectorAll(".cardImg"), {
+//     max: 95,
+//     speed: 400,
+//     perspective: 500,
+//     glare: true,
+//     "max-glare": 1,
+//   });
+// }
+// tiltAnimation();
 
 //! PORTFOLIO CLICK FUNCTION (JQuery)=====================
 //?flipping cards
@@ -252,7 +253,7 @@ tiltAnimation();
 // });
 
 //! Contact Section - Floating Box Animation (Completely Random) ====
-let boxSize = () => {
+let floatingBoxSize = () => {
   const boxes = document.querySelectorAll(".floating-boxes li");
   for (let i = 0; i < boxes.length; i++) {
     boxes[i].style.left = Math.floor(Math.random() * 100) + "%";
@@ -266,7 +267,7 @@ let boxSize = () => {
       Math.floor(Math.random() * (30 - 10) + 10) + "s";
   }
 };
-boxSize();
+floatingBoxSize();
 
 //! Contact form Label Animation (to legend) =================
 
