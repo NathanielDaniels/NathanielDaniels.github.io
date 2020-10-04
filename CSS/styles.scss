@@ -509,6 +509,7 @@ body {
   }
 
   .main-container {
+    position: relative;
     max-width: 100%;
     padding: 1em 0;
     display: flex;
@@ -517,8 +518,12 @@ body {
     justify-content: flex-end;
     padding: 1em;
     .main-container__content {
+      // position: absolute;
+      // width: 100%;
       padding-right: 1em;
       border-right: 10px solid hsla(271, 67%, 65%, 0.4);
+      // border-right: 10px solid hsl(271, 67%, 65%);
+
       // border-radius: 50%;
       text-align: right;
       // width: clamp(60%, 2.5vw, 60%);
@@ -527,10 +532,10 @@ body {
       text-shadow: 1px 1px #000;
       // font-size: clamp(1rem, 2.5vw, 1.8rem);
       .main-content__greeting {
-        position: relative;
+        // position: absolute;
         color: hsl(60, 100%, 80%);
         font-size: clamp(1.8rem, 3vw, 2.5rem);
-        width: 75%;
+        width: 78%;
         // width: clamp(60%, 2.2vw, 55%);
         margin-left: auto;
         .greeting-loop {
@@ -543,9 +548,9 @@ body {
             right: -0.1em;
             z-index: -1;
             width: 18rem;
-            // width: clamp(14rem, 2.5vw, 18rem);
             height: 10px;
-            background: hsla(271, 67%, 65%, 0.4);
+            // background: hsla(271, 67%, 65%, 0.4);
+            background: hsl(271, 67%, 65%);
             // border-radius: 50px;
           }
         }
@@ -879,6 +884,9 @@ body {
           row-gap: 1em;
           max-width: 35em;
           width: 450px;
+          transform: 0.5s;
+          transform-style: preserve-3d;
+          // transform: translate3d(0%, 0%, 0px);
           &:nth-child(4) .card-title {
             left: 0.6em;
           }

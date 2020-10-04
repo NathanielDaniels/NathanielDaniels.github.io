@@ -489,6 +489,7 @@ body {
 }
 
 .main-section .main-container {
+  position: relative;
   max-width: 100%;
   padding: 1em 0;
   display: -webkit-box;
@@ -510,10 +511,9 @@ body {
 }
 
 .main-section .main-container .main-container__content .main-content__greeting {
-  position: relative;
   color: #ffff99;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
-  width: 75%;
+  width: 78%;
   margin-left: auto;
 }
 
@@ -530,7 +530,7 @@ body {
   z-index: -1;
   width: 18rem;
   height: 10px;
-  background: rgba(168, 106, 226, 0.4);
+  background: #a86ae2;
 }
 
 .main-section .main-container .main-container__content .main-content__CTA {
@@ -918,6 +918,10 @@ body {
   row-gap: 1em;
   max-width: 35em;
   width: 450px;
+  -webkit-transform: 0.5s;
+          transform: 0.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 #projects-section .projects .grid-container .projects-grid .card:nth-child(4) .card-title {

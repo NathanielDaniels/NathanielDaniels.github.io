@@ -834,18 +834,39 @@ submitForm();
 //============================
 //? Learning Classes, Constructors, Static ...
 
-class Article {
-  constructor(title, date) {
-    this.title = title;
-    this.date = date;
-  }
+// class Article {
+//   constructor(title, date) {
+//     this.title = title;
+//     this.date = date;
+//   }
 
-  static createTodays() {
-    // remember, this = Article
-    return new this("Today's digest", new Date());
+//   static createTodays() {
+//     // remember, this = Article
+//     return new this("Today's digest", new Date());
+//   }
+// }
+
+// let article = Article.createTodays();
+
+// console.log(article.title, article.date); // Today's digest
+
+//============================================
+//! Reverse a String
+// reverse('Instagram')
+
+//? Easy Way
+// function reverse(name) {
+//   return name.split("").reverse().join("");
+// }
+// console.log(reverse("Instagram"));
+
+function reverse(name) {
+  let reverse = "";
+  for (let char of name) {
+    console.log(char);
+    reverse = char + reverse;
   }
+  return reverse[name.length - 1];
 }
 
-let article = Article.createTodays();
-
-console.log(article.title, article.date); // Today's digest
+console.log(reverse("Popeyes"));
