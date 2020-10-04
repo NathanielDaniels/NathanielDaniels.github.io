@@ -1241,9 +1241,6 @@ body {
   #contact-section .contact-container .floating-boxes {
     display: block;
   }
-  #contact-section .contact-container canvas {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 1000px) {
