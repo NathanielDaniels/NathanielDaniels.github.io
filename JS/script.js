@@ -229,7 +229,7 @@ skillsHover();
 
 //! Tilt Animation (projects)
 //!=================================
-
+//? If Tilt still works becasue of html attributes, might not need this
 // function tiltAnimation() {
 //   VanillaTilt.init(document.querySelectorAll(".cardImg"), {
 //     max: 95,
