@@ -179,16 +179,16 @@ body {
   );
   .greeting-loop {
     // z-index: 100;
-    // width: 100vw;
     font-size: 9rem;
-    // font-size: clamp(9rem, 3vw, 9rem);
-
     font-weight: bolder;
     position: absolute;
     top: 1em;
-    // color: #fff;
+    left: 0.8em;
+    // left: 50%;
+    // transform: translate(-50%, 0);
     color: hsl(271, 76%, 20%);
-    filter: drop-shadow(1px 1px 1px hsl(271, 76%, 40%));
+    text-shadow: 0px 1px hsl(271, 76%, 28%), -0px -3px hsl(271, 76%, 15%);
+    letter-spacing: -5px;
     // &:after {
     //   content: "";
     //   position: absolute;
@@ -536,6 +536,9 @@ body {
 
   .main-container {
     position: relative;
+    width: 70em;
+    margin-left: auto;
+    margin-right: 5em;
     max-width: 100%;
     padding: 1em 0;
     display: flex;
@@ -545,20 +548,13 @@ body {
     padding: 1em;
 
     .main-container__content {
-      // position: absolute;
-      // width: 100%;
       padding-right: 1em;
-      border-right: 10px solid hsla(271, 67%, 65%, 0.4);
+      // border-right: 10px solid hsla(271, 67%, 65%, 0.4);
       // border-right: 10px solid hsl(271, 67%, 65%);
-
-      // border-radius: 50%;
       text-align: right;
-      // width: clamp(60%, 2.5vw, 60%);
-      // max-width: 70%;
       text-transform: capitalize;
       text-shadow: 1px 1px #000;
       // font-size: clamp(1rem, 2.5vw, 1.8rem);
-
       .main-content__greeting {
         // position: absolute;
         color: hsl(60, 100%, 80%);
@@ -666,15 +662,17 @@ body {
       font-weight: 800;
       text-align: center;
       text-transform: uppercase;
-      // &:before {
+      // &:after {
       //   content: "";
       //   position: absolute;
-      //   height: 8px;
-      //   width: 5em;
-      //   top: 1.6em;
-      //   left: 6em;
-      //   background: blueviolet;
-      //   opacity: 0.8;
+      //   top: 0.7em;
+      //   right: -0.1em;
+      //   z-index: -1;
+      //   width: 80%;
+      //   height: 20%;
+      //   // background: hsla(271, 67%, 65%, 0.4);
+      //   background: hsl(271, 67%, 65%);
+      //   // border-radius: 50px;
       // }
     }
 
@@ -834,8 +832,13 @@ body {
         font-size: 1.2rem;
         background: rgb(250, 250, 250);
         text-align: center;
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+        transition: filter 0.5s ease-in-out;
+        transform: translateZ(20px);
         a {
           text-decoration: none;
+
           p {
             margin: 0 auto;
             max-width: 400px;
