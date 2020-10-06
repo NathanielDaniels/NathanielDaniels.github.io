@@ -162,8 +162,9 @@ body {
   z-index: 1;
   width: 100%;
   height: 125vh;
+  // height: 50em;
   display: flex;
-  justify-content: flex-end;
+  // justify-content: flex-end;
   align-items: center;
   // background: hsl(271, 76%, 45%);
   // background: linear-gradient(
@@ -176,6 +177,31 @@ body {
     rgb(153, 11, 230) 1%,
     rgba(76, 5, 113, 1) 50%
   );
+  .greeting-loop {
+    // z-index: 100;
+    // width: 100vw;
+    font-size: 9rem;
+    // font-size: clamp(9rem, 3vw, 9rem);
+
+    font-weight: bolder;
+    position: absolute;
+    top: 1em;
+    // color: #fff;
+    color: hsl(271, 76%, 20%);
+    filter: drop-shadow(1px 1px 1px hsl(271, 76%, 40%));
+    // &:after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0.7em;
+    //   right: -0.1em;
+    //   z-index: -1;
+    //   width: 80%;
+    //   height: 25%;
+    //   // background: hsla(271, 67%, 65%, 0.4);
+    //   background: hsl(271, 67%, 65%);
+    //   // border-radius: 50px;
+    // }
+  }
 
   //? Face
   .smiley-face {
@@ -517,6 +543,7 @@ body {
     // transform: translate(0, -20%); //same as top
     justify-content: flex-end;
     padding: 1em;
+
     .main-container__content {
       // position: absolute;
       // width: 100%;
@@ -531,6 +558,7 @@ body {
       text-transform: capitalize;
       text-shadow: 1px 1px #000;
       // font-size: clamp(1rem, 2.5vw, 1.8rem);
+
       .main-content__greeting {
         // position: absolute;
         color: hsl(60, 100%, 80%);
@@ -538,22 +566,26 @@ body {
         width: 78%;
         // width: clamp(60%, 2.2vw, 55%);
         margin-left: auto;
-        .greeting-loop {
-          position: relative;
-          color: #fff;
-          &:after {
-            content: "";
-            position: absolute;
-            top: 0.8em;
-            right: -0.1em;
-            z-index: -1;
-            width: 18rem;
-            height: 10px;
-            // background: hsla(271, 67%, 65%, 0.4);
-            background: hsl(271, 67%, 65%);
-            // border-radius: 50px;
-          }
-        }
+        // .greeting-loop {
+        //   width: 100vw;
+        //   font-size: 5rem;
+        //   position: absolute;
+        //   // color: #fff;
+        //   color: hsl(271, 76%, 20%);
+        //   filter: drop-shadow(1px 1px 1px hsl(271, 76%, 40%));
+        //   // &:after {
+        //   //   content: "";
+        //   //   position: absolute;
+        //   //   top: 0.8em;
+        //   //   right: -0.1em;
+        //   //   z-index: -1;
+        //   //   width: 18rem;
+        //   //   height: 10px;
+        //   //   // background: hsla(271, 67%, 65%, 0.4);
+        //   //   background: hsl(271, 67%, 65%);
+        //   //   // border-radius: 50px;
+        //   // }
+        // }
       }
 
       .main-content__CTA {

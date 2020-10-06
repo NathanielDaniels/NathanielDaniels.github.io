@@ -113,13 +113,20 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background: linear-gradient(120deg, #990be6 1%, #4c0571 50%);
+}
+
+.main-section .greeting-loop {
+  font-size: 9rem;
+  font-weight: bolder;
+  position: absolute;
+  top: 1em;
+  color: #340c5a;
+  -webkit-filter: drop-shadow(1px 1px 1px #6918b4);
+          filter: drop-shadow(1px 1px 1px #6918b4);
 }
 
 .main-section .smiley-face {
@@ -515,22 +522,6 @@ body {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   width: 78%;
   margin-left: auto;
-}
-
-.main-section .main-container .main-container__content .main-content__greeting .greeting-loop {
-  position: relative;
-  color: #fff;
-}
-
-.main-section .main-container .main-container__content .main-content__greeting .greeting-loop:after {
-  content: "";
-  position: absolute;
-  top: 0.8em;
-  right: -0.1em;
-  z-index: -1;
-  width: 18rem;
-  height: 10px;
-  background: #a86ae2;
 }
 
 .main-section .main-container .main-container__content .main-content__CTA {
