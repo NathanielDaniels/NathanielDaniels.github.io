@@ -1188,7 +1188,6 @@ body {
 
 #contact-section .contact-container .form-update-container {
   position: relative;
-  z-index: 100;
   height: 21.5em;
   -webkit-box-shadow: inset 0 0 10px #4d004d;
           box-shadow: inset 0 0 10px #4d004d;
