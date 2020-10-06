@@ -308,7 +308,7 @@ function submitForm() {
     // let userMessage = ourFormData.get("message");
 
     let updatedHTMLContent = `
-    <div class="form-update-container cardImg" >
+    <div class="form-update-container data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-max="10"" >
       <div class="form-update-info" >
         <h2>Thanks, ${userName}.</h2>
         <p>Form Test: Successful. <br/>Unfortunately, nothing has been sent at this time.</p>
