@@ -166,7 +166,7 @@ function greetingLoop() {
   let counter = 0;
   const elem = $("#greeting");
   setTimeout(() => {
-    setInterval(change, 3000);
+    setInterval(change, 5000);
   }, 3000);
   function change() {
     elem.fadeOut(function () {
