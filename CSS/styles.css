@@ -534,6 +534,10 @@ body {
   margin-left: auto;
 }
 
+.main-section .main-container .main-container__content .main-content__greeting span {
+  color: #fff;
+}
+
 .main-section .main-container .main-container__content .main-content__CTA {
   width: 100%;
   margin-top: 0.5em;
@@ -561,15 +565,15 @@ body {
 }
 
 .main-section .main-container .main-container__sidebar-social {
-  border-left: 10px solid rgba(168, 106, 226, 0.4);
   padding-left: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 1;
+  margin-top: 0.8em;
   background: transparent;
 }
 
