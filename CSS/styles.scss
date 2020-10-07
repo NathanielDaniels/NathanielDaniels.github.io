@@ -529,16 +529,16 @@ body {
     position: relative;
     width: 100%;
     max-width: 100%;
-    padding: 1em 0;
+    // padding: 1em 0;
     display: flex;
     margin-top: -5em;
     justify-content: flex-end;
     padding: 1em;
     .greeting-loop {
-      width: 95%;
+      // width: 95%;
+      width: 100%;
       display: flex;
       justify-content: center;
-      // justify-content: baseline;
       font-size: clamp(3rem, 10vw, 8rem);
       font-weight: bold;
       text-transform: uppercase;
@@ -546,18 +546,17 @@ body {
       top: -0.54em;
       color: hsl(271, 76%, 20%);
       // color: hsl(271, 76%, 45%);
-
       text-shadow: 0px 1px hsl(271, 76%, 28%), -0px -3px hsl(271, 76%, 15%);
       letter-spacing: -5px;
     }
     .main-container__content {
       position: relative;
       margin-left: auto;
-      padding-right: 1em;
+      // padding-right: 1em;
       // border-right: 10px solid hsla(271, 67%, 65%, 0.4);
       text-align: right;
       text-transform: capitalize;
-      text-shadow: 1px 1px #000;
+      // text-shadow: 1px 1px #000;
       .main-content__greeting {
         color: hsl(60, 100%, 80%);
         font-size: clamp(1.8rem, 3vw, 2.5rem);
@@ -1315,11 +1314,13 @@ body {
   }
 }
 
+//! Switch to Mobile
 @media screen and (max-width: 800px) {
   .main-section {
     .smiley-face {
       display: none;
     }
+
     .main-section__header {
       .title-content-wrapper {
         .title-name {
@@ -1341,17 +1342,33 @@ body {
         }
       }
     }
+
     .main-container {
       flex-direction: column !important;
-      .main-content__greeting {
-        font-size: 1.6rem !important;
-        width: 100% !important;
+      margin-right: 2%;
+      .greeting-loop {
+        color: hsl(0, 0%, 100%) !important;
+        // color: hsl(271, 76%, 50%) !important;
+        letter-spacing: -1px !important;
+        text-shadow: 0px 0.5px hsl(271, 76%, 60%), -0px -2px hsl(271, 76%, 20%) !important;
+        // top: -0.8em !important;
+        font-size: 2.8rem !important;
+        justify-content: flex-end !important;
+        // padding: 1rem !important;
+        // width: 100% !important;
+        position: relative;
+        top: 0 !important;
+        line-height: 1em !important;
       }
       .main-container__content {
         padding-right: 0em !important;
         border-right: 0 !important;
         // max-width: 80% !important;
         margin-left: auto;
+        // .main-content__greeting {
+        //   font-size: 1.6rem !important;
+        //   width: 100% !important;
+        // }
 
         // .main-content__CTA {
         //   width: 75% !important;

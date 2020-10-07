@@ -159,7 +159,7 @@ function greetingLoop() {
   const text = [
     "web designer",
     // "freelancer",
-    "problem solver",
+    // "problem solver",
     "web enthusiast",
     "web developer",
   ];
