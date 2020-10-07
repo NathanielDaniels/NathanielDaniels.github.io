@@ -28,6 +28,7 @@
 
     <!--! MAIN Section (Hero) -->
     <section class="main-section">
+      <!-- <span id="greeting" class="greeting-loop">web developer</span> -->
       <div id="smiley-face" class="smiley-face">
         <span class="smiley-face__face" role="Smiley Face"></span>
         <!-- <span class="speech-bubble" role="Smiley Face Welcome Message">
@@ -35,7 +36,7 @@
           <h2>Welcome!</h2>
         </span> -->
       </div>
-      <div class="bg" role="background-img"></div>
+      <!-- <div class="bg" role="background-img"></div> -->
       <header class="main-section__header nav-down">
         <div class="header__inner-container" role="header-container">
           <div class="title-content-wrapper">
@@ -66,12 +67,13 @@
           </ul>
         </div>
       </header>
+
       <div class="main-container">
+        <span id="greeting" class="greeting-loop">web developer</span>
         <div class="main-container__content">
           <h2 class="main-content__greeting">
-            <!-- <span class="content-start">Your local premier</span><br /> -->
-            <span id="greeting" class="greeting-loop">web developer</span>
-            who loves building high quality websites from scratch.
+            <!-- <span id="greeting" class="greeting-loop">web developer</span> -->
+            building high quality websites from scratch.
           </h2>
           <div class="main-content__CTA">
             <p>
@@ -81,7 +83,7 @@
             <a class="cta-btn" href="#contact-section">Let's chat</a>
           </div>
         </div>
-        <aside class="main-container__sidebar-social sidebar">
+        <aside class="main-container__sidebar-social">
           <ul class="sidebar__social-media">
             <li>
               <a
@@ -163,7 +165,13 @@
               </ul>
             </div>
           </div>
-          <div class="about-me__job">
+          <div
+            class="about-me__job"
+            data-tilt
+            data-tilt-glare
+            data-tilt-max-glare="0.2"
+            data-tilt-max="10"
+          >
             <a href="#contact-section">
               <p>
                 I'm Currently Looking For A Full-Time Web Development Position
