@@ -240,6 +240,14 @@ skillsHover();
 //   });
 // }
 // tiltAnimation();
+// function destroyTilt() {
+//   let destroyBox = document.querySelectorAll(".cardImg");
+//   if (window.innerWidth < 800) {
+//     // vanillaTilt.destroy(document.querySelectorAll(".cardImg"));
+//     VanillaTilt.init(destroyBox);
+//   }
+// }
+// destroyTilt();
 
 //! PORTFOLIO CLICK FUNCTION (JQuery)=====================
 //?flipping cards
@@ -253,7 +261,7 @@ skillsHover();
 // });
 
 //! Contact Section - Floating Box Animation (Completely Random) ====
-let floatingBoxSize = () => {
+const floatingBoxSize = () => {
   const boxes = document.querySelectorAll(".floating-boxes li");
   for (let i = 0; i < boxes.length; i++) {
     boxes[i].style.left = Math.floor(Math.random() * 100) + "%";

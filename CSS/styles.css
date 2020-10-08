@@ -926,10 +926,6 @@ body {
   width: 450px;
 }
 
-#projects-section .projects .grid-container .projects-grid .card:nth-child(4) .card-title {
-  left: 0.6em;
-}
-
 #projects-section .projects .grid-container .projects-grid .card:nth-child(8) .card-title {
   left: 1.3em;
 }
