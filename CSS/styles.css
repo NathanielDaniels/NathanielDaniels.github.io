@@ -1241,6 +1241,7 @@ body {
     top: 0;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+    padding-bottom: 2em;
   }
   .about#about-section .about-container .about-info .skills-icons ul {
     -webkit-box-orient: horizontal;
