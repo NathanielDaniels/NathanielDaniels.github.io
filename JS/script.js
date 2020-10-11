@@ -636,7 +636,6 @@ submitForm()
 //============================================
 //! Fetch Test
 
-//? Now add Click Event for Each h1
 //? Display instructions + recipe Image for selected recipe
 
 //! Un-comment once live 
@@ -651,15 +650,21 @@ async function food(item) {
 //! Replale "Soup" with question once live
 food("soup")
   .then(item => {
-    let meals = []
+    let meals = [];
+    let instructions = [];
+
+    // console.log(item.meals[0].strInstructions)
+   
 
     for (let food of item.meals) {
       meals.push(`<h1>${food.strMeal}</h1>`)
+      instructions.push(`<p>${food.strInstructions}</p>`)
     }
 
+    //! Print list of Meals
     document.body.innerHTML = `<section class="meals">${meals.join(' ')}</section>`
 
-    const main = document.querySelector('.meals')
+    
     const h1 = document.querySelectorAll('h1')
     const evenSection = document.querySelectorAll('.meals > h1:nth-of-type(even)')
     
@@ -670,17 +675,37 @@ food("soup")
     for (let each of h1) {
       each.style.padding = "5px"
       each.style.cursor = "pointer"
-      each.addEventListener("click", () => {
-        console.log(each.innerText)
-        let content = each.innerText
+
+      each.addEventListener("click", (e) => {
+        // console.log(e)
+        let content = each.textContent
         let newSection = document.createElement('section')
         newSection.classList.add('selectedRecipe')
-        newSection.innerHTML = content
-        document.body.innerHTML = newSection
+        newSection.innerHTML = `<h1>${content}</h1>`
+        console.log(newSection)
+        // console.log("path", e.path[0].textContent)
+        // console.log(newSection.textContent)
+
+          // for (let i = 0; i < meals.length; i++) {
+          //   // console.log(item.meals[i].strInstructions)
+
+          //   document.body.innerHTML = `
+          //     <section style="display: flex; flex-direction: column; justify-content: space-between;width: 50%; margin: 2em auto;">
+          //       <div style="color: #fff;">${newSection.innerHTML}</div>
+          //       <div style="color: #fff;">${item.meals[i].strMeal}</div>
+          //       <div class="instructions" >
+          //         <p style="color: #fff; padding: 1em 0">${item.meals[i].strInstructions}</p>
+          //       </div>
+          //       <button style="cursor: pointer; padding: 5px 10px; background: transparent; border: 2px solid #fff; color: #fff" onClick="window.location.reload();">Restart</button>
+
+          //     </section>
+          //   `
+          // }
+        
       })
     }
 
-    
+    const main = document.querySelector('.meals')
     main.style.border = "2px solid black"
   })
   .catch(err => console.error(err))
