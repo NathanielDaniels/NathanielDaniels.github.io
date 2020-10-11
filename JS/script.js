@@ -639,6 +639,7 @@ submitForm()
 //? Now add Click Event for Each h1
 //? Display instructions + recipe Image for selected recipe
 
+//! Un-comment once live 
 // let question = prompt("Name a Food Item")
 
 async function food(item) {
@@ -647,6 +648,7 @@ async function food(item) {
   return data
 }
 
+//! Replale "Soup" with question once live
 food("soup")
   .then(item => {
     let meals = []
@@ -666,10 +668,15 @@ food("soup")
     }
 
     for (let each of h1) {
-      each.style.padding = "5px 0"
+      each.style.padding = "5px"
       each.style.cursor = "pointer"
       each.addEventListener("click", () => {
-        console.log("clicked", each.textContent)
+        console.log(each.innerText)
+        let content = each.innerText
+        let newSection = document.createElement('section')
+        newSection.classList.add('selectedRecipe')
+        newSection.innerHTML = content
+        document.body.innerHTML = newSection
       })
     }
 
