@@ -651,64 +651,62 @@ async function food(item) {
 food("soup")
   .then(item => {
     let meals = [];
-    let instructions = [];
+    let title = [];
 
-    // console.log(item.meals[0].strInstructions)
-   
+    for ( let recipeItems of item.meals) {
+      // console.log(recipeItems)
+      meals.push({title: `${recipeItems.strMeal}`, instructions: `${recipeItems.strInstructions}`})
+      title.push(`<h1>${recipeItems.strMeal}</h1>`)
 
-    for (let food of item.meals) {
-      meals.push(`<h1>${food.strMeal}</h1>`)
-      instructions.push(`<p>${food.strInstructions}</p>`)
+      //! Print list of Meals
+      document.body.innerHTML = `<section class="meals">${title.join(' ')}</section>`
     }
 
-    //! Print list of Meals
-    document.body.innerHTML = `<section class="meals">${meals.join(' ')}</section>`
+    console.log(meals[1].title)
 
-    
+    function updateRecipe() {
+      meals.forEach((el, index, arr) => {
+        
+        console.log(arr)
+        // console.log(index)
+        // console.log(arr[index].title)
+        // console.log(arr[index].instructions)
+
+         document.body.innerHTML = `
+          <section style="display: flex; flex-direction: column; justify-content: space-between;width: 50%; margin: 2em auto;">
+            <div style="color: #fff;"><h1>${meals[1].title}</h1></div>
+            <div class="instructions" >
+              <p style="color: #fff; padding: 1em 0">${meals[1].instructions}</p>
+            </div>
+
+            <button style="cursor: pointer; padding: 5px 10px; background: transparent; border: 2px solid #fff; color: #fff; text-transform: uppercase" onClick="window.location.reload();">new search</button>
+
+          </section>
+        `
+      }) 
+    }
+
+
     const h1 = document.querySelectorAll('h1')
-    const evenSection = document.querySelectorAll('.meals > h1:nth-of-type(even)')
-    
-    for (let item of evenSection) {
-      item.style.backgroundColor = "grey"
-    }
-
     for (let each of h1) {
       each.style.padding = "5px"
       each.style.cursor = "pointer"
 
-      each.addEventListener("click", (e) => {
-        // console.log(e)
-        let content = each.textContent
-        let newSection = document.createElement('section')
-        newSection.classList.add('selectedRecipe')
-        newSection.innerHTML = `<h1>${content}</h1>`
-        console.log(newSection)
-        // console.log("path", e.path[0].textContent)
-        // console.log(newSection.textContent)
+      each.addEventListener("click", updateRecipe)
+    }
 
-          // for (let i = 0; i < meals.length; i++) {
-          //   // console.log(item.meals[i].strInstructions)
-
-          //   document.body.innerHTML = `
-          //     <section style="display: flex; flex-direction: column; justify-content: space-between;width: 50%; margin: 2em auto;">
-          //       <div style="color: #fff;">${newSection.innerHTML}</div>
-          //       <div style="color: #fff;">${item.meals[i].strMeal}</div>
-          //       <div class="instructions" >
-          //         <p style="color: #fff; padding: 1em 0">${item.meals[i].strInstructions}</p>
-          //       </div>
-          //       <button style="cursor: pointer; padding: 5px 10px; background: transparent; border: 2px solid #fff; color: #fff" onClick="window.location.reload();">Restart</button>
-
-          //     </section>
-          //   `
-          // }
-        
-      })
+     //* Styling Even/Odd boxes
+    const evenSection = document.querySelectorAll('.meals > h1:nth-of-type(even)')
+    const oddSection = document.querySelectorAll('.meals > h1:nth-of-type(odd)')
+    for (let item of evenSection) {
+      item.style.backgroundColor = "grey"
+      item.style.color = "black"
+    }
+    for (let item of oddSection) {
+      item.style.color = "#fff"
     }
 
     const main = document.querySelector('.meals')
     main.style.border = "2px solid black"
   })
   .catch(err => console.error(err))
-
-  
-  
