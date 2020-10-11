@@ -636,7 +636,10 @@ submitForm()
 //============================================
 //! Fetch Test
 
-let question = prompt("Name a Food Item")
+//? Now add Click Event for Each h1
+//? Display instructions + recipe Image for selected recipe
+
+// let question = prompt("Name a Food Item")
 
 async function food(item) {
   const request = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${item}`);
@@ -644,7 +647,7 @@ async function food(item) {
   return data
 }
 
-food(question)
+food("soup")
   .then(item => {
     let meals = []
 
@@ -653,7 +656,7 @@ food(question)
     }
 
     document.body.innerHTML = `<section class="meals">${meals.join(' ')}</section>`
-    
+
     const main = document.querySelector('.meals')
     const h1 = document.querySelectorAll('h1')
     const evenSection = document.querySelectorAll('.meals > h1:nth-of-type(even)')
@@ -664,7 +667,12 @@ food(question)
 
     for (let each of h1) {
       each.style.padding = "5px 0"
+      each.style.cursor = "pointer"
+      each.addEventListener("click", () => {
+        console.log("clicked", each.textContent)
+      })
     }
+
     
     main.style.border = "2px solid black"
   })
