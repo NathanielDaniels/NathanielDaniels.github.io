@@ -1,94 +1,94 @@
 //! Page Scroll Indicator.
-function scrollIndicator() {
+function scrollIndicator () {
   window.onscroll = () => {
     let winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
+      document.body.scrollTop || document.documentElement.scrollTop
     let height =
       document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
+      document.documentElement.clientHeight
     // let scrolled = (winScroll / height) * 100;
     let scrolled =
       window.innerWidth < 1200
         ? (winScroll / height) * 102
-        : (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
-  };
+        : (winScroll / height) * 100
+    document.getElementById('myBar').style.width = scrolled + '%'
+  }
 }
-scrollIndicator();
+scrollIndicator()
 
 //! Main Title SVG Animation ======================
 
 $(function () {
-  $("#name-svg").load("/titleName-anim/name-svg.html");
-});
+  $('#name-svg').load('/titleName-anim/name-svg.html')
+})
 
 //! Smiley Face Animation ======================
 
-function smileyFace() {
-  let face = $(".smiley-face span")[0];
-  let head = $(".smiley-face")[0];
+function smileyFace () {
+  let face = $('.smiley-face span')[0]
+  let head = $('.smiley-face')[0]
   // let isDead = true;
-  let canBlink = true;
+  let canBlink = true
 
-  document.onmousemove = trackMouse;
+  document.onmousemove = trackMouse
   // window.onresize = squish;
 
   //? Blink every 5.5 seconds
   setInterval(function () {
     if (!canBlink) {
-      return;
+      return
     }
 
-    face.classList.add("blink");
+    face.classList.add('blink')
 
     setTimeout(function () {
-      face.classList.remove("blink");
-    }, 200);
-  }, 5500);
+      face.classList.remove('blink')
+    }, 200)
+  }, 5500)
 
-  function trackMouse(event) {
+  function trackMouse (event) {
     // if (!isDead) {
     //   return;
     // }
 
     //? mouse coordinates
-    let mX = event.clientX;
-    let mY = event.clientY;
+    let mX = event.clientX
+    let mY = event.clientY
 
     // console.log(mX, mY);
 
     //? viewport dimentions
-    let vpH = window.innerHeight + 250;
-    let vpW = window.innerWidth;
+    let vpH = window.innerHeight + 250
+    let vpW = window.innerWidth
 
     //? head boundingbox
-    let headBox = head.getBoundingClientRect();
+    let headBox = head.getBoundingClientRect()
 
     // console.log(headBox);
 
     //? face boundingbox
-    let faceBox = face.getBoundingClientRect();
+    let faceBox = face.getBoundingClientRect()
 
     // console.log(faceBox);
 
     //? the magic
-    let calcX = (headBox.width - faceBox.width + 1000) * (mX / vpW);
+    let calcX = (headBox.width - faceBox.width + 1000) * (mX / vpW)
 
-    let calcY = (headBox.height - faceBox.height) * (mY / vpH);
+    let calcY = (headBox.height - faceBox.height) * (mY / vpH)
 
     // console.log(calcX, calcY);
 
     // //? add bounding restrictions to face
     // calcX = clamp(calcX, 60, 150);
     // calcY = clamp(calcY, 60, 130);
-    calcX = clamp(calcX, 80, 150);
-    calcY = clamp(calcY, 40, 160);
+    calcX = clamp(calcX, 80, 150)
+    calcY = clamp(calcY, 40, 160)
 
-    face.setAttribute("style", `top: ${calcY}px; left: ${calcX}px;`);
+    face.setAttribute('style', `top: ${calcY}px; left: ${calcX}px;`)
   }
 
-  function clamp(num, min, max) {
-    return num <= min ? min : num >= max ? max : num;
+  function clamp (num, min, max) {
+    return num <= min ? min : num >= max ? max : num
   }
 
   // add squish effect when viewport minimizes
@@ -109,7 +109,7 @@ function smileyFace() {
   //   face.style.opacity = 1.6 - squishP
   // }
 }
-smileyFace();
+smileyFace()
 
 //! Speech Bubble Animation! (smileyface)
 
@@ -127,59 +127,59 @@ smileyFace();
 //! Hamburger Nav Menu Animation! (JQuery) ======================
 //? Change this back to vanilla JS (hamburgerAnimation2).
 
-function hamburgerAnimation2() {
-  const menu = document.querySelector(".mobile-burger-menu__elements");
+function hamburgerAnimation2 () {
+  const menu = document.querySelector('.mobile-burger-menu__elements')
 
-  menu.addEventListener("click", () => {
-    const navMenu = document.querySelector("#mobile-nav-menu");
-    navMenu.classList.toggle("active");
-  });
+  menu.addEventListener('click', () => {
+    const navMenu = document.querySelector('#mobile-nav-menu')
+    navMenu.classList.toggle('active')
+  })
 }
 // hamburgerAnimation2();
 
-function hamburgerAnimation() {
-  $menu = $(".mobile-burger-menu__elements");
+function hamburgerAnimation () {
+  $menu = $('.mobile-burger-menu__elements')
 
   $menu.click(function () {
-    $("#mobile-nav-menu").toggleClass("active");
-    $(this).toggleClass("close");
-  });
+    $('#mobile-nav-menu').toggleClass('active')
+    $(this).toggleClass('close')
+  })
 
   //! Close btn SideBar Nav Menu (JQuery)
-  $("#mobile-nav-menu ul li a").click(function () {
-    $("#mobile-nav-menu").removeClass("active");
-    $menu.removeClass("close");
-  });
+  $('#mobile-nav-menu ul li a').click(function () {
+    $('#mobile-nav-menu').removeClass('active')
+    $menu.removeClass('close')
+  })
 }
-hamburgerAnimation();
+hamburgerAnimation()
 
 //! Greeting-Loop Animation (JQuery)================================
 
-function greetingLoop() {
+function greetingLoop () {
   const text = [
-    "web designer",
+    'web designer',
     // "freelancer",
     // "problem solver",
-    "web enthusiast",
-    "web developer",
-  ];
-  let counter = 0;
-  const elem = $("#greeting");
+    'web enthusiast',
+    'web developer'
+  ]
+  let counter = 0
+  const elem = $('#greeting')
   setTimeout(() => {
-    setInterval(change, 5000);
-  }, 3000);
-  function change() {
+    setInterval(change, 5000)
+  }, 3000)
+  function change () {
     elem.fadeOut(function () {
-      elem.text(text[counter]);
-      counter++;
+      elem.text(text[counter])
+      counter++
       if (counter >= text.length) {
-        counter = 0;
+        counter = 0
       }
-      elem.fadeIn();
-    });
+      elem.fadeIn()
+    })
   }
 }
-greetingLoop();
+greetingLoop()
 
 //! Sidebar location change (screen size) ====
 
@@ -208,24 +208,24 @@ greetingLoop();
 // sidebarPositionChange();
 
 //! Skills Hover Color Change (About)
-function skillsHover() {
-  const skillsUl = document.querySelectorAll(".skills-list > li");
-  const skillsLi = document.querySelectorAll(".skills-list > li > i");
+function skillsHover () {
+  const skillsUl = document.querySelectorAll('.skills-list > li')
+  const skillsLi = document.querySelectorAll('.skills-list > li > i')
 
   for (let index = 0; index < skillsUl.length; index++) {
-    skillsUl[index].addEventListener("mouseenter", () => {
+    skillsUl[index].addEventListener('mouseenter', () => {
       if (index % 2 === 0) {
-        skillsLi[index].style.color = "hsl(60, 100%, 44%)";
+        skillsLi[index].style.color = 'hsl(60, 100%, 44%)'
       }
-    });
-    skillsUl[index].addEventListener("mouseleave", () => {
+    })
+    skillsUl[index].addEventListener('mouseleave', () => {
       if (index % 2 === 0) {
-        skillsLi[index].style.color = "#474747";
+        skillsLi[index].style.color = '#474747'
       }
-    });
+    })
   }
 }
-skillsHover();
+skillsHover()
 
 //! Tilt Animation (projects)
 //!=================================
@@ -262,54 +262,62 @@ skillsHover();
 
 //! Contact Section - Floating Box Animation (Completely Random) ====
 const floatingBoxSize = () => {
-  const boxes = document.querySelectorAll(".floating-boxes li");
+  const boxes = document.querySelectorAll('.floating-boxes li')
   for (let i = 0; i < boxes.length; i++) {
-    boxes[i].style.left = Math.floor(Math.random() * 100) + "%";
+    boxes[i].style.left = Math.floor(Math.random() * 100) + '%'
     let boxWidth = (boxes[i].style.width =
-      Math.floor(Math.random() * (150 - 25) + 25) + "px");
+      Math.floor(Math.random() * (150 - 25) + 25) + 'px')
 
-    boxes[i].style.height = boxWidth;
+    boxes[i].style.height = boxWidth
     boxes[i].style.animationDelay =
-      Math.floor(Math.random() * (1 - 10) + 1) + "s";
+      Math.floor(Math.random() * (1 - 10) + 1) + 's'
     boxes[i].style.animationDuration =
-      Math.floor(Math.random() * (30 - 10) + 10) + "s";
+      Math.floor(Math.random() * (30 - 10) + 10) + 's'
   }
-};
-floatingBoxSize();
+}
+floatingBoxSize()
 
 //! Contact form Label Animation (to legend) =================
 
-function animateLabel() {
-  $("input").on("focus", function () {
-    $(this).closest(".field-wrapper").addClass("focused");
-  });
-  $("input").on("blur", function () {
-    if ($(this).val() === "") {
-      $(this).closest(".field-wrapper").removeClass("focused");
+function animateLabel () {
+  $('input').on('focus', function () {
+    $(this)
+      .closest('.field-wrapper')
+      .addClass('focused')
+  })
+  $('input').on('blur', function () {
+    if ($(this).val() === '') {
+      $(this)
+        .closest('.field-wrapper')
+        .removeClass('focused')
     }
-  });
+  })
 
-  $("textarea").on("focus", function () {
-    $(this).closest(".field-wrapper").addClass("focused");
-  });
-  $("textarea").on("blur", function () {
-    if ($(this).val() === "") {
-      $(this).closest(".field-wrapper").removeClass("focused");
+  $('textarea').on('focus', function () {
+    $(this)
+      .closest('.field-wrapper')
+      .addClass('focused')
+  })
+  $('textarea').on('blur', function () {
+    if ($(this).val() === '') {
+      $(this)
+        .closest('.field-wrapper')
+        .removeClass('focused')
     }
-  });
+  })
 }
-animateLabel();
+animateLabel()
 
 //! Contact form Submit  =================
 
-function submitForm() {
-  const form = document.querySelector(".cf-form");
+function submitForm () {
+  const form = document.querySelector('.cf-form')
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  form.addEventListener('submit', e => {
+    e.preventDefault()
 
-    let ourFormData = new FormData(e.target);
-    let userName = ourFormData.get("name");
+    let ourFormData = new FormData(e.target)
+    let userName = ourFormData.get('name')
     //! Might not need these below
     // let userEmail = ourFormData.get("email");
     // let userSubject = ourFormData.get("subject");
@@ -328,13 +336,13 @@ function submitForm() {
              style="color:#fff; cursor: pointer; margin-top:2em"><i class="fab fa-linkedin"></i></a></p>
       </div>
     </div>
-  `;
+  `
 
-    form.innerHTML = updatedHTMLContent;
-  });
+    form.innerHTML = updatedHTMLContent
+  })
 }
 
-submitForm();
+submitForm()
 
 //! Contact Form Click (Legend) Not Complete ======================
 
@@ -614,13 +622,48 @@ submitForm();
 // }
 // console.log(reverse("Instagram"));
 
-function reverse(name) {
-  let reverse = "";
-  for (let char of name) {
-    console.log(char);
-    reverse = char + reverse;
-  }
-  return reverse[name.length - 1];
+// function reverse(name) {
+//   let reverse = "";
+//   for (let char of name) {
+//     console.log(char);
+//     reverse = char + reverse;
+//   }
+//   return reverse[name.length - 1];
+// }
+
+// console.log(reverse("Popeyes"));
+
+//============================================
+//! Fetch Test
+
+async function food(item) {
+  const request = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${item}`);
+  const data = await request.json()
+  return data
 }
 
-console.log(reverse("Popeyes"));
+food("soup")
+  .then(item => {
+    let meals = []
+    for (let food of item.meals) {
+      meals.push(`<h1>${food.strMeal}</h1>`)
+    }
+    document.body.innerHTML = `<section class="meals">${meals.join(' ')}</section>`
+    const main = document.querySelector('.meals')
+    const h1 = document.querySelectorAll('h1')
+    console.log(h1)
+    const evenSection = document.querySelectorAll('.meals > h1:nth-of-type(even)')
+    console.log(evenSection)
+    for (let item of evenSection) {
+      console.log(item)
+      item.style.backgroundColor = "grey"
+    }
+    for (let each of h1) {
+      each.style.padding = "5px 0"
+    }
+    main.style.border = "2px solid black"
+  })
+  .catch(err => console.error(err))
+
+  
+  
