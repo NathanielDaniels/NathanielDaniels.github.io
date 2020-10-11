@@ -636,31 +636,36 @@ submitForm()
 //============================================
 //! Fetch Test
 
+let question = prompt("Name a Food Item")
+
 async function food(item) {
   const request = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${item}`);
   const data = await request.json()
   return data
 }
 
-food("soup")
+food(question)
   .then(item => {
     let meals = []
+
     for (let food of item.meals) {
       meals.push(`<h1>${food.strMeal}</h1>`)
     }
+
     document.body.innerHTML = `<section class="meals">${meals.join(' ')}</section>`
+    
     const main = document.querySelector('.meals')
     const h1 = document.querySelectorAll('h1')
-    console.log(h1)
     const evenSection = document.querySelectorAll('.meals > h1:nth-of-type(even)')
-    console.log(evenSection)
+    
     for (let item of evenSection) {
-      console.log(item)
       item.style.backgroundColor = "grey"
     }
+
     for (let each of h1) {
       each.style.padding = "5px 0"
     }
+    
     main.style.border = "2px solid black"
   })
   .catch(err => console.error(err))
