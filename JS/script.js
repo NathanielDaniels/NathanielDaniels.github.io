@@ -641,72 +641,88 @@ submitForm()
 //! Un-comment once live 
 // let question = prompt("Name a Food Item")
 
-async function food(item) {
-  const request = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${item}`);
-  const data = await request.json()
-  return data
-}
+// async function food(item) {
+//   const request = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${item}`);
+//   const data = await request.json()
+//   return data
+// }
 
-//! Replale "Soup" with question once live
-food("soup")
-  .then(item => {
-    let meals = [];
-    let title = [];
+// //! Replale "Soup" with question once live
+// food("soup")
+//   .then(item => {
+//     let meals = [];
+//     let title = [];
 
-    for ( let recipeItems of item.meals) {
-      // console.log(recipeItems)
-      meals.push({title: `${recipeItems.strMeal}`, instructions: `${recipeItems.strInstructions}`})
-      title.push(`<h1>${recipeItems.strMeal}</h1>`)
+//     for ( let recipeItems of item.meals) {
+//       // console.log(recipeItems.strMeal)
+//       meals.push({title: `${recipeItems.strMeal}`, instructions: `${recipeItems.strInstructions}`})
+//       title.push(`<h1>${recipeItems.strMeal}</h1>`)
 
-      //! Print list of Meals
-      document.body.innerHTML = `<section class="meals">${title.join(' ')}</section>`
-    }
-
-    console.log(meals[1].title)
-
-    function updateRecipe() {
-      meals.forEach((el, index, arr) => {
-        
-        console.log(arr)
-        // console.log(index)
-        // console.log(arr[index].title)
-        // console.log(arr[index].instructions)
-
-         document.body.innerHTML = `
-          <section style="display: flex; flex-direction: column; justify-content: space-between;width: 50%; margin: 2em auto;">
-            <div style="color: #fff;"><h1>${meals[1].title}</h1></div>
-            <div class="instructions" >
-              <p style="color: #fff; padding: 1em 0">${meals[1].instructions}</p>
-            </div>
-
-            <button style="cursor: pointer; padding: 5px 10px; background: transparent; border: 2px solid #fff; color: #fff; text-transform: uppercase" onClick="window.location.reload();">new search</button>
-
-          </section>
-        `
-      }) 
-    }
+//       //! Print list of Meals
+//       document.body.innerHTML = `<section class="meals">${title.join(' ')}</section>`
+//     }
 
 
-    const h1 = document.querySelectorAll('h1')
-    for (let each of h1) {
-      each.style.padding = "5px"
-      each.style.cursor = "pointer"
+   
+//     // meals.forEach(item => {
 
-      each.addEventListener("click", updateRecipe)
-    }
+//     //   item.addEventListener('click', () => {
+//     //     console.log('clicked')
+//     //   })
+//     // })
 
-     //* Styling Even/Odd boxes
-    const evenSection = document.querySelectorAll('.meals > h1:nth-of-type(even)')
-    const oddSection = document.querySelectorAll('.meals > h1:nth-of-type(odd)')
-    for (let item of evenSection) {
-      item.style.backgroundColor = "grey"
-      item.style.color = "black"
-    }
-    for (let item of oddSection) {
-      item.style.color = "#fff"
-    }
+//     function updateRecipe() {
+//     //   meals.forEach(meal => {
+//     //   console.log(meal.instructions)
+//     //    document.body.innerHTML = `
+//     //       <section style="display: flex; flex-direction: column; justify-content: space-between;width: 50%; margin: 2em auto;">
+//     //         <div style="color: #fff;"><h1>${meal.title}</h1></div>
+//     //         <div class="instructions" >
+//     //           <p style="color: #fff; padding: 1em 0">${meal.instructions}</p>
+//     //         </div>
 
-    const main = document.querySelector('.meals')
-    main.style.border = "2px solid black"
-  })
-  .catch(err => console.error(err))
+//     //         <button style="cursor: pointer; padding: 5px 10px; background: transparent; border: 2px solid #fff; color: #fff; text-transform: uppercase" onClick="window.location.reload();">new search</button>
+
+//     //       </section>
+//     //     `
+//     // })
+
+//       for (let i = 0; i < meals.length; i++) {
+//          document.body.innerHTML = `
+//           <section style="display: flex; flex-direction: column; justify-content: space-between;width: 50%; margin: 2em auto;">
+//             <div style="color: #fff;"><h1>${meals[i].title}</h1></div>
+//             <div class="instructions" >
+//               <p style="color: #fff; padding: 1em 0">${meals[i].instructions}</p>
+//             </div>
+
+//             <button style="cursor: pointer; padding: 5px 10px; background: transparent; border: 2px solid #fff; color: #fff; text-transform: uppercase" onClick="window.location.reload();">new search</button>
+
+//           </section>
+//         `
+//       }
+//     }
+
+
+//     const h1 = document.querySelectorAll('h1')
+//     for (let each of h1) {
+//       each.style.padding = "5px"
+//       each.style.cursor = "pointer"
+
+//       each.addEventListener("click", updateRecipe)
+//     }
+
+//      //* Styling Even/Odd boxes
+//     const evenSection = document.querySelectorAll('.meals > h1:nth-of-type(even)')
+//     const oddSection = document.querySelectorAll('.meals > h1:nth-of-type(odd)')
+//     for (let item of evenSection) {
+//       item.style.backgroundColor = "grey"
+//       item.style.color = "black"
+//     }
+//     for (let item of oddSection) {
+//       item.style.color = "#fff"
+//     }
+
+//     const main = document.querySelector('.meals')
+//     main.style.border = "2px solid black"
+//   })
+//   .catch(err => console.error(err))
