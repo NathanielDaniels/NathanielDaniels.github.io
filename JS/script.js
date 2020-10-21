@@ -312,16 +312,36 @@ animateLabel()
 
 function submitForm () {
   const form = document.querySelector('.cf-form')
+  // const submitBtn = document.querySelector('#input-submit')
+  let answeringMachine = []
 
   form.addEventListener('submit', e => {
     e.preventDefault()
 
+
+
+    // submitBtn.value = 'Sending...';
+
+    //? EmailJS
+    //=-===================================
+    // import{ init } from 'emailjs-com';
+
+    emailjs.sendForm('Portfolio', 'template_jut7dvf', '#form')
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.error('FAILED...', JSON.stringify(error));
+    });
+
     let ourFormData = new FormData(e.target)
     let userName = ourFormData.get('name')
     //! Might not need these below
-    // let userEmail = ourFormData.get("email");
-    // let userSubject = ourFormData.get("subject");
-    // let userMessage = ourFormData.get("message");
+    let userEmail = ourFormData.get("email");
+    let userSubject = ourFormData.get("subject");
+    let userMessage = ourFormData.get("message");
+
+    answeringMachine.push({Email: userEmail, Subject: userSubject, Message: userMessage});
+    console.log(answeringMachine)
 
     let updatedHTMLContent = `
     <div class="form-update-container" data-tilt >
@@ -343,6 +363,23 @@ function submitForm () {
 }
 
 submitForm()
+
+//==============================================================================
+
+const fs = require('fs');
+
+let lyrics = 'But still I\'m having memories of high speeds when the cops crashed\n' + 
+             'As I laugh, pushin the gas while my Glocks blast\n' + 
+             'We was young and we was dumb but we had heart';
+
+// write to a new file named 2pac.txt
+fs.writeFile('2pac.txt', lyrics, (err) => {
+    // throws an error, you could also catch it here
+    if (err) throw err;
+
+    // success case, the file was saved
+    console.log('Lyric saved!');
+});
 
 //! Contact Form Click (Legend) Not Complete ======================
 
