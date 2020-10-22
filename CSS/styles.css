@@ -500,7 +500,8 @@ body {
 }
 
 .main-section .main-container .greeting-loop {
-  width: 100%;
+  width: 98%;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -510,7 +511,6 @@ body {
   font-size: clamp(3rem, 10vw, 8rem);
   font-weight: bold;
   text-transform: uppercase;
-  position: absolute;
   top: -0.54em;
   color: #340c5a;
   text-shadow: 0px 1px #49117e, 0px -3px #270943;
@@ -521,6 +521,7 @@ body {
   position: relative;
   margin-left: auto;
   text-align: right;
+  right: 1em;
   text-transform: capitalize;
 }
 
@@ -562,7 +563,7 @@ body {
 }
 
 .main-section .main-container .main-container__sidebar-social {
-  padding-left: 1em;
+  padding: 0 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

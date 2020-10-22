@@ -72,7 +72,7 @@ function smileyFace () {
     // console.log(faceBox);
 
     //? the magic
-    let calcX = (headBox.width - faceBox.width + 1000) * (mX / vpW)
+    let calcX = (headBox.width - faceBox.width + 600) * (mX / vpW)
 
     let calcY = (headBox.height - faceBox.height) * (mY / vpH)
 

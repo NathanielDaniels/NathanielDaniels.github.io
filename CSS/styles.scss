@@ -535,15 +535,17 @@ body {
     justify-content: flex-end;
     padding: 1em;
     .greeting-loop {
-      // width: 95%;
-      width: 100%;
+      width: 98%;
+      // width: 100%;
+      position: absolute;
       display: flex;
+      // justify-content: flex-end;
       justify-content: center;
       font-size: clamp(3rem, 10vw, 8rem);
       font-weight: bold;
       text-transform: uppercase;
-      position: absolute;
       top: -0.54em;
+      // right: 1em;
       color: hsl(271, 76%, 20%);
       // color: hsl(271, 76%, 45%);
       text-shadow: 0px 1px hsl(271, 76%, 28%), -0px -3px hsl(271, 76%, 15%);
@@ -555,6 +557,7 @@ body {
       // padding-right: 1em;
       // border-right: 10px solid hsla(271, 67%, 65%, 0.4);
       text-align: right;
+      right: 1em;
       text-transform: capitalize;
       // text-shadow: 1px 1px #000;
       .main-content__greeting {
@@ -596,7 +599,8 @@ body {
     //? Side Social Media Links
     .main-container__sidebar-social {
       // border-left: 10px solid hsla(271, 67%, 65%, 0.4);
-      padding-left: 1em;
+      // padding-left: 1em;
+      padding: 0 1em;
       display: flex;
       align-items: center;
       z-index: 1;
