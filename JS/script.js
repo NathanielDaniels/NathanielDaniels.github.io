@@ -333,7 +333,6 @@ function submitForm () {
     //===============================================
 
     let ourFormData = new FormData(e.target)
-    console.log(ourFormData)
     let userName = ourFormData.get('from_name')
     //! Might not need these below
     // let userEmail = ourFormData.get("email");
