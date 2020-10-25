@@ -315,23 +315,22 @@ function submitForm () {
   // const submitBtn = document.querySelector('#input-submit')
   let answeringMachine = []
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', function(e) {
     e.preventDefault()
-
-
 
     // submitBtn.value = 'Sending...';
 
-    //? EmailJS
-    //=-===================================
-    // import{ init } from 'emailjs-com';
+    const serviceID = 'Portfolio'
+    const templateID = 'template_jut7dvf'
 
-    emailjs.sendForm('Portfolio', 'template_jut7dvf', '#form')
+    emailjs.sendForm(serviceID, templateID, this)
     .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
        console.error('FAILED...', JSON.stringify(error));
     });
+
+    //===============================================
 
     let ourFormData = new FormData(e.target)
     let userName = ourFormData.get('name')
