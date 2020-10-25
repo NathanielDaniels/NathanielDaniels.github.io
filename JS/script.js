@@ -333,21 +333,22 @@ function submitForm () {
     //===============================================
 
     let ourFormData = new FormData(e.target)
-    let userName = ourFormData.get('name')
+    console.log(ourFormData)
+    let userName = ourFormData.get('from_name')
     //! Might not need these below
-    let userEmail = ourFormData.get("email");
-    let userSubject = ourFormData.get("subject");
-    let userMessage = ourFormData.get("message");
+    // let userEmail = ourFormData.get("email");
+    // let userSubject = ourFormData.get("subject");
+    // let userMessage = ourFormData.get("message");
 
-    answeringMachine.push({Email: userEmail, Subject: userSubject, Message: userMessage});
-    console.log(answeringMachine)
+    // answeringMachine.push({Email: userEmail, Subject: userSubject, Message: userMessage});
+    // console.log(answeringMachine)
 
     let updatedHTMLContent = `
     <div class="form-update-container" data-tilt >
       <div class="form-update-info" >
         <h2>Thanks, ${userName}.</h2>
-        <p>Form Test: Successful. <br/>Unfortunately, nothing has been sent at this time.</p>
-        <p>You can contact me on <a
+        <p>Your message has been sent successfully</p>
+        <p>You can also contact me on <a
             target="_blank"
             rel="noreferrer"
             title="LinkedIn"
