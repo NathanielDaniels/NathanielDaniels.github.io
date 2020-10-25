@@ -318,8 +318,6 @@ function submitForm () {
   form.addEventListener('submit', function(e) {
     e.preventDefault()
 
-    // submitBtn.value = 'Sending...';
-
     const serviceID = 'Portfolio'
     const templateID = 'template_jut7dvf'
 
@@ -334,13 +332,15 @@ function submitForm () {
 
     let ourFormData = new FormData(e.target)
     let userName = ourFormData.get('from_name')
-    //! Might not need these below
+
+    //! Might not need these
     // let userEmail = ourFormData.get("email");
     // let userSubject = ourFormData.get("subject");
     // let userMessage = ourFormData.get("message");
 
     // answeringMachine.push({Email: userEmail, Subject: userSubject, Message: userMessage});
     // console.log(answeringMachine)
+    //!============================
 
     let updatedHTMLContent = `
     <div class="form-update-container" data-tilt >
