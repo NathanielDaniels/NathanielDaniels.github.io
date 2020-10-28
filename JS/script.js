@@ -127,14 +127,14 @@ smileyFace()
 //! Hamburger Nav Menu Animation! (JQuery) ======================
 //? Change this back to vanilla JS (hamburgerAnimation2).
 
-function hamburgerAnimation2 () {
-  const menu = document.querySelector('.mobile-burger-menu__elements')
+// function hamburgerAnimation2 () {
+//   const menu = document.querySelector('.mobile-burger-menu__elements')
 
-  menu.addEventListener('click', () => {
-    const navMenu = document.querySelector('#mobile-nav-menu')
-    navMenu.classList.toggle('active')
-  })
-}
+//   menu.onclick = function() {
+//     const navMenu = document.querySelector('#mobile-nav-menu')
+//     navMenu.classList.toggle('active')
+//   }
+// }
 // hamburgerAnimation2();
 
 function hamburgerAnimation () {
@@ -229,6 +229,13 @@ skillsHover()
 
 //! Tilt Animation (projects)
 //!=================================
+
+  if (window.innerWidth < 800) {
+    const cards = document.querySelectorAll('.card')
+    cards.forEach(card =>  card.removeAttribute('data-tilt'))
+   
+  }
+
 //? If Tilt still works becasue of html attributes, might not need this
 // function tiltAnimation() {
 //   VanillaTilt.init(document.querySelectorAll(".cardImg"), {
@@ -277,7 +284,7 @@ const floatingBoxSize = () => {
 }
 floatingBoxSize()
 
-//! Contact form Label Animation (to legend) =================
+//! Contact form Label Animation (to legend) JQuery =================
 
 function animateLabel () {
   $('input').on('focus', function () {
@@ -313,7 +320,7 @@ animateLabel()
 function submitForm () {
   const form = document.querySelector('.cf-form')
   // const submitBtn = document.querySelector('#input-submit')
-  let answeringMachine = []
+  // let answeringMachine = []
 
   form.addEventListener('submit', function(e) {
     e.preventDefault()
@@ -365,20 +372,20 @@ submitForm()
 
 //==============================================================================
 
-const fs = require('fs');
+// const fs = require('fs');
 
-let lyrics = 'But still I\'m having memories of high speeds when the cops crashed\n' + 
-             'As I laugh, pushin the gas while my Glocks blast\n' + 
-             'We was young and we was dumb but we had heart';
+// let lyrics = 'But still I\'m having memories of high speeds when the cops crashed\n' + 
+//              'As I laugh, pushin the gas while my Glocks blast\n' + 
+//              'We was young and we was dumb but we had heart';
 
-// write to a new file named 2pac.txt
-fs.writeFile('2pac.txt', lyrics, (err) => {
-    // throws an error, you could also catch it here
-    if (err) throw err;
+// // write to a new file named 2pac.txt
+// fs.writeFile('2pac.txt', lyrics, (err) => {
+//     // throws an error, you could also catch it here
+//     if (err) throw err;
 
-    // success case, the file was saved
-    console.log('Lyric saved!');
-});
+//     // success case, the file was saved
+//     console.log('Lyric saved!');
+// });
 
 //! Contact Form Click (Legend) Not Complete ======================
 
