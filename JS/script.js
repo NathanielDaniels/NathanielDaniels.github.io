@@ -230,12 +230,30 @@ skillsHover()
 //! Tilt Animation (projects)
 //!=================================
 
-  if (window.innerWidth < 800) {
-    const cards = document.querySelectorAll('.card')
-    cards.forEach(card =>  card.removeAttribute('data-tilt'))
-   
-  }
-
+  // if (window.innerWidth < 800) {
+  //   const cards = document.querySelectorAll('.card')
+  //   cards.forEach(card =>  card.removeAttribute('data-tilt'))
+  // }
+  // window.addEventListener('resize', removeTilt)
+  
+    function removeTilt() {
+      console.log(window.innerWidth)
+      if (window.innerWidth < 800) {
+        const cards = document.querySelectorAll('.cardImg')
+        console.log(cards)
+        cards.forEach(card =>  {
+          card.vanillaTilt.destroy();
+          // card.removeAttribute('data-tilt')
+          // card.removeAttribute('data-tilt-glare')
+          // card.removeAttribute('data-tilt-max-glare')
+          // card.removeAttribute('data-tilt-max')
+          // card.style.rotateX = '0deg'
+          // card.style.rotateY = '0deg'
+          // card.style.willChange = 'unset'
+        })
+      }
+    }
+    removeTilt()
 //? If Tilt still works becasue of html attributes, might not need this
 // function tiltAnimation() {
 //   VanillaTilt.init(document.querySelectorAll(".cardImg"), {
