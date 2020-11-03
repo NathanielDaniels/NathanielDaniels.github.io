@@ -800,6 +800,10 @@ body {
   margin: 2em auto;
 }
 
+#about-section .about-container .about-info .skills-description .skills-description__top {
+  margin-bottom: 1em;
+}
+
 #about-section .about-container .about-info .about-me__job {
   padding: 20px;
   width: 80%;
