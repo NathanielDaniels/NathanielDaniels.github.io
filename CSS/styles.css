@@ -789,9 +789,9 @@ body {
 
 #about-section .about-container .about-info .about-me__skills .skills-icons ul li:hover i,
 #about-section .about-container .about-info .about-me__skills .skills-icons ul li:focus i {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
   color: var(--main-purple);
+  -webkit-transform: rotate(360deg)scale(1.3);
+          transform: rotate(360deg)scale(1.3);
 }
 
 #about-section .about-container .about-info .skills-description {
@@ -1268,8 +1268,29 @@ body {
   font-size: 1.2rem;
 }
 
-#contact-section .contact-container .form-update-container p a i {
-  font-size: 1.5rem;
+#contact-section .contact-container .form-update-container .li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  cursor: pointer;
+}
+
+#contact-section .contact-container .form-update-container .li a {
+  color: var(--main-yellow);
+  text-shadow: 0px 1px 1px var(--main-text-shadow);
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+#contact-section .contact-container .form-update-container .li a:hover, #contact-section .contact-container .form-update-container .li a:focus {
+  text-shadow: 0px 2px 2px var(--main-text-shadow);
+  color: var(--main-yellow);
+}
+
+#contact-section .contact-container .form-update-container .li a .fab {
+  font-size: 40px;
 }
 
 @media screen and (max-width: 1200px) {
