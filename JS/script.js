@@ -372,41 +372,42 @@ function submitForm () {
       <div class="form-update-info" >
         <h2>Thanks, ${userName}.</h2>
         <p>Your message has been delivered successfully</p>
-        <p>Follow me on</p>
-           <li>
-              <a
-                target="_blank"
-                title="Twitter"
-                rel="noreferrer"
-                href="https://twitter.com/NathanDDaniels"
-                ><i class="fab fa-twitter-square"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                title="linkedIn"
-                rel="noreferrer"
-                href="https://www.linkedin.com/in/nathaniel-daniels-500740139/"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                title="GitHub"
-                rel="noreferrer"
-                href="https://github.com/NathanielDaniels"
-                ><i class="fab fa-github-square"></i
-              ></a>
-            </li>
-        
+        <p>Follow me on:</p>
+        <div class="icons">
+          <li>
+            <a
+              target="_blank"
+              title="Twitter"
+              rel="noreferrer"
+              href="https://twitter.com/NathanDDaniels"
+              ><i class="fab fa-twitter-square"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              title="linkedIn"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/nathaniel-daniels-500740139/"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              title="GitHub"
+              rel="noreferrer"
+              href="https://github.com/NathanielDaniels"
+              ><i class="fab fa-github-square"></i
+            ></a>
+          </li>
+        </div>
       </div>
     </div>
   `
 
-    form.innerHTML = updatedHTMLContent
-  })
+form.innerHTML = updatedHTMLContent
+})
 }
 
 submitForm()
