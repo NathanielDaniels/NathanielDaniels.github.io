@@ -371,7 +371,7 @@ function submitForm () {
     <div class="form-update-container" data-tilt >
       <div class="form-update-info" >
         <h2>Thanks, ${userName}.</h2>
-        <p>Your message has been delivered successfully</p>
+        <p>Your message has been delivered successfully!</p>
         <p>Follow me on:</p>
         <div class="icons">
           <li>

@@ -1181,16 +1181,19 @@ body {
       p {
         padding-top: 5px;
         font-size: 1.2rem;
+        &:nth-child(3) {
+          margin-top: 1em;
+        }
       }
       .icons {
 
         margin-top: 1em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
         li {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          gap: 1em;
           list-style: none;
           cursor: pointer;
           a {

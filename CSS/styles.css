@@ -1268,11 +1268,12 @@ body {
   font-size: 1.2rem;
 }
 
-#contact-section .contact-container .form-update-container .icons {
+#contact-section .contact-container .form-update-container p:nth-child(3) {
   margin-top: 1em;
 }
 
-#contact-section .contact-container .form-update-container .icons li {
+#contact-section .contact-container .form-update-container .icons {
+  margin-top: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1287,6 +1288,9 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1em;
+}
+
+#contact-section .contact-container .form-update-container .icons li {
   list-style: none;
   cursor: pointer;
 }
