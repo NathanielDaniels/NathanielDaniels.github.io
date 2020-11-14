@@ -334,7 +334,7 @@ function animateLabel () {
 animateLabel()
 
 //! Contact form Submit  =================
-
+//? EmailJS
 function submitForm () {
   const form = document.querySelector('.cf-form')
   // const submitBtn = document.querySelector('#input-submit')
