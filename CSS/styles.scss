@@ -742,6 +742,9 @@ body {
             }
           }
         }
+        .skills-title {
+          font-size: clamp(3rem, calc(5vw + 1em), 5rem)
+        }
       }
       .skills-description {
         max-width: 800px;
@@ -751,39 +754,39 @@ body {
           margin-bottom: 1em;
         }
       }
-      .about-me__job {
-        padding: 20px;
-        width: 80%;
-        border: 1px solid var(--main-purple);
-        border-radius: 20px;
-        font-size: 1.2rem;
-        background: var(--main-white);
-        text-align: center;
-        transform-style: preserve-3d;
-        transform: perspective(1000px);
-        transform: translateZ(20px);
-        transition: background 0.3s ease-in-out;
-        a {
-          text-decoration: none;
+      // .about-me__job {
+      //   padding: 20px;
+      //   width: 80%;
+      //   border: 1px solid var(--main-purple);
+      //   border-radius: 20px;
+      //   font-size: 1.2rem;
+      //   background: var(--main-white);
+      //   text-align: center;
+      //   transform-style: preserve-3d;
+      //   transform: perspective(1000px);
+      //   transform: translateZ(20px);
+      //   transition: background 0.3s ease-in-out;
+      //   a {
+      //     text-decoration: none;
 
-          p {
-            margin: 0 auto;
-            max-width: 400px;
-            color: var(--main-purple);
-          }
-        }
-        &:hover {
-          background-color: var(--main-purple);
+      //     p {
+      //       margin: 0 auto;
+      //       max-width: 400px;
+      //       color: var(--main-purple);
+      //     }
+      //   }
+      //   &:hover {
+      //     background-color: var(--main-purple);
 
-          p {
-            color: var(--main-white);
-          }
-        }
-        &:focus {
-          outline: 1.45px dashed;
-          outline-color: var(--main-yellow);;
-        }
-      }
+      //     p {
+      //       color: var(--main-white);
+      //     }
+      //   }
+      //   &:focus {
+      //     outline: 1.45px dashed;
+      //     outline-color: var(--main-yellow);;
+      //   }
+      // }
 
       // .about-me__quote {
       //   padding: 3em 0;

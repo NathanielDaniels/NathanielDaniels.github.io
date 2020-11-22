@@ -795,6 +795,10 @@ body {
           transform: rotate(360deg)scale(1.3);
 }
 
+#about-section .about-container .about-info .about-me__skills .skills-title {
+  font-size: clamp(3rem, calc(5vw + 1em), 5rem);
+}
+
 #about-section .about-container .about-info .skills-description {
   max-width: 800px;
   width: 90%;
@@ -803,47 +807,6 @@ body {
 
 #about-section .about-container .about-info .skills-description .skills-description__top {
   margin-bottom: 1em;
-}
-
-#about-section .about-container .about-info .about-me__job {
-  padding: 20px;
-  width: 80%;
-  border: 1px solid var(--main-purple);
-  border-radius: 20px;
-  font-size: 1.2rem;
-  background: var(--main-white);
-  text-align: center;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform: perspective(1000px);
-          transform: perspective(1000px);
-  -webkit-transform: translateZ(20px);
-          transform: translateZ(20px);
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-}
-
-#about-section .about-container .about-info .about-me__job a {
-  text-decoration: none;
-}
-
-#about-section .about-container .about-info .about-me__job a p {
-  margin: 0 auto;
-  max-width: 400px;
-  color: var(--main-purple);
-}
-
-#about-section .about-container .about-info .about-me__job:hover {
-  background-color: var(--main-purple);
-}
-
-#about-section .about-container .about-info .about-me__job:hover p {
-  color: var(--main-white);
-}
-
-#about-section .about-container .about-info .about-me__job:focus {
-  outline: 1.45px dashed;
-  outline-color: var(--main-yellow);
 }
 
 #projects-section .projects {
