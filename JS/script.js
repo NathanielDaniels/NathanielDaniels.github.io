@@ -112,17 +112,17 @@ function smileyFace () {
 smileyFace()
 
 //! Speech Bubble Animation! (smileyface)
-
-// function speechBubble() {
-//   setInterval(function () {
-//     document.querySelector(".speech-bubble").style.display = "none";
-//   }, 2500);
-//   //? Remove speech bubble under 1200px screen width (mobile/tablet)
-//   if (window.innerWidth < 1200) {
-//     document.querySelector(".speech-bubble").style.display = "none";
-//   }
-// }
-// speechBubble();
+speechBubble = () => {
+   let speechBubble = document.querySelector(".speech-bubble")
+   let smileyFace = document.querySelector('.smiley-face')
+   smileyFace.addEventListener('mouseover' , ()=> {
+     speechBubble.style.opacity = "1"
+   })
+   smileyFace.addEventListener('mouseleave' , ()=> {
+     speechBubble.style.opacity = "0"
+   })
+}
+speechBubble()
 
 //! Hamburger Nav Menu Animation! (JQuery) ======================
 //? Change this back to vanilla JS (hamburgerAnimation2).

@@ -224,7 +224,6 @@ body {
       14% 78%,
       14% 21%
     );
-    // content: "";
     z-index: 1;
     position: absolute;
     left: -2.6em;
@@ -309,7 +308,44 @@ body {
       border-radius: 0px;
       font-size: 2px;
     }
+    // &:hover {
+    //   .speech-bubble {
+    //     display: none;
+    //   }
+    // }
   }
+  .speech-bubble {
+    // display: none;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    position: absolute;
+    bottom: 350px;
+    left: 200px;
+    width: 200px;
+    height: 100px;
+    background: var(--main-white);
+    border-radius: 20px;
+    filter: drop-shadow(2px 2px 4px hsl(0, 0%, 10%));
+    z-index: 100;
+    h2 {
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .triangle {
+      position: absolute;
+      top: 80px;
+      left: -15px;
+      transform: rotate(48deg);
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 30px solid var(--main-white);
+    }
+  }
+
 
   .main-section__header {
     top: 0;
@@ -743,22 +779,22 @@ body {
           }
         }
         .whatIDo {
-          margin-top: -3em;
+          // margin-top: -3em;
           .skills-title {
-            font-size: clamp(3rem, calc(5vw + 1em), 5rem);
+            font-size: clamp(3.5rem, calc(5vw + 1em), 5rem);
             line-height: normal;
             text-shadow: 0px 1px hsl(271, 76%, 28%), -0px -1px hsl(271, 76%, 20%);
             color: var(--main-purple);
-            // font-size: 4rem;
+            margin-bottom: .2em;
           }
           .cards {
             display: flex;
             flex-wrap: wrap;
             gap: 1em;
-            margin: 0 auto;
             .card {
+              margin: 0 auto;
             // width: fit-content;
-            width: 48%;
+            width: 21em;
             border-radius: 5px;
             // box-shadow: 0 0 .5em hsla(0, 0%, 0%,.2);
             // box-shadow: inset 0 0 10px hsla(0, 0%, 0%,.2);
