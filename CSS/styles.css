@@ -329,11 +329,11 @@ body {
   color: var(--main-yellow);
 }
 
-.main-section .main-section__header .header__inner-container .header__nav-links li:nth-child(2):hover {
+.main-section .main-section__header .header__inner-container .header__nav-links li:nth-child(2):hover, .main-section .main-section__header .header__inner-container .header__nav-links li:nth-child(2):focus {
   background: transparent;
 }
 
-.main-section .main-section__header .header__inner-container .header__nav-links li:nth-child(2):hover a {
+.main-section .main-section__header .header__inner-container .header__nav-links li:nth-child(2):hover a, .main-section .main-section__header .header__inner-container .header__nav-links li:nth-child(2):focus a {
   color: var(--main-yellow);
 }
 
@@ -576,7 +576,6 @@ body {
   margin-left: auto;
   text-align: right;
   right: 1em;
-  text-transform: capitalize;
 }
 
 .main-section .main-container .main-container__content .main-content__greeting {
@@ -584,6 +583,7 @@ body {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   width: 100%;
   margin-left: auto;
+  text-transform: capitalize;
 }
 
 .main-section .main-container .main-container__content .main-content__greeting span {
@@ -592,8 +592,8 @@ body {
 
 .main-section .main-container .main-container__content .main-content__CTA {
   width: 100%;
-  margin-top: 0.5em;
-  font-size: clamp(1rem, 3vw, 1.3rem);
+  margin-top: 0.4em;
+  font-size: clamp(1.4rem, 3vw, 1.6rem);
   float: right;
   color: var(--main-white);
 }
@@ -603,7 +603,7 @@ body {
   display: inline-block;
   text-decoration: none;
   padding: 0.5em 1em;
-  margin: 1em 0 1em;
+  margin: .8em 0;
   border: 1px solid var(--main-purple);
   background: var(--main-purple);
   border-radius: 0.5em;
@@ -612,7 +612,7 @@ body {
   transition: background 0.3s ease-in-out;
 }
 
-.main-section .main-container .main-container__content .main-content__CTA .cta-btn:hover {
+.main-section .main-container .main-container__content .main-content__CTA .cta-btn:hover, .main-section .main-container .main-container__content .main-content__CTA .cta-btn:focus {
   background: transparent;
 }
 
@@ -822,6 +822,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: .5em;
 }
 
 #about-section .about-container .about-info .about-me__skills .whatIDo .cards .card {
@@ -830,11 +831,25 @@ body {
   border-radius: 5px;
   padding: 1em;
   text-align: left;
+  -webkit-transition: background .3s ease-in-out;
+  transition: background .3s ease-in-out;
 }
 
 #about-section .about-container .about-info .about-me__skills .whatIDo .cards .card .card__title {
   margin-bottom: .5em;
   color: var(--main-purple);
+}
+
+#about-section .about-container .about-info .about-me__skills .whatIDo .cards .card:hover, #about-section .about-container .about-info .about-me__skills .whatIDo .cards .card:focus {
+  -webkit-box-shadow: inset 0 0 10px var(--main-box-shadow);
+          box-shadow: inset 0 0 10px var(--main-box-shadow);
+  background: var(--main-purple);
+  color: #fff;
+}
+
+#about-section .about-container .about-info .about-me__skills .whatIDo .cards .card:hover .card__title, #about-section .about-container .about-info .about-me__skills .whatIDo .cards .card:focus .card__title {
+  color: #fff;
+  color: var(--main-yellow);
 }
 
 #projects-section .projects {

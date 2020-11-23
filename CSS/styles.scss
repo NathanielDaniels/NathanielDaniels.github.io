@@ -338,7 +338,8 @@ body {
             a {
               color: var(--main-yellow);
             }
-            &:hover {
+            &:hover,
+            &:focus {
               background: transparent;
               a {
                 color: var(--main-yellow);
@@ -522,13 +523,13 @@ body {
       // border-right: 10px solid hsla(271, 67%, 65%, 0.4);
       text-align: right;
       right: 1em;
-      text-transform: capitalize;
       // text-shadow: 1px 1px var(--main-black);
       .main-content__greeting {
         color: var(--main-yellow);;
         font-size: clamp(1.8rem, 3vw, 2.5rem);
         width: 100%;
         margin-left: auto;
+        text-transform: capitalize;
         span {
           color: var(--main-white);
           // font-weight: bolder;
@@ -537,8 +538,8 @@ body {
 
       .main-content__CTA {
         width: 100%;
-        margin-top: 0.5em;
-        font-size: clamp(1rem, 3vw, 1.3rem);
+        margin-top: 0.4em;
+        font-size: clamp(1.4rem, 3vw, 1.6rem);
         float: right;
         color: var(--main-white);
         // line-height: 1.5rem;
@@ -547,14 +548,15 @@ body {
           display: inline-block;
           text-decoration: none;
           padding: 0.5em 1em;
-          margin: 1em 0 1em;
+          margin: .8em 0;
           border: 1px solid var(--main-purple);
           background: var(--main-purple);
           // background: hsl(271, 67%, 65%);
           border-radius: 0.5em;
           color: var(--main-yellow);;
           transition: background 0.3s ease-in-out;
-          &:hover {
+          &:hover,
+          &:focus {
             background: transparent;
           }
         }
@@ -701,6 +703,8 @@ body {
           }
         }
         .whatIDo {
+         
+          
           // margin-top: -3em;
           .skills-title {
             font-size: clamp(3.5rem, calc(5vw + 1em), 5rem);
@@ -711,22 +715,33 @@ body {
           }
           .cards {
             display: flex;
+            // justify-content: flex-end;
             flex-wrap: wrap;
-            // gap: .5em;
+            gap: .5em;
             .card {
-              margin: 0 auto;
-            // width: fit-content;
-            width: 21em;
-            border-radius: 5px;
-            // box-shadow: 0 0 .5em hsla(0, 0%, 0%,.2);
-            // box-shadow: inset 0 0 10px hsla(0, 0%, 0%,.2);
-            padding: 1em;
-            text-align: left;
-            .card__title {
-              margin-bottom: .5em;
-              color: var(--main-purple);
+              margin: 0 auto; 
+              // width: fit-content;
+              width: 21em;
+              border-radius: 5px;
+              padding: 1em;
+              text-align: left;
+              transition: background .3s ease-in-out;
+              .card__title {
+                margin-bottom: .5em;
+                color: var(--main-purple);
+              }
+              &:hover,
+              &:focus {
+                // box-shadow: inset 0 0 10px hsla(0, 0%, 0%,.4);
+                box-shadow: inset 0 0 10px var(--main-box-shadow);
+                background: var(--main-purple);
+                color:#fff;
+                .card__title {
+                  color: #fff;
+                  color: var(--main-yellow)
+                }
+              }
             }
-          }
           }
         }
       }
