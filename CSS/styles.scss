@@ -742,8 +742,25 @@ body {
             }
           }
         }
-        .skills-title {
-          font-size: clamp(3rem, calc(5vw + 1em), 5rem)
+        .whatIDo {
+
+          .skills-title {
+            font-size: clamp(3rem, calc(5vw + 1em), 5rem)
+          }
+          .cards {
+            display: flex;
+            flex-wrap: wrap;
+            .card {
+            width: 25em;
+            border-radius: 5px;
+            box-shadow: 0 0 .5em hsla(0, 0%, 0%,.2);
+            padding: 1em;
+            margin: 1em 0;
+            .card__title {
+              margin-bottom: .5em;
+            }
+          }
+          }
         }
       }
       .skills-description {
