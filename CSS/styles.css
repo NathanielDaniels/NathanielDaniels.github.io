@@ -704,41 +704,12 @@ body {
           transform-origin: 120%;
 }
 
-#about-section .about-container h2.about-title {
-  text-shadow: 0px 1px #49117e, 0px -2px #340c5a;
-  color: var(--main-purple);
-  font-size: 4rem;
-  font-weight: 800;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 #about-section .about-container .about-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-size: 18px;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
   line-height: 1.5em;
   margin: 0 auto;
   width: 98%;
   max-width: 800px;
-  text-align: justify;
-  text-rendering: optimizeLegibility;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
 }
 
 #about-section .about-container .about-info span {
@@ -755,7 +726,7 @@ body {
 
 #about-section .about-container .about-info .about-me__skills .skills-icons {
   position: absolute;
-  left: 0;
+  left: 1em;
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
@@ -839,7 +810,7 @@ body {
 
 #about-section .about-container .about-info .about-me__skills .whatIDo .skills-title {
   font-size: clamp(3.5rem, calc(5vw + 1em), 5rem);
-  line-height: normal;
+  line-height: 1;
   text-shadow: 0px 1px #49117e, 0px -1px #340c5a;
   color: var(--main-purple);
   margin-bottom: .2em;
@@ -851,7 +822,6 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 1em;
 }
 
 #about-section .about-container .about-info .about-me__skills .whatIDo .cards .card {
@@ -865,16 +835,6 @@ body {
 #about-section .about-container .about-info .about-me__skills .whatIDo .cards .card .card__title {
   margin-bottom: .5em;
   color: var(--main-purple);
-}
-
-#about-section .about-container .about-info .skills-description {
-  max-width: 800px;
-  width: 90%;
-  margin: 2em auto;
-}
-
-#about-section .about-container .about-info .skills-description .skills-description__top {
-  margin-bottom: 1em;
 }
 
 #projects-section .projects {
