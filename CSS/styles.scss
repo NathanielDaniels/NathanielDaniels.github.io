@@ -364,7 +364,7 @@ body {
               filter: blur(0);
             }
             &:focus {
-              outline: 1.45px dashed;
+              outline: 2px dashed;
               outline-color: var(--main-yellow);
               filter: drop-shadow(0px 2px 2px var(--secondary-dark-purple));
             }
@@ -892,6 +892,9 @@ body {
               }
               &:focus {
                 outline-color: yellow;
+                outline: 2px dashed yellow;
+                outline-offset: 3px;
+
                 filter: drop-shadow(1px 2px 2px var(--main-purple));
               }
             }
@@ -1063,6 +1066,8 @@ body {
         resize: none;
         &:focus {
           outline-color: yellow;
+          outline: 2px dashed yellow;
+          outline-offset: 3px;
           filter: drop-shadow(1px 2px 2px var(--main-purple));
         }
       }
