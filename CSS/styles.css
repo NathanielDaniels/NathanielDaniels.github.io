@@ -86,6 +86,10 @@
           box-sizing: border-box;
 }
 
+*:focus {
+  outline: 2px dashed yellow;
+}
+
 html,
 body {
   width: 100%;
@@ -359,8 +363,6 @@ body {
 }
 
 .main-section .main-section__header .header__inner-container .header__nav-links li a:focus {
-  outline: 2px dashed;
-  outline-color: var(--main-yellow);
   -webkit-filter: drop-shadow(0px 2px 2px var(--secondary-dark-purple));
           filter: drop-shadow(0px 2px 2px var(--secondary-dark-purple));
 }
@@ -378,8 +380,6 @@ body {
 }
 
 .main-section .main-section__header .mobile-burger-menu__container:focus {
-  outline: thin dashed;
-  outline-color: var(--main-yellow);
   padding: 0 5px;
 }
 
@@ -531,8 +531,6 @@ body {
 }
 
 .main-section .main-section__header #mobile-nav-menu ul.mobile-nav-menu__links li a:focus {
-  outline: thin dashed;
-  outline-color: var(--main-yellow);
   padding: 5px 0px;
 }
 
@@ -831,8 +829,10 @@ body {
   border-radius: 5px;
   padding: 1em;
   text-align: left;
-  -webkit-transition: background .3s ease-in-out;
-  transition: background .3s ease-in-out;
+  -webkit-transition: background .3s ease-in-out, -webkit-box-shadow .3s ease-in-out;
+  transition: background .3s ease-in-out, -webkit-box-shadow .3s ease-in-out;
+  transition: box-shadow .3s ease-in-out, background .3s ease-in-out;
+  transition: box-shadow .3s ease-in-out, background .3s ease-in-out, -webkit-box-shadow .3s ease-in-out;
 }
 
 #about-section .about-container .about-info .about-me__skills .whatIDo .cards .card .card__title {
@@ -982,8 +982,6 @@ body {
 }
 
 #projects-section .projects .grid-container .projects-grid .card .card__links a:focus {
-  outline-color: yellow;
-  outline: 2px dashed yellow;
   outline-offset: 3px;
   -webkit-filter: drop-shadow(1px 2px 2px var(--main-purple));
           filter: drop-shadow(1px 2px 2px var(--main-purple));
@@ -1148,9 +1146,6 @@ body {
 
 #contact-section .contact-container form.cf-form input:focus,
 #contact-section .contact-container form.cf-form textarea:focus {
-  outline-color: yellow;
-  outline: 2px dashed yellow;
-  outline-offset: 3px;
   -webkit-filter: drop-shadow(1px 2px 2px var(--main-purple));
           filter: drop-shadow(1px 2px 2px var(--main-purple));
 }
