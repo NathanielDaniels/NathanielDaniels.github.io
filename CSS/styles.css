@@ -807,7 +807,7 @@ body {
 }
 
 #about-section .about-container .about-info .about-me__skills .whatIDo .skills-title {
-  font-size: clamp(3.5rem, calc(5vw + 1em), 5rem);
+  font-size: clamp(4rem, calc(5vw + 1em), 5rem);
   line-height: 1;
   text-shadow: 0px 1px #49117e, 0px -1px #340c5a;
   color: var(--main-purple);
@@ -1268,24 +1268,24 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-  section.main-section .smiley-face {
-    left: -40.5%;
+  section.main-section {
+    height: 50em;
   }
-  .about#about-section .about-container h2.about-title {
+  section.main-section .smiley-face {
+    display: none;
+  }
+  section.about#about-section .about-container .about-title {
     padding: 0.5em 0 0;
   }
-  .about#about-section .about-container .about-info .about-me__skills h3 {
-    display: block;
-  }
-  .about#about-section .about-container .about-info .skills-icons {
+  section.about#about-section .about-container .about-info .skills-icons {
     position: static;
     width: 90%;
     top: 0;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
-    padding-bottom: 2em;
+    padding: 1em 0 2em;
   }
-  .about#about-section .about-container .about-info .skills-icons ul {
+  section.about#about-section .about-container .about-info .skills-icons ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1299,17 +1299,14 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  #contact-section .contact-container .floating-boxes {
+  .contact .contact-container .floating-boxes {
     display: block;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  section.main-section {
-    height: 115vh;
-  }
-  .about#about-section .about-container h2.about-title {
-    padding: 0.5em 0 0;
+  .about#about-section .about-container .about-info .about-me__skills .whatIDo .skills-title {
+    padding: .4em;
   }
   section#projects-section .projects {
     top: -3em !important;
@@ -1362,31 +1359,27 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  .main-section .smiley-face {
+  section.main-section .main-section__header .title-content-wrapper .title-name {
     display: none;
   }
-  .main-section .main-section__header .title-content-wrapper .title-name {
-    display: none;
-  }
-  .main-section .main-section__header .title-content-wrapper h1 {
+  section.main-section .main-section__header .title-content-wrapper h1 {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
   }
-  .main-section .main-section__header .header__inner-container .header__nav-links {
+  section.main-section .main-section__header .header__inner-container .header__nav-links {
     display: none !important;
   }
-  .main-section .main-section__header .mobile-burger-menu button.mobile-burger-menu__container {
+  section.main-section .main-section__header .mobile-burger-menu button.mobile-burger-menu__container {
     display: block !important;
   }
-  .main-section .main-container {
+  section.main-section .main-container {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
-    margin-right: 2%;
   }
-  .main-section .main-container .greeting-loop {
+  section.main-section .main-container .greeting-loop {
     color: white !important;
     letter-spacing: -1px !important;
     text-shadow: 0px 0.5px #9c4be7, 0px -2px var(--secondary-dark-purple) !important;
@@ -1398,27 +1391,27 @@ body {
     top: 0 !important;
     line-height: 1em !important;
   }
-  .main-section .main-container .main-container__content {
+  section.main-section .main-container .main-container__content {
     padding-right: 0em !important;
     border-right: 0 !important;
     margin-left: auto;
   }
-  .main-section .main-container .main-container__sidebar-social {
+  section.main-section .main-container .main-container__sidebar-social {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .main-section .main-container .main-container__sidebar-social .sidebar__social-media {
+  section.main-section .main-container .main-container__sidebar-social .sidebar__social-media {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
             flex-direction: row !important;
   }
   .about#about-section .about__container {
-    padding-top: 50px !important;
+    padding-top: 100px !important;
   }
-  .about#about-section .about__top {
-    width: 100%;
+  .about#about-section .about__container .whatIDo .skills-title {
+    margin-left: 3em !important;
   }
   section#contact-section .contact-container form.cf-form {
     width: 95%;
@@ -1428,9 +1421,6 @@ body {
 @media screen and (max-width: 600px) {
   .about#about-section .about-container .about-info {
     width: 98% !important;
-  }
-  .about#about-section .about__top {
-    width: 100%;
   }
   section#contact-section {
     padding-top: 4rem;

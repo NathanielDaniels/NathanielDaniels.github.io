@@ -602,17 +602,11 @@ body {
     // }
 
     .about-info {
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
       font-size: 18px;
       line-height: 1.5em;
       margin: 0 auto;
       width: 98%;
       max-width: 800px;
-      // text-align: justify;
-      // // text-align: left;
       // text-rendering: optimizeLegibility;
       // overflow-wrap: break-word;
       // word-wrap: break-word;
@@ -684,7 +678,7 @@ body {
         .whatIDo {
           // margin-top: -3em;
           .skills-title {
-            font-size: clamp(3.5rem, calc(5vw + 1em), 5rem);
+            font-size: clamp(4rem, calc(5vw + 1em), 5rem);
             line-height: 1;
             text-shadow: 0px 1px hsl(271, 76%, 28%), -0px -1px hsl(271, 76%, 20%);
             color: var(--main-purple);
@@ -760,26 +754,6 @@ body {
       //   &:focus {
       //     outline: 1.45px dashed;
       //     outline-color: var(--main-yellow);;
-      //   }
-      // }
-
-      // .about-me__quote {
-      //   padding: 3em 0;
-      //   blockquote {
-      //     letter-spacing: 1px;
-      //     border-left: 10px solid hsl(271, 76%, 63%);
-      //     margin: 0 10px;
-      //     max-width: 700px;
-      //     padding: 0 10px;
-      //     quotes: "\201C""\201D""\2018""\2019";
-      //   }
-      //   blockquote:before {
-      //     color: var(--main-purple);
-      //     content: open-quote;
-      //     font-size: 4em;
-      //     line-height: 0.1em;
-      //     margin-right: 0.2em;
-      //     vertical-align: -0.4em;
       //   }
       // }
     }
@@ -1130,52 +1104,28 @@ body {
 //! Switch to Tablet
 @media screen and (max-width: 1200px) {
   section.main-section {
+    height: 50em;
     .smiley-face {
-      left: -40.5%;
+      display: none;
     }
-    // .main-container {
-    //   .main-container__content {
-    //     //   // width: 45em !important;
-    //     .main-content__greeting {
-    //       .greeting-loop {
-    //         &:after {
-    //           width: 14rem !important;
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
   }
-
-  // .about#about-section {
-  //   .about-container {
-  //     .about-info {
-  //       .skills-icons {
-  //         ul {
-  //           align-items: flex-start;
-  //           margin-left: 0.5em;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-  .about#about-section {
+  section.about#about-section {
     .about-container {
-      h2.about-title {
+      .about-title {
         padding: 0.5em 0 0;
       }
       .about-info {
         .about-me__skills {
-          h3 {
-            display: block;
-          }
+          // h3 {
+          //   display: block;
+          // }
         }
         .skills-icons {
           position: static;
           width: 90%;
           top: 0;
           transform: translate(0, 0);
-          padding-bottom: 2em;
+          padding: 1em 0 2em;
           ul {
             flex-direction: row;
             align-items: center;
@@ -1186,7 +1136,7 @@ body {
       }
     }
   }
-  #contact-section {
+  .contact {
     .contact-container {
       .floating-boxes {
         display: block;
@@ -1196,25 +1146,22 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-  section.main-section {
-    height: 115vh;
-    // .speechBubble {
-    //   display: none;
-    // }
-    // .smiley-face {
-    //   top: 13em;
-    //   left: 6em;
-    // }
-    // .sidebar-social {
-    //   bottom: 7em !important;
-    // }
-  }
 
   .about#about-section {
     .about-container {
-      h2.about-title {
-        padding: 0.5em 0 0;
+      .about-info {
+        .about-me__skills {
+          .whatIDo {
+            .skills-title {
+              padding: .4em;
+              
+            }
+          }
+        }
       }
+      // h2.about-title {
+      //   padding: 0.5em 0 0;
+      // }
       // .about-info {
       //   .skills-icons {
       //     max-width: 600px;
@@ -1284,11 +1231,7 @@ body {
 
 //! Switch to Mobile
 @media screen and (max-width: 800px) {
-  .main-section {
-    .smiley-face {
-      display: none;
-    }
-
+  section.main-section {
     .main-section__header {
       .title-content-wrapper {
         .title-name {
@@ -1310,20 +1253,14 @@ body {
         }
       }
     }
-
     .main-container {
       flex-direction: column !important;
-      margin-right: 2%;
       .greeting-loop {
         color: hsl(0, 0%, 100%) !important;
-        // color: var(--main-purple) !important;
         letter-spacing: -1px !important;
         text-shadow: 0px 0.5px hsl(271, 76%, 60%), -0px -2px var(--secondary-dark-purple) !important;
-        // top: -0.8em !important;
         font-size: 2.6rem !important;
         justify-content: flex-end !important;
-        // padding: 1rem !important;
-        // width: 100% !important;
         position: relative;
         top: 0 !important;
         line-height: 1em !important;
@@ -1331,24 +1268,9 @@ body {
       .main-container__content {
         padding-right: 0em !important;
         border-right: 0 !important;
-        // max-width: 80% !important;
         margin-left: auto;
-        // .main-content__greeting {
-        //   font-size: 1.6rem !important;
-        //   width: 100% !important;
-        // }
-
-        // .main-content__CTA {
-        //   width: 75% !important;
-        //   width: clamp(55%, 2.5em, 75%) !important;
-        //   margin-top: 1em;
-        //   .cta-btn {
-        //     margin-top: 1em;
-        //   }
-        // }
       }
       .main-container__sidebar-social {
-        // margin: 1em 0 !important;
         justify-content: flex-end;
         .sidebar__social-media {
           flex-direction: row !important;
@@ -1358,10 +1280,12 @@ body {
   }
   .about#about-section {
     .about__container {
-      padding-top: 50px !important;
-    }
-    .about__top {
-      width: 100%;
+      padding-top: 100px !important;
+      .whatIDo {
+        .skills-title {
+          margin-left: 3em !important;
+        }
+      }
     }
   }
   section#contact-section {
@@ -1377,21 +1301,6 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  // section.main-section {
-  //   // height: 110vh !important;
-  //   .main-container {
-  //     .main-container__content {
-  //       .main-content__greeting {
-  //         .greeting-loop {
-  //           &:after {
-  //             width: 12rem !important;
-  //             left: 14% !important;
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 
   .about#about-section {
     .about-container {
@@ -1399,12 +1308,8 @@ body {
         width: 98% !important;
       }
     }
-    .about__top {
-      width: 100%;
-    }
-    // .about-me__headline {
-    //   // text-align: justify !important;
-    //   width: 90%;
+    // .about__top {
+    //   width: 100%;
     // }
   }
 
