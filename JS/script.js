@@ -40,7 +40,7 @@ function smileyFace () {
     }
 
     face.classList.add('blink')
-
+    
     setTimeout(function () {
       face.classList.remove('blink')
     }, 200)
@@ -108,6 +108,19 @@ function smileyFace () {
 
   //   face.style.opacity = 1.6 - squishP
   // }
+  const touchSquint = () => {
+    const smileyFace = document.querySelector(".smiley-face__face")
+    const spokenWord = document.querySelector("span.speech-bubble > h2")
+    // let face = $('.smiley-face span')[0]
+    smileyFace.addEventListener('mouseover' , ()=> {
+      face.classList.add('blink')
+      spokenWord.innerText = "Watch Out!"
+    })
+    smileyFace.addEventListener('mouseleave' , ()=> {
+      face.classList.remove('blink')
+    })
+  }
+  touchSquint()
 }
 smileyFace()
 
