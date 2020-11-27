@@ -698,7 +698,7 @@ body {
               .fa-jquery {
                 background-image: url("/IMG/jquery.png");
               }
-              &:hover i,
+              &:hover i, 
               &:focus i {
                 color: var(--main-purple);
                 transform: rotate(360deg) + scale(1.3);

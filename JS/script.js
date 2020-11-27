@@ -242,8 +242,8 @@ skillsHover()
         const cards = document.querySelectorAll('.cardImg')
         console.log(cards)
         cards.forEach(card =>  {
-          card.vanillaTilt.destroy();
-          // card.removeAttribute('data-tilt')
+          // card.vanillaTilt.destroy();
+          card.removeAttribute('data-tilt')
           // card.removeAttribute('data-tilt-glare')
           // card.removeAttribute('data-tilt-max-glare')
           // card.removeAttribute('data-tilt-max')
