@@ -203,6 +203,8 @@ body {
 
 .main-section .speech-bubble {
   opacity: 0;
+  padding: 0 1em;
+  text-align: center;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   position: absolute;
