@@ -579,9 +579,9 @@ body {
 }
 
 .main-section .main-container .main-container__content .main-content__greeting {
+  width: 25ch;
   color: var(--main-yellow);
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  width: 100%;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
   margin-left: auto;
   text-transform: capitalize;
 }
@@ -593,7 +593,7 @@ body {
 .main-section .main-container .main-container__content .main-content__CTA {
   width: 100%;
   margin-top: 0.4em;
-  font-size: clamp(1.4rem, 3vw, 1.6rem);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
   float: right;
   color: var(--main-white);
 }
@@ -1039,56 +1039,6 @@ body {
 #projects-section .projects .grid-container .projects-grid .card-2__info,
 #projects-section .projects .grid-container .projects-grid .card-4__info {
   text-align: right;
-}
-
-.about-me__quote {
-  position: relative;
-  z-index: 1;
-  background: #eee;
-  z-index: 99;
-  height: 20em;
-  border-bottom: 2px solid black;
-  border-top: 2px solid black;
-}
-
-.about-me__quote:after {
-  background: inherit;
-  content: "";
-  display: block;
-  height: 500px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-.about-me__quote:after {
-  bottom: 0;
-  border-bottom: 5px solid #333333;
-  -webkit-transform: skewY(-6deg);
-          transform: skewY(-6deg);
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
-}
-
-.about-me__quote blockquote {
-  letter-spacing: 1px;
-  border-left: 10px solid var(--main-purple);
-  margin: 0 10px;
-  max-width: 700px;
-  padding: 0 10px;
-  quotes: "“" "”" "‘" "’";
-}
-
-.about-me__quote blockquote:before {
-  color: var(--main-purple);
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.2em;
-  vertical-align: -0.4em;
 }
 
 #contact-section {

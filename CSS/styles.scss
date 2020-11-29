@@ -515,10 +515,21 @@ body {
       margin-left: auto;
       text-align: right;
       right: 1em;
+      // .main-content__greeting {
+      //   color: var(--main-yellow);;
+      //   font-size: clamp(1.8rem, 3vw, 2.5rem);
+      //   width: 100%;
+      //   margin-left: auto;
+      //   text-transform: capitalize;
+      //   span {
+      //     color: var(--main-white);
+      //   }
+      // }
       .main-content__greeting {
+        width: 25ch;
         color: var(--main-yellow);;
-        font-size: clamp(1.8rem, 3vw, 2.5rem);
-        width: 100%;
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        // width: 100%;
         margin-left: auto;
         text-transform: capitalize;
         span {
@@ -529,7 +540,7 @@ body {
       .main-content__CTA {
         width: 100%;
         margin-top: 0.4em;
-        font-size: clamp(1.4rem, 3vw, 1.6rem);
+        font-size: clamp(1.2rem, 3vw, 1.6rem);
         float: right;
         color: var(--main-white);
         .cta-btn {
@@ -847,31 +858,31 @@ body {
 }
 
 //! Quote Section =============================
-.about-me__quote {
-  @include angle(after);
-  // display: relative;
-  background: #eee;
-  z-index: 99;
-  height: 20em;
-  border-bottom: 2px solid black;
-  border-top: 2px solid black;
-  blockquote {
-    letter-spacing: 1px;
-    border-left: 10px solid var(--main-purple);
-    margin: 0 10px;
-    max-width: 700px;
-    padding: 0 10px;
-    quotes: '\201C''\201D''\2018''\2019';
-  }
-  blockquote:before {
-    color: var(--main-purple);
-    content: open-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.2em;
-    vertical-align: -0.4em;
-  }
-}
+// .about-me__quote {
+//   @include angle(after);
+//   // display: relative;
+//   background: #eee;
+//   z-index: 99;
+//   height: 20em;
+//   border-bottom: 2px solid black;
+//   border-top: 2px solid black;
+//   blockquote {
+//     letter-spacing: 1px;
+//     border-left: 10px solid var(--main-purple);
+//     margin: 0 10px;
+//     max-width: 700px;
+//     padding: 0 10px;
+//     quotes: '\201C''\201D''\2018''\2019';
+//   }
+//   blockquote:before {
+//     color: var(--main-purple);
+//     content: open-quote;
+//     font-size: 4em;
+//     line-height: 0.1em;
+//     margin-right: 0.2em;
+//     vertical-align: -0.4em;
+//   }
+// }
 
 
 //! CONTACT Section ===============================
