@@ -529,7 +529,6 @@ body {
         width: 25ch;
         color: var(--main-yellow);;
         font-size: clamp(1.5rem, 3vw, 2.5rem);
-        // width: 100%;
         margin-left: auto;
         text-transform: capitalize;
         span {
@@ -969,6 +968,7 @@ body {
         filter: drop-shadow(1px 3px 2px gray);
         resize: none;
         &:focus {
+          outline: 2px solid yellow;
           filter: drop-shadow(1px 2px 2px var(--main-purple));
         }
       }
