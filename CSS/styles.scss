@@ -847,31 +847,31 @@ body {
 }
 
 //! Quote Section =============================
-// .about-me__quote {
-//   @include angle(after);
-//   // display: relative;
-//   background: #eee;
-//   z-index: 99;
-//   height: 20em;
-//   border-bottom: 2px solid black;
-//   border-top: 2px solid black;
-//   blockquote {
-//     letter-spacing: 1px;
-//     border-left: 10px solid var(--main-purple);
-//     margin: 0 10px;
-//     max-width: 700px;
-//     padding: 0 10px;
-//     quotes: '\201C''\201D''\2018''\2019';
-//   }
-//   blockquote:before {
-//     color: var(--main-purple);
-//     content: open-quote;
-//     font-size: 4em;
-//     line-height: 0.1em;
-//     margin-right: 0.2em;
-//     vertical-align: -0.4em;
-//   }
-// }
+.about-me__quote {
+  @include angle(after);
+  // display: relative;
+  background: #eee;
+  z-index: 99;
+  height: 20em;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  blockquote {
+    letter-spacing: 1px;
+    border-left: 10px solid var(--main-purple);
+    margin: 0 10px;
+    max-width: 700px;
+    padding: 0 10px;
+    quotes: '\201C''\201D''\2018''\2019';
+  }
+  blockquote:before {
+    color: var(--main-purple);
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.2em;
+    vertical-align: -0.4em;
+  }
+}
 
 
 //! CONTACT Section ===============================
