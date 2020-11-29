@@ -1262,6 +1262,48 @@ body {
   font-size: 40px;
 }
 
+#contact-section footer {
+  width: 100%;
+}
+
+#contact-section footer .main-container__sidebar-social {
+  z-index: 100;
+  padding: 0 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3em;
+  background: transparent;
+}
+
+#contact-section footer .main-container__sidebar-social .sidebar__social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  cursor: pointer;
+}
+
+#contact-section footer .main-container__sidebar-social .sidebar__social-media a {
+  color: var(--highlight-purple);
+  text-shadow: 0px 1px 1px var(--main-text-shadow);
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+#contact-section footer .main-container__sidebar-social .sidebar__social-media a:hover, #contact-section footer .main-container__sidebar-social .sidebar__social-media a:focus {
+  text-shadow: 0px 2px 2px var(--main-text-shadow);
+  color: var(--main-yellow);
+}
+
+#contact-section footer .main-container__sidebar-social .sidebar__social-media a .fab {
+  font-size: 40px;
+}
+
 @media screen and (max-width: 1200px) {
   section.main-section {
     height: 50em;
