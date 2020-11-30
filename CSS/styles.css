@@ -667,7 +667,7 @@ body {
   position: relative;
   z-index: 1;
   display: block;
-  z-index: 101;
+  z-index: 102;
   background: var(--main-white);
   max-width: 100%;
   width: 100%;
@@ -853,7 +853,7 @@ body {
   display: relative;
   background: var(--main-purple);
   cursor: default;
-  z-index: 100;
+  z-index: 101;
 }
 
 #projects-section .projects:after {
@@ -1042,6 +1042,7 @@ body {
 }
 
 #contact-section {
+  z-index: 100;
   margin: -3em 0;
   position: relative;
   padding: 10em 0 0;
@@ -1059,7 +1060,7 @@ body {
   bottom: 0em;
   left: 0;
   width: 100%;
-  height: 41em;
+  height: 41.5em;
   overflow: hidden;
 }
 
@@ -1263,11 +1264,14 @@ body {
 }
 
 #contact-section footer {
+  padding: .5em 0;
+  position: absolute;
   width: 100%;
+  z-index: 100;
+  margin-top: -3.5em;
 }
 
 #contact-section footer .main-container__sidebar-social {
-  z-index: 100;
   padding: 0 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1275,7 +1279,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 3em;
   background: transparent;
 }
 
@@ -1297,7 +1300,7 @@ body {
 
 #contact-section footer .main-container__sidebar-social .sidebar__social-media a:hover, #contact-section footer .main-container__sidebar-social .sidebar__social-media a:focus {
   text-shadow: 0px 2px 2px var(--main-text-shadow);
-  color: var(--main-yellow);
+  color: var(--highlight-purple);
 }
 
 #contact-section footer .main-container__sidebar-social .sidebar__social-media a .fab {
@@ -1467,7 +1470,7 @@ body {
     margin: -3em auto;
   }
   section#contact-section h2.contact-title {
-    margin-top: 2rem !important;
+    margin-top: 4rem !important;
   }
   section#contact-section .contact-container .floating-boxes {
     display: none;
@@ -1493,6 +1496,18 @@ body {
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
     width: 80% !important;
+  }
+  section#contact-section footer {
+    background: #2c2c2c;
+    top: 3em;
+  }
+  section#contact-section footer .main-container__sidebar-social {
+    padding: 2em 1em 1em;
+    top: 0.2em;
+    float: right;
+  }
+  section#contact-section footer .main-container__sidebar-social .sidebar__social-media li a:hover, section#contact-section footer .main-container__sidebar-social .sidebar__social-media li a:focus {
+    color: var(--main-yellow);
   }
 }
 
