@@ -361,7 +361,7 @@ body {
   border-radius: 50%;
   margin-right: 10px;
   position: relative;
-  padding: 5px;
+  padding: 0 5px;
   cursor: pointer;
 }
 
@@ -373,7 +373,6 @@ body {
   width: 35px;
   height: 35px;
   position: relative;
-  top: 5px;
 }
 
 .main-section .main-section__header .mobile-burger-menu__container .mobile-burger-menu__elements:hover, .main-section .main-section__header .mobile-burger-menu__container .mobile-burger-menu__elements:focus {
@@ -522,7 +521,6 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 1em;
 }
 
 .main-section .main-container .greeting-loop {
@@ -554,7 +552,7 @@ body {
   width: 25ch;
   max-width: 100%;
   color: var(--main-yellow);
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.4rem, 3.5vw, 2.5rem);
   margin-left: auto;
   text-transform: capitalize;
 }
@@ -566,7 +564,7 @@ body {
 .main-section .main-container .main-container__content .main-content__CTA {
   width: 100%;
   margin-top: 0.4em;
-  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
   float: right;
   color: var(--main-white);
 }
@@ -859,6 +857,7 @@ body {
   font-size: 4rem;
   color: var(--main-yellow);
   text-transform: uppercase;
+  max-width: 100%;
 }
 
 #projects-section .projects .grid-container {
@@ -1403,7 +1402,8 @@ body {
     color: white !important;
     letter-spacing: -1px !important;
     text-shadow: 0px 0.5px #9c4be7, 0px -2px var(--secondary-dark-purple) !important;
-    font-size: clamp(2rem, 8vw, 8rem);
+    font-size: clamp(2.1rem, 8vw, 8rem);
+    padding-right: .3em;
     -webkit-box-pack: end !important;
         -ms-flex-pack: end !important;
             justify-content: flex-end !important;
@@ -1491,9 +1491,43 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-  .about#about-section .about p.about__top {
-    font-size: 18px !important;
-    width: 95% !important;
+  section.about#about-section div.about-container div.about-info div.about-me__skills div.whatIDo h2.skills-title {
+    font-size: 3rem;
+  }
+  section.about#about-section div.about-container div.about-info div.about-me__skills div.whatIDo div.cards div.card h2 {
+    font-size: 1.5rem;
+  }
+  #projects-section .projects {
+    position: relative;
+    z-index: 1;
+    padding: 10em 0 0;
+    display: relative;
+    background: var(--main-purple);
+    cursor: default;
+    z-index: 101;
+  }
+  #projects-section .projects:after {
+    background: inherit;
+    content: "";
+    display: block;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  #projects-section .projects:after {
+    bottom: 0;
+    border-bottom: 5px solid #333333;
+    -webkit-transform: skewY(-6deg);
+            transform: skewY(-6deg);
+    -webkit-transform-origin: 100%;
+            transform-origin: 100%;
+  }
+  #projects-section .projects h2.projects-title {
+    font-size: 3rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

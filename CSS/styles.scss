@@ -371,7 +371,7 @@ body {
       border-radius: 50%;
       margin-right: 10px;
       position: relative;
-      padding: 5px;
+      padding: 0 5px;
       cursor: pointer;
       &:focus {
         padding: 0 5px;
@@ -381,7 +381,6 @@ body {
         width: 35px;
         height: 35px;
         position: relative;
-        top: 5px;
         &:hover,
         &:focus {
           filter: drop-shadow(0px 2px 2px var(--secondary-dark-purple));
@@ -475,7 +474,7 @@ body {
     max-width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding: 1em;
+    // padding: 1em;
     .greeting-loop {
       width: 100%;
       position: absolute;
@@ -501,7 +500,7 @@ body {
         width: 25ch;
         max-width: 100%;
         color: var(--main-yellow);;
-        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        font-size: clamp(1.4rem, 3.5vw, 2.5rem);
         margin-left: auto;
         text-transform: capitalize;
         span {
@@ -512,7 +511,7 @@ body {
       .main-content__CTA {
         width: 100%;
         margin-top: 0.4em;
-        font-size: clamp(1.2rem, 3vw, 1.6rem);
+        font-size: clamp(1.2rem, 2.5vw, 1.6rem);
         float: right;
         color: var(--main-white);
         .cta-btn {
@@ -715,6 +714,7 @@ body {
       font-size: 4rem;
       color: var(--main-yellow);;
       text-transform: uppercase;
+      max-width: 100%;
       // animation: slideUp 1s cubic-bezier(0.19, 1, 0.3, 1) 0.5s forwards;
     }
 
@@ -1280,8 +1280,8 @@ body {
         letter-spacing: -1px !important;
         text-shadow: 0px 0.5px hsl(271, 76%, 60%), -0px -2px var(--secondary-dark-purple) !important;
         // font-size: 3rem !important;
-        font-size: clamp(2rem, 8vw, 8rem);
-
+        font-size: clamp(2.1rem, 8vw, 8rem);
+        padding-right: .3em;
         justify-content: flex-end !important;
         position: relative;
         top: 0 !important;
@@ -1395,21 +1395,53 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-  section.main-section {
-    main.main-container {
-      div.greeting-loop {
-        // font-size: 1em;
+  // section.main-section {
+  //   main.main-container {
+  //     div.greeting-loop {
+  //       // font-size: 1em;
+  //     }
+  //     div.main-container__content {
+  //       h2.main-content__greeting {
+  //         // width: 100%;
+  //       }
+  //     }
+  //   }
+  // }
+  section.about#about-section {
+    div.about-container {
+      div.about-info {
+        div.about-me__skills {
+          div.whatIDo {
+            h2.skills-title {
+              font-size: 3rem;
+            }
+            div.cards {
+              div.card {
+                h2 {
+                  font-size: 1.5rem;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
-  .about#about-section {
-    .about {
-      p.about__top {
-        font-size: 18px !important;
-        width: 95% !important;
-      }
+#projects-section {
+  .projects {
+    @include angle(after);
+    padding: 10em 0 0;
+    display: relative;
+    background: var(--main-purple);;
+    cursor: default;
+    // z-index: 100;
+    z-index: 101;
+    h2.projects-title {
+      font-size: 3rem;
     }
   }
+}
+
 }
 
 
