@@ -821,7 +821,7 @@ body {
 #projects-section .projects {
   position: relative;
   z-index: 1;
-  padding: 14em 0 2em;
+  padding: 13em 0 0em;
   display: relative;
   background: var(--main-purple);
   cursor: default;

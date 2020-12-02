@@ -698,10 +698,9 @@ body {
 
 //! Projects Section =============================
 #projects-section {
-  
   .projects {
     @include angle(after);
-    padding: 14em 0 2em;
+    padding: 13em 0 0em;
     display: relative;
     background: var(--main-purple);;
     cursor: default;
