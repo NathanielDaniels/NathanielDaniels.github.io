@@ -821,7 +821,7 @@ body {
 #projects-section .projects {
   position: relative;
   z-index: 1;
-  padding: 10em 0 0;
+  padding: 14em 0 2em;
   display: relative;
   background: var(--main-purple);
   cursor: default;
@@ -854,14 +854,14 @@ body {
   z-index: 5;
   font-weight: 800;
   text-align: center;
-  font-size: 4rem;
+  font-size: clamp(3rem, 10vw, 5em);
   color: var(--main-yellow);
   text-transform: uppercase;
   max-width: 100%;
 }
 
 #projects-section .projects .grid-container {
-  padding: 3em 0;
+  padding: 5em 0;
 }
 
 #projects-section .projects .grid-container .projects-grid {
@@ -1018,7 +1018,7 @@ body {
 
 #contact-section {
   z-index: 100;
-  margin: -3em 0;
+  margin: -1em 0;
   position: relative;
   padding: 10em 0 0;
   background: var(--main-white);
@@ -1035,7 +1035,7 @@ body {
   bottom: 0em;
   left: 0;
   width: 100%;
-  height: 41.5em;
+  height: 45em;
   overflow: hidden;
 }
 
@@ -1055,7 +1055,7 @@ body {
 #contact-section .contact-container h2.contact-title {
   position: relative;
   font-weight: 800;
-  font-size: 4rem;
+  font-size: clamp(3rem, 10vw, 4em);
   color: var(--main-purple);
   text-transform: uppercase;
 }
@@ -1317,9 +1317,6 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .contact .contact-container .floating-boxes {
-    display: block;
-  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -1372,7 +1369,14 @@ body {
     left: -1%;
   }
   section#contact-section {
+    margin: -3em 0;
     padding-top: 6em;
+  }
+  section#contact-section div.contact-container {
+    padding-top: 2em;
+  }
+  section#contact-section div.contact-container div.floating-boxes {
+    height: 43em !important;
   }
 }
 
@@ -1432,7 +1436,7 @@ body {
   .about#about-section .about__container .whatIDo .skills-title {
     margin-left: 3em !important;
   }
-  section#contact-section .contact-container form.cf-form {
+  section#contact-section.contact div.contact-container form.cf-form {
     width: 95%;
   }
 }
@@ -1442,18 +1446,16 @@ body {
     width: 98% !important;
   }
   section#contact-section {
-    padding-top: 4rem;
+    padding-top: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: -3em auto;
   }
   section#contact-section h2.contact-title {
-    margin-top: 4rem !important;
+    margin-top: 2.5rem;
   }
   section#contact-section .contact-container .floating-boxes {
     display: none;
-    height: 55em;
   }
   section#contact-section .contact-container form.cf-form {
     width: 100%;
@@ -1477,7 +1479,7 @@ body {
     width: 80% !important;
   }
   section#contact-section footer {
-    background: #2c2c2c;
+    background: var(--main-white);
     top: 3em;
   }
   section#contact-section footer .main-container__sidebar-social {
