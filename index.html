@@ -36,7 +36,7 @@
         <h2>Welcome!</h2>
       </span>
       <header class="main-section__header nav-down">
-        <div class="header__inner-container" role="header-container">
+        <div class="header__inner-container" role="header container">
           <div class="title-content-wrapper">
             <div id="name-svg" class="title-name" title="That's Me!"></div>
             <h1 title="That's Me!">Nathaniel Daniels</h1>
@@ -49,9 +49,9 @@
         <div class="mobile-burger-menu">
           <button class="mobile-burger-menu__container" aria-label="Mobile Menu">
             <div class="mobile-burger-menu__elements">
-              <span class="line line01" role="Side Menu button"></span>
-              <span class="line line02" role="Side Menu button"></span>
-              <span class="line line03" role="Side Menu button"></span>
+              <span class="line line01" role="Side Menu button top line"></span>
+              <span class="line line02" role="Side Menu button middle line"></span>
+              <span class="line line03" role="Side Menu button bottom line"></span>
             </div>
           </button>
         </div>
@@ -66,18 +66,21 @@
       </header>
 
       <main class="main-container">
-        <div id="greeting" class="greeting-loop">web developer</div>
-        <div class="main-container__content">
-          <h2 class="main-content__greeting">
-            building quality
-            websites from the ground up
-          </h2>
-          <div class="main-content__CTA">
-            <p>
-              Have an idea for a project?
-            </p>
-            <a class="cta-btn" href="#contact-section">Let's chat</a>
+        <div class="content-wrapper">
+          <div id="greeting" class="greeting-loop">web developer</div>
+          <div class="main-container__content">
+            <h2 class="main-content__greeting">
+              building quality
+              websites from the ground up
+            </h2>
+            <div class="main-content__CTA">
+              <p>
+                Have an idea for a project?
+              </p>
+              <a class="cta-btn" href="#contact-section">Let's chat</a>
+            </div>
           </div>
+
         </div>
         <aside class="main-container__sidebar-social">
           <ul class="sidebar__social-media">
@@ -85,7 +88,7 @@
               <a
                 target="_blank"
                 title="Twitter"
-                rel="noreferrer"
+                rel="noreferrer noopener"
                 href="https://twitter.com/NathanDDaniels"
                 ><i class="fab fa-twitter-square"></i
               ></a>
@@ -94,7 +97,7 @@
               <a
                 target="_blank"
                 title="linkedIn"
-                rel="noreferrer"
+                rel="noreferrer noopener"
                 href="https://www.linkedin.com/in/nathaniel-daniels-500740139/"
                 ><i class="fab fa-linkedin"></i
               ></a>
@@ -103,7 +106,7 @@
               <a
                 target="_blank"
                 title="GitHub"
-                rel="noreferrer"
+                rel="noreferrer noopener"
                 href="https://github.com/NathanielDaniels"
                 ><i class="fab fa-github-square"></i
               ></a>
@@ -114,7 +117,7 @@
     </section>
     <!--!  ABOUT Section -->
     <section id="about-section" class="about">
-      <div class="about-container" role="about-container">
+      <div class="about-container" role="about container">
         <div class="about-info">
           <!-- <h2 class="skills-title">What I do</h2> -->
           <div class="about-me__skills">
@@ -143,13 +146,13 @@
                 <div class="card">
                   <h2 class="card__title">Dynamic Data</h2>
                   <p class="card__content">
-                    Pulling data from a database gives us the ability to add dynamic/up-to-date content to any project, no matter the size. 
+                    Using an API to pull data from a database gives us the ability to add dynamic up-to-date content to any project, no matter the size. 
                   </p>
                 </div>
                   <div class="card">
                   <h2 class="card__title">Responsive Design</h2>
                   <p class="card__content">
-                    Using a mobile-first approach, all of my projects are fully responsive to be viewed on any computer, tablet, or cellphone.
+                    Using a mobile-first design approach, all projects are fully responsive to be viewed on any computer, tablet, or cellphone.
                   </p>
                 </div>
                
@@ -186,7 +189,7 @@
 
     <!--! Project Section -->
     <section id="projects-section">
-      <div class="projects" role="projects-container">
+      <div class="projects" role="projects container">
         <h2 class="projects-title title">Projects</h2>
 
         <div class="grid-container">
@@ -219,13 +222,13 @@
               <div class="card__links">
                 <a
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noreferrer noopener"
                   href="https://github.com/NathanielDaniels/cookbook-project"
                   ><i class="fab fa-github-square"></i>Github</a
                 >
                 <a
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noreferrer noopener"
                   href="https://simonesrecipebox.netlify.app/"
                   ><i class="fas fa-laptop-code"></i>Preview</a
                 >
@@ -270,13 +273,13 @@
               <div class="card__links">
                 <a
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noreferrer noopener"
                   href="https://github.com/NathanielDaniels/Artist-Website"
                   ><i class="fab fa-github-square"></i>Github</a
                 >
                 <a
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noreferrer noopener"
                   href="https://top-artists.netlify.app/index.html"
                   ><i class="fas fa-laptop-code"></i>Preview</a
                 >
@@ -314,10 +317,10 @@
                 <p>React.</p>
               </div>
               <div class="card__links">
-                <a target="_blank" rel="noreferrer" href="#"
+                <a target="_blank" rel="noreferrer noopener" href="#"
                   ><i class="fab fa-github-square"></i>Github</a
                 >
-                <a target="_blank" rel="noreferrer" href="#"
+                <a target="_blank" rel="noreferrer noopener" href="#"
                   ><i class="fas fa-laptop-code"></i>Preview</a
                 >
               </div>
@@ -333,10 +336,10 @@
                 <p>HTML, CSS/SCSS, Hyperapp.</p>
               </div>
               <div class="card__links">
-                <a target="_blank" rel="noreferrer" href="#"
+                <a target="_blank" rel="noreferrer noopener" href="#"
                   ><i class="fab fa-github-square"></i>Github</a
                 >
-                <a target="_blank" rel="noreferrer" href="#"
+                <a target="_blank" rel="noreferrer noopener" href="#"
                   ><i class="fas fa-laptop-code"></i>Preview</a
                 >
               </div>
@@ -370,17 +373,20 @@
 
     <!--! CONTACT Section -->
     <section id="contact-section" class="contact">
-      <div class="contact-container" role="contact-container">
+      <div class="contact-container" role="contact container">
         <!-- ? Floating Boxes -->
         <div class="floating-boxes">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          
         </div>
         <h2 class="contact-title title">Contact</h2>
         <p class="sub-headline">Let's bring your idea(s) to life!</p>
@@ -430,7 +436,7 @@
               <a
                 target="_blank"
                 title="Twitter"
-                rel="noreferrer"
+                rel="noreferrer noopener"
                 href="https://twitter.com/NathanDDaniels"
                 ><i class="fab fa-twitter-square"></i
               ></a>
@@ -439,7 +445,7 @@
               <a
                 target="_blank"
                 title="linkedIn"
-                rel="noreferrer"
+                rel="noreferrer noopener"
                 href="https://www.linkedin.com/in/nathaniel-daniels-500740139/"
                 ><i class="fab fa-linkedin"></i
               ></a>
@@ -448,7 +454,7 @@
               <a
                 target="_blank"
                 title="GitHub"
-                rel="noreferrer"
+                rel="noreferrer noopener"
                 href="https://github.com/NathanielDaniels"
                 ><i class="fab fa-github-square"></i
               ></a>
