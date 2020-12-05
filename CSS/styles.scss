@@ -484,6 +484,7 @@ body {
       .greeting-loop {
         position: absolute;
         right: 0;
+        // top: -5px;
         font-size: clamp(3rem, 9vw, 8rem);
         font-weight: bold;
         text-transform: uppercase;
@@ -568,6 +569,7 @@ body {
 }
 
 //! ABOUT Section =============================
+
 #about-section {
   display: block;
   // max-width: 100%;
@@ -621,7 +623,6 @@ body {
         // }
          .whatIDo {
            margin: 0 auto;
-           
            max-width: 900px;
            display: grid;
            grid-gap: 1em;
@@ -1458,7 +1459,9 @@ body {
             grid-gap: 0;
             
             h2.skills-title {
-              font-size: 3rem;
+              // font-size: 3rem;
+              font-size: clamp(2rem, 11vw, 5rem);
+
               padding: 1em;
               // .skills-title {
               //   // position: relative;
@@ -1470,11 +1473,20 @@ body {
               // height: 90% !important;
 
               div.card {
+                min-width: 100%;
                 h2 {
-                  font-size: 1.5rem;
+                  font-size: 1.3rem;
+                }
+                p {
+                  font-size: 1rem;
+                  line-height: 1.4;
                 }
               }
             }
+          }
+          .skills-icons {
+            font-size: .5em;
+            margin: 0 auto;
           }
         }
       }

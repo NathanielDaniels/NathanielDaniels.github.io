@@ -1565,11 +1565,22 @@ body {
     grid-gap: 0;
   }
   section.about#about-section div.about-container div.about-info div.about-me__skills div.whatIDo h2.skills-title {
-    font-size: 3rem;
+    font-size: clamp(2rem, 11vw, 5rem);
     padding: 1em;
   }
+  section.about#about-section div.about-container div.about-info div.about-me__skills div.whatIDo div.cards div.card {
+    min-width: 100%;
+  }
   section.about#about-section div.about-container div.about-info div.about-me__skills div.whatIDo div.cards div.card h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+  section.about#about-section div.about-container div.about-info div.about-me__skills div.whatIDo div.cards div.card p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  section.about#about-section div.about-container div.about-info div.about-me__skills .skills-icons {
+    font-size: .5em;
+    margin: 0 auto;
   }
   #projects-section .projects {
     position: relative;
