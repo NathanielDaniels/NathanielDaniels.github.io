@@ -690,11 +690,13 @@ body {
   display: grid;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  -ms-grid-columns: 10em 5em auto;
-      grid-template-columns: 10em 5em auto;
+  -ms-grid-columns: 10em auto;
+      grid-template-columns: 10em auto;
 }
 
 #about-section .about-container .about-info .about-me__skills .whatIDo {
+  margin: 0 auto;
+  max-width: 900px;
   display: -ms-grid;
   display: grid;
   grid-gap: 1em;
@@ -704,16 +706,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-grid-column: 3;
+  -ms-grid-column: 2;
   -ms-grid-column-span: 1;
-  grid-column: 3 / span 1;
+  grid-column: 2 / span 1;
 }
 
 #about-section .about-container .about-info .about-me__skills .whatIDo .skills-title {
   -ms-grid-row: 1;
   grid-row: 1;
   max-width: 100%;
-  font-size: clamp(3.5rem, calc(5vw + 1em), 5rem);
+  font-size: clamp(4.4rem, 8vw, 5rem);
   line-height: 1;
   text-shadow: 0px 1px #49117e, 0px -1px #340c5a;
   color: var(--main-purple);
@@ -766,7 +768,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 10%;
-  margin: 0 auto;
+  margin: -3em auto;
 }
 
 #about-section .about-container .about-info .about-me__skills .skills-icons ul {
@@ -1155,6 +1157,7 @@ body {
 }
 
 #contact-section .contact-container form.cf-form #input-submit {
+  border-radius: 0.3em;
   padding: .4em;
   position: relative;
   color: var(--main-white);
@@ -1173,6 +1176,7 @@ body {
 #contact-section .contact-container form.cf-form #input-submit:hover, #contact-section .contact-container form.cf-form #input-submit:focus {
   -webkit-filter: drop-shadow(0px 1px 1px gray);
           filter: drop-shadow(0px 1px 1px gray);
+  background: var(--secondary-dark-purple);
 }
 
 #contact-section .contact-container .half {
@@ -1367,9 +1371,13 @@ body {
 
 @media screen and (max-width: 1050px) {
   .about#about-section .about-container .about-info .about-me__skills .whatIDo .skills-title {
-    padding: .4em;
+    padding: .4em .0em;
   }
   .about#about-section .about-container .about-info .about-me__skills .whatIDo .cards {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     -ms-grid-rows: (1fr)[4];
         grid-template-rows: repeat(4, 1fr);
     -ms-grid-columns: 1fr;
@@ -1553,8 +1561,12 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+  section.about#about-section div.about-container div.about-info div.about-me__skills div.whatIDo {
+    grid-gap: 0;
+  }
   section.about#about-section div.about-container div.about-info div.about-me__skills div.whatIDo h2.skills-title {
     font-size: 3rem;
+    padding: 1em;
   }
   section.about#about-section div.about-container div.about-info div.about-me__skills div.whatIDo div.cards div.card h2 {
     font-size: 1.5rem;
