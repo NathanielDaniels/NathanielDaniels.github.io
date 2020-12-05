@@ -109,7 +109,7 @@ function smileyFace () {
   //   face.style.opacity = 1.6 - squishP
   // }
   const touchSquint = () => {
-    const smileyFace = document.querySelector(".smiley-face__face")
+    const smileyFace = document.querySelector(".smiley-face")
     const spokenWord = document.querySelector("span.speech-bubble > h2")
     // let face = $('.smiley-face span')[0]
     smileyFace.addEventListener('mouseover' , ()=> {
@@ -132,17 +132,17 @@ speechBubble = () => {
    const smileyFace = document.querySelector('.smiley-face')
    let counter = 0;
    smileyFace.addEventListener('mouseover' , ()=> {
-     counter++
+      counter++
       if (counter >= welcomeWords.length) {
         counter = 0
       }
       //? Random
     //  let randomQuote = Math.floor(Math.random() * welcomeWords.length)
     //  spokenWord.innerText = welcomeWords[randomQuote];
-      //? Sequence
-    let quote = welcomeWords[counter];
-     spokenWord.innerText = quote;
-     speechBubble.style.opacity = "1";
+      //? In Sequence
+      let quote = welcomeWords[counter];
+      spokenWord.innerText = quote;
+      speechBubble.style.opacity = "1";
    })
    smileyFace.addEventListener('mouseleave' , ()=> {
      speechBubble.style.opacity = "0"
