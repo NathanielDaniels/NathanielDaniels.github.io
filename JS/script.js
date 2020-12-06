@@ -126,15 +126,23 @@ smileyFace()
 
 //! Speech Bubble Animation! (smileyface)
 speechBubble = () => {
-  const happyWords = ["Welcome in!", "Thanks for stopping by!", "Stay as long as you like!"]
+  const welcomeWords = ["Welcome in!", "Thanks for stopping by!", "Stay as long as you like!"]
    const speechBubble = document.querySelector(".speech-bubble")
    const spokenWord = document.querySelector(".speech-bubble > h2")
    const smileyFace = document.querySelector('.smiley-face')
-   
+   let counter = 0;
    smileyFace.addEventListener('mouseover' , ()=> {
-     let randomQuote = Math.floor(Math.random() * happyWords.length)
-     spokenWord.innerText = happyWords[randomQuote]
-     speechBubble.style.opacity = "1"
+     counter++
+      if (counter >= welcomeWords.length) {
+        counter = 0
+      }
+      //? Random
+    //  let randomQuote = Math.floor(Math.random() * welcomeWords.length)
+    //  spokenWord.innerText = welcomeWords[randomQuote];
+      //? Sequence
+    let quote = welcomeWords[counter];
+     spokenWord.innerText = quote;
+     speechBubble.style.opacity = "1";
    })
    smileyFace.addEventListener('mouseleave' , ()=> {
      speechBubble.style.opacity = "0"
