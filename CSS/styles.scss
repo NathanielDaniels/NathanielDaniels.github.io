@@ -622,16 +622,15 @@ body {
         //   }
         // }
          .whatIDo {
-           margin: 0 auto;
-           max-width: 900px;
-           display: grid;
-           grid-gap: 1em;
-           grid-template-rows: 5em auto;
-          //  display: flex;
-          //  justify-content: center;
-          //  align-items: center;
-           flex-direction: column;
-           grid-column: 2 / span 1;
+          position: relative;
+          left: -2em;
+          margin: 0 auto;
+          max-width: 900px;
+          display: grid;
+          grid-gap: 1em;
+          grid-template-rows: 5em auto;
+          flex-direction: column;
+          grid-column: 2 / span 1;
           .skills-title {
             grid-row: 1;
             max-width: 100%;
@@ -1140,11 +1139,12 @@ body {
           grid-template-columns: 1fr;
           grid-template-rows: 1fr 10em;
           .whatIDo {
+            position: static;
             grid-row: 1 / 2;
             grid-column: 1 / span 1;
-            .skills-title {
-              // text-align: center;
-            }
+            // .skills-title {
+            //   // text-align: center;
+            // }
             .cards {
               width: 100%;
             }

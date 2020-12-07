@@ -695,6 +695,8 @@ body {
 }
 
 #about-section .about-container .about-info .about-me__skills .whatIDo {
+  position: relative;
+  left: -2em;
   margin: 0 auto;
   max-width: 900px;
   display: -ms-grid;
@@ -1329,6 +1331,7 @@ body {
         grid-template-rows: 1fr 10em;
   }
   section.about#about-section .about-container .about-info .about-me__skills .whatIDo {
+    position: static;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
