@@ -467,7 +467,6 @@ body {
   }
 
   .main-container {
-    // border: 2px solid red;
     position: relative;
     width: 100%;
     max-width: 1230px;
@@ -476,12 +475,10 @@ body {
     justify-content: center;
     .content-wrapper {
       position: relative;
-      // border: 2px solid yellow;
       width: 100%;
       .greeting-loop {
         position: absolute;
         right: 0;
-        // top: -5px;
         font-size: clamp(3rem, 9vw, 8rem);
         font-weight: bold;
         text-transform: uppercase;
