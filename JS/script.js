@@ -363,8 +363,6 @@ animateLabel()
 //? EmailJS
 function submitForm () {
   const form = document.querySelector('.cf-form')
-  // const submitBtn = document.querySelector('#input-submit')
-  // let answeringMachine = []
 
   form.addEventListener('submit', function(e) {
     e.preventDefault()
