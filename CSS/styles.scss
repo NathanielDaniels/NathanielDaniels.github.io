@@ -634,16 +634,11 @@ body {
           }
           .cards {
             grid-row: 2;
-            // padding: 2em 0;
-            // display: flex;
-            // flex-wrap: wrap;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
-            // grid-gap: .5em;
             width: 80%;
             height: 90%;
-            // height: auto;
             .card {
               // display: flex;
               // flex-direction: column;
