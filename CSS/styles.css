@@ -928,6 +928,8 @@ body {
 
 #projects-section .projects .grid-container .projects-grid .card .left-icon,
 #projects-section .projects .grid-container .projects-grid .card .right-icon {
+  position: relative;
+  left: -15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

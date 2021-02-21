@@ -861,15 +861,18 @@ body {
           //   left: 0.6em;
           // }
 
-          //Speed Typer Icons
+          //? Speed Typer Icons
           .left-icon,
           .right-icon {
+            position: relative;
+            left: -15px;
             display: flex;
             width: 85px;
           }
 
           .left-icon {
             font-size: 60px;
+            // width: 70px;
           }
 
           &:nth-child(8) .card-title {
