@@ -323,6 +323,31 @@ floatingBoxSize()
 
 //! Contact form Label Animation (to legend) JQuery =================
 
+function vanillaAnimateLabel() {
+  const input = document.querySelectorAll('input');
+  for (let i = 0; i < input.length; i++) {
+
+    // console.log(input[i]);
+
+    input[i].addEventListener('focus', function() {
+      console.log("this", this)
+      let fieldWrapper = document.querySelector('.field-wrapper')
+      console.log("fieldWrapper",fieldWrapper)
+      fieldWrapper.classList.add('focused')
+    });
+
+    input[i].addEventListener('blur', function() {
+      if (input[i].value === '') {
+        let fieldWrapper = document.querySelector('.field-wrapper')
+        console.log(fieldWrapper)
+        fieldWrapper.classList.remove('focused')
+      }
+    });
+
+  };
+}
+// vanillaAnimateLabel()
+
 function animateLabel () {
   $('input').on('focus', function () {
     $(this)
