@@ -207,31 +207,6 @@ function greetingLoop () {
 }
 greetingLoop()
 
-//! Sidebar location change (screen size) ====
-
-// function sidebarPositionChange() {
-//   const sidebar = document.querySelector(".sidebar");
-//   // console.log(sidebar);
-
-//   $(window).resize(() => {
-//     if (window.innerWidth === 1600) {
-//       sidebar.style.right = "8em";
-//     } else if (window.innerWidth > 1601) {
-//       // sidebar.style.position = "absolute";
-//       sidebar.style.margin = "0 auto";
-
-//       // sidebar.style.bottom = "1rem";
-//       // sidebar.style.bottom = "1rem";
-//       // sidebar.style.right = "20em";
-//     } else {
-//       sidebar.style.position = "fixed";
-//       sidebar.style.right = "0.8rem";
-//       // sidebar.style.bottom = "1rem";
-//     }
-//     // console.log(window.innerWidth);
-//   });
-// }
-// sidebarPositionChange();
 
 //! Skills Hover Color Change (About)
 function skillsHover () {
@@ -253,7 +228,7 @@ function skillsHover () {
 }
 skillsHover()
 
-//! Tilt Animation (projects)
+//! Tilt Animation (projects section)
 //!=================================
 
   // if (window.innerWidth < 800) {
@@ -273,6 +248,7 @@ skillsHover()
       }
     }
     removeTilt()
+    
 //? If Tilt still works becasue of html attributes, might not need this
 // function tiltAnimation() {
 //   VanillaTilt.init(document.querySelectorAll(".cardImg"), {
@@ -321,61 +297,63 @@ const floatingBoxSize = () => {
 }
 floatingBoxSize()
 
-//! Contact form Label Animation (to legend) JQuery =================
+//! Contact form Label Animation (to legend) =================
 
 function vanillaAnimateLabel() {
   const input = document.querySelectorAll('input');
+  const textArea = document.querySelector('textarea');
+
   for (let i = 0; i < input.length; i++) {
-
-    // console.log(input[i]);
-
     input[i].addEventListener('focus', function() {
-      console.log("this", this)
-      let fieldWrapper = document.querySelector('.field-wrapper')
-      console.log("fieldWrapper",fieldWrapper)
-      fieldWrapper.classList.add('focused')
+      this.closest('.field-wrapper').classList.add('focused')
     });
 
     input[i].addEventListener('blur', function() {
       if (input[i].value === '') {
-        let fieldWrapper = document.querySelector('.field-wrapper')
-        console.log(fieldWrapper)
-        fieldWrapper.classList.remove('focused')
+        this.closest('.field-wrapper').classList.remove('focused')
       }
     });
-
   };
-}
-// vanillaAnimateLabel()
 
-function animateLabel () {
-  $('input').on('focus', function () {
-    $(this)
-      .closest('.field-wrapper')
-      .addClass('focused')
-  })
-  $('input').on('blur', function () {
-    if ($(this).val() === '') {
-      $(this)
-        .closest('.field-wrapper')
-        .removeClass('focused')
-    }
-  })
-
-  $('textarea').on('focus', function () {
-    $(this)
-      .closest('.field-wrapper')
-      .addClass('focused')
-  })
-  $('textarea').on('blur', function () {
-    if ($(this).val() === '') {
-      $(this)
-        .closest('.field-wrapper')
-        .removeClass('focused')
-    }
-  })
+  textArea.addEventListener('focus', function() {
+    this.closest('.field-wrapper').classList.add('focused')
+  });
+  textArea.addEventListener('blur', function() {
+    this.closest('.field-wrapper').classList.remove('focused')
+  });
 }
-animateLabel()
+vanillaAnimateLabel()
+
+
+//! Removed Jquery =========================================
+// function animateLabel () {
+//   $('input').on('focus', function () {
+//     $(this)
+//       .closest('.field-wrapper')
+//       .addClass('focused')
+//   })
+//   $('input').on('blur', function () {
+//     if ($(this).val() === '') {
+//       $(this)
+//         .closest('.field-wrapper')
+//         .removeClass('focused')
+//     }
+//   })
+
+//   $('textarea').on('focus', function () {
+//     $(this)
+//       .closest('.field-wrapper')
+//       .addClass('focused')
+//   })
+//   $('textarea').on('blur', function () {
+//     if ($(this).val() === '') {
+//       $(this)
+//         .closest('.field-wrapper')
+//         .removeClass('focused')
+//     }
+//   })
+// }
+// animateLabel()
 
 //! Contact form Submit  =================
 //? EmailJS
