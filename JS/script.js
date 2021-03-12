@@ -313,14 +313,25 @@ function vanillaAnimateLabel() {
         this.closest('.field-wrapper').classList.remove('focused')
       }
     });
+
+    textArea.addEventListener('focus', function() {
+    this.closest('.field-wrapper').classList.add('focused')
+    });
+    textArea.addEventListener('blur', function() {
+      if (input[i].value === '') {
+        this.closest('.field-wrapper').classList.remove('focused')
+      }
+    });
   };
 
-  textArea.addEventListener('focus', function() {
-    this.closest('.field-wrapper').classList.add('focused')
-  });
-  textArea.addEventListener('blur', function() {
-    this.closest('.field-wrapper').classList.remove('focused')
-  });
+  // textArea.addEventListener('focus', function() {
+  //   this.closest('.field-wrapper').classList.add('focused')
+  // });
+  // textArea.addEventListener('blur', function() {
+  //   if (input[i].value === '') {
+  //     this.closest('.field-wrapper').classList.remove('focused')
+  //   }
+  // });
 }
 vanillaAnimateLabel()
 
@@ -727,7 +738,7 @@ submitForm()
 //   return data
 // }
 
-// //! Replale "Soup" with question once live
+// //! Replace "Soup" with question once live
 // food("soup")
 //   .then(item => {
 //     let meals = [];
@@ -791,18 +802,3 @@ submitForm()
 //       each.addEventListener("click", updateRecipe)
 //     }
 
-//      //* Styling Even/Odd boxes
-//     const evenSection = document.querySelectorAll('.meals > h1:nth-of-type(even)')
-//     const oddSection = document.querySelectorAll('.meals > h1:nth-of-type(odd)')
-//     for (let item of evenSection) {
-//       item.style.backgroundColor = "grey"
-//       item.style.color = "black"
-//     }
-//     for (let item of oddSection) {
-//       item.style.color = "#fff"
-//     }
-
-//     const main = document.querySelector('.meals')
-//     main.style.border = "2px solid black"
-//   })
-//   .catch(err => console.error(err))
