@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800");
+// @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
 :root {
@@ -141,6 +142,7 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  // font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 0.05rem;
   text-rendering: optimizeLegibility;
 }
@@ -157,8 +159,7 @@
 html,
 body {
   width: 100%;
-  min-width: 100%;
-  max-width: 2000px;
+  max-width: 1600px;
   margin: 0 auto;
   scroll-behavior: smooth;
   background: #333;
@@ -189,6 +190,7 @@ body {
   z-index: 1;
   width: 100%;
   height: 125vh;
+  min-height: 800px;
   display: flex;
   align-items: center;
   background: linear-gradient(120deg,
@@ -399,21 +401,23 @@ body {
       display: none;
       background: transparent;
       border: transparent;
-      border-radius: 50%;
+      // border-radius: 50%;
       margin-right: 10px;
       position: relative;
+
       padding: 0 5px;
       cursor: pointer;
 
-      &:focus {
-        padding: 0 5px;
-        // filter: drop-shadow(0px 2px 2px var(--secondary-dark-purple));
-      }
+      // &:focus {
+      //   // padding: 0 5px;
+      //   // filter: drop-shadow(0px 2px 2px var(--secondary-dark-purple));
+      // }
 
       .mobile-burger-menu__elements {
         width: 35px;
         height: 35px;
         position: relative;
+
 
         &:hover,
         &:focus {
@@ -496,16 +500,16 @@ body {
             color: var(--main-white);
             font-size: 20px;
 
-            &:hover {
+            &:hover,
+            &:focus {
               color: var(--main-yellow);
-              ;
               filter: drop-shadow(0px 2px 2px var(--secondary-dark-purple));
               transform: scale(1.1);
             }
 
-            &:focus {
-              padding: 5px 0px;
-            }
+            // &:focus {
+            //   padding: 5px 0px;
+            // }
           }
         }
       }
@@ -534,7 +538,7 @@ body {
         font-size: clamp(3rem, 9vw, 8rem);
         font-weight: bold;
         text-transform: uppercase;
-        transform: translateY(-50%);
+        transform: translateY(-80%);
         color: var(--secondary-dark-purple);
         text-shadow: 0px 1px hsl(271, 76%, 28%), -0px -3px hsl(271, 76%, 15%);
         letter-spacing: -5px;
@@ -544,7 +548,6 @@ body {
         max-width: 100%;
         position: relative;
         text-align: right;
-        right: 1em;
 
         .main-content__greeting {
           width: 25ch;
@@ -564,6 +567,7 @@ body {
           margin-top: 0.4em;
           font-size: clamp(1.4rem, 2.5vw, 1.6rem);
           float: right;
+          font-weight: 600;
           color: var(--main-white);
 
           .cta-btn {
@@ -710,7 +714,8 @@ body {
             .card {
               margin: 0 auto;
               // width: fit-content;
-              min-width: 24em;
+              // min-width: 24em;
+              min-width: 25em;
               max-width: 45ch;
               border-radius: 5px;
               padding: 1em;
@@ -1530,11 +1535,11 @@ body {
 
   section#contact-section.contact {
     div.contact-container {
-      div.floating-boxes {
-        //   // display: none;
-        // height: 41.5em;
+      // div.floating-boxes {
+      //   //   // display: none;
+      //   // height: 41.5em;
 
-      }
+      // }
 
       form.cf-form {
         width: 95%;

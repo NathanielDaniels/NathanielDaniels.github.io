@@ -164,8 +164,17 @@ speechBubble()
 // hamburgerAnimation2();
 
 function hamburgerAnimation () {
-  $menu = $('.mobile-burger-menu__elements')
+  const burgerMenu = document.querySelector('.mobile-burger-menu__elements')
 
+   // burgerMenu.addEventListener('click', function () {
+  //   console.log("this",this)
+  //   const navMenu = document.querySelector('#mobile-nav-menu')
+  //   navMenu.classList.toggle('active')
+  //   this.classList.toggle('close')
+  // })
+
+  //? JQUERY
+  $menu = $('.mobile-burger-menu__elements')
   $menu.click(function () {
     $('#mobile-nav-menu').toggleClass('active')
     $(this).toggleClass('close')
@@ -241,7 +250,7 @@ skillsHover()
       console.log(window.innerWidth)
       if (window.innerWidth < 800) {
         const cards = document.querySelectorAll('.cardImg')
-        console.log(cards)
+        // console.log(cards)
         cards.forEach(card =>  {
           card.removeAttribute('data-tilt')
         })
