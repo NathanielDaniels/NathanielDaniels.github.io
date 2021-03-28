@@ -302,6 +302,14 @@ const floatingBoxSize = () => {
       Math.floor(Math.random() * (1 - 10) + 1) + 's'
     boxes[i].style.animationDuration =
       Math.floor(Math.random() * (30 - 10) + 10) + 's'
+
+    if (i % 2) {
+      boxes[i].style.backgroundColor = "hsla(252, 59%, 29%, 0.37)"
+    } else {
+      // boxes[i].style.backgroundColor = "hsla(57, 100%, 50%, 0.37)"
+      boxes[i].style.backgroundColor = "hsla(252, 59%, 29%, 0.57)"
+      // boxes[i].style.backgroundColor = "pink"
+    }
   }
 }
 floatingBoxSize()

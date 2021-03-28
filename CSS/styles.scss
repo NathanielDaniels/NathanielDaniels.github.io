@@ -196,6 +196,7 @@ body {
   background: linear-gradient(120deg,
       rgb(153, 11, 230) 1%,
       rgba(76, 5, 113, 1) 50%);
+  filter: drop-shadow(0 10px black);
 
   //? Face
   .smiley-face {
@@ -535,7 +536,7 @@ body {
       .greeting-loop {
         position: absolute;
         right: 0;
-        font-size: clamp(3rem, 9vw, 8rem);
+        font-size: clamp(2.8rem, 9vw, 8rem);
         font-weight: bold;
         text-transform: uppercase;
         transform: translateY(-80%);
@@ -1024,6 +1025,7 @@ body {
   padding: 10em 0 0;
   background: var(--main-white);
   cursor: default;
+
 
   .contact-container {
     padding-bottom: 1em;

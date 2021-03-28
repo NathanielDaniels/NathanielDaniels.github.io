@@ -130,6 +130,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background: linear-gradient(120deg, #990be6 1%, #4c0571 50%);
+  -webkit-filter: drop-shadow(0 10px black);
+          filter: drop-shadow(0 10px black);
 }
 
 .main-section .smiley-face {
@@ -523,7 +525,7 @@ body {
 .main-section .main-container .content-wrapper .greeting-loop {
   position: absolute;
   right: 0;
-  font-size: clamp(3rem, 9vw, 8rem);
+  font-size: clamp(2.8rem, 9vw, 8rem);
   font-weight: bold;
   text-transform: uppercase;
   -webkit-transform: translateY(-80%);
