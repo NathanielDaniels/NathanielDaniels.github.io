@@ -144,7 +144,7 @@ speechBubble = () => {
       spokenWord.innerText = quote;
       speechBubble.style.opacity = "1";
    })
-   smileyFace.addEventListener('mouseleave' , ()=> {
+   smileyFace.addEventListener('mouseleave' , () => {
      speechBubble.style.opacity = "0"
    })
 }
@@ -164,7 +164,7 @@ speechBubble()
 // hamburgerAnimation2();
 
 function hamburgerAnimation () {
-  const burgerMenu = document.querySelector('.mobile-burger-menu__elements')
+  // const burgerMenu = document.querySelector('.mobile-burger-menu__elements')
 
    // burgerMenu.addEventListener('click', function () {
   //   console.log("this",this)
@@ -278,17 +278,6 @@ skillsHover()
 // }
 // destroyTilt();
 
-//! PORTFOLIO CLICK FUNCTION (JQuery)=====================
-//?flipping cards
-// $(function () {
-//   $(".card").click(function () {
-//     $(this)
-//       .toggleClass("is-flipped")
-//       .siblings(".is-flipped")
-//       .removeClass("is-flipped");
-//   });
-// });
-
 //! Contact Section - Floating Box Animation (Completely Random) ====
 const floatingBoxSize = () => {
   const boxes = document.querySelectorAll('.floating-boxes li')
@@ -297,6 +286,7 @@ const floatingBoxSize = () => {
     let boxWidth = (boxes[i].style.width =
       Math.floor(Math.random() * (150 - 25) + 25) + 'px')
 
+      console.log(boxes[i].style.width)
     boxes[i].style.height = boxWidth
     boxes[i].style.animationDelay =
       Math.floor(Math.random() * (1 - 10) + 1) + 's'
@@ -304,11 +294,12 @@ const floatingBoxSize = () => {
       Math.floor(Math.random() * (30 - 10) + 10) + 's'
 
     if (i % 2) {
-      boxes[i].style.backgroundColor = "hsla(252, 59%, 29%, 0.37)"
+      if (boxes[i].style.width >= 80) {
+        boxes[i].style.backgroundColor = "hsla(252, 59%, 29%, 0.37)"
+      }
     } else {
       // boxes[i].style.backgroundColor = "hsla(57, 100%, 50%, 0.37)"
       boxes[i].style.backgroundColor = "hsla(252, 59%, 29%, 0.57)"
-      // boxes[i].style.backgroundColor = "pink"
     }
   }
 }

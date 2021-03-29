@@ -507,7 +507,7 @@ body {
 .main-section .main-container {
   position: relative;
   width: 100%;
-  max-width: 1230px;
+  max-width: 1160px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -581,7 +581,7 @@ body {
   background: transparent;
 }
 
-.main-section .main-container .main-container__sidebar-social {
+.main-section .main-container__sidebar-social {
   padding: 0 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -594,7 +594,7 @@ body {
   background: transparent;
 }
 
-.main-section .main-container .main-container__sidebar-social .sidebar__social-media {
+.main-section .main-container__sidebar-social .sidebar__social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -602,25 +602,25 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1em;
+  gap: 1.2em;
   list-style: none;
   cursor: pointer;
 }
 
-.main-section .main-container .main-container__sidebar-social .sidebar__social-media a {
+.main-section .main-container__sidebar-social .sidebar__social-media a {
   color: var(--highlight-purple);
   text-shadow: 0px 1px 1px var(--main-text-shadow);
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 
-.main-section .main-container .main-container__sidebar-social .sidebar__social-media a:hover, .main-section .main-container .main-container__sidebar-social .sidebar__social-media a:focus {
+.main-section .main-container__sidebar-social .sidebar__social-media a:hover, .main-section .main-container__sidebar-social .sidebar__social-media a:focus {
   text-shadow: 0px 2px 2px var(--main-text-shadow);
   color: var(--main-yellow);
 }
 
-.main-section .main-container .main-container__sidebar-social .sidebar__social-media a .fab {
-  font-size: 40px;
+.main-section .main-container__sidebar-social .sidebar__social-media a .fab {
+  font-size: 50px;
 }
 
 #about-section {
@@ -1069,14 +1069,11 @@ body {
   padding: 10em 0 0;
   background: var(--main-white);
   cursor: default;
-}
-
-#contact-section .contact-container {
   padding-bottom: 1em;
   text-align: center;
 }
 
-#contact-section .contact-container .floating-boxes {
+#contact-section .floating-boxes {
   position: absolute;
   bottom: 0em;
   left: 0;
@@ -1085,7 +1082,7 @@ body {
   overflow: hidden;
 }
 
-#contact-section .contact-container .floating-boxes li {
+#contact-section .floating-boxes li {
   border-radius: 5px;
   position: absolute;
   display: block;
@@ -1098,7 +1095,7 @@ body {
   bottom: -180px;
 }
 
-#contact-section .contact-container h2.contact-title {
+#contact-section h2.contact-title {
   position: relative;
   font-weight: 800;
   font-size: clamp(3rem, 10vw, 4em);
@@ -1106,19 +1103,19 @@ body {
   text-transform: uppercase;
 }
 
-#contact-section .contact-container form.cf-form {
+#contact-section form.cf-form {
   margin: 3em auto;
   max-width: 37rem;
   text-align: center;
 }
 
-#contact-section .contact-container form.cf-form .field-wrapper {
+#contact-section form.cf-form .field-wrapper {
   display: block;
   position: relative;
   width: 100%;
 }
 
-#contact-section .contact-container form.cf-form .field-wrapper label {
+#contact-section form.cf-form .field-wrapper label {
   border-radius: 8px;
   z-index: 100;
   position: relative;
@@ -1140,14 +1137,14 @@ body {
   cursor: text;
 }
 
-#contact-section .contact-container form.cf-form .field-wrapper.focused label {
+#contact-section form.cf-form .field-wrapper.focused label {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   top: -20px;
 }
 
-#contact-section .contact-container form.cf-form input,
-#contact-section .contact-container form.cf-form textarea {
+#contact-section form.cf-form input,
+#contact-section form.cf-form textarea {
   font-size: 1.2rem;
   border: 1px solid var(--main-purple);
   padding: 1em;
@@ -1160,22 +1157,22 @@ body {
   resize: none;
 }
 
-#contact-section .contact-container form.cf-form input:focus,
-#contact-section .contact-container form.cf-form textarea:focus {
+#contact-section form.cf-form input:focus,
+#contact-section form.cf-form textarea:focus {
   outline: 2px solid yellow;
   -webkit-filter: drop-shadow(1px 2px 2px var(--main-purple));
           filter: drop-shadow(1px 2px 2px var(--main-purple));
 }
 
-#contact-section .contact-container form.cf-form input:nth-child(2) {
+#contact-section form.cf-form input:nth-child(2) {
   margin-bottom: 1em;
 }
 
-#contact-section .contact-container form.cf-form textarea {
+#contact-section form.cf-form textarea {
   height: calc(14rem + 2px);
 }
 
-#contact-section .contact-container form.cf-form #input-submit {
+#contact-section form.cf-form #input-submit {
   border-radius: 0.3em;
   padding: .4em;
   position: relative;
@@ -1192,26 +1189,26 @@ body {
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
 
-#contact-section .contact-container form.cf-form #input-submit:hover, #contact-section .contact-container form.cf-form #input-submit:focus {
+#contact-section form.cf-form #input-submit:hover, #contact-section form.cf-form #input-submit:focus {
   -webkit-filter: drop-shadow(0px 1px 1px gray);
           filter: drop-shadow(0px 1px 1px gray);
   background: var(--secondary-dark-purple);
 }
 
-#contact-section .contact-container .half {
+#contact-section .half {
   float: left;
   width: 48%;
 }
 
-#contact-section .contact-container .right {
+#contact-section .right {
   width: 50%;
 }
 
-#contact-section .contact-container .left {
+#contact-section .left {
   margin-right: 2%;
 }
 
-#contact-section .contact-container .form-update-container {
+#contact-section .form-update-container {
   position: relative;
   height: 21.5em;
   -webkit-box-shadow: inset 0 0 10px var(--main-box-shadow);
@@ -1234,21 +1231,21 @@ body {
           align-items: center;
 }
 
-#contact-section .contact-container .form-update-container h2 {
+#contact-section .form-update-container h2 {
   color: var(--main-yellow);
   font-size: 2rem;
 }
 
-#contact-section .contact-container .form-update-container p {
+#contact-section .form-update-container p {
   padding-top: 5px;
   font-size: 1.2rem;
 }
 
-#contact-section .contact-container .form-update-container p:nth-child(3) {
+#contact-section .form-update-container p:nth-child(3) {
   margin-top: 1em;
 }
 
-#contact-section .contact-container .form-update-container .icons {
+#contact-section .form-update-container .icons {
   margin-top: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1266,28 +1263,28 @@ body {
   gap: 1em;
 }
 
-#contact-section .contact-container .form-update-container .icons li {
+#contact-section .form-update-container .icons li {
   list-style: none;
   cursor: pointer;
 }
 
-#contact-section .contact-container .form-update-container .icons li a {
+#contact-section .form-update-container .icons li a {
   color: var(--main-yellow);
   text-shadow: 0px 1px 1px var(--main-text-shadow);
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 
-#contact-section .contact-container .form-update-container .icons li a:hover, #contact-section .contact-container .form-update-container .icons li a:focus {
+#contact-section .form-update-container .icons li a:hover, #contact-section .form-update-container .icons li a:focus {
   text-shadow: 0px 2px 2px var(--main-text-shadow);
   color: var(--main-yellow);
 }
 
-#contact-section .contact-container .form-update-container .icons li a .fab {
+#contact-section .form-update-container .icons li a .fab {
   font-size: 40px;
 }
 
-#contact-section footer {
+#contact-section aside {
   padding: .5em 0;
   position: absolute;
   width: 100%;
@@ -1295,7 +1292,7 @@ body {
   margin-top: -3.5em;
 }
 
-#contact-section footer .main-container__sidebar-social {
+#contact-section aside .main-container__sidebar-social {
   padding: 0 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1306,7 +1303,7 @@ body {
   background: transparent;
 }
 
-#contact-section footer .main-container__sidebar-social .sidebar__social-media {
+#contact-section aside .main-container__sidebar-social .sidebar__social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1315,19 +1312,19 @@ body {
   cursor: pointer;
 }
 
-#contact-section footer .main-container__sidebar-social .sidebar__social-media a {
+#contact-section aside .main-container__sidebar-social .sidebar__social-media a {
   color: var(--highlight-purple);
   text-shadow: 0px 1px 1px var(--main-text-shadow);
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 
-#contact-section footer .main-container__sidebar-social .sidebar__social-media a:hover, #contact-section footer .main-container__sidebar-social .sidebar__social-media a:focus {
+#contact-section aside .main-container__sidebar-social .sidebar__social-media a:hover, #contact-section aside .main-container__sidebar-social .sidebar__social-media a:focus {
   text-shadow: 0px 2px 2px var(--main-text-shadow);
   color: var(--highlight-purple);
 }
 
-#contact-section footer .main-container__sidebar-social .sidebar__social-media a .fab {
+#contact-section aside .main-container__sidebar-social .sidebar__social-media a .fab {
   font-size: 40px;
 }
 

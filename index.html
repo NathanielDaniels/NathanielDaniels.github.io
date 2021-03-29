@@ -13,7 +13,7 @@
     <meta property="og:url" content="http://NathanielDaniels.github.io">
     <!--! Twitter Meta -->
     <meta name="twitter:title" content="Nathaniel Daniels Portfolio">
-    <meta name="twitter:description" content="Hi, I'm Nathaniel and I create incredible landing pages and content filled websites that tell a story.">
+    <meta name="twitter:description" content="Building Quality Websites From The Ground up.">
     <meta name="twitter:image" content="//nathanieldaniels.github.io/IMG\hero-section-new.png">
     <meta property="twitter:image" content="./IMG/hero-section-new.png">
     <meta name="twitter:image" content="./IMG/hero-section-new.png">
@@ -105,7 +105,39 @@
           </div>
 
         </div>
-        <aside class="main-container__sidebar-social">
+        <!-- <aside class="main-container__sidebar-social">
+          <ul class="sidebar__social-media">
+            <li>
+              <a
+                target="_blank"
+                title="Twitter"
+                rel="noreferrer noopener"
+                href="https://twitter.com/NathanDDaniels"
+                ><i class="fab fa-twitter-square"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                title="linkedIn"
+                rel="noreferrer noopener"
+                href="https://www.linkedin.com/in/nathaniel-daniels-500740139/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                title="GitHub"
+                rel="noreferrer noopener"
+                href="https://github.com/NathanielDaniels"
+                ><i class="fab fa-github-square"></i
+              ></a>
+            </li>
+          </ul>
+        </aside> -->
+      </main>
+      <aside class="main-container__sidebar-social">
           <ul class="sidebar__social-media">
             <li>
               <a
@@ -136,7 +168,6 @@
             </li>
           </ul>
         </aside>
-      </main>
     </section>
     <!--!  ABOUT Section -->
     <section id="about-section" class="about">
@@ -335,7 +366,7 @@
             <div class="card card-3__info">
               <div class="top-info">
                 <p>
-                  Nateflix is a Netflix style clone. Nateflix fetches limited movie data from firebase backend, uses authentication, and a search feature.
+                  Nateflix is a Netflix style clone that fetches limited movie data from firebase backend, uses authentication, and has a search feature.
                 </p>
                 <p>React App, Firebase.</p>
               </div>
@@ -452,7 +483,7 @@ Preview</a
 
     <!--! CONTACT Section -->
     <section id="contact-section" class="contact">
-      <div class="contact-container" role="contact container">
+      <!-- <div class="contact-container" role="contact container"> -->
         <!-- ? Floating Boxes -->
         <div class="floating-boxes">
           <ul>
@@ -465,50 +496,51 @@ Preview</a
             <li></li>
             <li></li>
           </ul>
-          
         </div>
+        
         <h2 class="contact-title title">Contact</h2>
         <p class="sub-headline">Let's bring your idea(s) to life!</p>
-        <!--? Contact Form -->
-        <form class="cf-form" id="form" name="contact-form" method="POST" action="#">
-          <div class="half left">
-            <div class="field-wrapper">
-              <label for="from_name">Name</label>
-              <input type="text" name="from_name" id="from_name" required />
-            </div>
+        <container>
+          <!--? Contact Form -->
+          <form class="cf-form" id="form" name="contact-form" method="POST" action="#">
+            <div class="half left">
+              <div class="field-wrapper">
+                <label for="from_name">Name</label>
+                <input type="text" name="from_name" id="from_name" required />
+              </div>
 
-            <div class="field-wrapper">
-              <label for="reply_to">Email</label>
-              <input type="email" name="reply_to" id="reply_to" required />
-            </div>
+              <div class="field-wrapper">
+                <label for="reply_to">Email</label>
+                <input type="email" name="reply_to" id="reply_to" required />
+              </div>
 
-            <div class="field-wrapper">
-              <label for="to_name">Subject</label>
-              <input type="text" name="to_name" id="to_name" required />
+              <div class="field-wrapper">
+                <label for="to_name">Subject</label>
+                <input type="text" name="to_name" id="to_name" required />
+              </div>
             </div>
-          </div>
-          <div class="half right">
-            <div class="field-wrapper">
-              <label for="message">Message</label>
-              <textarea
-                name="message"
-                type="text"
-                id="message"
-                required
-              ></textarea>
+            <div class="half right">
+              <div class="field-wrapper">
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  type="text"
+                  id="message"
+                  required
+                ></textarea>
+              </div>
             </div>
-          </div>
-          <input
-            type="submit"
-            name="submit"
-            value="SUBMIT"
-            id="input-submit"
-            aria-label="submit button"
-          />
-        </form>
-      </div>
+            <input
+              type="submit"
+              name="submit"
+              value="SUBMIT"
+              id="input-submit"
+              aria-label="submit button"
+            />
+          </form>
+      <!-- </div> -->
 
-      <footer>
+      <aside>
         <div class="main-container__sidebar-social">
           <ul class="sidebar__social-media">
             <li>
@@ -540,9 +572,44 @@ Preview</a
             </li>
           </ul>
         </div>
-      </footer>
+      </aside>
+      <!-- <footer>
+        <div class="main-container__sidebar-social">
+          <ul class="sidebar__social-media">
+            <li>
+              <a
+                target="_blank"
+                title="Twitter"
+                rel="noreferrer noopener"
+                href="https://twitter.com/NathanDDaniels"
+                ><i class="fab fa-twitter-square"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                title="linkedIn"
+                rel="noreferrer noopener"
+                href="https://www.linkedin.com/in/nathaniel-daniels-500740139/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                title="GitHub"
+                rel="noreferrer noopener"
+                href="https://github.com/NathanielDaniels"
+                ><i class="fab fa-github-square"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </footer> -->
     </section>
 
+
+    <!-- ! JavaScript -->
     <script src="/JS/vanilla-tilt.min.js"></script>
     <script src="/JS/script.js"></script>
     <!--!EmailJS -->
