@@ -1103,8 +1103,17 @@ body {
   text-transform: uppercase;
 }
 
+#contact-section .contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 #contact-section form.cf-form {
-  margin: 3em auto;
+  margin: 3em 0;
   max-width: 37rem;
   text-align: center;
 }
@@ -1285,15 +1294,15 @@ body {
 }
 
 #contact-section aside {
-  padding: .5em 0;
-  position: absolute;
-  width: 100%;
+  width: 40%;
   z-index: 100;
-  margin-top: -3.5em;
 }
 
 #contact-section aside .main-container__sidebar-social {
-  padding: 0 1em;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1304,10 +1313,7 @@ body {
 }
 
 #contact-section aside .main-container__sidebar-social .sidebar__social-media {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1em;
+  gap: 2em;
   list-style: none;
   cursor: pointer;
 }
