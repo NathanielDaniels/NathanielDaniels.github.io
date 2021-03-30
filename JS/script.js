@@ -343,23 +343,7 @@ function vanillaAnimateLabel() {
 }
 vanillaAnimateLabel()
 
-//! Social icon hover =========================================
-//? remove .contact-social to enable all social-icons on website
 
-function socialHover() {
-  const icon = document.querySelectorAll('.contact-social .sidebar__social-media li');
-
-  console.log(icon)
-
-  icon.forEach(icon => icon.addEventListener('mouseover', function() {
-    console.log('icon hovered')
-    const slideOut = document.querySelector('.slideOut-anim');
-    slideOut.style.display = 'flex'
-  }))
-
-}
-
-// socialHover()
 
 
 //! Removed Jquery =========================================
@@ -392,13 +376,36 @@ function socialHover() {
 // }
 // animateLabel()
 
+//! Social icon hover =========================================
+//? remove .contact-social to enable all social-icons on website
+
+// function socialHover() {
+//   const icon = document.querySelectorAll('.contact-social .sidebar__social-media li');
+
+//   console.log(icon)
+
+//   icon.forEach(icon => icon.addEventListener('mouseover', function() {
+//     console.log('icon hovered')
+//     const slideOut = document.querySelector('.slideOut-anim');
+//     slideOut.style.display = 'flex'
+//   }))
+
+// }
+
+// socialHover()
+
 //! Contact form Submit  =================
 //? EmailJS
 function submitForm () {
   const form = document.querySelector('.cf-form')
 
+  
   form.addEventListener('submit', function(e) {
     e.preventDefault()
+    
+    //? remove social icons (aside)
+    const icon = document.querySelectorAll('.contact-social .sidebar__social-media li');
+    icon.forEach(item => item.style.display = "none");
 
     const serviceID = 'Portfolio'
     const templateID = 'template_jut7dvf'
@@ -406,6 +413,8 @@ function submitForm () {
     emailjs.sendForm(serviceID, templateID, this)
     .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
+      //  const inputReset = document.querySelectorAll('.cf-form .fieldWrapper label')
+      // inputReset.forEach(item => item.value = "")
     }, function(error) {
        console.error('FAILED...', JSON.stringify(error));
     });
@@ -454,8 +463,9 @@ function submitForm () {
     </div>
   `
 
-form.innerHTML = updatedHTMLContent
-})
+  form.innerHTML = updatedHTMLContent
+
+  })
 }
 
 submitForm()

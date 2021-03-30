@@ -483,7 +483,6 @@ Preview</a
 
     <!--! CONTACT Section -->
     <section id="contact-section" class="contact">
-      <!-- <div class="contact-container" role="contact container"> -->
         <!-- ? Floating Boxes -->
         <div class="floating-boxes">
           <ul>
@@ -502,22 +501,42 @@ Preview</a
         <p class="sub-headline">Let's bring your idea(s) to life!</p>
 
         <div class="contact-container">
+
           <!--? Contact Form -->
           <form class="cf-form" id="form" name="contact-form" method="POST" action="#">
             <div class="half left">
               <div class="field-wrapper">
                 <label for="from_name">Name</label>
-                <input type="text" name="from_name" id="from_name" required />
+                <input 
+                  type="text" 
+                  name="from_name" 
+                  id="from_name" 
+                  autocomplete="off"
+                  required 
+                />
               </div>
 
               <div class="field-wrapper">
                 <label for="reply_to">Email</label>
-                <input type="email" name="reply_to" id="reply_to" required />
+                <input 
+                  type="email" 
+                  name="reply_to" 
+                  id="reply_to" 
+                  autocomplete="off"
+                  required 
+                />
+                  
               </div>
 
               <div class="field-wrapper">
                 <label for="to_name">Subject</label>
-                <input type="text" name="to_name" id="to_name" required />
+                <input 
+                  type="text"
+                  name="to_name" 
+                  id="to_name" 
+                  autocomplete="off"
+                  required
+                />
               </div>
             </div>
             <div class="half right">
@@ -528,6 +547,7 @@ Preview</a
                   type="text"
                   id="message"
                   required
+                  autocomplete="off"
                 ></textarea>
               </div>
             </div>
@@ -539,8 +559,8 @@ Preview</a
               aria-label="submit button"
             />
           </form>
-      <!-- </div> -->
 
+          <!--? Social Icons -->
           <aside class="contact-social">
             <div class="main-container__sidebar-social">
               <ul class="sidebar__social-media">
