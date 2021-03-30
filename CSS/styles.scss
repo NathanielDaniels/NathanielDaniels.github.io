@@ -668,11 +668,8 @@ body {
 #about-section {
   display: block;
 
-  // max-width: 100%;
   .about-container {
-    // position: relative;
     @include angle(both);
-    // display: block;
     z-index: 102;
     background: var(--main-white);
     max-width: 100%;
@@ -1267,29 +1264,22 @@ body {
   // }
 
   aside {
-    // padding: .5em 0;
-    // position: absolute;
-    width: 40%;
+    // width: 8%;
     z-index: 100;
-    // position: relative;
-    // top: 50%;
-    // left: 50px;
-    // margin-top: -3.5em;
 
     .main-container__sidebar-social {
       position: relative;
       top: 50%;
-      transform: translate(0, -50%);
-      // padding: 0 1em;
-      // height: auto;
+      left: 20px;
+      transform: translate(0, -70%);
       display: flex;
       align-items: center;
       background: transparent;
 
       .sidebar__social-media {
-        // display: flex;
-        // flex-direction: column;
-        gap: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
         list-style: none;
         cursor: pointer;
 
@@ -1305,7 +1295,7 @@ body {
           }
 
           .fab {
-            font-size: 40px;
+            font-size: 50px;
           }
         }
       }
@@ -1604,14 +1594,7 @@ body {
 
       .about-info {
         .about-me__skills {
-
-          // display: grid;
-          // grid-template-rows: auto 5em;
-          // grid-template-columns: auto 5em;
           .whatIDo {
-
-            // grid-row: 1;
-            // grid-column: 1 / span;
             .skills-title {
               margin-left: 3em !important;
             }
@@ -1628,7 +1611,36 @@ body {
   }
 
   section#contact-section.contact {
+    padding-bottom: 30px;
+
     div.contact-container {
+      flex-direction: column-reverse;
+      margin: 15px 0 0;
+
+      form.cf-form {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      aside.contact-social {
+        width: 100%;
+
+        .main-container__sidebar-social {
+          left: 0;
+
+          .sidebar__social-media {
+            flex-direction: row;
+            margin: 0 auto;
+
+            // a {
+            //   .fab {
+            //     // font-size: 45px;
+            //   }
+            // }
+          }
+        }
+      }
+
       // div.floating-boxes {
       //   //   // display: none;
       //   // height: 41.5em;
@@ -1657,17 +1669,17 @@ body {
 
   section#contact-section {
     padding-top: 2rem;
-    display: flex;
+    // display: flex;
+
+    .floating-boxes {
+      display: none;
+    }
 
     h2.contact-title {
       margin-top: 2.5rem;
     }
 
     .contact-container {
-      .floating-boxes {
-        display: none;
-
-      }
 
       form.cf-form {
         width: 100%;
@@ -1693,28 +1705,28 @@ body {
       }
     }
 
-    footer {
-      background: var(--main-white);
-      top: 3em;
+    // footer {
+    //   background: var(--main-white);
+    //   top: 3em;
 
-      .main-container__sidebar-social {
-        padding: 2em 1em 1em;
-        top: 0.2em;
-        float: right;
+    //   .main-container__sidebar-social {
+    //     padding: 2em 1em 1em;
+    //     top: 0.2em;
+    //     float: right;
 
-        .sidebar__social-media {
-          li {
-            a {
+    //     .sidebar__social-media {
+    //       li {
+    //         a {
 
-              &:hover,
-              &:focus {
-                color: var(--main-yellow);
-              }
-            }
-          }
-        }
-      }
-    }
+    //           &:hover,
+    //           &:focus {
+    //             color: var(--main-yellow);
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
 
