@@ -1267,7 +1267,8 @@ body {
   // }
 
   .contact-social {
-    // width: 8%;
+    // width: 1%;
+    width: 0;
     z-index: 100;
 
     .main-container__sidebar-social {
@@ -1290,6 +1291,14 @@ body {
           display: inherit;
           flex-direction: row;
 
+          &:hover .slideOut-anim {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+          }
+
+
           a {
             color: var(--highlight-purple);
             text-shadow: 0px 1px 1px var(--main-text-shadow);
@@ -1300,7 +1309,10 @@ body {
             &:focus {
               // text-shadow: 0px 2px 2px var(--main-text-shadow);
               color: var(--highlight-purple);
+              text-shadow: none;
             }
+
+
 
             .fab {
               font-size: 50px;
@@ -1308,36 +1320,30 @@ body {
           }
 
           .slideOut-anim {
+            display: none;
             margin: 3.4px 0 0 -5px;
             padding: 0 10px;
             width: 100px;
-            height: 44px;
+            height: 43.5px;
             background: var(--highlight-purple);
-            border-right: 2px solid black;
             color: #fff;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            border-radius: 4px;
+
+            -webkit-border-top-right-radius: 4px;
+            -webkit-border-bottom-right-radius: 4px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+
             font-weight: 500;
-            filter: drop-shadow(0px 1px gray);
+
+            &:hover {
+              display: none;
+            }
           }
 
-          // .slideOut-anim {
-          //   margin: 3.4px 0 0 -5px;
-          //   padding: 0 10px;
-          //   width: 100px;
-          //   height: 44px;
-          //   background: var(--highlight-purple);
-          //   border-right: 2px solid black;
-          //   color: #fff;
-          //   display: flex;
-          //   justify-content: flex-end;
-          //   align-items: center;
-          //   border-radius: 4px;
-          //   font-weight: 500;
-          //   filter: drop-shadow(0px 1px gray);
-          // }
+          .linkedin {
+            // height: 43.5px;
+            // border-top: 1px solid purple;
+          }
         }
 
 

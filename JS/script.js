@@ -245,7 +245,7 @@ skillsHover()
   //   cards.forEach(card =>  card.removeAttribute('data-tilt'))
   // }
   // window.addEventListener('resize', removeTilt)
-    
+
     function removeTilt() {
       console.log(window.innerWidth)
       if (window.innerWidth < 800) {
@@ -286,7 +286,7 @@ const floatingBoxSize = () => {
     let boxWidth = (boxes[i].style.width =
       Math.floor(Math.random() * (150 - 25) + 25) + 'px')
 
-      console.log(boxes[i].style.width)
+      // console.log(boxes[i].style.width)
     boxes[i].style.height = boxWidth
     boxes[i].style.animationDelay =
       Math.floor(Math.random() * (1 - 10) + 1) + 's'
@@ -342,6 +342,24 @@ function vanillaAnimateLabel() {
   // });
 }
 vanillaAnimateLabel()
+
+//! Social icon hover =========================================
+//? remove .contact-social to enable all social-icons on website
+
+function socialHover() {
+  const icon = document.querySelectorAll('.contact-social .sidebar__social-media li');
+
+  console.log(icon)
+
+  icon.forEach(icon => icon.addEventListener('mouseover', function() {
+    console.log('icon hovered')
+    const slideOut = document.querySelector('.slideOut-anim');
+    slideOut.style.display = 'flex'
+  }))
+
+}
+
+// socialHover()
 
 
 //! Removed Jquery =========================================
