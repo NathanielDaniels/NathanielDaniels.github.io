@@ -590,7 +590,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   z-index: 1;
-  margin-top: 0.8em;
   background: transparent;
 }
 
@@ -607,19 +606,19 @@ body {
   cursor: pointer;
 }
 
-.main-section .main-container__sidebar-social .sidebar__social-media a {
+.main-section .main-container__sidebar-social .sidebar__social-media li a {
   color: var(--highlight-purple);
   text-shadow: 0px 1px 1px var(--main-text-shadow);
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 
-.main-section .main-container__sidebar-social .sidebar__social-media a:hover, .main-section .main-container__sidebar-social .sidebar__social-media a:focus {
+.main-section .main-container__sidebar-social .sidebar__social-media li a:hover, .main-section .main-container__sidebar-social .sidebar__social-media li a:focus {
   text-shadow: 0px 2px 2px var(--main-text-shadow);
   color: var(--main-yellow);
 }
 
-.main-section .main-container__sidebar-social .sidebar__social-media a .fab {
+.main-section .main-container__sidebar-social .sidebar__social-media li a .fab {
   font-size: 50px;
 }
 
@@ -1279,13 +1278,11 @@ body {
 
 #contact-section .form-update-container .icons li a {
   color: var(--main-yellow);
-  text-shadow: 0px 1px 1px var(--main-text-shadow);
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 
 #contact-section .form-update-container .icons li a:hover, #contact-section .form-update-container .icons li a:focus {
-  text-shadow: 0px 2px 2px var(--main-text-shadow);
   color: var(--main-yellow);
 }
 
@@ -1293,16 +1290,14 @@ body {
   font-size: 40px;
 }
 
-#contact-section aside {
+#contact-section .contact-social {
   z-index: 100;
 }
 
-#contact-section aside .main-container__sidebar-social {
+#contact-section .contact-social .main-container__sidebar-social {
   position: relative;
-  top: 50%;
+  top: 15%;
   left: 20px;
-  -webkit-transform: translate(0, -70%);
-          transform: translate(0, -70%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1312,7 +1307,7 @@ body {
   background: transparent;
 }
 
-#contact-section aside .main-container__sidebar-social .sidebar__social-media {
+#contact-section .contact-social .main-container__sidebar-social .sidebar__social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1325,20 +1320,50 @@ body {
   cursor: pointer;
 }
 
-#contact-section aside .main-container__sidebar-social .sidebar__social-media a {
+#contact-section .contact-social .main-container__sidebar-social .sidebar__social-media li {
+  display: inherit;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#contact-section .contact-social .main-container__sidebar-social .sidebar__social-media li a {
   color: var(--highlight-purple);
   text-shadow: 0px 1px 1px var(--main-text-shadow);
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 
-#contact-section aside .main-container__sidebar-social .sidebar__social-media a:hover, #contact-section aside .main-container__sidebar-social .sidebar__social-media a:focus {
-  text-shadow: 0px 2px 2px var(--main-text-shadow);
+#contact-section .contact-social .main-container__sidebar-social .sidebar__social-media li a:hover, #contact-section .contact-social .main-container__sidebar-social .sidebar__social-media li a:focus {
   color: var(--highlight-purple);
 }
 
-#contact-section aside .main-container__sidebar-social .sidebar__social-media a .fab {
+#contact-section .contact-social .main-container__sidebar-social .sidebar__social-media li a .fab {
   font-size: 50px;
+}
+
+#contact-section .contact-social .main-container__sidebar-social .sidebar__social-media li .slideOut-anim {
+  margin: 3.4px 0 0 -5px;
+  padding: 0 10px;
+  width: 100px;
+  height: 44px;
+  background: var(--highlight-purple);
+  border-right: 2px solid black;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  font-weight: 500;
+  -webkit-filter: drop-shadow(0px 1px gray);
+          filter: drop-shadow(0px 1px gray);
 }
 
 @media screen and (max-width: 1200px) {

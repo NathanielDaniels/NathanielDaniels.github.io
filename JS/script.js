@@ -245,7 +245,7 @@ skillsHover()
   //   cards.forEach(card =>  card.removeAttribute('data-tilt'))
   // }
   // window.addEventListener('resize', removeTilt)
-  
+    
     function removeTilt() {
       console.log(window.innerWidth)
       if (window.innerWidth < 800) {
