@@ -130,8 +130,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background: linear-gradient(120deg, #990be6 1%, #4c0571 50%);
-  -webkit-filter: drop-shadow(0 10px black);
-          filter: drop-shadow(0 10px black);
 }
 
 .main-section .smiley-face {
@@ -507,7 +505,6 @@ body {
 .main-section .main-container {
   position: relative;
   width: 100%;
-  max-width: 1160px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -528,8 +525,8 @@ body {
   font-size: clamp(2.8rem, 9vw, 8rem);
   font-weight: bold;
   text-transform: uppercase;
-  -webkit-transform: translateY(-80%);
-          transform: translateY(-80%);
+  -webkit-transform: translateY(-85%);
+          transform: translateY(-85%);
   color: var(--secondary-dark-purple);
   text-shadow: 0px 1px #49117e, 0px -3px #270943;
   letter-spacing: -5px;
@@ -583,12 +580,6 @@ body {
 
 .main-section .main-container__sidebar-social {
   padding: 0 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   z-index: 1;
   background: transparent;
 }
@@ -1379,14 +1370,34 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-  .main-section {
-    height: 50em;
-  }
   .main-section .smiley-face {
     display: none;
   }
   .main-section .speech-bubble {
     display: none;
+  }
+  .main-section .main-container__sidebar-social {
+    padding: 0 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 1;
+    background: transparent;
+  }
+  .main-section .main-container__sidebar-social .sidebar__social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 1.2em;
+    list-style: none;
+    cursor: pointer;
   }
   section.about#about-section .about-container .about-info .about-me__skills {
     -ms-grid-columns: 1fr;

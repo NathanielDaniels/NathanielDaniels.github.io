@@ -196,7 +196,7 @@ body {
   background: linear-gradient(120deg,
       rgb(153, 11, 230) 1%,
       rgba(76, 5, 113, 1) 50%);
-  filter: drop-shadow(0 10px black);
+  // filter: drop-shadow(0 10px black);
 
   //? Face
   .smiley-face {
@@ -303,6 +303,7 @@ body {
       border-top: 30px solid var(--main-white);
     }
   }
+
 
   .main-section__header {
     top: 0;
@@ -524,7 +525,7 @@ body {
   .main-container {
     position: relative;
     width: 100%;
-    max-width: 1160px;
+    // max-width: 1160px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -539,7 +540,8 @@ body {
         font-size: clamp(2.8rem, 9vw, 8rem);
         font-weight: bold;
         text-transform: uppercase;
-        transform: translateY(-80%);
+        // transform: translateY(-80%);
+        transform: translateY(-85%);
         color: var(--secondary-dark-purple);
         text-shadow: 0px 1px hsl(271, 76%, 28%), -0px -3px hsl(271, 76%, 15%);
         letter-spacing: -5px;
@@ -630,8 +632,8 @@ body {
   //? Side Social Media Links
   .main-container__sidebar-social {
     padding: 0 1em;
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
     z-index: 1;
     background: transparent;
 
@@ -1357,7 +1359,9 @@ body {
 //! Switch to Tablet
 @media screen and (max-width: 1200px) {
   .main-section {
-    height: 50em;
+    // height: 50em;
+    // height: 100em;
+    // flex-direction: column;
 
     .smiley-face {
       display: none;
@@ -1365,6 +1369,36 @@ body {
 
     .speech-bubble {
       display: none;
+    }
+
+    //? Side Social Media Links
+    .main-container__sidebar-social {
+      padding: 0 1em;
+      display: flex;
+      align-items: center;
+      z-index: 1;
+      background: transparent;
+
+      .sidebar__social-media {
+        display: flex;
+        flex-direction: row;
+        gap: 1.2em;
+        list-style: none;
+        cursor: pointer;
+
+        // li {
+
+        //   a {
+
+        //     .fab {
+        //       // font-size: 40px;
+        //       font-size: 50px;
+        //     }
+
+        //   }
+
+        // }
+      }
     }
   }
 
