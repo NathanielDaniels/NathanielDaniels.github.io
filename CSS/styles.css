@@ -504,27 +504,38 @@ body {
 }
 
 .main-section .main-container {
-  position: relative;
-  margin: 0 auto;
+  margin-top: -100px;
+  padding-right: 150px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-.main-section .main-container .content-wrapper .greeting-loop {
-  position: absolute;
-  right: 0;
+.main-section .main-container .greeting-loop {
+  position: relative;
+  text-align: right;
+  margin-bottom: -20px;
   font-size: clamp(2.8rem, 9vw, 8rem);
   font-weight: bold;
   text-transform: uppercase;
-  -webkit-transform: translateY(-85%);
-          transform: translateY(-85%);
   color: var(--secondary-dark-purple);
   text-shadow: 0px 1px #49117e, 0px -3px #270943;
   letter-spacing: -5px;
+}
+
+.main-section .main-container .content-wrapper {
+  position: relative;
 }
 
 .main-section .main-container .content-wrapper .main-container__content {
@@ -577,20 +588,22 @@ body {
   padding: 0 1em;
   z-index: 1;
   background: transparent;
-  background: blue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .main-section .main-container .sidebar-social .sidebar__social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 1.2em;
   list-style: none;
   cursor: pointer;
@@ -1370,10 +1383,6 @@ body {
 
 @media screen and (max-width: 1200px) {
   .main-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     max-width: 100%;
   }
   .main-section .smiley-face {
@@ -1382,7 +1391,7 @@ body {
   .main-section .speech-bubble {
     display: none;
   }
-  .main-section .main-container__sidebar-social {
+  .main-section .sidebar-social {
     padding: 0 1em;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1393,7 +1402,7 @@ body {
     z-index: 1;
     background: transparent;
   }
-  .main-section .main-container__sidebar-social .sidebar__social-media {
+  .main-section .sidebar-social .sidebar__social-media {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
