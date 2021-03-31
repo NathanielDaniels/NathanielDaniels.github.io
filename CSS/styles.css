@@ -304,6 +304,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-weight: 500;
 }
 
 .main-section .main-section__header .header__inner-container .header__nav-links li {
@@ -504,7 +505,6 @@ body {
 
 .main-section .main-container {
   position: relative;
-  width: 100%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -512,11 +512,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.main-section .main-container .content-wrapper {
-  position: relative;
-  width: 100%;
 }
 
 .main-section .main-container .content-wrapper .greeting-loop {
@@ -578,13 +573,17 @@ body {
   background: transparent;
 }
 
-.main-section .main-container__sidebar-social {
+.main-section .main-container .sidebar-social {
   padding: 0 1em;
   z-index: 1;
   background: transparent;
+  background: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.main-section .main-container__sidebar-social .sidebar__social-media {
+.main-section .main-container .sidebar-social .sidebar__social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -597,19 +596,19 @@ body {
   cursor: pointer;
 }
 
-.main-section .main-container__sidebar-social .sidebar__social-media li a {
+.main-section .main-container .sidebar-social .sidebar__social-media li a {
   color: var(--highlight-purple);
   text-shadow: 0px 1px 1px var(--main-text-shadow);
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 
-.main-section .main-container__sidebar-social .sidebar__social-media li a:hover, .main-section .main-container__sidebar-social .sidebar__social-media li a:focus {
+.main-section .main-container .sidebar-social .sidebar__social-media li a:hover, .main-section .main-container .sidebar-social .sidebar__social-media li a:focus {
   text-shadow: 0px 2px 2px var(--main-text-shadow);
   color: var(--main-yellow);
 }
 
-.main-section .main-container__sidebar-social .sidebar__social-media li a .fab {
+.main-section .main-container .sidebar-social .sidebar__social-media li a .fab {
   font-size: 50px;
 }
 
@@ -1103,7 +1102,7 @@ body {
 }
 
 #contact-section form.cf-form {
-  margin: 3em 0 3em;
+  margin: 2em 0 3em;
   max-width: 37rem;
   text-align: center;
 }
@@ -1307,7 +1306,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1.5em;
+  gap: 1em;
   list-style: none;
   cursor: pointer;
 }
@@ -1370,6 +1369,13 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+  .main-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%;
+  }
   .main-section .smiley-face {
     display: none;
   }
