@@ -530,11 +530,11 @@ body {
   .main-container {
     margin-top: -100px;
     // position: relative;
-    padding-right: 150px;
+    // padding-right: 150px;
     width: 100%;
     // width: 50%;
-    // max-width: 1160px;
-    // margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -543,10 +543,9 @@ body {
     .greeting-loop {
       // position: absolute;
       position: relative;
-      // right: 100px;
       text-align: right;
-      margin-bottom: -20px;
-      font-size: clamp(2.8rem, 9vw, 8rem);
+      line-height: .9;
+      font-size: clamp(3rem, 9vw, 7rem);
       font-weight: bold;
       text-transform: uppercase;
       // transform: translateY(-80%);
@@ -609,7 +608,7 @@ body {
         .main-content__CTA {
           width: 100%;
           margin-top: 0.4em;
-          font-size: clamp(1.4rem, 2.5vw, 1.6rem);
+          font-size: clamp(1.2rem, 2.5vw, 1.6rem);
           float: right;
           font-weight: 600;
           color: var(--main-white);
@@ -867,7 +866,6 @@ body {
     padding: 13em 0 0em;
     display: relative;
     background: var(--main-purple);
-    ;
     cursor: default;
     // z-index: 100;
     z-index: 101;
@@ -876,10 +874,8 @@ body {
       z-index: 5;
       font-weight: 800;
       text-align: center;
-      // font-size: 5rem;
       font-size: clamp(3rem, 10vw, 5em);
       color: var(--main-yellow);
-      ;
       text-transform: uppercase;
       max-width: 100%;
       // animation: slideUp 1s cubic-bezier(0.19, 1, 0.3, 1) 0.5s forwards;
@@ -985,86 +981,62 @@ body {
           }
         }
 
-        .cardImg {
-          font-size: 3rem;
-          padding: 2em;
-          box-shadow: 0 0 10px var(--main-box-shadow);
-          // box-shadow: inset 0 0 10px var(--main-box-shadow);
-          background: var(--card-background-purple);
-          transform: 0.5s;
-          transform-style: preserve-3d;
-          transform: perspective(1000px);
-          transition: filter 0.5s ease-in-out;
+
+      }
+
+      .cardImg {
+        font-size: 3rem;
+        padding: 2em;
+        box-shadow: 0 0 10px var(--main-box-shadow);
+        // box-shadow: inset 0 0 10px var(--main-box-shadow);
+        background: var(--card-background-purple);
+        transform: 0.5s;
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+        transition: filter 0.5s ease-in-out;
+        transform: translateZ(20px);
+
+        .icon {
+          transition: 0.5s ease-in-out;
           transform: translateZ(20px);
-
-          .icon {
-            transition: 0.5s ease-in-out;
-            transform: translateZ(20px);
-            color: var(--main-black);
-          }
-
-          .card-title {
-            transform: translateZ(20px);
-            position: absolute;
-            bottom: -5%;
-            right: 0;
-            transition: 0.5s ease-in-out;
-          }
+          color: var(--main-black);
         }
 
-        // Speed Typer
-        .card-4 {
-          display: flex;
-          flex-direction: row;
+        .card-title {
+          transform: translateZ(20px);
+          position: absolute;
+          bottom: -5%;
+          right: 0;
+          transition: 0.5s ease-in-out;
         }
+      }
 
-        .card-1__info,
-        .card-2__info,
-        .card-3__info,
-        .card-4__info {
-          color: var(--main-white);
-          letter-spacing: 1px;
-          font-size: 18px;
-          line-height: 1.5;
-          text-align: left;
-        }
+      //? Speed Typer
+      .card-4 {
+        display: flex;
+        flex-direction: row;
+      }
 
-        .card-2__info,
-        .card-4__info {
-          text-align: right;
-        }
+      .card-1__info,
+      .card-2__info,
+      .card-3__info,
+      .card-4__info {
+        color: var(--main-white);
+        letter-spacing: 1px;
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: left;
+      }
+
+      .card-2__info,
+      .card-4__info {
+        text-align: right;
       }
     }
   }
 }
 
-//! Quote Section =============================
-// .about-me__quote {
-//   @include angle(after);
-//   // display: relative;
-//   background: #eee;
-//   z-index: 99;
-//   height: 20em;
-//   border-bottom: 2px solid black;
-//   border-top: 2px solid black;
-//   blockquote {
-//     letter-spacing: 1px;
-//     border-left: 10px solid var(--main-purple);
-//     margin: 0 10px;
-//     max-width: 700px;
-//     padding: 0 10px;
-//     quotes: '\201C''\201D''\2018''\2019';
-//   }
-//   blockquote:before {
-//     color: var(--main-purple);
-//     content: open-quote;
-//     font-size: 4em;
-//     line-height: 0.1em;
-//     margin-right: 0.2em;
-//     vertical-align: -0.4em;
-//   }
 // }
-
 
 //! CONTACT Section ===============================
 #contact-section {
@@ -1877,4 +1849,10 @@ body {
     }
   }
 
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
 }
