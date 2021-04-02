@@ -1001,6 +1001,117 @@ body {
           justify-content: flex-end;
 }
 
+#projects-section .projects .grid-container .projects-grid .testBox {
+  max-width: 100%;
+  width: 850px;
+  max-height: 350px;
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox:hover .card__overlay {
+  width: 100%;
+  border-radius: 8px;
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox:hover .card__overlay .card-3__info {
+  max-width: 80%;
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox:hover .card__overlay .card-3__info,
+#projects-section .projects .grid-container .projects-grid .testBox:hover .card__overlay .card__info,
+#projects-section .projects .grid-container .projects-grid .testBox:hover .card__overlay .card__links a {
+  display: block;
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox .card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--main-text-shadow);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__info {
+  height: 100%;
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__info p {
+  letter-spacing: 1px;
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__info p:nth-of-type(2) {
+  margin-top: 1em;
+  border: 1px solid var(--main-yellow);
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card-3__info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: var(--main-white);
+  letter-spacing: 1px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card-3__info,
+#projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__info,
+#projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__links a {
+  display: none;
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow: hidden;
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__links a {
+  margin-right: 1em;
+  text-decoration: none;
+  color: var(--main-yellow);
+  font-size: 1.2rem;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__links a:hover, #projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__links a:focus {
+  color: var(--main-white);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__links a:focus {
+  outline-offset: 3px;
+  -webkit-filter: drop-shadow(1px 2px 2px var(--main-purple));
+          filter: drop-shadow(1px 2px 2px var(--main-purple));
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox .card__overlay:nth-child(3) .card__links,
+#projects-section .projects .grid-container .projects-grid .testBox .card__overlay:nth-child(7) .card__links {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 #projects-section .projects .grid-container .cardImg {
   font-size: 3rem;
   padding: 2em;
