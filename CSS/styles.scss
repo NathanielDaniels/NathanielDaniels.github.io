@@ -896,7 +896,7 @@ body {
           position: relative;
           border-radius: 10px;
           display: flex;
-          flex-direction: column;
+          // flex-direction: column;
           justify-content: center;
           row-gap: 1em;
           max-width: 35em;
@@ -984,7 +984,9 @@ body {
           //? overlay
           max-width: 100%;
           width: 850px;
-          max-height: 350px;
+          // max-height: 350px;
+          min-height: 340px;
+          // max-height: 400px;
 
           &:hover .card__overlay {
             // display: flex;
@@ -1131,6 +1133,10 @@ body {
         flex-direction: row;
       }
 
+      .card-4__info {
+        flex-direction: column;
+      }
+
       .card-1__info,
       .card-2__info,
       .card-3__info,
@@ -1140,11 +1146,13 @@ body {
         font-size: 18px;
         line-height: 1.5;
         text-align: left;
+        flex-direction: column;
       }
 
       .card-2__info,
       .card-4__info {
         text-align: right;
+
       }
     }
   }

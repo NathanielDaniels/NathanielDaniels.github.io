@@ -910,10 +910,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1004,7 +1000,7 @@ body {
 #projects-section .projects .grid-container .projects-grid .testBox {
   max-width: 100%;
   width: 850px;
-  max-height: 350px;
+  min-height: 340px;
 }
 
 #projects-section .projects .grid-container .projects-grid .testBox:hover .card__overlay {
@@ -1160,6 +1156,13 @@ body {
           flex-direction: row;
 }
 
+#projects-section .projects .grid-container .card-4__info {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 #projects-section .projects .grid-container .card-1__info,
 #projects-section .projects .grid-container .card-2__info,
 #projects-section .projects .grid-container .card-3__info,
@@ -1169,6 +1172,10 @@ body {
   font-size: 18px;
   line-height: 1.5;
   text-align: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #projects-section .projects .grid-container .card-2__info,
