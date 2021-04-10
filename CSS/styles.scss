@@ -545,7 +545,7 @@ body {
         position: relative;
         text-align: right;
         line-height: .9;
-        font-size: clamp(2.4rem, 9vw, 7rem);
+        font-size: clamp(2.5rem, 9vw, 7rem);
         font-weight: bold;
         text-transform: uppercase;
         color: var(--secondary-dark-purple);
@@ -565,7 +565,7 @@ body {
             width: 25ch;
             max-width: 100%;
             color: var(--main-yellow);
-            font-size: clamp(1.35rem, 3.5vw, 2.5rem);
+            font-size: clamp(1.3rem, 4vw, 2.5rem);
 
             margin-left: auto;
             text-transform: capitalize;
@@ -578,13 +578,13 @@ body {
           .main-content__CTA {
             width: 100%;
             margin-top: 0.4em;
-            font-size: clamp(1rem, 2vw, 1.6rem);
+            font-size: clamp(.9rem, 2.5vw, 1.6rem);
             float: right;
             font-weight: 600;
             color: var(--main-white);
 
             .cta-btn {
-              font-size: clamp(1.6rem, 4.5vw, 2rem);
+              font-size: clamp(1.5rem, 4.5vw, 2rem);
               text-transform: uppercase;
               display: inline-block;
               text-decoration: none;
@@ -1698,7 +1698,7 @@ body {
     }
 
     .top-content {
-      width: 95%;
+      // width: 95%;
 
       .main-container {
         .greeting-loop {
