@@ -247,16 +247,23 @@ skillsHover()
   // window.addEventListener('resize', removeTilt)
 
     function removeTilt() {
-      console.log(window.innerWidth)
+      console.log("Inner Width", window.innerWidth)
       if (window.innerWidth < 800) {
+
         const cards = document.querySelectorAll('.cardImg')
-        // console.log(cards)
+
         cards.forEach(card =>  {
-          card.removeAttribute('data-tilt')
-        })
+          console.log(card)
+
+          VanillaTilt.init(card)
+          card.vanillaTilt.destroy();
+          // card.vanillaTilt.getValues();
+        });
+
       }
     }
     removeTilt()
+    
     
 //? If Tilt still works becasue of html attributes, might not need this
 // function tiltAnimation() {
