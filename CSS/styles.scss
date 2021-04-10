@@ -1531,7 +1531,6 @@ body {
 //! Switch to Tablet
 @media screen and (max-width: 1200px) {
   .main-section {
-    // flex-direction: column;
     max-width: 100%;
 
     .smiley-face {
@@ -1543,8 +1542,13 @@ body {
     }
 
     .top-content {
+      // border: 2px solid red;
+      width: 90%;
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      // padding: 0 20px;
 
       //? Side Social Media Links
       .sidebar-social {
@@ -1761,51 +1765,45 @@ body {
       }
     }
 
-    .main-container {
-      flex-direction: column !important;
+    .top-content {
+      width: 95%;
 
-      .greeting-loop {
-        position: relative !important;
-        transform: none !important;
-        text-align: right;
-        color: hsl(0, 0%, 100%) !important;
-        letter-spacing: -1px !important;
-        text-shadow: 0px 0.5px hsl(271, 76%, 60%), -0px -2px var(--secondary-dark-purple) !important;
-        font-size: clamp(2.2rem, 8vw, 8rem);
-        padding-right: .25em;
-        justify-content: flex-end !important;
-        position: relative;
-        // top: 0 !important;
-        line-height: 1em !important;
-      }
+      .main-container {
+        .greeting-loop {
+          color: hsl(0, 0%, 100%) !important;
+          letter-spacing: -1px !important;
+          text-shadow: 0px 0.5px hsl(271, 76%, 60%), -0px -2px var(--secondary-dark-purple) !important;
+          // font-size: clamp(2.2rem, 8vw, 8rem);
+          line-height: 1em !important;
+        }
 
-      .main-container__content {
-        padding-right: 0em !important;
-        border-right: 0 !important;
+        .main-container__content {
+          padding-right: 0em !important;
+          border-right: 0 !important;
 
-        .main-content__CTA {
-          .cta-btn {
-            padding: .5em 2em !important;
+          .main-content__CTA {
+            .cta-btn {
+              padding: .5em 2em !important;
+              font-size: 1.5rem;
+            }
           }
+
         }
 
       }
 
-      .main-container__sidebar-social {
-        justify-content: flex-end;
-
+      .sidebar-social {
         .sidebar__social-media {
-          flex-direction: row !important;
-
           li {
             a {
-              .fab {
-                font-size: 50px;
+              i.fab {
+                font-size: 45px;
               }
             }
           }
         }
       }
+
     }
   }
 
