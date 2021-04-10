@@ -241,7 +241,7 @@ skillsHover()
 //!=================================
 function removeTilt() {
   console.log("Inner Width", window.innerWidth)
-  if (window.innerWidth < 800) {
+  if (window.innerWidth < 1200) {
 
     const cards = document.querySelectorAll('.cardImg')
 
@@ -446,7 +446,6 @@ function submitForm () {
 
   })
 }
-
 submitForm()
 
 
