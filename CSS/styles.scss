@@ -190,8 +190,8 @@ body {
   z-index: 1;
   width: 100%;
   height: 125vh;
-  // min-height: 800px;
-  min-height: 100vh;
+  min-height: 800px;
+  // min-height: 100vh;
   display: flex;
   align-items: center;
   background: linear-gradient(120deg,
@@ -565,8 +565,7 @@ body {
             width: 25ch;
             max-width: 100%;
             color: var(--main-yellow);
-            // font-size: clamp(1.4rem, 3.5vw, 2.5rem);
-            font-size: clamp(1.2rem, 3.5vw, 2.5rem);
+            font-size: clamp(1.35rem, 3.5vw, 2.5rem);
 
             margin-left: auto;
             text-transform: capitalize;
@@ -579,7 +578,7 @@ body {
           .main-content__CTA {
             width: 100%;
             margin-top: 0.4em;
-            font-size: clamp(.8rem, 2vw, 1.6rem);
+            font-size: clamp(1rem, 2vw, 1.6rem);
             float: right;
             font-weight: 600;
             color: var(--main-white);
@@ -644,8 +643,7 @@ body {
             }
 
             .fab {
-              // font-size: 50px;
-              font-size: clamp(2.5rem, 8vw, 4rem);
+              font-size: clamp(2.5rem, 8vw, 3.5rem);
             }
 
           }
@@ -725,7 +723,7 @@ body {
           .skills-title {
             grid-row: 1;
             max-width: 100%;
-            font-size: clamp(4.5rem, 8vw, 5rem);
+            font-size: clamp(4rem, 8vw, 5rem);
             line-height: 1;
             text-shadow: 0px 1px hsl(271, 76%, 28%), -0px -1px hsl(271, 76%, 20%);
             color: var(--main-purple);
@@ -1673,6 +1671,8 @@ body {
 //? Switch to Mobile 
 @media screen and (max-width: 800px) {
   section.main-section {
+    min-height: 100vh;
+
     header.main-section__header {
       div.title-content-wrapper {
         div.title-name {
