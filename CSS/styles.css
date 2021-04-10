@@ -361,7 +361,7 @@ body {
   border: transparent;
   margin-right: 10px;
   position: relative;
-  padding: 0 5px;
+  padding: 5px 5px 0;
   cursor: pointer;
 }
 
@@ -999,8 +999,12 @@ body {
 
 #projects-section .projects .grid-container .projects-grid .testBox {
   max-width: 100%;
-  width: 850px;
-  min-height: 340px;
+  width: 650px;
+  height: 300px;
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox .testBox-icon {
+  font-size: 3em;
 }
 
 #projects-section .projects .grid-container .projects-grid .testBox:hover .card__overlay {
@@ -1080,13 +1084,13 @@ body {
 }
 
 #projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__links a {
-  margin-right: 1em;
   text-decoration: none;
   color: var(--main-yellow);
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  border: 2px solid yellow;
 }
 
 #projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__links a:hover, #projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__links a:focus {
@@ -1106,6 +1110,10 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+#projects-section .projects .grid-container .projects-grid .testBox h3 {
+  font-size: 4rem;
 }
 
 #projects-section .projects .grid-container .cardImg {

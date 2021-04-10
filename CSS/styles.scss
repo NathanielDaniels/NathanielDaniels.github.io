@@ -407,8 +407,7 @@ body {
       // border-radius: 50%;
       margin-right: 10px;
       position: relative;
-
-      padding: 0 5px;
+      padding: 5px 5px 0;
       cursor: pointer;
 
       // &:focus {
@@ -983,15 +982,15 @@ body {
         .testBox {
           //? overlay
           max-width: 100%;
-          width: 850px;
-          // max-height: 350px;
-          min-height: 340px;
-          // max-height: 400px;
+          width: 650px;
+          height: 300px;
+          // min-height: 340px;
+
+          .testBox-icon {
+            font-size: 3em;
+          }
 
           &:hover .card__overlay {
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
             width: 100%;
             border-radius: 8px;
 
@@ -1012,7 +1011,6 @@ body {
             bottom: 0;
             left: 0;
             right: 0;
-            // background-color: #008CBA;
             background-color: var(--main-text-shadow);
             overflow: hidden;
             width: 0;
@@ -1061,15 +1059,17 @@ body {
               display: flex;
               justify-content: flex-end;
               overflow: hidden;
+              // z-index: 100000;
 
-              // white-space: nowrap;
               a {
-                margin-right: 1em;
+                // margin-right: 1.5em;
+                // justify-content: space-between;
                 text-decoration: none;
                 color: var(--main-yellow);
-                font-size: 1.2rem;
+                font-size: 1rem;
                 text-align: center;
                 transition: all 0.2s ease-in-out;
+                border: 2px solid yellow;
 
                 &:hover,
                 &:focus {
@@ -1090,6 +1090,10 @@ body {
               justify-content: flex-end;
             }
 
+          }
+
+          h3 {
+            font-size: 4rem;
           }
         }
 
