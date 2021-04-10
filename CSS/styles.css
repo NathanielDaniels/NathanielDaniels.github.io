@@ -122,7 +122,7 @@ body {
   z-index: 1;
   width: 100%;
   height: 125vh;
-  min-height: 800px;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1600,7 +1600,6 @@ body {
     width: 100%;
   }
   section.about#about-section .about-container .about-info .about-me__skills .skills-icons {
-    border: 2px solid red;
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
