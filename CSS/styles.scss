@@ -600,7 +600,8 @@ body {
             width: 25ch;
             max-width: 100%;
             color: var(--main-yellow);
-            font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+            // font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+            font-size: clamp(1.1rem, 4.5vw, 2.5rem);
             margin-left: auto;
             text-transform: capitalize;
 
@@ -612,12 +613,13 @@ body {
           .main-content__CTA {
             width: 100%;
             margin-top: 0.4em;
-            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            font-size: clamp(.6rem, 3vw, 1.6rem);
             float: right;
             font-weight: 600;
             color: var(--main-white);
 
             .cta-btn {
+              font-size: clamp(1.4rem, 4.5vw, 2rem);
               text-transform: uppercase;
               display: inline-block;
               text-decoration: none;
@@ -688,10 +690,6 @@ body {
     //? Side Social Media Links
     .sidebar-social {
       // border: 2px solid red;
-
-      // width: 100%;
-      // max-width: 1000px;
-      // margin: 20px auto;
       height: 300px;
       padding: 0 1em;
       z-index: 1;
@@ -704,7 +702,6 @@ body {
 
       display: flex;
       align-items: center;
-      // justify-content: flex-end;
 
       .sidebar__social-media {
         display: flex;
@@ -727,8 +724,8 @@ body {
             }
 
             .fab {
-              // font-size: 40px;
-              font-size: 50px;
+              // font-size: 50px;
+              font-size: clamp(2.5rem, 8vw, 4rem);
             }
 
           }
@@ -1773,7 +1770,7 @@ body {
           color: hsl(0, 0%, 100%) !important;
           letter-spacing: -1px !important;
           text-shadow: 0px 0.5px hsl(271, 76%, 60%), -0px -2px var(--secondary-dark-purple) !important;
-          // font-size: clamp(2.2rem, 8vw, 8rem);
+          font-size: clamp(2.3rem, 9vw, 9rem);
           line-height: 1em !important;
         }
 
@@ -1781,10 +1778,18 @@ body {
           padding-right: 0em !important;
           border-right: 0 !important;
 
+          .main-content__greeting {
+
+            // font-size: clamp(1.2rem, 4.5vw, 2rem) !important;
+          }
+
           .main-content__CTA {
+            // font-size: clamp(.8rem, 3vw, 1.5rem) !important;
+
             .cta-btn {
-              padding: .5em 2em !important;
-              font-size: 1.5rem;
+              // padding: .5em 2em !important;
+              // font-size: 1.5rem;
+              // font-size: clamp(1.2rem, 4vw, 2rem) !important;
             }
           }
 
@@ -1797,7 +1802,8 @@ body {
           li {
             a {
               i.fab {
-                font-size: 45px;
+                // font-size: 45px;
+                // font-size: clamp(3rem, 4vw, 2rem) !important;
               }
             }
           }
