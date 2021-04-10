@@ -537,7 +537,7 @@ body {
   position: relative;
   text-align: right;
   line-height: .9;
-  font-size: clamp(2.3rem, 9vw, 7rem);
+  font-size: clamp(2.4rem, 9vw, 7rem);
   font-weight: bold;
   text-transform: uppercase;
   color: var(--secondary-dark-purple);
@@ -559,7 +559,7 @@ body {
   width: 25ch;
   max-width: 100%;
   color: var(--main-yellow);
-  font-size: clamp(1.1rem, 4.5vw, 2.5rem);
+  font-size: clamp(1.2rem, 3.5vw, 2.5rem);
   margin-left: auto;
   text-transform: capitalize;
 }
@@ -571,7 +571,7 @@ body {
 .main-section .top-content .main-container .content-wrapper .main-container__content .main-content__CTA {
   width: 100%;
   margin-top: 0.4em;
-  font-size: clamp(0.6rem, 3vw, 1.6rem);
+  font-size: clamp(0.8rem, 2vw, 1.6rem);
   float: right;
   font-weight: 600;
   color: var(--main-white);
@@ -1730,7 +1730,7 @@ body {
     color: white !important;
     letter-spacing: -1px !important;
     text-shadow: 0px 0.5px #9c4be7, 0px -2px var(--secondary-dark-purple) !important;
-    line-height: 1em !important;
+    line-height: 1.1em !important;
   }
   .about#about-section .about__container {
     padding-top: 100px !important;
