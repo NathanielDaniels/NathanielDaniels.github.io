@@ -578,7 +578,7 @@ body {
 }
 
 .main-section .top-content .main-container .content-wrapper .main-container__content .main-content__CTA .cta-btn {
-  font-size: clamp(1.4rem, 4.5vw, 2rem);
+  font-size: clamp(1.6rem, 4.5vw, 2rem);
   text-transform: uppercase;
   display: inline-block;
   text-decoration: none;
@@ -640,7 +640,7 @@ body {
 }
 
 .main-section .top-content .sidebar-social .sidebar__social-media li a .fab {
-  font-size: clamp(2.5rem, 8vw, 3.5rem);
+  font-size: clamp(3rem, 8vw, 3.5rem);
 }
 
 #about-section {
