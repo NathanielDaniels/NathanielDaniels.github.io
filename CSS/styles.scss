@@ -684,17 +684,6 @@ body {
         font-weight: 500;
       }
 
-      // .skills-title {
-      //   max-width: 100%;
-      //   font-size: clamp(3.5rem, calc(5vw + 1em), 5rem);
-      //   line-height: 1;
-      //   text-shadow: 0px 1px hsl(271, 76%, 28%), -0px -1px hsl(271, 76%, 20%);
-      //   color: var(--main-purple);
-      //   // margin-bottom: 0.2em;
-      //   position: relative;
-      //   left: 3em;
-      // }
-
       .about-me__skills {
         display: grid;
         grid-template-rows: auto;
@@ -769,13 +758,13 @@ body {
         }
 
         .skills-icons {
+          // border: 2px solid blue;
+
           grid-column: 1 / span 1;
           grid-row: 1;
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 10%;
-          // margin: 0 auto;
           margin: -3em auto;
 
           ul {
@@ -1524,15 +1513,14 @@ body {
           }
 
           .skills-icons {
-            // border: 2px solid red;
+            width: 100%;
             grid-row: 2 / 3;
             grid-column: 1 / 3;
-            position: static;
-            width: 90%;
-            top: 0;
-            transform: translate(0, 0);
-            // padding: 1em 0 2em;
-            // padding: 1em 0;
+            position: relative;
+            bottom: 0;
+            margin: 0 auto;
+            font-size: clamp(.6em, 2vw, 1.4em);
+
 
             ul {
               flex-direction: row;
@@ -1718,21 +1706,21 @@ body {
     }
   }
 
-  .about#about-section {
-    .about__container {
-      padding-top: 100px !important;
+  // .about#about-section {
+  //   .about__container {
+  //     padding-top: 100px !important;
 
-      .about-info {
-        .about-me__skills {
-          .whatIDo {
-            .skills-title {
-              margin-left: 3em !important;
-            }
-          }
-        }
-      }
-    }
-  }
+  //     .about-info {
+  //       .about-me__skills {
+  //         .whatIDo {
+  //           .skills-title {
+  //             margin-left: 3em !important;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
   section#contact-section.contact {
     padding-bottom: 30px;
@@ -1851,10 +1839,11 @@ body {
             }
           }
 
-          .skills-icons {
-            font-size: .5em;
-            margin: 0 auto;
-          }
+          // .skills-icons {
+          //   // font-size: clamp(.6em, 2vw, 1.5em);
+          //   // font-size: .6em;
+          //   // margin: 0 auto;
+          // }
         }
       }
     }
