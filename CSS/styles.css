@@ -1108,6 +1108,8 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   overflow: hidden;
+  background: blue;
+  border: 2px solid white;
 }
 
 #projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__links a {
