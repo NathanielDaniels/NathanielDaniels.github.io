@@ -24,14 +24,13 @@ $(function () {
 
 //! Smiley Face Animation ======================
 
-function smileyFace () {
+const smileyFace = (() => {
   let face = $('.smiley-face span')[0]
   let head = $('.smiley-face')[0]
   // let isDead = true;
   let canBlink = true
 
   document.onmousemove = trackMouse
-  // window.onresize = squish;
 
   //? Blink every 5.5 seconds
   setInterval(function () {
@@ -47,16 +46,10 @@ function smileyFace () {
   }, 5500)
 
   function trackMouse (event) {
-    // if (!isDead) {
-    //   return;
-    // }
 
     //? mouse coordinates
     let mX = event.clientX
     let mY = event.clientY
-
-    // console.log(mX, mY);
-
     //? viewport dimentions
     let vpH = window.innerHeight + 250
     let vpW = window.innerWidth
@@ -64,23 +57,14 @@ function smileyFace () {
     //? head boundingbox
     let headBox = head.getBoundingClientRect()
 
-    // console.log(headBox);
-
     //? face boundingbox
     let faceBox = face.getBoundingClientRect()
 
-    // console.log(faceBox);
-
     //? the magic
     let calcX = (headBox.width - faceBox.width + 600) * (mX / vpW)
-
     let calcY = (headBox.height - faceBox.height) * (mY / vpH)
 
-    // console.log(calcX, calcY);
-
     // //? add bounding restrictions to face
-    // calcX = clamp(calcX, 60, 150);
-    // calcY = clamp(calcY, 60, 130);
     calcX = clamp(calcX, 80, 150)
     calcY = clamp(calcY, 40, 160)
 
@@ -90,65 +74,92 @@ function smileyFace () {
   function clamp (num, min, max) {
     return num <= min ? min : num >= max ? max : num
   }
-
-  // add squish effect when viewport minimizes
-  // function squish () {
-  //   // head boundingbox
-  //   let headBox = head.getBoundingClientRect()
-
-  //   let wP = 1 - headBox.width / 300
-  //   let hP = 1 - headBox.height / 300
-
-  //   let squishP = Math.max(wP, hP) * 2
-
-  //   canBlink = !(squishP > 1.2)
-  //   isDead = !(squishP > 1.3)
-
-  //   head.setAttribute('style', 'background: rgba(169,3,41,' + squishP + ');')
-
-  //   face.style.opacity = 1.6 - squishP
-  // }
-  const touchSquint = () => {
+  const touchSquint = (() => {
     const smileyFace = document.querySelector(".smiley-face")
-    const spokenWord = document.querySelector("span.speech-bubble > h2")
+    // const spokenWord = document.querySelector("span.speech-bubble > h2")
     // let face = $('.smiley-face span')[0]
     smileyFace.addEventListener('mouseover' , ()=> {
       face.classList.add('blink')
-      spokenWord.innerText = "Watch Out!"
+      // speechBubble.style.opacity = "0"
     })
     smileyFace.addEventListener('mouseleave' , ()=> {
       face.classList.remove('blink')
     })
+  })()
+})()
+
+function throttle(event, delay) {
+  let timer = null;
+  return function() {
+    const context = this;
+    console.log('context', context);
+    const args = arguments;
+    console.log('args', args);
+    if (!timer) {
+      timer = setTimeout(function() {
+        event.apply(context, args);
+        timer = null;
+      }, delay);
+    }
   }
-  touchSquint()
 }
-smileyFace()
 
 //! Speech Bubble Animation! (smileyface)
-speechBubble = () => {
+speechBubble = (() => {
+  let currentWord = 'Welcome in!'
   const welcomeWords = ["Welcome in!", "Thanks for stopping by!", "Stay as long as you like!"]
    const speechBubble = document.querySelector(".speech-bubble")
    const spokenWord = document.querySelector(".speech-bubble > h2")
    const smileyFace = document.querySelector('.smiley-face')
+   const smileyFaceFace = document.querySelector('.smiley-face__face')
    let counter = 0;
-   smileyFace.addEventListener('mouseover' , ()=> {
-      counter++
-      if (counter >= welcomeWords.length) {
-        counter = 0
-      }
-      //? Random
-    //  let randomQuote = Math.floor(Math.random() * welcomeWords.length)
-    //  spokenWord.innerText = welcomeWords[randomQuote];
-      //? In Sequence
-      let quote = welcomeWords[counter];
-      spokenWord.innerText = quote;
-      speechBubble.style.opacity = "1";
-   })
+   smileyFace.addEventListener('mouseover' , throttle((event) => {
+      event.target === smileyFaceFace ? speechBubble.style.opacity = "0" : speechBubble.style.opacity = "1"
+      // console.log(event)
+        counter++
+        // counter reset
+        if (counter >= welcomeWords.length) {
+          counter = 0
+        }
+        currentWord = welcomeWords[counter]
+        console.log(currentWord)
+        //? Random
+       let randomQuote = Math.floor(Math.random() * welcomeWords.length)
+       const showCorrectQuote = randomQuote !== currentWord ? randomQuote : randomQuote + 1
+       spokenWord.innerText = welcomeWords[showCorrectQuote];
+      //  spokenWord.innerText = welcomeWords[randomQuote];
+        //? In Sequence
+        // if (event.target === smileyFace) {
+        // let quote = welcomeWords[counter];
+        // spokenWord.innerText = quote;
+        // speechBubble.style.opacity = "1";
+        // }
+}, 600)
+
+  //  (event) => {
+  //   event.target === smileyFaceFace ? speechBubble.style.opacity = "0" : speechBubble.style.opacity = "1"
+  //   console.log(event)
+  //     counter++
+  //     if (counter >= welcomeWords.length) {
+  //       counter = 0
+  //     }
+  //     //? Random
+  //   //  let randomQuote = Math.floor(Math.random() * welcomeWords.length)
+  //   //  spokenWord.innerText = welcomeWords[randomQuote];
+  //     //? In Sequence
+  //     if (event.target === smileyFace) {
+  //     let quote = welcomeWords[counter];
+  //     spokenWord.innerText = quote;
+  //     speechBubble.style.opacity = "1";
+  //     }
+  //  }
+   )
+
    smileyFace.addEventListener('mouseleave' , () => {
      speechBubble.style.opacity = "0"
    })
-}
-speechBubble()
+
+})()
 
 //! Hamburger Nav Menu Animation! (JQuery) ======================
 //? Change this back to vanilla JS (hamburgerAnimation2).
@@ -163,7 +174,7 @@ speechBubble()
 // }
 // hamburgerAnimation2();
 
-function hamburgerAnimation () {
+const hamburgerAnimation = (() => {
   // const burgerMenu = document.querySelector('.mobile-burger-menu__elements')
 
    // burgerMenu.addEventListener('click', function () {
@@ -185,16 +196,13 @@ function hamburgerAnimation () {
     $('#mobile-nav-menu').removeClass('active')
     $menu.removeClass('close')
   })
-}
-hamburgerAnimation()
+})()
 
 //! Greeting-Loop Animation (JQuery)================================
 
-function greetingLoop () {
+const greetingLoop = (() => {
   const text = [
     'web designer',
-    // "freelancer",
-    // "problem solver",
     'web enthusiast',
     'web developer'
   ]
@@ -213,12 +221,11 @@ function greetingLoop () {
       elem.fadeIn()
     })
   }
-}
-greetingLoop()
+})()
 
 
-//! Skills Hover Color Change (About)
-function skillsHover () {
+//* Skills Hover Color Change (About)
+const skillsHover = (() => {
   const skillsUl = document.querySelectorAll('.skills-list > li')
   const skillsLi = document.querySelectorAll('.skills-list > li > i')
 
@@ -234,12 +241,10 @@ function skillsHover () {
       }
     })
   }
-}
-skillsHover()
+})()
 
-//! Tilt Animation (projects section)
-//!=================================
-function removeTilt() {
+//* Tilt Animation (projects section)
+const removeTilt = (() => {
   console.log("Inner Width", window.innerWidth)
   if (window.innerWidth < 1200) {
 
@@ -254,76 +259,68 @@ function removeTilt() {
     });
 
   }
-}
-removeTilt()
+})()
 
-//! Contact Section - Floating Box Animation (Completely Random) ====
-const floatingBoxSize = () => {
+/* 
+/  floatingBoxSize function to randomly set the size, position, 
+/  animation delay, animation duration, and 
+/  background color for a list of floating boxes.
+*/
+
+const floatingBoxSize = (() => {
   const boxes = document.querySelectorAll('.floating-boxes li')
   for (let i = 0; i < boxes.length; i++) {
-    boxes[i].style.left = Math.floor(Math.random() * 100) + '%'
-    let boxWidth = (boxes[i].style.width =
-      Math.floor(Math.random() * (150 - 25) + 25) + 'px')
-
-      // console.log(boxes[i].style.width)
-    boxes[i].style.height = boxWidth
-    boxes[i].style.animationDelay =
+    const box = boxes[i]
+    box.style.left = Math.floor(Math.random() * 100) + '%'
+    box.style.width = Math.floor(Math.random() * (150 - 25) + 25) + 'px'
+    box.style.height = box.style.width
+    box.style.animationDelay =
       Math.floor(Math.random() * (1 - 10) + 1) + 's'
-    boxes[i].style.animationDuration =
+    box.style.animationDuration =
       Math.floor(Math.random() * (30 - 10) + 10) + 's'
-
     if (i % 2) {
-      if (boxes[i].style.width >= 80) {
-        boxes[i].style.backgroundColor = "hsla(252, 59%, 29%, 0.37)"
-      }
+      box.style.backgroundColor = "hsla(252, 59%, 29%, 0.37)"
     } else {
-      // boxes[i].style.backgroundColor = "hsla(57, 100%, 50%, 0.37)"
-      boxes[i].style.backgroundColor = "hsla(252, 59%, 29%, 0.57)"
+      box.style.backgroundColor = "hsla(252, 59%, 29%, 0.57)"
     }
   }
-}
-floatingBoxSize()
+})()
 
 //! Contact form Label Animation (to legend) =================
 
-function vanillaAnimateLabel() {
+const vanillaAnimateFormLabel = (() => {
   const input = document.querySelectorAll('input');
   const textArea = document.querySelector('textarea');
 
   for (let i = 0; i < input.length; i++) {
+    // Add a focus event listener to each input and textarea element.
     input[i].addEventListener('focus', function() {
+      // Add the 'focused' class to the closest parent element that has the class 'field-wrapper'.
       this.closest('.field-wrapper').classList.add('focused')
     });
 
+    // Add a blur event listener to each input and textarea element.
     input[i].addEventListener('blur', function() {
-      if (input[i].value === '') {
-        this.closest('.field-wrapper').classList.remove('focused')
-      }
-    });
-
-    textArea.addEventListener('focus', function() {
-    this.closest('.field-wrapper').classList.add('focused')
-    });
-    textArea.addEventListener('blur', function() {
+      // If the input or textarea element's value is blank, remove the 'focused' class from the closest parent element that has the class 'field-wrapper'.
       if (input[i].value === '') {
         this.closest('.field-wrapper').classList.remove('focused')
       }
     });
   };
 
-  // textArea.addEventListener('focus', function() {
-  //   this.closest('.field-wrapper').classList.add('focused')
-  // });
-  // textArea.addEventListener('blur', function() {
-  //   if (input[i].value === '') {
-  //     this.closest('.field-wrapper').classList.remove('focused')
-  //   }
-  // });
-}
-vanillaAnimateLabel()
-
-
-
+  // Add a focus event listener to the textarea element.
+  textArea.addEventListener('focus', function() {
+    // Add the 'focused' class to the closest parent element that has the class 'field-wrapper'.
+    this.closest('.field-wrapper').classList.add('focused')
+  });
+  // Add a blur event listener to the textarea element.
+  textArea.addEventListener('blur', function() {
+    // If the textarea element's value is blank, remove the 'focused' class from the closest parent element that has the class 'field-wrapper'.
+    if (textArea.value === '') {
+      this.closest('.field-wrapper').classList.remove('focused')
+    }
+  });
+})();
 
 //! Removed Jquery after testing =========================================
 // function animateLabel () {
@@ -375,7 +372,7 @@ vanillaAnimateLabel()
 
 //! Contact form Submit  =================
 //? EmailJS
-function submitForm () {
+const submitForm = (() => {
   const form = document.querySelector('.cf-form')
 
   
@@ -391,11 +388,13 @@ function submitForm () {
 
     emailjs.sendForm(serviceID, templateID, this)
     .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
+      if (response.status === '200') {
+        console.log('SUCCESS!', response.status, response.text);
+      }
       //  const inputReset = document.querySelectorAll('.cf-form .fieldWrapper label')
       // inputReset.forEach(item => item.value = "")
-    }, function(error) {
-       console.error('FAILED...', JSON.stringify(error));
+    }).catch(function(error) {
+      console.error('FAILED...', JSON.stringify(error));
     });
 
     //===============================================
@@ -403,8 +402,9 @@ function submitForm () {
     let ourFormData = new FormData(e.target)
     let userName = ourFormData.get('from_name')
 
-    let updatedHTMLContent = `
-    <div class="form-update-container" data-tilt >
+    const updatedContent = () => {
+      return `
+        <div class="form-update-container" data-tilt >
       <div class="form-update-info" >
         <h2>Thanks, ${userName}.</h2>
         <p>Your message has been delivered successfully!</p>
@@ -440,24 +440,9 @@ function submitForm () {
         </div>
       </div>
     </div>
-  `
+      `;
+    }
 
-  form.innerHTML = updatedHTMLContent
-
+  form.innerHTML = updatedContent()
   })
-}
-submitForm()
-
-
-//! Contact Form Click (Legend) Not Complete ======================
-
-// const form = document.querySelectorAll(".cf-form input");
-// console.log(form);
-
-// form.forEach((i) => {
-//   i.addEventListener("click", () => {
-//     const legend = `<legend>${i.placeholder}</legend>`;
-//     // console.log(i.);
-//   });
-// });
-
+})();
