@@ -6,6 +6,7 @@
   "dependencies": {
     "chai": "^4.3.7",
     "emailjs-com": "^2.6.3",
+    "eslint": "^8.39.0",
     "requirejs": "^2.3.6"
   },
   "scripts": {
