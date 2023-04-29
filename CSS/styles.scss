@@ -850,7 +850,6 @@ body {
       padding: 5em 0;
 
       .projects-grid {
-        // border: 2px solid yellow;
         display: flex;
         flex-flow: wrap;
         grid-gap: 6em 2em;
@@ -1098,7 +1097,9 @@ body {
         transform: perspective(1000px);
         transition: filter 0.5s ease-in-out;
         transform: translateZ(20px);
-
+        // &:hover {
+        //   overflow: hidden;
+        // }
         .icon {
           transition: 0.5s ease-in-out;
           transform: translateZ(20px);
@@ -1108,7 +1109,6 @@ body {
         // .textBox-icon {
         //   font-size: 4rem;
         // }
-
         .card-title {
           transform: translateZ(20px);
           position: absolute;
@@ -1116,7 +1116,25 @@ body {
           right: 0;
           transition: 0.5s ease-in-out;
         }
+  
+        // image {
+        //   display: none;
+        //   // width: 200px;
+        //   // height: 200px;
+        //   // object-fit: cover;
+        //   // object-position: center;
+        //   // transition: 0.5s ease-in-out;
+        //   // transform: translateZ(20px);
+  
+        // }
       }
+      // h3.card-title {
+      //   transform: translateZ(20px);
+      //   // position: absolute;
+      //   bottom: -5%;
+      //   right: 0;
+      //   transition: 0.5s ease-in-out;
+      // }
 
       //? Speed Typer
       .card-4 {
@@ -1195,6 +1213,7 @@ body {
     font-weight: 800;
     font-size: clamp(3rem, 10vw, 4em);
     color: var(--main-purple);
+    text-shadow: -0.1px 0.1px 0 #fff, 0.8px 0.8px 0 #fff, 0.8px -0.8px 0 #fff;
     text-transform: uppercase;
   }
 

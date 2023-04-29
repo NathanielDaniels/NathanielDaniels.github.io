@@ -153,27 +153,27 @@
               <h2 class="skills-title">What I do</h2>
               <div class="cards">
                 <div class="card">
-                  <h2 class="card__title">Design + Development</h2>
+                  <h2 class="card__title">Web Development</h2>
                   <p class="card__content">
-                   I specialize in turning custom Wireframe designs into fully functional websites from the ground up.
+                   I specialize in creating custom websites from the ground up, using the latest technologies and best practices to deliver high-quality results. My focus is on creating responsive, accessible, and performant websites that stand out in today's competitive online landscape.
                   </p>
                 </div>
                 <div class="card">
                   <h2 class="card__title">Web Animations</h2>
                   <p class="card__content">
-                    In 2021, animations are one of the most appealing tools for a website to stand out. 
+                     I have a passion for web animations and understand their potential to enhance user engagement and overall user experience. I keep up-to-date with the latest animation techniques and trends and can integrate them seamlessly into any project.
                   </p>
                 </div>
                 <div class="card">
                   <h2 class="card__title">Dynamic Data</h2>
                   <p class="card__content">
-                    Fetching data from a database gives us the ability to add dynamic up-to-date content to any project. 
+                    Fetching data from a database is a crucial aspect of modern web development. I have experience working with databases and can add dynamic up-to-date content to any project, ensuring that your website stays current and relevant.
                   </p>
                 </div>
                   <div class="card">
-                  <h2 class="card__title">Responsive Design</h2>
+                  <h2 class="card__title">Agile Methodologies</h2>
                   <p class="card__content">
-                    All projects are fully responsive, viewable on any computer, tablet, or cellphone.
+                     I'm proficient in Agile methodologies, specifically the Scrum framework, and use tools like Azure DevOps to manage tickets and track project progress. This ensures that my work is completed on time and to the satisfaction of all stakeholders.
                   </p>
                 </div>
                
@@ -217,7 +217,7 @@
           <div class="projects-grid">
 
             <!-- ? (Test box)-->
-            <div
+            <!-- <div
               class="card-5 cardImg card testBox"
               data-tilt
               data-tilt-glare
@@ -226,8 +226,6 @@
             >
               <i class="fa fa-camera-retro testBox-icon" aria-hidden="true"></i>
               <h3 class="card-title">ChocoShop</h3>
-          
-              <!-- ? (Test Info) -->
               <div class="card__overlay">
                 <div class="card-5__info card">
                   
@@ -253,26 +251,29 @@
                     </div>
                   </div>
               </div>
-            </div>
+            </div> -->
 
             <!-- ? Card 1 (Netflix box)-->
-            <div
-              class="card card-1 cardImg"
-              data-tilt
-              data-tilt-glare
-              data-tilt-max-glare="0.2"
-              data-tilt-max="10"
-            >
-              <i class="fas fa-film icon"></i>
-              <h3 class="card-title">Nateflix</h3>
-            </div>
+            <article class="cardContainer">
+              <div
+                class="card card-1 cardImg"
+                data-tilt
+                data-tilt-glare
+                data-tilt-max-glare="0.2"
+                data-tilt-max="10"
+              >
+                <!-- <image class="card-1__img" src="IMG/portfolio-img/nateflix.png" alt="Nateflix" /> -->
+                <i class="fas fa-film icon"></i>
+                <h3 class="card-title">Nateflix</h3>
+              </div>
+            </article>
             <!-- ? Card 1 (Netflix Info) -->
             <div class="card card-1__info">
               <div class="top-info">
                 <p>
-                  Nateflix is a Netflix style clone that fetches limited movie data from firebase backend, uses authentication, and has a search feature.
+                  Nateflix is a movie app that fetches custom movie data from firebase, Authentication, and search functionality.
                 </p>
-                <p>React App, Firebase.</p>
+                <p>React, Firebase.</p>
               </div>
               <div class="card__links">
                 <a target="_blank" rel="noreferrer noopener" href="https://github.com/NathanielDaniels/Nateflix-react-app"
@@ -286,11 +287,10 @@
             <div class="card card-2__info">
               <div class="top-info">
                 <p>
-                  S&P Recipe Box is a project for a local Instagram foodtographer.
-                  The main idea was to store favorite recipes all while showcasing their
-                  foodtography business. 
+                  S&P Recipe Box is a project to store favorite recipes all while showcasing
+                  foodtography. 
                 </p>
-                <p><strong>Build:</strong> HTML, SASS/SCSS,JavaScript.</p>
+                <p>HTML, SASS/SCSS, JavaScript.</p>
               </div>
 
               <div class="card__links">
@@ -402,7 +402,7 @@
                 <p>
                   PicSome was a fun capstone project built with React hooks and local storage, bringing you a mini ecommerce website where users can purchase photos.
                 </p>
-                <p>React App.</p>
+                <p>React.</p>
               </div>
               <div class="card__links">
                 <a target="_blank" rel="noreferrer noopener" href="https://github.com/NathanielDaniels/capstone-project-react"
@@ -422,7 +422,7 @@ Preview</a
                 <p>
                   Speed Typer is a speed typing game built with only speed in mind. Can you beat the timer to be the fastest typer in all the land?
                 </p>
-                <p>React App.</p>
+                <p>React.</p>
               </div>
               <div class="card__links">
                 <a target="_blank" rel="noreferrer noopener" href="https://github.com/NathanielDaniels/speed-typing-game-react"
@@ -681,8 +681,10 @@ Preview</a
 
 
     <!-- ! JavaScript -->
-    <script src="/JS/vanilla-tilt.min.js"></script>
+    <script src="/JS/components/vanilla-tilt.min.js"></script>
     <script src="/JS/script.js"></script>
+    <script src="/JS/components/scrollIndicator.js"></script>
+    <script src="/JS/components/email.js"></script>
     <!--!EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script> 
     <script type="text/javascript">

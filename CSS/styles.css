@@ -899,6 +899,7 @@ body {
   font-weight: 800;
   font-size: clamp(3rem, 10vw, 4em);
   color: var(--main-purple);
+  text-shadow: -0.1px 0.1px 0 #fff, 0.8px 0.8px 0 #fff, 0.8px -0.8px 0 #fff;
   text-transform: uppercase;
 }
 #contact-section .contact-container {
