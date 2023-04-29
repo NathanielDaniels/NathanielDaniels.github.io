@@ -1,33 +1,13 @@
-//! Page Scroll Indicator.
-function scrollIndicator () {
-  window.onscroll = () => {
-    let winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop
-    let height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight
-    // let scrolled = (winScroll / height) * 100;
-    let scrolled =
-      window.innerWidth < 1200
-        ? (winScroll / height) * 102
-        : (winScroll / height) * 100
-    document.getElementById('myBar').style.width = scrolled + '%'
-  }
-}
-scrollIndicator()
-
-//! Main Title SVG Animation ======================
-
+//* Main Title SVG Animation ======================
 $(function () {
   $('#name-svg').load('/titleName-anim/name-svg.html')
 })
 
-//! Smiley Face Animation ======================
+//* Smiley Face Animation ======================
 
 const smileyFace = (() => {
   let face = $('.smiley-face span')[0]
   let head = $('.smiley-face')[0]
-  // let isDead = true;
   let canBlink = true
 
   document.onmousemove = trackMouse
@@ -64,7 +44,7 @@ const smileyFace = (() => {
     let calcX = (headBox.width - faceBox.width + 600) * (mX / vpW)
     let calcY = (headBox.height - faceBox.height) * (mY / vpH)
 
-    // //? add bounding restrictions to face
+    //? add bounding restrictions to face
     calcX = clamp(calcX, 80, 150)
     calcY = clamp(calcY, 40, 160)
 
@@ -74,27 +54,26 @@ const smileyFace = (() => {
   function clamp (num, min, max) {
     return num <= min ? min : num >= max ? max : num
   }
-  const touchSquint = (() => {
-    const smileyFace = document.querySelector(".smiley-face")
-    // const spokenWord = document.querySelector("span.speech-bubble > h2")
-    // let face = $('.smiley-face span')[0]
-    smileyFace.addEventListener('mouseover' , ()=> {
-      face.classList.add('blink')
-      // speechBubble.style.opacity = "0"
-    })
-    smileyFace.addEventListener('mouseleave' , ()=> {
-      face.classList.remove('blink')
-    })
-  })()
+const touchSquint = (() => {
+  const smileyFace = document.querySelector(".smiley-face")
+  const speechBubble = document.querySelector(".speech-bubble")
+  let face = $('.smiley-face span')[0]
+  smileyFace.addEventListener('mouseover' , ()=> {
+    face.classList.add('blink')
+    speechBubble.style.opacity = "0"
+  })
+  smileyFace.addEventListener('mouseleave' , ()=> {
+    face.classList.remove('blink')
+    speechBubble.style.opacity = "1"
+  })
+})()
 })()
 
 function throttle(event, delay) {
   let timer = null;
   return function() {
     const context = this;
-    console.log('context', context);
     const args = arguments;
-    console.log('args', args);
     if (!timer) {
       timer = setTimeout(function() {
         event.apply(context, args);
@@ -104,9 +83,8 @@ function throttle(event, delay) {
   }
 }
 
-//! Speech Bubble Animation! (smileyface)
-speechBubble = (() => {
-  let currentWord = 'Welcome in!'
+const speechBubble = (() => {
+  let currentWord = 'Welcome In!';
   const welcomeWords = ["Welcome in!", "Thanks for stopping by!", "Stay as long as you like!"]
    const speechBubble = document.querySelector(".speech-bubble")
    const spokenWord = document.querySelector(".speech-bubble > h2")
@@ -114,19 +92,25 @@ speechBubble = (() => {
    const smileyFaceFace = document.querySelector('.smiley-face__face')
    let counter = 0;
    smileyFace.addEventListener('mouseover' , throttle((event) => {
-      event.target === smileyFaceFace ? speechBubble.style.opacity = "0" : speechBubble.style.opacity = "1"
-      // console.log(event)
-        counter++
-        // counter reset
-        if (counter >= welcomeWords.length) {
-          counter = 0
-        }
-        currentWord = welcomeWords[counter]
-        console.log(currentWord)
+      event.target === smileyFaceFace ? speechBubble.style.opacity = "0" : speechBubble.style.opacity = "1";
+
+      counter++
+      // counter reset
+      if (counter >= welcomeWords.length) {
+        counter = 0
+      }
+      currentWord = welcomeWords[counter]
+        // console.log(currentWord)
         //? Random
        let randomQuote = Math.floor(Math.random() * welcomeWords.length)
        const showCorrectQuote = randomQuote !== currentWord ? randomQuote : randomQuote + 1
        spokenWord.innerText = welcomeWords[showCorrectQuote];
+      // let randomQuote;
+      //   //? Generate Random Quote
+      //   while (randomQuote === currentWord) {
+      //       randomQuote = Math.floor(Math.random() * welcomeWords.length);
+      //   }
+      //   spokenWord.innerText = welcomeWords[randomQuote];
       //  spokenWord.innerText = welcomeWords[randomQuote];
         //? In Sequence
         // if (event.target === smileyFace) {
@@ -135,24 +119,6 @@ speechBubble = (() => {
         // speechBubble.style.opacity = "1";
         // }
 }, 600)
-
-  //  (event) => {
-  //   event.target === smileyFaceFace ? speechBubble.style.opacity = "0" : speechBubble.style.opacity = "1"
-  //   console.log(event)
-  //     counter++
-  //     if (counter >= welcomeWords.length) {
-  //       counter = 0
-  //     }
-  //     //? Random
-  //   //  let randomQuote = Math.floor(Math.random() * welcomeWords.length)
-  //   //  spokenWord.innerText = welcomeWords[randomQuote];
-  //     //? In Sequence
-  //     if (event.target === smileyFace) {
-  //     let quote = welcomeWords[counter];
-  //     spokenWord.innerText = quote;
-  //     speechBubble.style.opacity = "1";
-  //     }
-  //  }
    )
 
    smileyFace.addEventListener('mouseleave' , () => {
@@ -161,7 +127,7 @@ speechBubble = (() => {
 
 })()
 
-//! Hamburger Nav Menu Animation! (JQuery) ======================
+//* Hamburger Nav Menu Animation! (JQuery) ======================
 //? Change this back to vanilla JS (hamburgerAnimation2).
 
 // function hamburgerAnimation2 () {
@@ -178,7 +144,6 @@ const hamburgerAnimation = (() => {
   // const burgerMenu = document.querySelector('.mobile-burger-menu__elements')
 
    // burgerMenu.addEventListener('click', function () {
-  //   console.log("this",this)
   //   const navMenu = document.querySelector('#mobile-nav-menu')
   //   navMenu.classList.toggle('active')
   //   this.classList.toggle('close')
@@ -191,14 +156,14 @@ const hamburgerAnimation = (() => {
     $(this).toggleClass('close')
   })
 
-  //! Close btn SideBar Nav Menu (JQuery)
+  //* Close btn SideBar Nav Menu (JQuery)
   $('#mobile-nav-menu ul li a').click(function () {
     $('#mobile-nav-menu').removeClass('active')
     $menu.removeClass('close')
   })
 })()
 
-//! Greeting-Loop Animation (JQuery)================================
+//* Greeting-Loop Animation (JQuery)
 
 const greetingLoop = (() => {
   const text = [
@@ -223,7 +188,6 @@ const greetingLoop = (() => {
   }
 })()
 
-
 //* Skills Hover Color Change (About)
 const skillsHover = (() => {
   const skillsUl = document.querySelectorAll('.skills-list > li')
@@ -245,14 +209,11 @@ const skillsHover = (() => {
 
 //* Tilt Animation (projects section)
 const removeTilt = (() => {
-  console.log("Inner Width", window.innerWidth)
   if (window.innerWidth < 1200) {
 
     const cards = document.querySelectorAll('.cardImg')
 
     cards.forEach(card =>  {
-      console.log(card)
-
       VanillaTilt.init(card)
       card.vanillaTilt.destroy();
       // card.vanillaTilt.getValues();
@@ -266,7 +227,6 @@ const removeTilt = (() => {
 /  animation delay, animation duration, and 
 /  background color for a list of floating boxes.
 */
-
 const floatingBoxSize = (() => {
   const boxes = document.querySelectorAll('.floating-boxes li')
   for (let i = 0; i < boxes.length; i++) {
@@ -286,7 +246,7 @@ const floatingBoxSize = (() => {
   }
 })()
 
-//! Contact form Label Animation (to legend) =================
+//* Contact form Label Animation (to legend) =================
 
 const vanillaAnimateFormLabel = (() => {
   const input = document.querySelectorAll('input');
@@ -352,7 +312,7 @@ const vanillaAnimateFormLabel = (() => {
 // }
 // animateLabel()
 
-//! Social icon hover =========================================
+//* Social icon hover =========================================
 //? remove .contact-social to enable all social-icons on website
 
 // function socialHover() {
@@ -369,80 +329,3 @@ const vanillaAnimateFormLabel = (() => {
 // }
 
 // socialHover()
-
-//! Contact form Submit  =================
-//? EmailJS
-const submitForm = (() => {
-  const form = document.querySelector('.cf-form')
-
-  
-  form.addEventListener('submit', function(e) {
-    e.preventDefault()
-    
-    //? remove social icons (aside)
-    const icon = document.querySelectorAll('.contact-social .sidebar__social-media li');
-    icon.forEach(item => item.style.display = "none");
-
-    const serviceID = 'Portfolio'
-    const templateID = 'template_jut7dvf'
-
-    emailjs.sendForm(serviceID, templateID, this)
-    .then(function(response) {
-      if (response.status === '200') {
-        console.log('SUCCESS!', response.status, response.text);
-      }
-      //  const inputReset = document.querySelectorAll('.cf-form .fieldWrapper label')
-      // inputReset.forEach(item => item.value = "")
-    }).catch(function(error) {
-      console.error('FAILED...', JSON.stringify(error));
-    });
-
-    //===============================================
-
-    let ourFormData = new FormData(e.target)
-    let userName = ourFormData.get('from_name')
-
-    const updatedContent = () => {
-      return `
-        <div class="form-update-container" data-tilt >
-      <div class="form-update-info" >
-        <h2>Thanks, ${userName}.</h2>
-        <p>Your message has been delivered successfully!</p>
-        <p>Follow me on:</p>
-        <div class="icons">
-          <li>
-            <a
-              target="_blank"
-              title="Twitter"
-              rel="noreferrer"
-              href="https://twitter.com/NathanDDaniels"
-              ><i class="fab fa-twitter-square"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              title="linkedIn"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/nathaniel-daniels-500740139/"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              title="GitHub"
-              rel="noreferrer"
-              href="https://github.com/NathanielDaniels"
-              ><i class="fab fa-github-square"></i
-            ></a>
-          </li>
-        </div>
-      </div>
-    </div>
-      `;
-    }
-
-  form.innerHTML = updatedContent()
-  })
-})();
