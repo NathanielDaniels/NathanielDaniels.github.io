@@ -50,7 +50,7 @@
 }
 
 *:focus {
-  outline: 2px dashed yellow;
+  outline: 2px dashed #ffff00;
 }
 
 html,
@@ -300,11 +300,11 @@ body {
 .main-section .main-section__header .mobile-burger-menu__container .mobile-burger-menu__elements.close .line01 {
   transform: rotate(45deg);
   top: 30%;
-  background: yellow;
+  background: #ffff00;
 }
 .main-section .main-section__header .mobile-burger-menu__container .mobile-burger-menu__elements.close .line02,
 .main-section .main-section__header .mobile-burger-menu__container .mobile-burger-menu__elements.close .line03 {
-  background: yellow;
+  background: #ffff00;
   top: 30%;
   transform: rotate(-45deg);
 }
@@ -516,18 +516,23 @@ body {
 #about-section .about-container .about-info .about-me__skills {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 10em auto;
+  grid-template-columns: 16em auto;
+}
+@media (max-width: 1200px) {
+  #about-section .about-container .about-info .about-me__skills {
+    grid-template-columns: 10em auto;
+  }
 }
 #about-section .about-container .about-info .about-me__skills .whatIDo {
   position: relative;
-  left: -2em;
+  left: -6em;
   margin: 0 auto;
-  max-width: 900px;
-  display: grid;
-  grid-gap: 1em;
-  grid-template-rows: 5em auto;
   flex-direction: column;
-  grid-column: 2/span 1;
+}
+@media (max-width: 1200px) {
+  #about-section .about-container .about-info .about-me__skills .whatIDo {
+    left: 0em;
+  }
 }
 #about-section .about-container .about-info .about-me__skills .whatIDo .skills-title {
   grid-row: 1;
@@ -538,17 +543,12 @@ body {
   color: var(--main-purple);
 }
 #about-section .about-container .about-info .about-me__skills .whatIDo .cards {
-  grid-row: 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  width: 80%;
-  height: 90%;
+  margin-top: 1em;
 }
 #about-section .about-container .about-info .about-me__skills .whatIDo .cards .card {
   margin: 0 auto;
   min-width: 25em;
-  max-width: 45ch;
+  max-width: 60ch;
   border-radius: 5px;
   padding: 1em;
   text-align: left;
@@ -583,9 +583,14 @@ body {
 }
 #about-section .about-container .about-info .about-me__skills .skills-icons ul li i {
   color: #474747;
-  font-size: 2rem;
+  font-size: 4rem;
   padding-bottom: 0.2em;
   transition: all 0.3s ease-in-out;
+}
+@media (max-width: 1200px) {
+  #about-section .about-container .about-info .about-me__skills .skills-icons ul li i {
+    font-size: 3rem;
+  }
 }
 #about-section .about-container .about-info .about-me__skills .skills-icons ul li .fa-bootstrap,
 #about-section .about-container .about-info .about-me__skills .skills-icons ul li .fa-jquery {
@@ -653,10 +658,9 @@ body {
 #projects-section .projects .grid-container .projects-grid {
   display: flex;
   flex-flow: wrap;
-  grid-gap: 6em 2em;
+  grid-gap: 6em 3em;
   justify-content: center;
-  width: 65em;
-  max-width: 90%;
+  width: min(65em, 90%);
   margin: 0 auto;
 }
 #projects-section .projects .grid-container .projects-grid .card {
@@ -664,7 +668,7 @@ body {
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  row-gap: 1em;
+  row-gap: 2em;
   max-width: 35em;
   width: 450px;
 }
@@ -692,6 +696,21 @@ body {
   letter-spacing: 1px;
   padding: 10px 0;
 }
+#projects-section .projects .grid-container .projects-grid .card .top-info aside ul {
+  display: flex;
+}
+#projects-section .projects .grid-container .projects-grid .card .top-info aside ul li {
+  list-style: none;
+  border: 1px solid var(--main-yellow);
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 12px;
+}
+#projects-section .projects .grid-container .projects-grid .card .top-info aside ul li:not(:first-child) {
+  margin-left: 0.5em;
+}
 #projects-section .projects .grid-container .projects-grid .card .card__links {
   display: flex;
   justify-content: flex-start;
@@ -711,9 +730,6 @@ body {
 #projects-section .projects .grid-container .projects-grid .card .card__links a:focus {
   outline-offset: 3px;
   filter: drop-shadow(1px 2px 2px var(--main-purple));
-}
-#projects-section .projects .grid-container .projects-grid .card:nth-child(3) .card__links, #projects-section .projects .grid-container .projects-grid .card:nth-child(7) .card__links {
-  justify-content: flex-end;
 }
 #projects-section .projects .grid-container .projects-grid .testBox {
   max-width: 100%;
@@ -796,7 +812,6 @@ body {
 }
 #projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__links {
   display: flex;
-  justify-content: flex-end;
   overflow: hidden;
 }
 #projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__links a {
@@ -814,9 +829,6 @@ body {
 #projects-section .projects .grid-container .projects-grid .testBox .card__overlay .card__links a:focus {
   outline-offset: 3px;
   filter: drop-shadow(1px 2px 2px var(--main-purple));
-}
-#projects-section .projects .grid-container .projects-grid .testBox .card__overlay:nth-child(3) .card__links, #projects-section .projects .grid-container .projects-grid .testBox .card__overlay:nth-child(7) .card__links {
-  justify-content: flex-end;
 }
 #projects-section .projects .grid-container .cardImg {
   font-size: 3rem;
@@ -859,10 +871,6 @@ body {
   line-height: 1.5;
   text-align: left;
   flex-direction: column;
-}
-#projects-section .projects .grid-container .card-2__info,
-#projects-section .projects .grid-container .card-4__info {
-  text-align: right;
 }
 
 #contact-section {
@@ -1042,7 +1050,7 @@ body {
 }
 #contact-section .contact-social .main-container__sidebar-social {
   position: relative;
-  top: 15%;
+  top: 22%;
   left: 20px;
   display: flex;
   align-items: center;
@@ -1135,7 +1143,6 @@ body {
     grid-template-rows: 1fr 10em;
   }
   section.about#about-section .about-container .about-info .about-me__skills .whatIDo {
-    position: static;
     grid-row: 1/2;
     grid-column: 1/span 1;
   }
@@ -1149,7 +1156,6 @@ body {
     position: relative;
     bottom: 0;
     margin: 0 auto;
-    font-size: clamp(0.6em, 2vw, 1.4em);
   }
   section.about#about-section .about-container .about-info .about-me__skills .skills-icons ul {
     flex-direction: row;
@@ -1157,11 +1163,16 @@ body {
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
+  section.about#about-section .about-container .about-info .about-me__skills .skills-icons ul li {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 1200px) and (max-width: 1200px) {
+  section.about#about-section .about-container .about-info .about-me__skills .skills-icons ul li {
+    font-size: 1rem;
+  }
 }
 @media screen and (max-width: 1050px) {
-  .about#about-section .about-container .about-info .about-me__skills .whatIDo .skills-title {
-    padding: 0.4em 0em;
-  }
   .about#about-section .about-container .about-info .about-me__skills .whatIDo .cards {
     position: relative;
     top: 50%;
@@ -1169,37 +1180,43 @@ body {
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr;
   }
-  section#projects-section .projects {
-    top: -3em !important;
-  }
   section#projects-section .projects .grid-container .projects-grid {
-    grid-gap: 1.5em;
+    grid-gap: 5em;
+  }
+  section#projects-section .projects .grid-container .projects-grid .card-1 {
+    order: 1;
+  }
+  section#projects-section .projects .grid-container .projects-grid .card-1__info {
+    order: 2;
+  }
+  section#projects-section .projects .grid-container .projects-grid .card-2 {
+    order: 3;
   }
   section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-2__info {
     order: 4;
     text-align: left;
   }
-  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-2__info .card__links {
-    justify-content: flex-start;
-  }
-  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-2 {
-    order: 3;
+  section#projects-section .projects .grid-container .projects-grid .card-3 {
+    order: 5;
   }
   section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-3__info {
+    order: 6;
     text-align: left;
   }
   section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-4__info {
     text-align: left;
-    order: 6;
-  }
-  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-4__info .card__links {
-    justify-content: flex-start;
+    order: 8;
   }
   section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-4 {
-    order: 5;
+    order: 7;
   }
   section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-5 {
     margin-bottom: 1em;
+    order: 9;
+  }
+  section#projects-section .projects .grid-container .projects-grid:nth-child(1) .card-5__info {
+    text-align: left;
+    order: 10;
   }
   section#projects-section .projects .grid-container .projects-grid .card:nth-child(4) .card-title, section#projects-section .projects .grid-container .projects-grid .card:nth-child(8) .card-title {
     left: -1%;

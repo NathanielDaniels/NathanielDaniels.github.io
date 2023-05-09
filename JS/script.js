@@ -84,8 +84,13 @@ function throttle(event, delay) {
 }
 
 const speechBubble = (() => {
+  // grab local time
+// var time = new Date();
+// console.log(
+//   time.toLocaleString('en-US', { hour: 'numeric', hour12: true })
+// );  
   let currentWord = 'Welcome In!';
-  const welcomeWords = ["Welcome in!", "Thanks for stopping by!", "Stay as long as you like!"]
+  const welcomeWords = ["Welcome in!", "Thanks for stopping by!", "Hey, that Tickles!"]
    const speechBubble = document.querySelector(".speech-bubble")
    const spokenWord = document.querySelector(".speech-bubble > h2")
    const smileyFace = document.querySelector('.smiley-face')
@@ -93,6 +98,7 @@ const speechBubble = (() => {
    let counter = 0;
    smileyFace.addEventListener('mouseover' , throttle((event) => {
       event.target === smileyFaceFace ? speechBubble.style.opacity = "0" : speechBubble.style.opacity = "1";
+      // event.target === smileyFaceFace ? speechBubble.style.opacity = "0" : speechBubble.style.opacity = "1";
 
       counter++
       // counter reset
@@ -100,11 +106,10 @@ const speechBubble = (() => {
         counter = 0
       }
       currentWord = welcomeWords[counter]
-        // console.log(currentWord)
-        //? Random
-       let randomQuote = Math.floor(Math.random() * welcomeWords.length)
-       const showCorrectQuote = randomQuote !== currentWord ? randomQuote : randomQuote + 1
-       spokenWord.innerText = welcomeWords[showCorrectQuote];
+      // let randomQuote = Math.floor(Math.random() * welcomeWords.length)
+      // const showCorrectQuote = welcomeWords[randomQuote] !== currentWord ? randomQuote : randomQuote + 1
+      spokenWord.innerText = currentWord;
+      // spokenWord.innerText = welcomeWords[showCorrectQuote];
       // let randomQuote;
       //   //? Generate Random Quote
       //   while (randomQuote === currentWord) {
@@ -126,6 +131,28 @@ const speechBubble = (() => {
    })
 
 })()
+
+
+/* 
+  This function prevents url change and scrolls the page
+  to the section specified by the href attribute of the clicked link.
+*/
+for (let i = 0; i < document.querySelectorAll('#header__nav-links').length; i++) {
+  document.querySelectorAll('#header__nav-links')[i].addEventListener('click', function (event) {
+    event.preventDefault();
+    const link = event.target.getAttribute('href');
+    const section = document.querySelector(link);
+    section.scrollIntoView({ behavior: 'smooth' })
+  })
+}
+
+// document.querySelectorAll('#header__nav-links').addEventListener('click', function (event) {
+//   event.preventDefault();
+//   const link = event.target.getAttribute('href');
+//   const section = document.querySelector(link);
+//   section.scrollIntoView({ behavior: 'smooth' })
+// })
+
 
 //* Hamburger Nav Menu Animation! (JQuery) ======================
 //? Change this back to vanilla JS (hamburgerAnimation2).
@@ -186,6 +213,7 @@ const greetingLoop = (() => {
       elem.fadeIn()
     })
   }
+  // clearTimeout(change)
 })()
 
 //* Skills Hover Color Change (About)
