@@ -1,23 +1,24 @@
 //* Contact form Submit  =================
 //? EmailJS
 const submitForm = (() => {
-  const form = document.querySelector('.cf-form')
+  const form = document.querySelector(".cf-form");
 
-  
-  form.addEventListener('submit', function(e) {
-    e.preventDefault()
-    
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
     //? remove social icons (aside)
-    const icon = document.querySelectorAll('.contact-social .sidebar__social-media li');
-    icon.forEach(item => item.style.display = "none");
+    const icon = document.querySelectorAll(
+      ".contact-social .sidebar__social-media li"
+    );
+    icon.forEach((item) => (item.style.display = "none"));
 
-    const serviceID = 'Portfolio'
-    const templateID = 'template_jut7dvf'
+    const serviceID = "Portfolio";
+    const templateID = "template_jut7dvf";
 
-    let ourFormData = new FormData(e.target)
-    let userName = ourFormData.get('from_name')
+    let ourFormData = new FormData(e.target);
+    let userName = ourFormData.get("from_name");
 
-    const updatedContent = function() {
+    const updatedContent = function () {
       return `
         <div class="form-update-container" data-tilt >
       <div class="form-update-info" >
@@ -56,20 +57,22 @@ const submitForm = (() => {
       </div>
     </div>
       `;
-    }
+    };
 
-    emailjs.sendForm(serviceID, templateID, this)
-    .then((response) => {
-        form.innerHTML = updatedContent()
-      if (response.status === '200') {
-        console.log('SUCCESS!', response.status, response.text);
-        // form.innerHTML = updatedContent()
-      }
-      //  const inputReset = document.querySelectorAll('.cf-form .fieldWrapper label')
-      // inputReset.forEach(item => item.value = "")
-    }).catch(function(error) {
-      return new Error('FAILED...', JSON.stringify(error));
-    });
+    emailjs
+      .sendForm(serviceID, templateID, this)
+      .then((response) => {
+        form.innerHTML = updatedContent();
+        if (response.status === "200") {
+          console.log("SUCCESS!", response.status, response.text);
+          // form.innerHTML = updatedContent()
+        }
+        //  const inputReset = document.querySelectorAll('.cf-form .fieldWrapper label')
+        // inputReset.forEach(item => item.value = "")
+      })
+      .catch(function (error) {
+        return new Error("FAILED...", JSON.stringify(error));
+      });
 
     //===============================================
 
@@ -117,6 +120,6 @@ const submitForm = (() => {
     //   `;
     // }
 
-  // form.innerHTML = updatedContent()
-  })
-})()
+    // form.innerHTML = updatedContent()
+  });
+})();
