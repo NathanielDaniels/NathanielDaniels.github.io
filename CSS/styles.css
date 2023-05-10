@@ -557,6 +557,9 @@ body {
   margin-bottom: 0.5em;
   color: var(--main-purple);
 }
+#about-section .about-container .about-me__skills .whatIDo .cards .card .card__content {
+  font-size: 18px;
+}
 #about-section .about-container .about-me__skills .skills-icons {
   grid-column: 1/span 1;
   grid-row: 1;
