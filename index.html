@@ -66,19 +66,19 @@
     <!--! MAIN Section (Hero) -->
     <section class="main-section">
       <div id="smiley-face" class="smiley-face">
-        <span class="smiley-face__face" role="Smiley Face"></span>
+        <span class="smiley-face__face" role="Smiley Face presentation"></span>
       </div>
-      <span class="speech-bubble" role="Smiley Face Welcome Message">
-        <span class="triangle" role="speech bubble"></span>
+      <span class="speech-bubble" role="Smiley Face Welcome banner">
+        <span class="triangle"></span>
         <h2>Welcome!</h2>
       </span>
       <header class="main-section__header nav-down">
-        <div class="header__inner-container" role="header container">
+        <div class="header__inner-container" role="header document">
           <div class="title-content-wrapper">
             <div id="name-svg" class="title-name" title="That's Me!"></div>
             <h1 title="That's Me!">Nathaniel Daniels</h1>
           </div>
-          <ul class="header__nav-links" id="header__nav-links">
+          <ul class="header__nav-links" id="head__nav-links">
             <li><a href="#projects-section">Projects</a></li>
             <li><a href="#contact-section">Get In Touch</a></li>
           </ul>
@@ -166,7 +166,7 @@
     </section>
     <!--*  ABOUT Section -->
     <section id="about-section" class="about">
-      <div class="about-container" role="about container">
+      <div class="about-container" role="about document">
         <!-- <div class="about-info"> -->
         <div class="about-me__skills">
           <!-- <div class="bgShape"></div> -->
@@ -248,13 +248,13 @@
 
     <!--* Project Section -->
     <section id="projects-section">
-      <div class="projects" role="projects container">
+      <div class="projects" role="projects document">
         <h2 class="projects-title title">What I Create</h2>
         <!-- <h2 class="projects-title title">Projects</h2> -->
         <div class="grid-container">
           <div class="projects-grid">
             <!-- ? Card 1 (ChocoShop box)-->
-            <!-- <article id="cardContainer" class="cardContainer">
+            <article id="cardContainer" class="cardContainer">
               <div
                 class="card card-1 cardImg"
                 data-tilt
@@ -264,13 +264,18 @@
               >
                 <i class="fas fa-grip-horizontal"></i>
                 <h3 class="card-title">ChocoShop</h3>
-                <image class="card-1__img" src="IMG/portfolio-img/nateflix.png" alt="Nateflix" />
+                <!-- <image
+                  class="card-1__img"
+                  src="IMG/portfolio-img/nateflix.png"
+                  alt="Nateflix"
+                /> -->
               </div>
               <div class="card card-1__info">
                 <div class="top-info">
                   <p>
-                    ChocoShop is a fully custom rebuild of my favorite chocolate
-                    company.
+                    ChocoShop is an e-commerce website that allows users to
+                    browse and purchase chocolate bars. It features a shopping
+                    cart, user authentication, and a checkout process.
                   </p>
                   <aside>
                     <ul>
@@ -298,7 +303,7 @@
                   </a>
                 </div>
               </div>
-            </article> -->
+            </article>
             <article id="cardContainer" class="cardContainer">
               <div
                 class="card card-2 cardImg"
@@ -325,11 +330,11 @@
                   </aside>
                 </div>
                 <div class="card__links">
-                  <a href="#" onclick="navigateTo('/nateflix', event)">
+                  <!-- <a href="#" onclick="navigateTo('/nateflix', event)">
                     View Project
-                  </a>
+                  </a> -->
                   <!-- <a href="/nateflix">View Project</a> -->
-                  <!-- <a
+                  <a
                     target="_blank"
                     rel="noreferrer noopener"
                     href="https://github.com/NathanielDaniels/Nateflix-react-app"
@@ -340,7 +345,7 @@
                     rel="noreferrer noopener"
                     href="https://nateflix.netlify.app/"
                     ><i class="fa fa-eye" aria-hidden="true"></i>Preview</a
-                  > -->
+                  >
                 </div>
               </div>
             </article>
@@ -389,35 +394,6 @@
                 </div>
               </div>
             </article>
-            <!-- ? Card 2 (Sneaker Info) -->
-            <!-- <div class="card card-2__info">
-              <div class="top-info">
-                <p>
-                  Sneaker Shop is an E-commerce website with a functional
-                  shopping cart.
-                </p>
-                <p>HTML, CSS/SCSS, JavaScript</p>
-              </div>
-              <div class="card__links">
-                <a target="_blank" rel="noreferrer" href="#"
-                  ><i class="fab fa-github-square"></i>Github</a
-                >
-                <a target="_blank" rel="noreferrer" href="#"
-                  ><i class="fas fa-laptop-code"></i>Preview</a
-                >
-              </div>
-            </div> -->
-            <!-- ? Card 2 (Sneaker Box) -->
-            <!-- <div
-              class="card card-2 cardImg"
-              data-tilt
-              data-tilt-glare
-              data-tilt-max-glare="0.2"
-              data-tilt-max="10"
-            >
-              <i class="fas fa-shoe-prints icon"></i>
-              <h3 class="card-title">Sneaker Shop</h3>
-            </div> -->
             <!-- ? Card 2 (Artist Portfolio) -->
             <!-- <div class="card card-2__info">
               <div class="top-info">
@@ -538,75 +514,7 @@
                 </div>
               </div>
             </article>
-            <!-- ? Card 6 (Test box)-->
-            <!-- <div
-              class="card-5 cardImg card testBox"
-              data-tilt
-              data-tilt-glare
-              data-tilt-max-glare="0.2"
-              data-tilt-max="10"
-            >
-              <i class="fa fa-camera-retro testBox-icon" aria-hidden="true"></i>
-              <h3 class="card-title">ChocoShop</h3> -->
-
-            <!-- ? Card 6 (Test Info) -->
-            <!-- <div class="card__overlay">
-                <div class="card-5__info card">
-                  
-                  <div class="card__info">
-                    <p>ChocoShop is a rebuild of my favorite chocolate company. Built with ReactJS frontend and Firbase backend for authentication.</p>
-                    <aside>
-                      <ul>
-                        <li>ReactJS</li>
-                        <li>Firebase</li>
-                      </ul>
-                    </aside>
-                  </div>
-
-                  <div class="card__links updated">
-                    <a target="_blank" rel="noreferrer noopener" href="https://github.com/NathanielDaniels/chocolate-bar-shop">
-                      <i class="fab fa-github-square"></i>
-                      Github
-                    </a>
-                    <a target="_blank" rel="noreferrer noopener" href="https://chocolateshop.netlify.app/">
-                      <i class="fa fa-eye" aria-hidden="true"></i>
-                      Preview
-                    </a>
-                    </div>
-                  </div>
-              </div>
-            </div> -->
-
-            <!-- ? Card 4 (Steakhouse Info)-->
-            <!-- <div class="card card-4__info">
-              <div class="top-info">
-                <p>
-                  Steak House is an old fashioned style restaurant website built
-                  with the Hyperapp framework.</p>
-                <p>HTML, CSS/SCSS, Hyperapp.</p>
-              </div>
-              <div class="card__links">
-                <a target="_blank" rel="noreferrer noopener" href="#"
-                  ><i class="fab fa-github-square"></i>Github</a
-                >
-                <a target="_blank" rel="noreferrer noopener" href="#"
-                  ><i class="fas fa-laptop-code"></i>Preview</a
-                >
-              </div>
-            </div> -->
-            <!-- ? Card 4 (Steakhouse Box)-->
-            <!-- <div
-              class="card card-4 cardImg"
-              data-tilt
-              data-tilt-glare
-              data-tilt-max-glare="0.2"
-              data-tilt-max="10"
-            >
-              <i class="fas fa-utensils icon"></i>
-              <h3 class="card-title">Steak House</h3>
-            </div> -->
           </div>
-          <!-- Project Grid-->
         </div>
       </div>
     </section>
@@ -721,6 +629,7 @@
                 <a
                   target="_blank"
                   rel="noreferrer noopener"
+                  title="LinkedIn"
                   href="https://www.linkedin.com/in/nathaniel-daniels-500740139/"
                   ><i class="fab fa-linkedin"></i
                 ></a>
@@ -730,6 +639,7 @@
                 <a
                   target="_blank"
                   rel="noreferrer noopener"
+                  title="Github"
                   href="https://github.com/NathanielDaniels"
                   ><i class="fab fa-github-square"></i
                 ></a>
