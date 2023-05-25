@@ -677,7 +677,7 @@ body {
       position: relative;
       display: grid;
       grid-template-rows: auto;
-      grid-template-columns: 16em auto;
+      grid-template-columns: 12em auto;
       @media (max-width: 1200px) {
         grid-template-columns: 10em auto;
       }
@@ -701,18 +701,18 @@ body {
       //   }
       // }
       .whatIDo {
-        // border: 2px solid blue;
         position: relative;
-        left: -6em;
+        // left: -6em;
         margin: 0 auto;
         // max-width: 900px;
+        display: flex;
         // display: grid;
         // grid-gap: 1em;
         // grid-template-rows: 5em auto;
         flex-direction: column;
         // grid-column: 2 / span 1;
         @media (max-width: 1200px) {
-          left: 0em;
+          // left: 0em;
         }
         .skills-title {
           grid-row: 1;
@@ -724,7 +724,9 @@ body {
         }
 
         .cards {
-          margin-top: 1em;
+          margin-top: 3em;
+          display: flex;
+          flex-wrap: wrap;
           // grid-row: 2;
           // display: grid;
           // grid-template-columns: 1fr 1fr;
@@ -733,20 +735,24 @@ body {
           // height: 90%;
 
           .card {
-            margin: 0 auto;
-            min-width: 25em;
-            max-width: 60ch;
+            margin: 0.5em 1em;
+            // min-width: 25ch;
+            // max-width: 56ch;
+            width: min(45%, 56ch);
             border-radius: 5px;
             padding: 1em;
             text-align: left;
             transition: box-shadow 0.5s ease-in-out, background 0.5s ease-in-out;
-
+            @media (max-width: 1200px) {
+              width: calc(100% - 54%);
+              margin: 0 auto;
+            }
             .card__title {
               margin-bottom: 0.5em;
               color: var(--main-purple);
             }
             .card__content {
-              font-size: 18px;  
+              font-size: 18px;
             }
             // &:hover,
             // &:focus {
@@ -784,16 +790,9 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            // p {
-            //   font-size: 3rem;
-            //   @media (max-width: 1200px) {
-            //       // width: 2rem;
-            //       font-size: 2rem;
-            //     }
-            // }
             i {
               color: #474747;
-              font-size: 4rem;
+              font-size: 3rem;
               padding-bottom: 0.2em;
               transition: all 0.3s ease-in-out;
               @media (max-width: 1200px) {
@@ -852,7 +851,7 @@ body {
       text-align: center;
       font-size: clamp(3rem, 10vw, 5em);
       color: var(--main-yellow);
-      text-transform: uppercase;
+      // text-transform: uppercase;
       max-width: 100%;
     }
     .grid-container {
@@ -939,7 +938,6 @@ body {
             .card__links {
               display: flex;
               justify-content: flex-start;
-
               a {
                 margin-right: 1em;
                 text-decoration: none;
@@ -947,16 +945,13 @@ body {
                 font-size: 1.2rem;
                 text-align: center;
                 transition: all 0.2s ease-in-out;
-
                 &:hover,
                 &:focus {
                   color: var(--main-white);
                   transform: scale(1.1);
                 }
-
                 &:focus {
                   outline-offset: 3px;
-
                   filter: drop-shadow(1px 2px 2px var(--main-purple));
                 }
               }
@@ -1441,9 +1436,9 @@ body {
         .whatIDo {
           grid-row: 1 / 2;
           grid-column: 1 / span 1;
-          .cards {
-            width: 100%;
-          }
+          // .cards {
+          //   width: 100%;
+          // }
         }
         .skills-icons {
           width: 100%;
@@ -1483,10 +1478,18 @@ body {
           // }
           .cards {
             position: relative;
-            top: 50%;
+            top: 40%;
+            // top: 50%;
             transform: translateY(-50%);
             grid-template-rows: repeat(4, 1fr);
             grid-template-columns: 1fr;
+            .card {
+              // width: 65ch;
+              width: clamp(300px, 65ch, 100%);
+              .card__content {
+                font-size: 16px;
+              }
+            }
           }
         }
       }

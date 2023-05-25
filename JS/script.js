@@ -1,3 +1,57 @@
+// window.addEventListener("load", function () {
+//   let nateflixLink = document.querySelector('a[href="/nateflix"]');
+
+//   nateflixLink.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     loadPage("/nateflix.html");
+//   });
+// });
+
+// function loadPage(url) {
+//   let xhr = new XMLHttpRequest();
+
+//   xhr.onreadystatechange = function () {
+//     if (xhr.readyState === XMLHttpRequest.DONE) {
+//       console.log(xhr.status);
+//       if (xhr.status === 200) {
+//         let content = xhr.responseText;
+//         document.body.innerHTML = content;
+//       } else {
+//         console.log("Error: " + xhr.status);
+//       }
+//     }
+//   };
+
+//   xhr.open("GET", url, true);
+//   xhr.send();
+// }
+
+function navigateTo(route, event) {
+  event.preventDefault();
+  let url = window.location.href + route;
+  console.log(url);
+  window.history.pushState({ path: url }, "", url);
+  loadPage(url);
+}
+
+function loadPage(url) {
+  let xhr = new XMLHttpRequest();
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        let content = xhr.responseText;
+        document.body.innerHTML = content;
+      } else {
+        console.log("Error: " + xhr.status);
+      }
+    }
+  };
+
+  xhr.open("GET", url, true);
+  xhr.send();
+}
+
 //* Main Title SVG Animation ======================
 $(function () {
   $("#name-svg").load("/titleName-anim/name-svg.html");
